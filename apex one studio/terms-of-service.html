@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service | ApexOne Studio</title>
+    
+    <!-- Simplified theme initialization -->
+    <script>
+        (function() {
+            var savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'light') {
+                document.documentElement.classList.add('light-theme');
+                
+                // Super minimal initial style for light theme
+                var style = document.createElement('style');
+                style.textContent = 'html.light-theme,body.light-theme{background-color:#f5f7fa!important;color:#202842!important;}';
+                document.head.appendChild(style);
+            }
+        })();
+    </script>
+    
+    <!-- Critical Light Theme Styles before any other CSS -->
+    <link rel="stylesheet" href="light-theme-critical.css">
+    
+    <!-- Theme Manager -->
+    <script src="theme.js"></script>
+    
+    <!-- Regular Styles -->
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./legal.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Final theme reinforcement -->
+    <script>
+        // Make sure light theme is properly applied to body after DOM starts parsing
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'light') {
+                document.documentElement.classList.add('light-theme');
+                document.body.classList.add('light-theme');
+                console.log('Reinforced light theme on DOMContentLoaded');
+            }
+        });
+    </script>
+</head>
+<body>
+    <!-- Loading Overlay -->
+    <div class="loading-overlay">
+        <div class="loading-content">
+            <div class="loading-logo">A1</div>
+            <div class="loading-spinner"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar glass-nav">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="assets/images/logo.svg" alt="A1 Logo" class="logo-icon">
+                <div class="logo-text">
+                    <span class="logo-main">Apex One</span>
+                    <span class="logo-sub">Studios</span>
+                </div>
+            </div>
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#services" class="nav-link">Services</a></li>
+                <li><a href="index.html#team" class="nav-link">Team</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                <li><a href="handbook.html" class="nav-link">Handbook</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="legal-hero">
+        <div class="legal-hero-content">
+            <h1>Terms of Service</h1>
+            <p class="hero-subtitle">Last Updated: June 1, 2025</p>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="legal-content">
+        <div class="container">
+            <div class="legal-toc glass-effect">
+                <h2>Table of Contents</h2>
+                <ul>
+                    <li><a href="#introduction">1. Introduction</a></li>
+                    <li><a href="#acceptance">2. Acceptance of Terms</a></li>
+                    <li><a href="#services">3. Description of Services</a></li>
+                    <li><a href="#eligibility">4. Eligibility</a></li>
+                    <li><a href="#accounts">5. User Accounts</a></li>
+                    <li><a href="#content">6. User Content</a></li>
+                    <li><a href="#intellectual-property">7. Intellectual Property</a></li>
+                    <li><a href="#payment">8. Payment Terms</a></li>
+                    <li><a href="#termination">9. Termination</a></li>
+                    <li><a href="#disclaimers">10. Disclaimers</a></li>
+                    <li><a href="#limitation">11. Limitation of Liability</a></li>
+                    <li><a href="#changes">12. Changes to Terms</a></li>
+                    <li><a href="#governing-law">13. Governing Law</a></li>
+                    <li><a href="#contact-us">14. Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <div class="legal-main">
+                <section id="introduction" class="legal-section">
+                    <h2>1. Introduction</h2>
+                    <p>Welcome to ApexOne Studio ("Company", "we", "us", or "our"). These Terms of Service govern your use of our website, products, and services.</p>
+                    <p>By accessing or using our services, you agree to be bound by these Terms and our Privacy Policy. If you disagree with any part of the terms, you may not access our services.</p>
+                </section>
+
+                <section id="acceptance" class="legal-section">
+                    <h2>2. Acceptance of Terms</h2>
+                    <p>By accessing or using our services, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service. If you are using our services on behalf of a company or other legal entity, you represent that you have the authority to bind such entity to these terms.</p>
+                </section>
+
+                <section id="services" class="legal-section">
+                    <h2>3. Description of Services</h2>
+                    <p>ApexOne Studio provides AI-powered business solutions, website development, digital marketing, and business consulting services. We reserve the right to modify, suspend, or discontinue any part of our services at any time without notice.</p>
+                </section>
+
+                <section id="eligibility" class="legal-section">
+                    <h2>4. Eligibility</h2>
+                    <p>You must be at least 18 years old to use our services. By using our services, you represent and warrant that you are at least 18 years old and have the legal capacity to enter into these Terms.</p>
+                </section>
+
+                <section id="accounts" class="legal-section">
+                    <h2>5. User Accounts</h2>
+                    <p>When you create an account with us, you must provide accurate, complete, and current information. You are responsible for safeguarding your account credentials and for any activity that occurs under your account.</p>
+                    <p>You agree to notify us immediately of any unauthorized use of your account or any other breach of security. We cannot and will not be liable for any loss or damage arising from your failure to comply with this instruction.</p>
+                </section>
+
+                <section id="content" class="legal-section">
+                    <h2>6. User Content</h2>
+                    <p>You retain all rights to any content you submit, post, or display on or through our services. By submitting content, you grant us a worldwide, non-exclusive, royalty-free license to use, reproduce, modify, adapt, publish, distribute, and display such content.</p>
+                    <p>You represent and warrant that you own or have the necessary rights to all content you submit and that the content does not violate the rights of any third party.</p>
+                </section>
+
+                <section id="intellectual-property" class="legal-section">
+                    <h2>7. Intellectual Property</h2>
+                    <p>The service and its original content, features, and functionality are and will remain the exclusive property of ApexOne Studio and its licensors. The service is protected by copyright, trademark, and other intellectual property laws.</p>
+                </section>
+
+                <section id="payment" class="legal-section">
+                    <h2>8. Payment Terms</h2>
+                    <p>You agree to pay all fees or charges to your account based on our fee schedule, billing terms, and payment methods. Unless otherwise specified, all fees are quoted in U.S. Dollars.</p>
+                    <p>If you dispute any charges, you must notify us within 30 days of the disputed charge. We reserve the right to change our prices upon 30 days' notice.</p>
+                </section>
+
+                <section id="termination" class="legal-section">
+                    <h2>9. Termination</h2>
+                    <p>We may terminate or suspend your account and access to our services immediately, without prior notice or liability, for any reason, including but not limited to a breach of the Terms.</p>
+                    <p>Upon termination, your right to use the services will cease immediately. If you wish to terminate your account, you may simply discontinue using our services.</p>
+                </section>
+
+                <section id="disclaimers" class="legal-section">
+                    <h2>10. Disclaimers</h2>
+                    <p>Our services are provided "as is" and "as available" without warranties of any kind, either express or implied, including, but not limited to, implied warranties of merchantability, fitness for a particular purpose, or non-infringement.</p>
+                    <p>We do not warrant that the service will be uninterrupted, timely, secure, or error-free, or that defects will be corrected.</p>
+                </section>
+
+                <section id="limitation" class="legal-section">
+                    <h2>11. Limitation of Liability</h2>
+                    <p>In no event shall ApexOne Studio, its directors, employees, partners, agents, suppliers, or affiliates be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your access to or use of or inability to access or use the services.</p>
+                </section>
+
+                <section id="changes" class="legal-section">
+                    <h2>12. Changes to Terms</h2>
+                    <p>We reserve the right to modify or replace these Terms at any time. We will provide notice of any changes by posting the new Terms on this page. Your continued use of the services after any such changes constitutes your acceptance of the new Terms.</p>
+                </section>
+
+                <section id="governing-law" class="legal-section">
+                    <h2>13. Governing Law</h2>
+                    <p>These Terms shall be governed and construed in accordance with the laws of India, without regard to its conflict of law provisions.</p>
+                    <p>Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. If any provision of these Terms is held to be invalid or unenforceable, the remaining provisions will remain in effect.</p>
+                </section>
+
+                <section id="contact-us" class="legal-section">
+                    <h2>14. Contact Us</h2>
+                    <p>If you have any questions about these Terms, please contact us at:</p>
+                    <ul class="contact-info">
+                        <li><strong>Email:</strong> apexonestudio@gmail.com</li>
+                        <li><strong>Phone:</strong> +91 9902079990</li>
+                        <li><strong>Address:</strong> Bangalore, Karnataka, India</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-enhanced">
+        <div class="footer-bg">
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+        
+        <div class="container">
+            <div class="footer-main">
+                <!-- Company Information -->
+                <div class="footer-brand-info">
+                    <div>
+                        <div class="footer-logo">A1</div>
+                        <p class="company-desc">ApexOne Studios is a cutting-edge tech agency specializing in AI-driven solutions, web development, digital marketing, and business consulting.</p>
+                    </div>
+                    
+                    <div class="social-links-premium">
+                        <a href="#" class="social-link-premium"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link-premium"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link-premium"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link-premium"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link-premium"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#about" class="footer-link"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="index.html#services" class="footer-link"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="index.html#team" class="footer-link"><i class="fas fa-chevron-right"></i> Team</a></li>
+                        <li><a href="index.html#contact" class="footer-link"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                        <li><a href="handbook.html" class="footer-link"><i class="fas fa-chevron-right"></i> Handbook</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Legal Pages -->
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="terms-of-service.html" class="footer-link"><i class="fas fa-chevron-right"></i> Terms of Service</a></li>
+                        <li><a href="privacy-policy.html" class="footer-link"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
+                        <li><a href="cookie-policy.html" class="footer-link"><i class="fas fa-chevron-right"></i> Cookie Policy</a></li>
+                        <li><a href="accessibility.html" class="footer-link"><i class="fas fa-chevron-right"></i> Accessibility</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Information -->
+                <div class="footer-column">
+                    <h4>Contact Us</h4>
+                    <div class="footer-locations">
+                        <div class="location-item">
+                            <div class="location-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="location-info">
+                                <h5>Headquarters</h5>
+                                <p>Bangalore, Karnataka<br>India</p>
+                            </div>
+                        </div>
+                        
+                        <div class="location-item">
+                            <div class="location-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="location-info">
+                                <h5>Email Us</h5>
+                                <p>apexonestudio@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-divider"></div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    &copy; 2025 ApexOne Studios. All rights reserved.
+                </div>
+                
+                <div class="footer-legal">
+                    <a href="terms-of-service.html" class="legal-link">Terms of Service</a>
+                    <a href="privacy-policy.html" class="legal-link">Privacy Policy</a>
+                    <a href="cookie-policy.html" class="legal-link">Cookie Policy</a>
+                    <a href="accessibility.html" class="legal-link">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="theme.js"></script>
+    
+    <!-- Add floating action buttons -->
+    <div class="floating-actions">
+        <button class="fab-button theme-toggle premium-glass" title="Toggle light/dark theme">
+            <i class="fas fa-moon"></i>
+        </button>
+        <button class="fab-button scroll-top premium-glass" title="Scroll to top" style="opacity: 0; visibility: hidden;">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </div>
+</body>
+</html>

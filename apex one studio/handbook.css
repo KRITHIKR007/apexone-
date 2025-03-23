@@ -682,6 +682,70 @@
     background: linear-gradient(135deg, rgba(110, 87, 255, 0.1), rgba(0, 221, 194, 0.05));
 }
 
+/* Founder Bios Section */
+.founder-section {
+    margin-bottom: 3rem;
+}
+
+.founder-bios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.founder-card {
+    padding: 2rem;
+    transition: var(--hover-transition);
+}
+
+.founder-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.founder-card h3 {
+    font-size: 1.4rem;
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+}
+
+.founder-name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+}
+
+.bio-content p {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .founder-bios {
+        grid-template-columns: 1fr;
+    }
+    
+    .founder-card {
+        padding: 1.5rem;
+    }
+    
+    .founder-name {
+        font-size: 1.6rem;
+    }
+}
+
+/* Light theme adjustments */
+body.light-theme .founder-card h3 {
+    color: #0057ff;
+}
+
+body.light-theme .founder-name {
+    color: #202842;
+}
+
 /* Responsive Styles */
 @media (max-width: 992px) {
     .handbook-content .container {

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | ApexOne Studio</title>
+    
+    <!-- Critical immediate theme check - Must be first -->
+    <script>
+        // Simple theme check that won't conflict with theme.js
+        (function() {
+            try {
+                const savedTheme = localStorage.getItem('theme');
+                if (savedTheme === 'light') {
+                    document.documentElement.classList.add('light-theme');
+                    // Minimal initial style to prevent flash
+                    document.write('<style>html.light-theme,body{background-color:#f5f7fa!important;}</style>');
+                }
+            } catch (e) {
+                console.error('Error in theme initialization:', e);
+            }
+        })();
+    </script>
+    
+    <!-- Critical Light Theme Styles - Load before any other CSS -->
+    <link rel="stylesheet" href="light-theme-critical.css">
+    
+    <!-- Theme Manager - Load Early -->
+    <script src="theme.js"></script>
+    
+    <!-- Regular Styles -->
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./legal.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Final theme reinforcement -->
+    <script>
+        // Make sure light theme is properly applied to body after DOM starts parsing
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'light') {
+                document.documentElement.classList.add('light-theme');
+                document.body.classList.add('light-theme');
+                console.log('Reinforced light theme on DOMContentLoaded');
+            }
+        });
+    </script>
+</head>
+<body>
+    <!-- Loading Overlay -->
+    <div class="loading-overlay">
+        <div class="loading-content">
+            <div class="loading-logo">A1</div>
+            <div class="loading-spinner"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar glass-nav">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="assets/images/logo.svg" alt="A1 Logo" class="logo-icon">
+                <div class="logo-text">
+                    <span class="logo-main">Apex One</span>
+                    <span class="logo-sub">Studios</span>
+                </div>
+            </div>
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#services" class="nav-link">Services</a></li>
+                <li><a href="index.html#team" class="nav-link">Team</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                <li><a href="handbook.html" class="nav-link">Handbook</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="legal-hero">
+        <div class="legal-hero-content">
+            <h1>Privacy Policy</h1>
+            <p class="hero-subtitle">Last Updated: June 1, 2025</p>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="legal-content">
+        <div class="container">
+            <div class="legal-toc glass-effect">
+                <h2>Table of Contents</h2>
+                <ul>
+                    <li><a href="#introduction">1. Introduction</a></li>
+                    <li><a href="#information-collection">2. Information We Collect</a></li>
+                    <li><a href="#how-we-use">3. How We Use Your Information</a></li>
+                    <li><a href="#information-sharing">4. Information Sharing and Disclosure</a></li>
+                    <li><a href="#cookies">5. Cookies and Tracking Technologies</a></li>
+                    <li><a href="#data-security">6. Data Security</a></li>
+                    <li><a href="#data-retention">7. Data Retention</a></li>
+                    <li><a href="#your-rights">8. Your Privacy Rights</a></li>
+                    <li><a href="#children">9. Children's Privacy</a></li>
+                    <li><a href="#international">10. International Data Transfers</a></li>
+                    <li><a href="#changes">11. Changes to Privacy Policy</a></li>
+                    <li><a href="#contact-us">12. Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <div class="legal-main">
+                <section id="introduction" class="legal-section">
+                    <h2>1. Introduction</h2>
+                    <p>ApexOne Studio ("we", "us", or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.</p>
+                    <p>Please read this Privacy Policy carefully. If you do not agree with the terms of this Privacy Policy, please do not access our services.</p>
+                </section>
+
+                <section id="information-collection" class="legal-section">
+                    <h2>2. Information We Collect</h2>
+                    <h3>Personal Information</h3>
+                    <p>We may collect personal information that you voluntarily provide to us when you:</p>
+                    <ul>
+                        <li>Register for an account</li>
+                        <li>Express interest in obtaining information about our services</li>
+                        <li>Participate in activities on our services</li>
+                        <li>Contact us</li>
+                    </ul>
+                    <p>Personal information may include:</p>
+                    <ul>
+                        <li>Name</li>
+                        <li>Email address</li>
+                        <li>Phone number</li>
+                        <li>Mailing address</li>
+                        <li>Job title and company information</li>
+                        <li>Payment information</li>
+                    </ul>
+                    
+                    <h3>Automatically Collected Information</h3>
+                    <p>We automatically collect certain information when you visit our website, including:</p>
+                    <ul>
+                        <li>Device and usage information</li>
+                        <li>IP address</li>
+                        <li>Browser type</li>
+                        <li>Operating system</li>
+                        <li>Pages visited and time spent</li>
+                        <li>Referring websites</li>
+                    </ul>
+                </section>
+
+                <section id="how-we-use" class="legal-section">
+                    <h2>3. How We Use Your Information</h2>
+                    <p>We may use the information we collect for various purposes, including:</p>
+                    <ul>
+                        <li>Providing, operating, and maintaining our services</li>
+                        <li>Improving, personalizing, and expanding our services</li>
+                        <li>Understanding and analyzing how you use our services</li>
+                        <li>Developing new products, services, features, and functionality</li>
+                        <li>Communicating with you about our services, updates, and promotions</li>
+                        <li>Processing transactions and sending related information</li>
+                        <li>Finding and preventing fraud</li>
+                        <li>Responding to your inquiries and support requests</li>
+                    </ul>
+                </section>
+
+                <section id="information-sharing" class="legal-section">
+                    <h2>4. Information Sharing and Disclosure</h2>
+                    <p>We may share your information in the following situations:</p>
+                    <ul>
+                        <li><strong>With Service Providers:</strong> We may share your information with third-party vendors, service providers, contractors, or agents who perform services for us.</li>
+                        <li><strong>For Business Transfers:</strong> We may share your information in connection with, or during negotiations of, any merger, sale of company assets, financing, or acquisition of all or a portion of our business.</li>
+                        <li><strong>With Affiliates:</strong> We may share your information with our affiliates, in which case we will require those affiliates to honor this Privacy Policy.</li>
+                        <li><strong>With Business Partners:</strong> We may share your information with our business partners to offer you certain products, services, or promotions.</li>
+                        <li><strong>With Your Consent:</strong> We may disclose your information for any other purpose with your consent.</li>
+                        <li><strong>To Comply with Laws:</strong> We may disclose your information where required by law or to respond to legal process.</li>
+                        <li><strong>To Protect Rights:</strong> We may disclose your information to protect the rights, property, or safety of our company, our clients, or others.</li>
+                    </ul>
+                </section>
+
+                <section id="cookies" class="legal-section">
+                    <h2>5. Cookies and Tracking Technologies</h2>
+                    <p>We use cookies and similar tracking technologies to collect and store information about your preferences and how you interact with our services. You can set your browser to refuse all or some browser cookies, or to alert you when websites set or access cookies.</p>
+                    <p>For more specific information about how we use these technologies and how you can control them, please see our <a href="cookie-policy.html">Cookie Policy</a>.</p>
+                </section>
+
+                <section id="data-security" class="legal-section">
+                    <h2>6. Data Security</h2>
+                    <p>We implement appropriate technical and organizational security measures to protect your personal information from unauthorized access, disclosure, alteration, or destruction. However, no method of transmission over the Internet or electronic storage is 100% secure, and we cannot guarantee absolute security.</p>
+                </section>
+
+                <section id="data-retention" class="legal-section">
+                    <h2>7. Data Retention</h2>
+                    <p>We will retain your personal information only for as long as necessary to fulfill the purposes for which it was collected, including for the purposes of satisfying any legal, accounting, or reporting requirements.</p>
+                </section>
+
+                <section id="your-rights" class="legal-section">
+                    <h2>8. Your Privacy Rights</h2>
+                    <p>Depending on your location, you may have certain rights regarding your personal information, which may include:</p>
+                    <ul>
+                        <li>The right to access your personal information</li>
+                        <li>The right to correct inaccurate or incomplete information</li>
+                        <li>The right to request deletion of your personal information</li>
+                        <li>The right to restrict or object to our processing of your information</li>
+                        <li>The right to data portability</li>
+                        <li>The right to withdraw consent at any time</li>
+                    </ul>
+                    <p>To exercise these rights, please contact us using the information provided at the end of this Policy.</p>
+                </section>
+
+                <section id="children" class="legal-section">
+                    <h2>9. Children's Privacy</h2>
+                    <p>Our services are not directed to children under the age of 18, and we do not knowingly collect personal information from children under the age of 18. If we learn that we have collected personal information from a child under the age of 18, we will promptly delete that information.</p>
+                </section>
+
+                <section id="international" class="legal-section">
+                    <h2>10. International Data Transfers</h2>
+                    <p>Your information may be transferred to, stored, and processed in countries other than the country in which you are resident. These countries may have data protection laws that are different from those in your country. By using our services, you consent to your information being transferred to these countries.</p>
+                </section>
+
+                <section id="changes" class="legal-section">
+                    <h2>11. Changes to Privacy Policy</h2>
+                    <p>We may update this Privacy Policy from time to time. The updated version will be indicated by an updated "Last updated" date and the updated version will be effective as soon as it is accessible. We encourage you to review this Privacy Policy frequently to be informed of how we are protecting your information.</p>
+                </section>
+
+                <section id="contact-us" class="legal-section">
+                    <h2>12. Contact Us</h2>
+                    <p>If you have any questions about this Privacy Policy, please contact us at:</p>
+                    <ul class="contact-info">
+                        <li><strong>Email:</strong> apexonestudio@gmail.com</li>
+                        <li><strong>Phone:</strong> +91 9902079990</li>
+                        <li><strong>Address:</strong> Bangalore, Karnataka, India</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-enhanced">
+        <div class="footer-bg">
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+        
+        <div class="container">
+            <div class="footer-main">
+                <!-- Company Information -->
+                <div class="footer-brand-info">
+                    <div>
+                        <div class="footer-logo">A1</div>
+                        <p class="company-desc">ApexOne Studios is a cutting-edge tech agency specializing in AI-driven solutions, web development, digital marketing, and business consulting.</p>
+                    </div>
+                    
+                    <div class="social-links-premium">
+                        <a href="#" class="social-link-premium"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link-premium"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link-premium"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link-premium"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link-premium"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#about" class="footer-link"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="index.html#services" class="footer-link"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="index.html#team" class="footer-link"><i class="fas fa-chevron-right"></i> Team</a></li>
+                        <li><a href="index.html#contact" class="footer-link"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                        <li><a href="handbook.html" class="footer-link"><i class="fas fa-chevron-right"></i> Handbook</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Legal Pages -->
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="terms-of-service.html" class="footer-link"><i class="fas fa-chevron-right"></i> Terms of Service</a></li>
+                        <li><a href="privacy-policy.html" class="footer-link"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
+                        <li><a href="cookie-policy.html" class="footer-link"><i class="fas fa-chevron-right"></i> Cookie Policy</a></li>
+                        <li><a href="accessibility.html" class="footer-link"><i class="fas fa-chevron-right"></i> Accessibility</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Information -->
+                <div class="footer-column">
+                    <h4>Contact Us</h4>
+                    <div class="footer-locations">
+                        <div class="location-item">
+                            <div class="location-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="location-info">
+                                <h5>Headquarters</h5>
+                                <p>Bangalore, Karnataka<br>India</p>
+                            </div>
+                        </div>
+                        
+                        <div class="location-item">
+                            <div class="location-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="location-info">
+                                <h5>Email Us</h5>
+                                <p>apexonestudio@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-divider"></div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    &copy; 2025 ApexOne Studios. All rights reserved.
+                </div>
+                
+                <div class="footer-legal">
+                    <a href="terms-of-service.html" class="legal-link">Terms of Service</a>
+                    <a href="privacy-policy.html" class="legal-link">Privacy Policy</a>
+                    <a href="cookie-policy.html" class="legal-link">Cookie Policy</a>
+                    <a href="accessibility.html" class="legal-link">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="theme.js"></script>
+    
+    <!-- Add floating action buttons -->
+    <div class="floating-actions">
+        <button class="fab-button theme-toggle premium-glass" title="Toggle light/dark theme">
+            <i class="fas fa-moon"></i>
+        </button>
+        <button class="fab-button scroll-top premium-glass" title="Scroll to top" style="opacity: 0; visibility: hidden;">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </div>
+</body>
+</html>

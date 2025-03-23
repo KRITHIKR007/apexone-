@@ -31,6 +31,8 @@
     --hover-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     --hover-scale: scale(1.02);
+    --transition-speed: 0.5s;
+    --transition-timing: ease;
 }
 
 /* Light Theme Variables */
@@ -48,6 +50,52 @@ body.light-theme {
 /* Theme Transition */
 body {
     transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Enhanced Light Theme Variables with important transitions */
+body {
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Make sure all elements transition smoothly */
+*, *::before, *::after {
+    transition: background-color 0.5s ease, 
+                color 0.5s ease, 
+                border-color 0.5s ease, 
+                box-shadow 0.5s ease;
+}
+
+/* Force light theme colors to apply properly with higher specificity */
+body.light-theme {
+    --bg-primary: #f5f7fa !important;
+    --bg-secondary: #eef1f6 !important;
+    --bg-card: rgba(240, 245, 255, 0.7) !important;
+    --text-primary: #202842 !important;
+    --text-secondary: #4d5a7a !important;
+    --card-shadow: 0 8px 25px rgba(0, 0, 0, 0.1) !important;
+    --glass-bg: rgba(255, 255, 255, 0.3) !important;
+    --glass-border: rgba(255, 255, 255, 0.5) !important;
+    
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+/* Enhance light theme specificity for nested elements */
+body.light-theme .navbar,
+body.light-theme .glass-effect,
+body.light-theme .premium-glass,
+body.light-theme .genz-member,
+body.light-theme .footer-enhanced,
+body.light-theme .service-hero,
+body.light-theme .feature-card,
+body.light-theme .service-cta {
+    background-color: var(--glass-bg);
+    border-color: var(--glass-border);
+}
+
+/* Enhance hamburger menu for light theme */
+body.light-theme .hamburger div {
+    background-color: var(--text-primary);
 }
 
 /* Adjust navbar for light theme */
@@ -78,7 +126,7 @@ body.light-theme .stat-item:hover {
 
 /* Adjust theme toggle button for light theme */
 body.light-theme .theme-toggle {
-    background: linear-gradient(135deg, #8a7bff, #c98cff);
+    background: linear-gradient(135deg, #ff9f43, #ffbc80);
 }
 
 /* Reset and Base Styles */
@@ -738,7 +786,7 @@ body::after {
 .stats-intro {
     text-align: center;
     margin-bottom: 2rem;
-    color: var(--text-secondary);
+    color: var (--text-secondary);
     font-size: 0.95rem;
 }
 
@@ -1615,6 +1663,7 @@ body::after {
     padding: 3rem;
     display: flex;
     flex-direction: column;
+    transition: background-color 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease;
 }
 
 .contact-header {
@@ -1706,6 +1755,7 @@ body::after {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    transition: background-color 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease;
 }
 
 .form-header {
@@ -2007,6 +2057,15 @@ body::after {
 
 .theme-toggle {
     background: linear-gradient(135deg, #6e57ff, #b36fee);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.theme-toggle i {
+    transition: transform 0.5s ease;
+}
+
+.theme-toggle:hover i {
+    transform: rotate(180deg);
 }
 
 .scroll-top {
@@ -2169,6 +2228,10 @@ body::after {
     opacity: 1;
 }
 
+body.light-theme .service-tab.active::before {
+    opacity: 1;
+}
+
 .service-content-container {
     position: relative;
     min-height: 500px;
@@ -2293,6 +2356,7 @@ body::after {
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: background-color 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease;
 }
 
 .feature-card:hover {
@@ -2390,6 +2454,7 @@ body::after {
     position: relative;
     overflow: hidden;
     z-index: 1;
+    transition: background-color 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease;
 }
 
 .premium-glass::before {
@@ -2575,6 +2640,7 @@ body::after {
     background: linear-gradient(to bottom, #060a15, #030509);
     overflow: hidden;
     padding-top: 6rem;
+    transition: background-color 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease;
 }
 
 .footer-enhanced .footer-bg {
@@ -2851,6 +2917,10 @@ body::after {
     color: white;
 }
 
+body.light-theme .social-link-premium {
+    background: rgba(0, 0, 0, 0.05);
+}
+
 /* Responsive Footer Adjustments */
 @media (max-width: 1200px) {
     .footer-enhanced .footer-main {
@@ -2900,4 +2970,566 @@ body::after {
 
 .service-content.active {
     display: block !important; /* Always visible when active */
+}
+
+body.light-theme .nav-links a {
+    color: var(--text-primary);
+}
+
+body.light-theme .hero-content h1,
+body.light-theme .section-header h2,
+body.light-theme .glitch-text {
+    text-shadow: none;
+}
+
+/* Enhanced Theme Transitions and Light Theme Fixes */
+/* Make light theme more specific and ensure all elements transition properly */
+:root {
+    --transition-speed: 0.5s;
+    --transition-timing: ease;
+}
+
+/* Ensure all elements transition smoothly */
+body,
+.navbar,
+.glass-effect,
+.premium-glass,
+.footer-enhanced,
+.service-hero,
+.feature-card,
+.service-card,
+.service-cta,
+.cta-button,
+.about-card,
+.genz-member,
+.fab-button,
+.member-data,
+.stat-item,
+.service-tab,
+.theme-toggle i,
+.social-link-premium,
+.form-group input,
+.form-group textarea {
+    transition: background-color var(--transition-speed) var(--transition-timing),
+                color var(--transition-speed) var(--transition-timing),
+                border-color var(--transition-speed) var(--transition-timing),
+                box-shadow var(--transition-speed) var(--transition-timing),
+                transform 0.3s var(--transition-timing);
+}
+
+/* Stronger light theme specificity for better visibility */
+body.light-theme {
+    --bg-primary: #f5f7fa !important;
+    --bg-secondary: #eef1f6 !important;
+    --bg-card: rgba(240, 245, 255, 0.7) !important;
+    --text-primary: #202842 !important;
+    --text-secondary: #4d5a7a !important;
+    --card-shadow: 0 8px 25px rgba(0, 0, 0, 0.1) !important;
+    --glass-bg: rgba(255, 255, 255, 0.3) !important;
+    --glass-border: rgba(255, 255, 255, 0.5) !important;
+    background-color: var(--bg-primary) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Light theme adjustments for specific components to ensure visibility */
+body.light-theme .navbar {
+    background: rgba(245, 247, 250, 0.9) !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08) !important;
+}
+
+body.light-theme .nav-links a {
+    color: var(--text-primary) !important;
+}
+
+body.light-theme .hamburger div {
+    background-color: var(--text-primary) !important;
+}
+
+body.light-theme .glass-effect,
+body.light-theme .premium-glass,
+body-light-theme .service-card,
+body-light-theme .feature-card {
+    background: rgba(255, 255, 255, 0.25) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), inset 0 0 15px rgba(255, 255, 255, 0.5) !important;
+    border-color: var(--glass-border) !important;
+}
+
+body.light-theme .hero-content h1,
+body-light-theme .section-header h2,
+body-light-theme .about-card h3,
+body-light-theme .member-name,
+body-light-theme .glitch-text {
+    text-shadow: none !important;
+}
+
+body-light-theme .service-tab.active::before {
+    opacity: 1 !important;
+}
+
+body-light-theme .service-tab {
+    color: var(--text-secondary) !important;
+    background: rgba(0, 0, 0, 0.04) !important;
+    border-color: rgba(0, 0, 0, 0.05) !important;
+}
+
+body-light-theme .service-tab.active {
+    color: white !important;
+}
+
+body-light-theme .stat-item {
+    background: rgba(0, 0, 0, 0.04) !important;
+}
+
+body-light-theme .stat-item:hover {
+    background: rgba(0, 0, 0, 0.08) !important;
+}
+
+body-light-theme .social-link-premium {
+    background: rgba(0, 0, 0, 0.05) !important;
+    color: var(--text-primary) !important;
+}
+
+body-light-theme .form-group input,
+body-light-theme .form-group textarea {
+    border-bottom-color: rgba(0, 0, 0, 0.1) !important;
+    color: var(--text-primary) !important;
+}
+
+body-light-theme .form-group label {
+    color: var(--text-secondary) !important;
+}
+
+/* Fix for theme toggle in light mode */
+body-light-theme .theme-toggle {
+    background: linear-gradient(135deg, #ff9f43, #ffbc80) !important;
+}
+
+/* CRITICAL DARK MODE FIX */
+body:not(.light-theme) {
+    --bg-primary: #050810 !important;
+    --bg-secondary: #080d1a !important;
+    --bg-card: rgba(15, 20, 35, 0.5) !important;
+    --text-primary: #ffffff !important;
+    --text-secondary: #9ba4bc !important;
+    
+    background-color: var(--bg-primary) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Make sure Dark Mode navbar styles are applied */
+body:not(.light-theme) .navbar {
+    background: rgba(5, 8, 16, 0.8) !important;
+    backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Make sure dark mode cards are visible */
+body:not(.light-theme) .glass-effect,
+body:not(.light-theme) .premium-glass,
+body:not(.light-theme) .service-card,
+body:not(.light-theme) .feature-card {
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+/* CRITICAL LIGHT MODE FIXES - FOR MAXIMUM VISIBILITY */
+body.light-theme {
+    /* Force background and text colors with max specificity */
+    --bg-primary: #f5f7fa !important;
+    --bg-secondary: #eef1f6 !important;
+    --bg-card: rgba(240, 245, 255, 0.7) !important;
+    --text-primary: #202842 !important; 
+    --text-secondary: #4d5a7a !important;
+    --card-shadow: 0 8px 25px rgba(0, 0, 0, 0.1) !important;
+    --glass-bg: rgba(255, 255, 255, 0.3) !important;
+    --glass-border: rgba(255, 255, 255, 0.5) !important;
+    
+    /* Force body background update */
+    background-color: var(--bg-primary) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Enhanced element visibility in light mode */
+body-light-theme .service-card h3,
+body-light-theme .feature-card h5,
+body-light-theme .service-hero h3,
+body-light-theme .mission-card h3,
+body-light-theme .vision-card h3,
+body-light-theme .value-card h3,
+body-light-theme .section-header h2,
+body-light-theme .contact-header h2,
+body-light-theme .step-content h5,
+body-light-theme .item-content h3,
+body-light-theme .social-connect h3,
+body-light-theme .about-card h3,
+body-light-theme .footer-column h4 {
+    color: var(--text-primary) !important;
+}
+
+/* High-contrast light mode elements */
+body-light-theme .service-card {
+    background: rgba(255, 255, 255, 0.5) !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+body-light-theme .service-tab {
+    background: rgba(255, 255, 255, 0.2) !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    color: #4d5a7a !important;
+}
+
+body-light-theme .service-tab.active {
+    background: var(--accent-color) !important;
+    color: white !important;
+}
+
+body-light-theme .icon-wrapper,
+body-light-theme .card-icon {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15) !important;
+}
+
+body-light-theme .glass-effect,
+body-light-theme .premium-glass {
+    background: rgba(255, 255, 255, 0.4) !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Critical fixes for content visibility */
+body-light-theme .service-content.active {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+body-light-theme .form-group input,
+body-light-theme .form-group textarea {
+    color: var(--text-primary) !important;
+    border-bottom-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+body-light-theme .form-group label {
+    color: var(--text-secondary) !important;
+}
+
+body-light-theme .service-card ul li,
+body-light-theme .section-content p {
+    color: var(--text-secondary) !important;
+}
+
+/* Address navbar and content in light mode */
+body-light-theme .navbar {
+    background: rgba(245, 247, 250, 0.85) !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07) !important;
+}
+
+body-light-theme .theme-toggle {
+    background: linear-gradient(135deg, #ff9f43, #ffbc80) !important;
+}
+
+/* Fix footer in light mode */
+body-light-theme .footer-enhanced {
+    background: #eef1f6 !important;
+}
+
+body-light-theme .footer-brand-info .company-desc,
+body-light-theme .footer-copyright,
+body-light-theme .footer-link,
+body-light-theme .legal-link,
+body-light-theme .footer-newsletter p {
+    color: var(--text-secondary) !important;
+}
+
+/* SUPER HIGH PRIORITY LIGHT THEME STYLES */
+/* These rules use multiple selectors and !important to maximize specificity */
+html.light-theme body,
+body-light-theme {
+    --bg-primary: #f5f7fa !important;
+    --bg-secondary: #eef1f6 !important;
+    --bg-card: rgba(240, 245, 255, 0.7) !important;
+    --text-primary: #202842 !important;
+    --text-secondary: #4d5a7a !important;
+    --card-shadow: 0 8px 25px rgba(0, 0, 0, 0.1) !important;
+    --glass-bg: rgba(255, 255, 255, 0.3) !important;
+    --glass-border: rgba(255, 255, 255, 0.5) !important;
+    
+    background-color: #f5f7fa !important;
+    color: #202842 !important;
+}
+
+/* Super-specific selector combinations to ensure light theme works */
+html-light-theme body .navbar,
+body-light-theme .navbar {
+    background: rgba(245, 247, 250, 0.9) !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08) !important;
+}
+
+html-light-theme body .glass-effect,
+html-light-theme body .premium-glass,
+html-light-theme body .service-card,
+html-light-theme body .feature-card,
+body-light-theme .glass-effect,
+body-light-theme .premium-glass,
+body-light-theme .service-card,
+body-light-theme .feature-card {
+    background: rgba(255, 255, 255, 0.5) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), inset 0 0 15px rgba(255, 255, 255, 0.5) !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Critical text color fixes */
+html-light-theme body .section-header h2,
+html-light-theme body .about-card h3,
+html-light-theme body .service-card h3,
+html-light-theme body .feature-card h5,
+html-light-theme body .contact-header h2,
+body-light-theme .section-header h2,
+body-light-theme .about-card h3,
+body-light-theme .service-card h3,
+body-light-theme .feature-card h5,
+body-light-theme .contact-header h2 {
+    color: #202842 !important;
+}
+
+/* Service tab specific fix */
+html-light-theme body .service-tab,
+body-light-theme .service-tab {
+    background: rgba(255, 255, 255, 0.3) !important;
+    color: #4d5a7a !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+html-light-theme body .service-tab.active,
+body-light-theme .service-tab.active {
+    background: var(--accent-color) !important;
+    color: white !important;
+}
+
+/* Critical service content fix */
+html-light-theme body .service-content.active,
+body-light-theme .service-content.active {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Form fields */
+html-light-theme body .form-group input,
+html-light-theme body .form-group textarea,
+body-light-theme .form-group input,
+body-light-theme .form-group textarea {
+    color: #202842 !important;
+    border-bottom-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+/* ENHANCED LIGHT THEME STYLING - CRITICAL OVERRIDES */
+body.light-theme {
+    --bg-primary: #f5f7fa !important;
+    --bg-secondary: #eef1f6 !important;
+    --bg-card: rgba(240, 245, 255, 0.7) !important;
+    --text-primary: #202842 !important;
+    --text-secondary: #4d5a7a !important;
+    --card-shadow: 0 8px 25px rgba(0, 0, 0, 0.1) !important;
+    --glass-bg: rgba(255, 255, 255, 0.3) !important;
+    --glass-border: rgba(255, 255, 255, 0.5) !important;
+    
+    background-color: var(--bg-primary) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Light Theme Specific Enhancements */
+body.light-theme .navbar {
+    background: rgba(245, 247, 250, 0.9) !important;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+}
+
+body-light-theme .glass-effect,
+body-light-theme .premium-glass,
+body-light-theme .service-card,
+body-light-theme .feature-card,
+body-light-theme .about-card,
+body-light-theme .info-card,
+body-light-theme .timeline-content,
+body-light-theme .guideline-card,
+body-light-theme .principle-card,
+body-light-theme .goal-card,
+body-light-theme .culture-point,
+body-light-theme .legal-toc {
+    background: rgba(255, 255, 255, 0.65) !important;
+    backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(0, 0, 0, 0.05) !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08) !important;
+}
+
+body-light-theme .service-tab {
+    background: rgba(240, 245, 255, 0.5) !important;
+    color: var(--text-secondary) !important;
+    border: 1px solid rgba(0, 0, 0, 0.03) !important;
+}
+
+body-light-theme .service-tab.active {
+    background: var(--accent-color) !important;
+    color: white !important;
+    border: 1px solid var(--accent-color) !important;
+}
+
+body-light-theme .hero-content h1,
+body-light-theme .section-header h2,
+body-light-theme .legal-hero h1 {
+    color: var(--text-primary) !important;
+    /* Use a different gradient for light mode to ensure visibility */
+    background: linear-gradient(45deg, #0057ff, #00b8ff) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+}
+
+body-light-theme .value-card .icon-feature,
+body-light-theme .card-icon,
+body-light-theme .timeline-icon,
+body-light-theme .goal-icon,
+body-light-theme .principle-icon {
+    box-shadow: 0 5px 15px rgba(0, 87, 255, 0.2) !important;
+}
+
+body-light-theme .stat-item {
+    background: rgba(240, 245, 255, 0.8) !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05) !important;
+    border: 1px solid rgba(0, 0, 0, 0.03) !important;
+}
+
+body-light-theme .stat-item:hover {
+    background: rgba(235, 240, 250, 0.9) !important;
+    transform: translateY(-5px) !important;
+}
+
+body-light-theme .footer-enhanced {
+    background: linear-gradient(to bottom, #e8eef9, #dbe5f2) !important;
+    color: var(--text-secondary) !important;
+}
+
+body-light-theme .footer-column h4,
+body-light-theme .mission-card h3, 
+body-light-theme .vision-card h3,
+body-light-theme .value-card h3,
+body-light-theme .about-card h3,
+body-light-theme .service-card h3,
+body-light-theme .guideline-header h3,
+body-light-theme .culture-point h3,
+body-light-theme .service-hero h3 {
+    color: var(--text-primary) !important;
+}
+
+body-light-theme .footer-link,
+body-light-theme .legal-link,
+body-light-theme .handbook-nav-link {
+    color: var(--text-secondary) !important;
+}
+
+body-light-theme .footer-link:hover,
+body-light-theme .legal-link:hover,
+body-light-theme .handbook-nav-link:hover {
+    color: var(--accent-color) !important;
+}
+
+body-light-theme .floating-actions .fab-button {
+    background: rgba(255, 255, 255, 0.8) !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) !important;
+    color: var(--text-primary) !important;
+}
+
+body-light-theme .floating-actions .fab-button:hover {
+    background: rgba(255, 255, 255, 0.95) !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+body-light-theme .theme-toggle i {
+    color: #0057ff !important;
+}
+
+/* Light theme specific fixes for heroic elements */
+body-light-theme .hero,
+body-light-theme .handbook-hero,
+body-light-theme .legal-hero {
+    background: linear-gradient(135deg, rgba(0, 87, 255, 0.05), rgba(0, 184, 255, 0.02)) !important;
+}
+
+body-light-theme .hero-subtitle,
+body-light-theme .hero-text p {
+    color: var(--text-secondary) !important;
+}
+
+/* Leadership section for founders */
+.leadership-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.genz-member.leadership {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    overflow: hidden;
+    transition: var(--hover-transition);
+    border-radius: 16px;
+    height: 100%;
+}
+
+.genz-member.leadership .member-photo {
+    height: 280px;
+}
+
+.genz-member.leadership .member-name {
+    font-size: 1.8rem;
+}
+
+.genz-member.leadership .member-title {
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+}
+
+.genz-member.leadership .member-bio {
+    padding: 0 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.genz-member.leadership .member-bio p {
+    margin-bottom: 0.75rem;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+/* Handle responsive layout for leadership cards */
+@media (max-width: 992px) {
+    .leadership-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .genz-member.leadership .member-photo {
+        height: 320px;
+    }
+}
+
+@media (max-width: 768px) {
+    .genz-member.leadership .member-photo {
+        height: 250px;
+    }
+}
+
+@media (max-width: 576px) {
+    .member-bio {
+        display: none; /* Hide detailed bio on small screens */
+    }
+    
+    .genz-member.leadership .member-photo {
+        height: 200px;
+    }
+}
+
+/* Light theme adjustments for leadership section */
+body.light-theme .genz-member.leadership .member-bio p {
+    color: #4d5a7a;
 }

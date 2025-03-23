@@ -1,0 +1,105 @@
+/* EMERGENCY LIGHT THEME FIXES - This file should be loaded directly in the head */
+
+/* Force core elements to have light theme ONLY when light-theme class is present */
+html.light-theme,
+html.light-theme body,
+body.light-theme {
+    background-color: #f5f7fa !important;
+    color: #202842 !important;
+}
+
+/* Critical text adjustments ONLY when in light theme */
+html.light-theme p,
+html.light-theme li,
+html-light-theme .legal-section p,
+html-light-theme .legal-section li,
+body-light-theme p,
+body-light-theme li,
+body-light-theme .legal-section p,
+body-light-theme .legal-section li {
+    color: #4d5a7a !important;
+}
+
+/* Critical section styles ONLY when in light theme */
+html.light-theme .legal-toc,
+body-light-theme .legal-toc {
+    background: rgba(255, 255, 255, 0.85) !important;
+    border: 1px solid rgba(0, 0, 0, 0.05) !important;
+    color: #202842 !important;
+}
+
+/* Style overrides when light theme is active */
+html.light-theme .legal-toc h2,
+body-light-theme .legal-toc h2 {
+    color: #202842 !important;
+}
+
+html.light-theme .legal-toc a,
+body-light-theme .legal-toc a {
+    color: #4d5a7a !important;
+}
+
+html.light-theme .legal-section h2,
+body-light-theme .legal-section h2 {
+    color: #202842 !important;
+    border-bottom-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+html.light-theme .legal-section h3,
+body-light-theme .legal-section h3 {
+    color: #0057ff !important;
+}
+
+html.light-theme .contact-info,
+body-light-theme .contact-info {
+    background: rgba(0, 0, 0, 0.03) !important;
+    color: #4d5a7a !important;
+}
+
+/* Footer elements */
+html.light-theme .footer-enhanced,
+body-light-theme .footer-enhanced {
+    background: linear-gradient(to bottom, #e8eef9, #dbe5f2) !important;
+}
+
+html.light-theme .footer-logo,
+body-light-theme .footer-logo {
+    color: #202842 !important;
+}
+
+html.light-theme .footer-column h4,
+body-light-theme .footer-column h4 {
+    color: #202842 !important;
+}
+
+html-light-theme .footer-link,
+body-light-theme .footer-link,
+html-light-theme .legal-link,
+body-light-theme .legal-link {
+    color: #4d5a7a !important;
+}
+
+html-light-theme .company-desc,
+body-light-theme .company-desc,
+html-light-theme .footer-copyright,
+body-light-theme .footer-copyright {
+    color: #4d5a7a !important;
+}
+
+/* Floating action buttons */
+html-light-theme .floating-actions .fab-button,
+body-light-theme .floating-actions .fab-button {
+    background: rgba(255, 255, 255, 0.9) !important;
+    color: #202842 !important;
+}
+
+html-light-theme .theme-toggle i,
+body-light-theme .theme-toggle i {
+    color: #0057ff !important;
+}
+
+/* Core dark theme styles should NOT be overridden */
+html:not(.light-theme) body:not(.light-theme) {
+    background-color: #050810;
+    color: #ffffff;
+}

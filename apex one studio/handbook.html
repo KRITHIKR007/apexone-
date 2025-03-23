@@ -4,6 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Company Handbook | ApexOne Studio</title>
+    
+    <!-- Critical immediate theme check - Must be first -->
+    <script>
+        // Immediate theme check before any rendering
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'light') {
+                document.documentElement.classList.add('light-theme');
+                document.write('<style>body{background-color:#f5f7fa!important;color:#202842!important;}</style>');
+            } else {
+                // Ensure light-theme is removed for dark mode
+                document.documentElement.classList.remove('light-theme');
+                document.write('<style>body:not(.light-theme){background-color:#050810!important;color:#ffffff!important;}</style>');
+            }
+        })();
+    </script>
+    
+    <!-- Theme Manager - Load Early -->
+    <script src="theme.js"></script>
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="./handbook.css">
     <!-- Font Awesome for icons -->
@@ -99,6 +118,30 @@
                         <h2>Company Overview</h2>
                     </div>
                     <div class="section-content">
+                        <div class="founder-section">
+                            <div class="founder-bios">
+                                <div class="founder-card glass-effect">
+                                    <h3>Founder & CEO</h3>
+                                    <p class="founder-name">Krithik R</p>
+                                    <div class="bio-content">
+                                        <p> computer science student with a passion for AI/ML solutions and business strategy, leading ApexOne Studio's vision and direction.</p>
+                                        <p>Enthusiast in emerging technologies and entrepreneurship, bringing innovative ideas to life through creative problem-solving.</p>
+                                        <p>Committed to bridging technology and business to create solutions that empower entrepreneurs and fellow students alike.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="founder-card glass-effect">
+                                    <h3>Co-founder & COO</h3>
+                                    <p class="founder-name">SHAILI</p>
+                                    <div class="bio-content">
+                                        <p>tech enthusiast with a growing expertise in software development and web technologies, overseeing technical solutions at ApexOne Studio.</p>
+                                        <p>Passionate about learning and applying the latest technologies to solve real-world problems with efficiency and elegance.</p>
+                                        <p>Dedicated to creating meaningful impact through technology while continuously expanding knowledge and skills in the field.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
                         <div class="company-info-grid">
                             <div class="info-card glass-effect">
                                 <div class="icon-wrapper">
@@ -656,10 +699,10 @@
                 </div>
                 
                 <div class="footer-legal">
-                    <a href="#" class="legal-link">Terms of Service</a>
-                    <a href="#" class="legal-link">Privacy Policy</a>
-                    <a href="#" class="legal-link">Cookie Policy</a>
-                    <a href="#" class="legal-link">Accessibility</a>
+                    <a href="terms-of-service.html" class="legal-link">Terms of Service</a>
+                    <a href="privacy-policy.html" class="legal-link">Privacy Policy</a>
+                    <a href="cookie-policy.html" class="legal-link">Cookie Policy</a>
+                    <a href="accessibility.html" class="legal-link">Accessibility</a>
                 </div>
             </div>
         </div>

@@ -294,6 +294,7 @@ document.querySelectorAll('.gallery-row').forEach(row => {
     galleryObserver.observe(row);
 });
 
+// Fix for stats animation
 function animateStats() {
     const stats = document.querySelectorAll('.stat-number');
     
@@ -317,18 +318,20 @@ function animateStats() {
 }
 
 // Add to your Intersection Observer
-const aboutObserver = new IntersectionObserver((entries) => {
+const statsObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             animateStats();
-            aboutObserver.unobserve(entry.target);
+            statsObserver.unobserve(entry.target);
         }
     });
 }, { threshold: 0.5 });
 
-document.querySelector('.about').forEach(section => {
-    aboutObserver.observe(section);
-});
+// Find stats section and observe it
+const statsSection = document.querySelector('.stats-grid');
+if (statsSection) {
+    statsObserver.observe(statsSection);
+}
 
 // Testimonials Slider
 function initTestimonialsSlider() {
@@ -868,3 +871,51 @@ document.addEventListener('DOMContentLoaded', function() {
 // Remove or comment out the old tab initialization functions to prevent conflicts
 // function initializeTabs() { ... }
 // function directTabInitialization() { ... }
+
+// Initialize theme functionality
+function initializeTheme() {
+    console.log("Using theme.js for theme management instead of built-in function");
+    // This function is kept for backward compatibility only
+    // All theme functionality is now in theme.js
+}
+
+function updateThemeIcon(isLightTheme) {
+    // This function is kept for backward compatibility only
+    // All theme functionality is now in theme.js
+}
+
+// Initialize scroll to top button
+function initializeScrollToTop() {
+    const scrollTopButton = document.querySelector('.scroll-top');
+    
+    if (scrollTopButton) {
+        // Show button when user scrolls down
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollTopButton.style.opacity = '1';
+                scrollTopButton.style.visibility = 'visible';
+            } else {
+                scrollTopButton.style.opacity = '0';
+                scrollTopButton.style.visibility = 'hidden';
+            }
+        });
+        
+        // Scroll to top on click
+        scrollTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+}
+
+// Call theme initialization in the DOMContentLoaded event
+document.addEventListener('DOMContentLoaded', () => {
+    // ...existing code...
+    
+    // Initialize theme functionality
+    initializeTheme();
+    
+    // ...existing code...
+});

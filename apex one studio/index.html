@@ -4,6 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apex One Studios</title>
+    
+    <!-- Critical immediate theme check - Must be first -->
+    <script>
+        // Immediate theme check before any rendering
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'light') {
+                document.documentElement.classList.add('light-theme');
+                document.write('<style>body{background-color:#f5f7fa!important;color:#202842!important;}html.light-theme body{background-color:#f5f7fa!important;}</style>');
+            } else {
+                // Ensure light-theme is removed for dark mode
+                document.documentElement.classList.remove('light-theme');
+                document.write('<style>body:not(.light-theme){background-color:#050810!important;color:#ffffff!important;}</style>');
+            }
+        })();
+    </script>
+    
+    <!-- Theme Manager - Load Early -->
+    <script src="theme.js"></script>
     <link rel="stylesheet" href="./styles.css">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -167,36 +186,48 @@
                     </div>
                 </div>
 
-                <!-- Stats Card -->
+                <!-- Stats Card - Updated with impact numbers -->
                 <div class="about-card glass-effect">
+                    <div class="card-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
                     <h3 class="stats-title">Our Impact</h3>
-                    <p class="stats-intro">Our growing portfolio reflects our commitment to excellence and innovation in every project we undertake.</p>
+                    <p class="stats-intro">Measuring our success through the growth and achievements of our clients.</p>
+                    
                     <div class="stats-grid">
                         <div class="stat-item">
-                            <div class="stat-number" data-value="100">0</div>
-                            <div class="stat-label">Projects</div>
+                            <div class="stat-number" data-value="95">0</div>
+                            <div class="stat-label">Client Satisfaction</div>
                             <div class="stat-icon">
-                                <i class="fas fa-project-diagram"></i>
+                                <i class="fas fa-smile"></i>
                             </div>
                         </div>
                         <div class="stat-item">
-                            <div class="stat-number" data-value="50">0</div>
-                            <div class="stat-label">Clients</div>
+                            <div class="stat-number" data-value="120">0</div>
+                            <div class="stat-label">Projects Completed</div>
                             <div class="stat-icon">
-                                <i class="fas fa-users"></i>
+                                <i class="fas fa-tasks"></i>
                             </div>
                         </div>
                         <div class="stat-item">
-                            <div class="stat-number" data-value="10">0</div>
-                            <div class="stat-label">Team Size</div>
+                            <div class="stat-number" data-value="42">0</div>
+                            <div class="stat-label">AI Solutions Deployed</div>
                             <div class="stat-icon">
-                                <i class="fas fa-user-friends"></i>
+                                <i class="fas fa-robot"></i>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-value="38">0</div>
+                            <div class="stat-label">Growth Rate (%)</div>
+                            <div class="stat-icon">
+                                <i class="fas fa-rocket"></i>
                             </div>
                         </div>
                     </div>
+                    
                     <div class="stat-highlight">
-                        <i class="fas fa-lightbulb"></i>
-                        <span>Turning innovative ideas into digital realities since 2025</span>
+                        <i class="fas fa-certificate"></i>
+                        <span>Driving digital transformation across 15+ industries</span>
                     </div>
                 </div>
             </div>
@@ -594,6 +625,11 @@
                         <div class="member-data">
                             <h3 class="member-name">KRITHIK R</h3>
                             <div class="member-title">CEO & VISIONARY</div>
+                            <div class="member-bio">
+                                <p>Cmputer science student with a passion for AI/ML solutions and business strategy, leading ApexOne Studio's vision and direction.</p>
+                                <p>Enthusiast in emerging technologies and entrepreneurship, bringing innovative ideas to life through creative problem-solving.</p>
+                                <p>Committed to bridging technology and business to create solutions that empower entrepreneurs and fellow students alike.</p>
+                            </div>
                             <div class="member-vibe">
                                 <span>#Leadership</span>
                                 <span>#Strategy</span>
@@ -618,6 +654,11 @@
                         <div class="member-data">
                             <h3 class="member-name">SHAILI</h3>
                             <div class="member-title">COO & STRATEGIST</div>
+                            <div class="member-bio">
+                                <p>Tech enthusiast with a growing expertise in software development and web technologies, overseeing technical solutions at ApexOne Studio.</p>
+                                <p>Passionate about learning and applying the latest technologies to solve real-world problems with efficiency and elegance.</p>
+                                <p>Dedicated to creating meaningful impact through technology while continuously expanding knowledge and skills in the field.</p>
+                            </div>
                             <div class="member-vibe">
                                 <span>#Operations</span>
                                 <span>#Research</span>
@@ -1031,18 +1072,20 @@
             </div>
             
             <div class="footer-legal">
-                <a href="#" class="legal-link">Terms of Service</a>
-                <a href="#" class="legal-link">Privacy Policy</a>
-                <a href="#" class="legal-link">Cookie Policy</a>
-                <a href="#" class="legal-link">Accessibility</a>
+                <a href="terms-of-service.html" class="legal-link">Terms of Service</a>
+                <a href="privacy-policy.html" class="legal-link">Privacy Policy</a>
+                <a href="cookie-policy.html" class="legal-link">Cookie Policy</a>
+                <a href="accessibility.html" class="legal-link">Accessibility</a>
             </div>
         </div>
     </div>
 </footer>
 
-    <!-- Scripts -->
+    <!-- Scripts - Update order to ensure proper initialization -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <!-- Load dedicated tabs script before main script -->
+    <script src="tabs.js"></script>
     <script src="script.js"></script>
 
     <!-- Add Direct Tab Functionality -->
@@ -1097,9 +1140,6 @@
             console.log("Direct tab system initialized!");
         });
     </script>
-
-    <!-- Dedicated tabs script -->
-    <script src="tabs.js"></script>
 
     <!-- Replace existing floating actions with premium ones -->
     <div class="floating-actions">

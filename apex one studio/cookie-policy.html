@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Policy | ApexOne Studio</title>
+    
+    <!-- Critical immediate theme check - Must be first -->
+    <script>
+        // Simple theme check that won't conflict with theme.js
+        (function() {
+            try {
+                const savedTheme = localStorage.getItem('theme');
+                if (savedTheme === 'light') {
+                    document.documentElement.classList.add('light-theme');
+                    // Minimal initial style to prevent flash
+                    document.write('<style>html.light-theme,body{background-color:#f5f7fa!important;}</style>');
+                }
+            } catch (e) {
+                console.error('Error in theme initialization:', e);
+            }
+        })();
+    </script>
+    
+    <!-- Critical Light Theme Styles - Load before any other CSS -->
+    <link rel="stylesheet" href="light-theme-critical.css">
+    
+    <!-- Theme Manager - Load Early -->
+    <script src="theme.js"></script>
+    
+    <!-- Regular Styles -->
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./legal.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Final theme reinforcement -->
+    <script>
+        // Make sure light theme is properly applied to body after DOM starts parsing
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'light') {
+                document.documentElement.classList.add('light-theme');
+                document.body.classList.add('light-theme');
+                console.log('Reinforced light theme on DOMContentLoaded');
+            }
+        });
+    </script>
+</head>
+<body>
+    <!-- Loading Overlay -->
+    <div class="loading-overlay">
+        <div class="loading-content">
+            <div class="loading-logo">A1</div>
+            <div class="loading-spinner"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar glass-nav">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="assets/images/logo.svg" alt="A1 Logo" class="logo-icon">
+                <div class="logo-text">
+                    <span class="logo-main">Apex One</span>
+                    <span class="logo-sub">Studios</span>
+                </div>
+            </div>
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#services" class="nav-link">Services</a></li>
+                <li><a href="index.html#team" class="nav-link">Team</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                <li><a href="handbook.html" class="nav-link">Handbook</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="legal-hero">
+        <div class="legal-hero-content">
+            <h1>Cookie Policy</h1>
+            <p class="hero-subtitle">Last Updated: June 1, 2025</p>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="legal-content">
+        <div class="container">
+            <div class="legal-toc glass-effect">
+                <h2>Table of Contents</h2>
+                <ul>
+                    <li><a href="#introduction">1. Introduction</a></li>
+                    <li><a href="#what-are-cookies">2. What Are Cookies</a></li>
+                    <li><a href="#types-of-cookies">3. Types of Cookies We Use</a></li>
+                    <li><a href="#purposes">4. Purposes of Cookies</a></li>
+                    <li><a href="#third-party">5. Third-Party Cookies</a></li>
+                    <li><a href="#control">6. Cookie Control</a></li>
+                    <li><a href="#privacy">7. Cookies and Privacy</a></li>
+                    <li><a href="#changes">8. Changes to Cookie Policy</a></li>
+                    <li><a href="#contact-us">9. Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <div class="legal-main">
+                <section id="introduction" class="legal-section">
+                    <h2>1. Introduction</h2>
+                    <p>This Cookie Policy explains how ApexOne Studio ("we", "us", or "our") uses cookies and similar technologies to recognize and remember you when you visit our website. It explains what these technologies are and why we use them, as well as your rights to control our use of them.</p>
+                </section>
+
+                <section id="what-are-cookies" class="legal-section">
+                    <h2>2. What Are Cookies</h2>
+                    <p>Cookies are small data files that are placed on your computer or mobile device when you visit a website. Cookies are widely used by website owners to make their websites work, or to work more efficiently, as well as to provide reporting information.</p>
+                    <p>Cookies set by the website owner (in this case, ApexOne Studio) are called "first-party cookies". Cookies set by parties other than the website owner are called "third-party cookies". Third-party cookies enable third-party features or functionality to be provided on or through the website (e.g., advertising, interactive content, and analytics).</p>
+                </section>
+
+                <section id="types-of-cookies" class="legal-section">
+                    <h2>3. Types of Cookies We Use</h2>
+                    <p>We use the following types of cookies:</p>
+                    <h3>Essential Cookies</h3>
+                    <p>These cookies are necessary for the website to function and cannot be switched off in our systems. They are usually only set in response to actions made by you which amount to a request for services, such as setting your privacy preferences, logging in, or filling in forms.</p>
+                    
+                    <h3>Performance Cookies</h3>
+                    <p>These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our site. They help us to know which pages are the most and least popular and see how visitors move around the site.</p>
+                    
+                    <h3>Functional Cookies</h3>
+                    <p>These cookies enable the website to provide enhanced functionality and personalization. They may be set by us or by third-party providers whose services we have added to our pages.</p>
+                    
+                    <h3>Targeting Cookies</h3>
+                    <p>These cookies may be set through our site by our advertising partners. They may be used by those companies to build a profile of your interests and show you relevant advertisements on other sites.</p>
+                </section>
+
+                <section id="purposes" class="legal-section">
+                    <h2>4. Purposes of Cookies</h2>
+                    <p>We use cookies for several reasons. Some cookies are required for technical reasons for our website to operate, and we refer to these as "essential" or "strictly necessary" cookies. Other cookies enable us to track and target the interests of our users to enhance the experience on our site. Third parties serve cookies through our website for advertising, analytics, and other purposes. This is described in more detail below.</p>
+                    <p>The specific types of first- and third-party cookies served through our website and the purposes they perform include:</p>
+                    <ul>
+                        <li><strong>Authentication and Security:</strong> To identify you when you login to our site and help ensure the security of your account.</li>
+                        <li><strong>Preferences:</strong> To remember information about how you prefer the site to behave and look, such as your preferred language or theme.</li>
+                        <li><strong>Analytics and Research:</strong> To help us understand how visitors interact with our website by collecting and reporting information anonymously.</li>
+                        <li><strong>Advertising:</strong> To make advertising more engaging to users and more valuable to publishers and advertisers.</li>
+                    </ul>
+                </section>
+
+                <section id="third-party" class="legal-section">
+                    <h2>5. Third-Party Cookies</h2>
+                    <p>Our website may use services provided by third parties, such as:</p>
+                    <ul>
+                        <li><strong>Google Analytics:</strong> For tracking website traffic and user behavior.</li>
+                        <li><strong>Social Media Buttons:</strong> To allow you to share content on platforms like Facebook, Twitter, and LinkedIn.</li>
+                        <li><strong>Advertising Networks:</strong> To deliver targeted advertisements.</li>
+                    </ul>
+                    <p>Each of these services may use cookies and may collect data about you, such as your IP address and browsing habits. They may use this data to provide us with analytics or to display advertisements targeted to your interests.</p>
+                </section>
+
+                <section id="control" class="legal-section">
+                    <h2>6. Cookie Control</h2>
+                    <p>Most web browsers allow some control of most cookies through the browser settings. To find out more about cookies, including how to see what cookies have been set, visit <a href="https://www.allaboutcookies.org/" target="_blank">www.allaboutcookies.org</a>.</p>
+                    <p>You can set or amend your web browser controls to accept or refuse cookies. If you choose to reject cookies, you may still use our website though your access to some functionality and areas of our website may be restricted. As the means by which you can refuse cookies through your web browser controls vary from browser-to-browser, you should visit your browser's help menu for more information.</p>
+                    <p>In addition, most advertising networks offer you a way to opt out of targeted advertising. If you would like to find out more information, please visit <a href="https://www.aboutads.info/choices/" target="_blank">www.aboutads.info/choices/</a> or <a href="https://www.youronlinechoices.com" target="_blank">www.youronlinechoices.com</a>.</p>
+                </section>
+
+                <section id="privacy" class="legal-section">
+                    <h2>7. Cookies and Privacy</h2>
+                    <p>Our <a href="privacy-policy.html">Privacy Policy</a> explains how we protect your privacy in our use of cookies and other information.</p>
+                </section>
+
+                <section id="changes" class="legal-section">
+                    <h2>8. Changes to Cookie Policy</h2>
+                    <p>We may update this Cookie Policy from time to time in order to reflect, for example, changes to the cookies we use or for other operational, legal, or regulatory reasons. Please therefore revisit this Cookie Policy regularly to stay informed about our use of cookies and related technologies.</p>
+                    <p>The date at the top of this Cookie Policy indicates when it was last updated.</p>
+                </section>
+
+                <section id="contact-us" class="legal-section">
+                    <h2>9. Contact Us</h2>
+                    <p>If you have any questions about our use of cookies or other technologies, please contact us at:</p>
+                    <ul class="contact-info">
+                        <li><strong>Email:</strong> apexonestudio@gmail.com</li>
+                        <li><strong>Phone:</strong> +91 9902079990</li>
+                        <li><strong>Address:</strong> Bangalore, Karnataka, India</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-enhanced">
+        <div class="footer-bg">
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+        
+        <div class="container">
+            <div class="footer-main">
+                <!-- Company Information -->
+                <div class="footer-brand-info">
+                    <div>
+                        <div class="footer-logo">A1</div>
+                        <p class="company-desc">ApexOne Studios is a cutting-edge tech agency specializing in AI-driven solutions, web development, digital marketing, and business consulting.</p>
+                    </div>
+                    
+                    <div class="social-links-premium">
+                        <a href="#" class="social-link-premium"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link-premium"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link-premium"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link-premium"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link-premium"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#about" class="footer-link"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="index.html#services" class="footer-link"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="index.html#team" class="footer-link"><i class="fas fa-chevron-right"></i> Team</a></li>
+                        <li><a href="index.html#contact" class="footer-link"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                        <li><a href="handbook.html" class="footer-link"><i class="fas fa-chevron-right"></i> Handbook</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Legal Pages -->
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="terms-of-service.html" class="footer-link"><i class="fas fa-chevron-right"></i> Terms of Service</a></li>
+                        <li><a href="privacy-policy.html" class="footer-link"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
+                        <li><a href="cookie-policy.html" class="footer-link"><i class="fas fa-chevron-right"></i> Cookie Policy</a></li>
+                        <li><a href="accessibility.html" class="footer-link"><i class="fas fa-chevron-right"></i> Accessibility</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Information -->
+                <div class="footer-column">
+                    <h4>Contact Us</h4>
+                    <div class="footer-locations">
+                        <div class="location-item">
+                            <div class="location-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="location-info">
+                                <h5>Headquarters</h5>
+                                <p>Bangalore, Karnataka<br>India</p>
+                            </div>
+                        </div>
+                        
+                        <div class="location-item">
+                            <div class="location-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="location-info">
+                                <h5>Email Us</h5>
+                                <p>apexonestudio@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-divider"></div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    &copy; 2025 ApexOne Studios. All rights reserved.
+                </div>
+                
+                <div class="footer-legal">
+                    <a href="terms-of-service.html" class="legal-link">Terms of Service</a>
+                    <a href="privacy-policy.html" class="legal-link">Privacy Policy</a>
+                    <a href="cookie-policy.html" class="legal-link">Cookie Policy</a>
+                    <a href="accessibility.html" class="legal-link">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="theme.js"></script>
+    
+    <!-- Add floating action buttons -->
+    <div class="floating-actions">
+        <button class="fab-button theme-toggle premium-glass" title="Toggle light/dark theme">
+            <i class="fas fa-moon"></i>
+        </button>
+        <button class="fab-button scroll-top premium-glass" title="Scroll to top" style="opacity: 0; visibility: hidden;">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </div>
+</body>
+</html>

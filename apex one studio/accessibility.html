@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility Statement | ApexOne Studio</title>
+    
+    <!-- Critical immediate theme check - Must be first -->
+    <script>
+        // Simple theme check that won't conflict with theme.js
+        (function() {
+            try {
+                const savedTheme = localStorage.getItem('theme');
+                if (savedTheme === 'light') {
+                    document.documentElement.classList.add('light-theme');
+                    // Minimal initial style to prevent flash
+                    document.write('<style>html.light-theme,body{background-color:#f5f7fa!important;}</style>');
+                }
+            } catch (e) {
+                console.error('Error in theme initialization:', e);
+            }
+        })();
+    </script>
+    
+    <!-- Critical Light Theme Styles - Load before any other CSS -->
+    <link rel="stylesheet" href="light-theme-critical.css">
+    
+    <!-- Theme Manager - Load Early -->
+    <script src="theme.js"></script>
+    
+    <!-- Regular Styles -->
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./legal.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Final theme reinforcement -->
+    <script>
+        // Make sure light theme is properly applied to body after DOM starts parsing
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'light') {
+                document.documentElement.classList.add('light-theme');
+                document.body.classList.add('light-theme');
+                console.log('Reinforced light theme on DOMContentLoaded');
+            }
+        });
+    </script>
+</head>
+<body>
+    <!-- Loading Overlay -->
+    <div class="loading-overlay">
+        <div class="loading-content">
+            <div class="loading-logo">A1</div>
+            <div class="loading-spinner"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar glass-nav">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="assets/images/logo.svg" alt="A1 Logo" class="logo-icon">
+                <div class="logo-text">
+                    <span class="logo-main">Apex One</span>
+                    <span class="logo-sub">Studios</span>
+                </div>
+            </div>
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#services" class="nav-link">Services</a></li>
+                <li><a href="index.html#team" class="nav-link">Team</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                <li><a href="handbook.html" class="nav-link">Handbook</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="legal-hero">
+        <div class="legal-hero-content">
+            <h1>Accessibility Statement</h1>
+            <p class="hero-subtitle">Last Updated: June 1, 2025</p>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="legal-content">
+        <div class="container">
+            <div class="legal-toc glass-effect">
+                <h2>Table of Contents</h2>
+                <ul>
+                    <li><a href="#commitment">1. Our Commitment</a></li>
+                    <li><a href="#standards">2. Accessibility Standards</a></li>
+                    <li><a href="#compatibility">3. Browser and Technology Compatibility</a></li>
+                    <li><a href="#features">4. Accessibility Features</a></li>
+                    <li><a href="#limitations">5. Known Limitations</a></li>
+                    <li><a href="#feedback">6. Feedback and Assistance</a></li>
+                    <li><a href="#assessment">7. Assessment Methods</a></li>
+                    <li><a href="#future">8. Future Enhancements</a></li>
+                    <li><a href="#contact-us">9. Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <div class="legal-main">
+                <section id="commitment" class="legal-section">
+                    <h2>1. Our Commitment</h2>
+                    <p>ApexOne Studio is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone and applying the relevant accessibility standards.</p>
+                    <p>We believe that all website visitors should be able to access and use our digital services, regardless of their abilities or disabilities. Our goal is to provide an inclusive experience that accommodates the diverse needs of our users.</p>
+                </section>
+
+                <section id="standards" class="legal-section">
+                    <h2>2. Accessibility Standards</h2>
+                    <p>We strive to conform to the Web Content Accessibility Guidelines (WCAG) 2.1 Level AA standards. These guidelines explain how to make web content more accessible to people with disabilities, including:</p>
+                    <ul>
+                        <li>Visual impairments, including blindness and low vision</li>
+                        <li>Hearing impairments</li>
+                        <li>Mobility limitations</li>
+                        <li>Cognitive disabilities</li>
+                    </ul>
+                    <p>We use these standards as a benchmark for our ongoing accessibility improvements and aim to exceed them where possible.</p>
+                </section>
+
+                <section id="compatibility" class="legal-section">
+                    <h2>3. Browser and Technology Compatibility</h2>
+                    <p>Our website is designed to be compatible with:</p>
+                    <ul>
+                        <li>Recent versions of major browsers (Chrome, Firefox, Safari, Edge)</li>
+                        <li>Screen readers and other assistive technologies</li>
+                        <li>Keyboard navigation</li>
+                        <li>Various display sizes and orientations</li>
+                    </ul>
+                    <p>We regularly test our site with assistive technologies to ensure compatibility and improve the experience for all users.</p>
+                </section>
+
+                <section id="features" class="legal-section">
+                    <h2>4. Accessibility Features</h2>
+                    <p>Our website includes the following accessibility features:</p>
+                    <ul>
+                        <li><strong>Semantic HTML:</strong> We use proper HTML elements to structure our content, making it easier for screen readers to interpret.</li>
+                        <li><strong>Text Alternatives:</strong> We provide alt text for images and multimedia content to ensure users with visual impairments can access the information.</li>
+                        <li><strong>Keyboard Navigation:</strong> All interactive elements are accessible via keyboard navigation.</li>
+                        <li><strong>Color Contrast:</strong> We ensure sufficient color contrast between text and background colors.</li>
+                        <li><strong>Scalable Text:</strong> Text can be resized without loss of functionality.</li>
+                        <li><strong>Focus Indicators:</strong> Visible focus indicators help keyboard users navigate the site.</li>
+                        <li><strong>ARIA Attributes:</strong> We use ARIA attributes where appropriate to enhance accessibility.</li>
+                        <li><strong>Theme Options:</strong> Light and dark theme options for users with light sensitivity or visual preferences.</li>
+                    </ul>
+                </section>
+
+                <section id="limitations" class="legal-section">
+                    <h2>5. Known Limitations</h2>
+                    <p>While we strive for full accessibility, we are aware of some current limitations:</p>
+                    <ul>
+                        <li>Some older content may not fully meet our current accessibility standards.</li>
+                        <li>Third-party content or services embedded in our site may have accessibility issues outside our control.</li>
+                        <li>Some complex interactive features may have limited accessibility.</li>
+                    </ul>
+                    <p>We are actively working to address these limitations and improve accessibility across all areas of our website.</p>
+                </section>
+
+                <section id="feedback" class="legal-section">
+                    <h2>6. Feedback and Assistance</h2>
+                    <p>We welcome your feedback on the accessibility of our website. If you encounter any barriers or have suggestions for improvement, please contact us using the information provided at the end of this statement.</p>
+                    <p>If you need assistance accessing any part of our website or services, please contact us, and we will provide reasonable accommodations to ensure you can access the information or services you need.</p>
+                </section>
+
+                <section id="assessment" class="legal-section">
+                    <h2>7. Assessment Methods</h2>
+                    <p>We assess and improve the accessibility of our website through:</p>
+                    <ul>
+                        <li>Regular automated accessibility testing</li>
+                        <li>Manual testing by our development team</li>
+                        <li>User testing with individuals who use assistive technologies</li>
+                        <li>Evaluation by external accessibility specialists</li>
+                        <li>Continuous education of our design and development teams</li>
+                    </ul>
+                </section>
+
+                <section id="future" class="legal-section">
+                    <h2>8. Future Enhancements</h2>
+                    <p>We are committed to continuous improvement in accessibility. Our planned enhancements include:</p>
+                    <ul>
+                        <li>Regular accessibility audits and remediation</li>
+                        <li>Expanded compatibility with assistive technologies</li>
+                        <li>Improved navigation options</li>
+                        <li>Enhanced multimedia accessibility</li>
+                        <li>User feedback integration into our development process</li>
+                    </ul>
+                </section>
+
+                <section id="contact-us" class="legal-section">
+                    <h2>9. Contact Us</h2>
+                    <p>If you have any questions, need assistance, or would like to provide feedback about the accessibility of our website, please contact us at:</p>
+                    <ul class="contact-info">
+                        <li><strong>Email:</strong> accessibility@apexonestudio.com</li>
+                        <li><strong>Phone:</strong> +91 9902079990</li>
+                        <li><strong>Address:</strong> Bangalore, Karnataka, India</li>
+                    </ul>
+                    <p>We value your input and are committed to making our digital services accessible to all users.</p>
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-enhanced">
+        <div class="footer-bg">
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+        
+        <div class="container">
+            <div class="footer-main">
+                <!-- Company Information -->
+                <div class="footer-brand-info">
+                    <div>
+                        <div class="footer-logo">A1</div>
+                        <p class="company-desc">ApexOne Studios is a cutting-edge tech agency specializing in AI-driven solutions, web development, digital marketing, and business consulting.</p>
+                    </div>
+                    
+                    <div class="social-links-premium">
+                        <a href="#" class="social-link-premium"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link-premium"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link-premium"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link-premium"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link-premium"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#about" class="footer-link"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="index.html#services" class="footer-link"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="index.html#team" class="footer-link"><i class="fas fa-chevron-right"></i> Team</a></li>
+                        <li><a href="index.html#contact" class="footer-link"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                        <li><a href="handbook.html" class="footer-link"><i class="fas fa-chevron-right"></i> Handbook</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Legal Pages -->
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="terms-of-service.html" class="footer-link"><i class="fas fa-chevron-right"></i> Terms of Service</a></li>
+                        <li><a href="privacy-policy.html" class="footer-link"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
+                        <li><a href="cookie-policy.html" class="footer-link"><i class="fas fa-chevron-right"></i> Cookie Policy</a></li>
+                        <li><a href="accessibility.html" class="footer-link"><i class="fas fa-chevron-right"></i> Accessibility</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Information -->
+                <div class="footer-column">
+                    <h4>Contact Us</h4>
+                    <div class="footer-locations">
+                        <div class="location-item">
+                            <div class="location-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="location-info">
+                                <h5>Headquarters</h5>
+                                <p>Bangalore, Karnataka<br>India</p>
+                            </div>
+                        </div>
+                        
+                        <div class="location-item">
+                            <div class="location-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="location-info">
+                                <h5>Email Us</h5>
+                                <p>apexonestudio@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-divider"></div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    &copy; 2025 ApexOne Studios. All rights reserved.
+                </div>
+                
+                <div class="footer-legal">
+                    <a href="terms-of-service.html" class="legal-link">Terms of Service</a>
+                    <a href="privacy-policy.html" class="legal-link">Privacy Policy</a>
+                    <a href="cookie-policy.html" class="legal-link">Cookie Policy</a>
+                    <a href="accessibility.html" class="legal-link">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="theme.js"></script>
+    
+    <!-- Add floating action buttons -->
+    <div class="floating-actions">
+        <button class="fab-button theme-toggle premium-glass" title="Toggle light/dark theme">
+            <i class="fas fa-moon"></i>
+        </button>
+        <button class="fab-button scroll-top premium-glass" title="Scroll to top" style="opacity: 0; visibility: hidden;">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </div>
+</body>
+</html>
