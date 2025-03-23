@@ -96,13 +96,6 @@ form.addEventListener('submit', (e) => {
     }, 2000);
 });
 
-// Clone cards for infinite scroll
-function setupInfiniteScroll() {
-    const servicesTrack = document.querySelector('.services-track');
-    const originalCards = servicesTrack.innerHTML;
-    servicesTrack.innerHTML = originalCards + originalCards;
-}
-
 // Initialize card tilt effect
 function initTiltEffect() {
     const cards = document.querySelectorAll('.service-card');
@@ -115,10 +108,10 @@ function initTiltEffect() {
             const centerX = rect.width / 2;
             const centerY = rect.height / 2;
             
-            const rotateX = (y - centerY) / 10;
-            const rotateY = (centerX - x) / 10;
+            const rotateX = (y - centerY) / 15;
+            const rotateY = (centerX - x) / 15;
             
-            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.05, 1.05, 1.05)`;
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.03, 1.03, 1.03)`;
         });
         
         card.addEventListener('mouseleave', () => {
@@ -129,7 +122,6 @@ function initTiltEffect() {
 
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    setupInfiniteScroll();
     initTiltEffect();
     setupGallery();
     initTestimonialsSlider();
@@ -138,6 +130,10 @@ document.addEventListener('DOMContentLoaded', () => {
     initFlowLines();
     initInnovatorCards();
     initMinimalCards();
+    
+    // Initialize service cards click handlers
+    initServiceCards();
+    
     // Initialize particles
     particlesJS('hero-particles', {
         particles: {
@@ -189,7 +185,35 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
+
+    // Initialize service tabs
+    setTimeout(initializeTabs, 100);
+    
+    // Initialize theme based on localStorage
+    initializeTheme();
+    
+    // Initialize scroll to top button
+    initializeScrollToTop();
 });
+
+// Add a new function to handle service card interactions
+function initServiceCards() {
+    const serviceCards = document.querySelectorAll('.service-card');
+    
+    serviceCards.forEach(card => {
+        card.addEventListener('click', () => {
+            // Extract service name for analytics or other purposes
+            const serviceName = card.querySelector('h3').textContent;
+            console.log(`Service selected: ${serviceName}`);
+            
+            // Redirect to contact section when clicked
+            document.querySelector('#contact').scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        });
+    });
+}
 
 // Initialize EmailJS
 (function() {
@@ -776,4 +800,71 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Initialize EmailJS if configured
 if (typeof emailjs !== 'undefined') {
     emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
-} 
+}
+
+// ULTRA-SIMPLE TAB SYSTEM - No fancy techniques, just pure reliable code
+document.addEventListener('DOMContentLoaded', function() {
+    // Remove all previous tab initialization functions
+    // and replace with this single, simple implementation
+    
+    console.log("Initializing service tabs with ultra-simple approach");
+    
+    // Direct selection of all tab elements
+    const tabs = document.querySelectorAll('.service-tab');
+    
+    // Add click listeners to each tab
+    tabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+            console.log('Tab clicked:', this.textContent.trim());
+            
+            // Get the target content ID from data-target attribute
+            const targetId = this.getAttribute('data-target');
+            
+            if (!targetId) {
+                console.error('Tab is missing data-target attribute');
+                return;
+            }
+            
+            console.log('Target content ID:', targetId);
+            
+            // Find the target content element
+            const targetContent = document.getElementById(targetId);
+            
+            if (!targetContent) {
+                console.error('Target content not found:', targetId);
+                return;
+            }
+            
+            // Remove active class from all tabs
+            tabs.forEach(t => t.classList.remove('active'));
+            
+            // Add active class to clicked tab
+            this.classList.add('active');
+            
+            // Get all content sections
+            const allContent = document.querySelectorAll('.service-content');
+            
+            // Hide all content sections
+            allContent.forEach(content => {
+                content.classList.remove('active');
+                content.style.display = 'none';
+            });
+            
+            // Show the target content
+            targetContent.classList.add('active');
+            targetContent.style.display = 'block';
+            
+            console.log('Tab switch completed successfully');
+        });
+    });
+    
+    // Initialize the first tab as active on page load
+    if (tabs.length > 0) {
+        // Trigger a click on the first tab to initialize everything
+        tabs[0].click();
+    }
+});
+
+// Remove or comment out the old tab initialization functions to prevent conflicts
+// function initializeTabs() { ... }
+// function directTabInitialization() { ... }

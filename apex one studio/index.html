@@ -49,6 +49,7 @@
                 <li><a href="#services" class="nav-link">Services</a></li>
                 <li><a href="#team" class="nav-link">Team</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="handbook.html" class="nav-link">Handbook</a></li>
             </ul>
         </div>
     </nav>
@@ -204,89 +205,378 @@
 
     <!-- Third: Services Section -->
     <section id="services" class="services">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">What We Do</span>
-                <h2>Our Services</h2>
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">What We Do</span>
+            <h2>Our Services</h2>
+            <p class="section-intro">We deliver cutting-edge solutions tailored to meet your specific needs and drive your business forward.</p>
+        </div>
+        
+        <!-- Service navigation - simplified and clear structure -->
+        <div class="service-tabs">
+            <button class="service-tab active" data-target="ai-ml">AI & Machine Learning</button>
+            <button class="service-tab" data-target="web-dev">Web Development</button>
+            <button class="service-tab" data-target="digital-marketing">Digital Marketing</button>
+            <button class="service-tab" data-target="business-consulting">Business Consulting</button>
+        </div>
+        
+        <!-- Service content sections - ensure proper IDs match data-target attributes -->
+        <div class="service-content-container">
+            <!-- AI & Machine Learning -->
+            <div id="ai-ml" class="service-content active" style="display: block;">
+                <div class="service-hero glass-effect">
+                    <div class="service-hero-content">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div>
+                            <h3>AI & Machine Learning</h3>
+                            <p>Harness the power of artificial intelligence to transform your business operations, improve decision-making, and create new opportunities for growth and innovation.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-details">
+                    <div class="service-info">
+                        <h4>How We Transform Your Business With AI</h4>
+                        <p>At ApexOne Studio, we harness cutting-edge AI and machine learning technologies to solve complex business problems and create competitive advantages for our clients. Our AI solutions are designed to be practical, scalable, and deliver measurable ROI.</p>
+                        
+                        <div class="service-process">
+                            <div class="process-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h5>Discovery & Analysis</h5>
+                                    <p>We start by understanding your business objectives, data landscape, and specific challenges to identify the best AI applications for your needs.</p>
+                                </div>
+                            </div>
+                            <div class="process-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h5>Solution Design</h5>
+                                    <p>Our team designs a custom AI solution that integrates seamlessly with your existing systems and processes, focusing on practical outcomes.</p>
+                                </div>
+                            </div>
+                            <div class="process-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h5>Development & Training</h5>
+                                    <p>We develop and train the AI models using your data, employing state-of-the-art techniques to ensure accuracy and performance.</p>
+                                </div>
+                            </div>
+                            <div class="process-step">
+                                <div class="step-number">4</div>
+                                <div class="step-content">
+                                    <h5>Implementation & Scaling</h5>
+                                    <p>Once validated, we deploy the solution in your environment and scale it to meet your operational requirements with continuous optimization.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-features">
+                        <div class="feature-card glass-effect">
+                            <i class="fas fa-robot"></i>
+                            <h5>Intelligent Automation</h5>
+                            <p>Automate complex tasks and workflows using AI to increase efficiency, reduce errors, and free up human resources for higher-value activities.</p>
+                        </div>
+                        <div class="feature-card glass-effect">
+                            <i class="fas fa-chart-line"></i>
+                            <h5>Predictive Analytics</h5>
+                            <p>Leverage machine learning to analyze historical data and forecast future trends, enabling proactive decision-making across your business.</p>
+                        </div>
+                        <div class="feature-card glass-effect">
+                            <i class="fas fa-comment-dots"></i>
+                            <h5>Natural Language Processing</h5>
+                            <p>Implement text and speech analysis solutions that can understand, interpret, and generate human language for improved customer interactions.</p>
+                        </div>
+                        <div class="feature-card glass-effect">
+                            <i class="fas fa-eye"></i>
+                            <h5>Computer Vision</h5>
+                            <p>Utilize image recognition and processing technologies to extract information, detect patterns, and automate visual inspection processes.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="service-cta glass-effect">
+                        <h4>Ready to harness the power of AI?</h4>
+                        <p>Let's discuss how our AI solutions can transform your business operations and drive growth.</p>
+                        <a href="#contact" class="cta-button primary">
+                            <span class="button-content">
+                                <i class="fas fa-paper-plane"></i>
+                                <span>Get Started</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
             </div>
             
-            <!-- Infinite Scroll Cards -->
-            <div class="infinite-scroll-container">
-                <div class="services-track">
-                    <!-- First Set -->
-                    <div class="service-card glass-effect">
-                        <div class="card-content">
-                            <div class="icon-wrapper">
-                                <i class="fas fa-robot"></i>
-                            </div>
-                            <h3>AI & Machine Learning</h3>
-                            <ul>
-                                <li>Custom AI models</li>
-                                <li>Predictive analytics</li>
-                                <li>Automation solutions</li>
-                            </ul>
-                            <div class="card-blur"></div>
+            <!-- Web Development -->
+            <div id="web-dev" class="service-content" style="display: none;">
+                <div class="service-hero glass-effect">
+                    <div class="service-hero-content">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-code"></i>
                         </div>
-                    </div>
-
-                    <div class="service-card glass-effect">
-                        <div class="card-content">
-                            <div class="icon-wrapper">
-                                <i class="fas fa-code"></i>
-                            </div>
+                        <div>
                             <h3>Web Development</h3>
-                            <ul>
-                                <li>Full-stack development</li>
-                                <li>UI/UX design</li>
-                                <li>E-commerce solutions</li>
-                            </ul>
-                            <div class="card-blur"></div>
+                            <p>Create powerful, responsive, and user-friendly web experiences that captivate your audience and drive conversions with our cutting-edge development services.</p>
                         </div>
                     </div>
-
-                    <div class="service-card glass-effect">
-                        <div class="card-content">
-                            <div class="icon-wrapper">
-                                <i class="fas fa-bullhorn"></i>
+                </div>
+                
+                <div class="service-details">
+                    <div class="service-info">
+                        <h4>Building Digital Experiences That Stand Out</h4>
+                        <p>Our web development team combines technical expertise with creative design to build websites and applications that are not only visually appealing but also functional, responsive, and optimized for performance and SEO. We deliver custom solutions that align with your brand identity and business objectives.</p>
+                        
+                        <div class="service-process">
+                            <div class="process-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h5>Strategy & Planning</h5>
+                                    <p>We start by understanding your business goals, target audience, and requirements to create a comprehensive development roadmap.</p>
+                                </div>
                             </div>
+                            <div class="process-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h5>Design & Prototyping</h5>
+                                    <p>Our designers create wireframes and interactive prototypes to visualize the user experience and interface before moving to development.</p>
+                                </div>
+                            </div>
+                            <div class="process-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h5>Development & Integration</h5>
+                                    <p>We build your website or application using modern frameworks and best practices, integrating all necessary functionality and third-party services.</p>
+                                </div>
+                            </div>
+                            <div class="process-step">
+                                <div class="step-number">4</div>
+                                <div class="step-content">
+                                    <h5>Testing & Launch</h5>
+                                    <p>We thoroughly test all aspects of the project to ensure quality, security, and performance before launching it to your audience.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-features">
+                        <div class="feature-card glass-effect">
+                            <i class="fas fa-laptop-code"></i>
+                            <h5>Custom Website Development</h5>
+                            <p>Tailored websites built from the ground up to match your unique brand identity and business needs with scalable, maintainable code.</p>
+                        </div>
+                        <div class="feature-card glass-effect">
+                            <i class="fas fa-shopping-cart"></i>
+                            <h5>E-Commerce Solutions</h5>
+                            <p>Powerful online stores with secure payment processing, inventory management, and seamless user experience to maximize conversions.</p>
+                        </div>
+                        <div class="feature-card glass-effect">
+                            <i class="fas fa-mobile-alt"></i>
+                            <h5>Responsive Design</h5>
+                            <p>Websites that adapt perfectly to any device or screen size, ensuring a consistent and user-friendly experience for all visitors.</p>
+                        </div>
+                        <div class="feature-card glass-effect">
+                            <i class="fas fa-cogs"></i>
+                            <h5>Web Application Development</h5>
+                            <p>Complex web applications with advanced functionality, user authentication, data management, and real-time features.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="service-cta glass-effect">
+                        <h4>Ready to elevate your web presence?</h4>
+                        <p>Let's create a website that not only looks great but delivers measurable results for your business.</p>
+                        <a href="#contact" class="cta-button primary">
+                            <span class="button-content">
+                                <i class="fas fa-paper-plane"></i>
+                                <span>Discuss Your Project</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Digital Marketing -->
+            <div id="digital-marketing" class="service-content" style="display: none;">
+                <div class="service-hero glass-effect">
+                    <div class="service-hero-content">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <div>
                             <h3>Digital Marketing</h3>
-                            <ul>
-                                <li>Social media management</li>
-                                <li>Content creation</li>
-                                <li>Brand strategy</li>
-                            </ul>
-                            <div class="card-blur"></div>
+                            <p>Increase your online visibility, engage your target audience, and drive conversions with our data-driven digital marketing strategies that deliver measurable results.</p>
                         </div>
                     </div>
-
-                    <div class="service-card glass-effect">
-                        <div class="card-content">
-                            <div class="icon-wrapper">
-                                <i class="fas fa-chart-line"></i>
+                </div>
+                
+                <div class="service-details">
+                    <div class="service-info">
+                        <h4>Amplifying Your Digital Presence</h4>
+                        <p>Our digital marketing services blend creativity with analytics to create integrated campaigns that not only reach your target audience but also engage and convert them. We focus on measurable results, constantly optimizing strategies to maximize ROI and achieve your business objectives through a customized mix of digital channels.</p>
+                        
+                        <div class="service-process">
+                            <div class="process-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h5>Research & Strategy</h5>
+                                    <p>We analyze your market, competitors, and audience to create a comprehensive marketing strategy aligned with your business goals.</p>
+                                </div>
                             </div>
-                            <h3>Business Consulting</h3>
-                            <ul>
-                                <li>Market research</li>
-                                <li>Strategy formulation</li>
-                                <li>Start-up consulting</li>
-                            </ul>
-                            <div class="card-blur"></div>
+                            <div class="process-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h5>Campaign Development</h5>
+                                    <p>Our team crafts compelling campaigns with engaging content, visuals, and messaging tailored to each channel and audience segment.</p>
+                                </div>
+                            </div>
+                            <div class="process-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h5>Implementation & Management</h5>
+                                    <p>We execute campaigns across selected channels, managing day-to-day operations, content publishing, and audience engagement.</p>
+                                </div>
+                            </div>
+                            <div class="process-step">
+                                <div class="step-number">4</div>
+                                <div class="step-content">
+                                    <h5>Analysis & Optimization</h5>
+                                    <p>We continuously monitor performance metrics, analyze results, and optimize campaigns to improve effectiveness and ROI.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
-                    <!-- Duplicate cards for infinite scroll effect -->
-                    <!-- Second Set (Duplicates) -->
-                    <!-- ... duplicate the above cards ... -->
+                    
+                    <div class="service-features">
+                        <div class="feature-card glass-effect">
+                            <i class="fas fa-search"></i>
+                            <h5>Search Engine Optimization</h5>
+                            <p>Improve your organic search visibility with comprehensive SEO strategies, including keyword research, on-page optimization, and link building.</p>
+                        </div>
+                        <div class="feature-card glass-effect">
+                            <i class="fas fa-ad"></i>
+                            <h5>Paid Advertising</h5>
+                            <p>Targeted ad campaigns across search engines and social media platforms that maximize reach and conversions while minimizing cost per acquisition.</p>
+                        </div>
+                        <div class="feature-card glass-effect">
+                            <i class="fas fa-share-alt"></i>
+                            <h5>Social Media Marketing</h5>
+                            <p>Strategic social media presence management, content creation, community engagement, and paid social campaigns to build brand awareness.</p>
+                        </div>
+                        <div class="feature-card glass-effect">
+                            <i class="fas fa-envelope-open-text"></i>
+                            <h5>Content & Email Marketing</h5>
+                            <p>Compelling content creation and targeted email campaigns that nurture leads, build relationships, and drive conversions throughout the customer journey.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="service-cta glass-effect">
+                        <h4>Ready to boost your digital marketing?</h4>
+                        <p>Let's create strategies that connect with your audience and drive meaningful business results.</p>
+                        <a href="#contact" class="cta-button primary">
+                            <span class="button-content">
+                                <i class="fas fa-paper-plane"></i>
+                                <span>Get a Strategy</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Business Consulting -->
+            <div id="business-consulting" class="service-content" style="display: none;">
+                <div class="service-hero glass-effect">
+                    <div class="service-hero-content">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div>
+                            <h3>Business Consulting</h3>
+                            <p>Navigate complex business challenges, identify new opportunities, and develop strategic roadmaps for sustainable growth with our expert consulting services.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-details">
+                    <div class="service-info">
+                        <h4>Transforming Challenges Into Opportunities</h4>
+                        <p>Our business consulting services provide expert guidance to help you navigate complex business challenges, seize new opportunities, and achieve sustainable growth. We partner with you to develop clear strategies and practical implementation plans tailored to your unique business context, industry dynamics, and organizational capabilities.</p>
+                        
+                        <div class="service-process">
+                            <div class="process-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h5>Assessment & Discovery</h5>
+                                    <p>We conduct a comprehensive analysis of your business, including operations, market position, competitive landscape, and growth opportunities.</p>
+                                </div>
+                            </div>
+                            <div class="process-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h5>Strategy Development</h5>
+                                    <p>Based on our findings, we collaborate with you to create a strategic roadmap with clear objectives, initiatives, and performance metrics.</p>
+                                </div>
+                            </div>
+                            <div class="process-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h5>Implementation Planning</h5>
+                                    <p>We develop detailed implementation plans, including resource requirements, timelines, risk mitigation strategies, and success criteria.</p>
+                                </div>
+                            </div>
+                            <div class="process-step">
+                                <div class="step-number">4</div>
+                                <div class="step-content">
+                                    <h5>Execution & Support</h5>
+                                    <p>Our team provides ongoing support and guidance during implementation, helping you overcome obstacles and adapt to changing conditions.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-features">
+                        <div class="feature-card glass-effect">
+                            <i class="fas fa-chart-pie"></i>
+                            <h5>Strategic Planning</h5>
+                            <p>Comprehensive strategic planning services to define your vision, mission, business objectives, and the roadmap to achieve them.</p>
+                        </div>
+                        <div class="feature-card glass-effect">
+                            <i class="fas fa-users-cog"></i>
+                            <h5>Operational Excellence</h5>
+                            <p>Process optimization, workflow redesign, and operational efficiency initiatives to improve productivity and reduce costs.</p>
+                        </div>
+                        <div class="feature-card glass-effect">
+                            <i class="fas fa-rocket"></i>
+                            <h5>Growth & Innovation</h5>
+                            <p>Market expansion strategies, new product development frameworks, and innovation management to drive sustainable growth.</p>
+                        </div>
+                        <div class="feature-card glass-effect">
+                            <i class="fas fa-handshake"></i>
+                            <h5>Digital Transformation</h5>
+                            <p>Technology adoption and digital transformation initiatives to enhance competitiveness and create new business opportunities.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="service-cta glass-effect">
+                        <h4>Ready to take your business to the next level?</h4>
+                        <p>Let's collaborate to develop strategies that drive sustainable growth and overcome your business challenges.</p>
+                        <a href="#contact" class="cta-button primary">
+                            <span class="button-content">
+                                <i class="fas fa-paper-plane"></i>
+                                <span>Book a Consultation</span>
+                            </span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Fourth: Team Section -->
     <section id="team" class="team">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">SQUAD</span>
                 <h2 class="glitch-text" data-text="THE CREW">THE CREW</h2>
             </div>
             
@@ -470,53 +760,65 @@
                 <!-- First Row -->
                 <div class="gallery-row">
                     <div class="gallery-item">
-                        <img src="path/to/project1.jpg" alt="Project 1">
+                        <img src="https://images.unsplash.com/photo-1535378620166-273708d44e4c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1050&q=80" alt="AI Solution Project">
                         <div class="gallery-overlay">
                             <h3>AI Solution</h3>
                             <p>Machine Learning Implementation</p>
                         </div>
                     </div>
                     <div class="gallery-item">
-                        <img src="path/to/project2.jpg" alt="Project 2">
+                        <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&auto=format&fit=crop&w=1050&q=80" alt="Web Development Project">
                         <div class="gallery-overlay">
                             <h3>Web Development</h3>
                             <p>E-commerce Platform</p>
                         </div>
                     </div>
                     <div class="gallery-item">
-                        <img src="path/to/project3.jpg" alt="Project 3">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1050&q=80" alt="Digital Marketing Project">
                         <div class="gallery-overlay">
                             <h3>Digital Marketing</h3>
                             <p>Social Media Campaign</p>
                         </div>
                     </div>
-                    <!-- Add more items as needed -->
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1050&q=80" alt="Business Strategy Project">
+                        <div class="gallery-overlay">
+                            <h3>Business Strategy</h3>
+                            <p>Growth Planning Framework</p>
+                        </div>
+                    </div>
                 </div>
                 
                 <!-- Second Row (Reverse Direction) -->
                 <div class="gallery-row reverse">
                     <div class="gallery-item">
-                        <img src="path/to/project4.jpg" alt="Project 4">
+                        <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1050&q=80" alt="UI/UX Design Project">
                         <div class="gallery-overlay">
                             <h3>UI/UX Design</h3>
                             <p>Mobile App Interface</p>
                         </div>
                     </div>
                     <div class="gallery-item">
-                        <img src="path/to/project5.jpg" alt="Project 5">
+                        <img src="https://images.unsplash.com/photo-1587614382346-4ec70e388b28?ixlib=rb-4.0.3&auto=format&fit=crop&w=1050&q=80" alt="Branding Project">
                         <div class="gallery-overlay">
                             <h3>Branding</h3>
                             <p>Corporate Identity</p>
                         </div>
                     </div>
                     <div class="gallery-item">
-                        <img src="path/to/project6.jpg" alt="Project 6">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=1050&q=80" alt="Consulting Project">
                         <div class="gallery-overlay">
                             <h3>Consulting</h3>
                             <p>Business Strategy</p>
                         </div>
                     </div>
-                    <!-- Add more items as needed -->
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1050&q=80" alt="Data Analytics Project">
+                        <div class="gallery-overlay">
+                            <h3>Data Analytics</h3>
+                            <p>Performance Insights</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -526,150 +828,285 @@
 
     <!-- Sixth: Contact Section -->
     <section id="contact" class="contact">
-        <div class="contact-wrapper">
-            <div class="contact-info glass-effect">
-                <div class="contact-header">
-                    <h2>Get In Touch</h2>
-                    <p>Let's discuss your next big project</p>
-                </div>
-                
-                <div class="contact-details">
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div class="item-content">
-                            <h3>Location</h3>
-                            <p>Bangalore, India</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div class="item-content">
-                            <h3>Email</h3>
-                            <p>rkrithik795@gmail.com</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div class="item-content">
-                            <h3>Phone</h3>
-                            <p>+91 9902079990</p>
-                        </div>
+    <!-- Add premium background effect -->
+    <div class="premium-bg">
+        <div class="premium-circle"></div>
+        <div class="premium-circle"></div>
+        <div class="premium-circle"></div>
+    </div>
+    
+    <div class="contact-wrapper">
+        <div class="contact-info premium-glass">
+            <div class="contact-header">
+                <h2>Get In Touch</h2>
+                <p>Let's discuss your next big project</p>
+            </div>
+            
+            <div class="contact-details">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="item-content">
+                        <h3>Location</h3>
+                        <p>Bangalore, India</p>
                     </div>
                 </div>
                 
-                <div class="social-connect">
-                    <h3>Connect With Us</h3>
-                    <div class="social-links">
-                        <a href="#" class="social-btn"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-btn"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-btn"><i class="fab fa-github"></i></a>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div class="item-content">
+                        <h3>Email</h3>
+                        <p>rkrithik795@gmail.com</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div class="item-content">
+                        <h3>Phone</h3>
+                        <p>+91 9902079990</p>
                     </div>
                 </div>
             </div>
-
-            <form class="contact-form glass-effect" id="contactForm" onsubmit="sendEmail(event)">
-                <div class="form-header">
-                    <h2>Send Message</h2>
-                    <p>Fill out the form below</p>
+            
+            <div class="social-connect">
+                <h3>Connect With Us</h3>
+                <div class="social-links-premium">
+                    <a href="#" class="social-link-premium"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-link-premium"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link-premium"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link-premium"><i class="fab fa-github"></i></a>
                 </div>
-                
-                <div class="form-group floating">
-                    <input type="text" id="name" required>
-                    <label for="name">Your Name</label>
-                    <div class="form-border"></div>
-                </div>
-                
-                <div class="form-group floating">
-                    <input type="email" id="email" required>
-                    <label for="email">Your Email</label>
-                    <div class="form-border"></div>
-                </div>
-                
-                <div class="form-group floating">
-                    <input type="text" id="subject" required>
-                    <label for="subject">Subject</label>
-                    <div class="form-border"></div>
-                </div>
-                
-                <div class="form-group floating">
-                    <textarea id="message" required></textarea>
-                    <label for="message">Your Message</label>
-                    <div class="form-border"></div>
-                </div>
-                
-                <button type="submit" class="submit-btn">
-                    <span>Send Message</span>
-                    <i class="fas fa-paper-plane"></i>
-                </button>
-            </form>
+            </div>
         </div>
-    </section>
 
-    <!-- Last: Footer -->
-    <footer class="footer">
-        <div class="parallax-bg"></div>
-        <div class="footer-top">
-            <div class="container">
-                <div class="footer-grid">
-                    <div class="footer-brand">
-                        <div class="footer-logo">A1</div>
-                        <p>Innovating for tomorrow, delivering excellence today.</p>
-                        <div class="footer-contact">
-                            <p><i class="fas fa-map-marker-alt"></i> Bangalore, India</p>
-                            <p><i class="fas fa-envelope"></i> rkrithik795@gmail.com</p>
+        <form class="contact-form premium-glass" id="contactForm" onsubmit="sendEmail(event)">
+            <div class="form-header">
+                <h2>Send Message</h2>
+                <p>Fill out the form below</p>
+            </div>
+            
+            <div class="form-group floating">
+                <input type="text" id="name" required>
+                <label for="name">Your Name</label>
+                <div class="form-border"></div>
+            </div>
+            
+            <div class="form-group floating">
+                <input type="email" id="email" required>
+                <label for="email">Your Email</label>
+                <div class="form-border"></div>
+            </div>
+            
+            <div class="form-group floating">
+                <input type="text" id="subject" required>
+                <label for="subject">Subject</label>
+                <div class="form-border"></div>
+            </div>
+            
+            <div class="form-group floating">
+                <textarea id="message" required></textarea>
+                <label for="message">Your Message</label>
+                <div class="form-border"></div>
+            </div>
+            
+            <button type="submit" class="submit-btn premium-btn">
+                <span>Send Message</span>
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </form>
+    </div>
+</section>
+
+<!-- Enhanced Premium Footer -->
+<footer class="footer-enhanced">
+    <div class="footer-bg">
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+    
+    <div class="container">
+        <div class="footer-main">
+            <!-- Company Information -->
+            <div class="footer-brand-info">
+                <div>
+                    <div class="footer-logo">A1</div>
+                    <p class="company-desc">ApexOne Studios is a cutting-edge tech agency specializing in AI-driven solutions, web development, digital marketing, and business consulting. Founded in 2025, we're committed to innovation and excellence.</p>
+                    <div class="footer-awards">
+                        <div class="award-badge" title="Top Tech Startup 2025"><i class="fas fa-trophy"></i></div>
+                        <div class="award-badge" title="AI Innovation Award"><i class="fas fa-robot"></i></div>
+                        <div class="award-badge" title="Digital Excellence"><i class="fas fa-award"></i></div>
+                    </div>
+                </div>
+                
+                <div class="social-links-premium">
+                    <a href="#" class="social-link-premium"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-link-premium"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link-premium"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link-premium"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link-premium"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <!-- Quick Links -->
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#about" class="footer-link"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                    <li><a href="#services" class="footer-link"><i class="fas fa-chevron-right"></i> Services</a></li>
+                    <li><a href="#team" class="footer-link"><i class="fas fa-chevron-right"></i> Team</a></li>
+                    <li><a href="#gallery" class="footer-link"><i class="fas fa-chevron-right"></i> Projects</a></li>
+                    <li><a href="#contact" class="footer-link"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    <li><a href="handbook.html" class="footer-link"><i class="fas fa-chevron-right"></i> Handbook</a></li>
+                </ul>
+            </div>
+            
+            <!-- Services -->
+            <div class="footer-column">
+                <h4>Services</h4>
+                <ul class="footer-links">
+                    <li><a href="#services" class="footer-link"><i class="fas fa-chevron-right"></i> AI Solutions</a></li>
+                    <li><a href="#services" class="footer-link"><i class="fas fa-chevron-right"></i> Web Development</a></li>
+                    <li><a href="#services" class="footer-link"><i class="fas fa-chevron-right"></i> Digital Marketing</a></li>
+                    <li><a href="#services" class="footer-link"><i class="fas fa-chevron-right"></i> Business Consulting</a></li>
+                    <li><a href="#services" class="footer-link"><i class="fas fa-chevron-right"></i> Brand Strategy</a></li>
+                    <li><a href="#services" class="footer-link"><i class="fas fa-chevron-right"></i> UI/UX Design</a></li>
+                </ul>
+            </div>
+            
+            <!-- Contact Information -->
+            <div class="footer-column">
+                <h4>Contact Us</h4>
+                <div class="footer-locations">
+                    <div class="location-item">
+                        <div class="location-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="location-info">
+                            <h5>Headquarters</h5>
+                            <p>Bangalore, Karnataka<br>India</p>
                         </div>
                     </div>
-                    <div class="footer-links">
-                        <h4>Quick Links</h4>
-                        <ul>
-                            <li><a href="#about">About Us</a></li>
-                            <li><a href="#services">Services</a></li>
-                            <li><a href="#team">Team</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
+                    
+                    <div class="location-item">
+                        <div class="location-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="location-info">
+                            <h5>Email Us</h5>
+                            <p>rkrithik795@gmail.com<br>support@apexonestudio.com</p>
+                        </div>
                     </div>
-                    <div class="footer-links">
-                        <h4>Services</h4>
-                        <ul>
-                            <li><a href="#services">AI Solutions</a></li>
-                            <li><a href="#services">Web Development</a></li>
-                            <li><a href="#services">Digital Marketing</a></li>
-                            <li><a href="#services">Consulting</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-social">
-                        <h4>Connect With Us</h4>
-                        <div class="social-links">
-                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    
+                    <div class="location-item">
+                        <div class="location-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="location-info">
+                            <h5>Call Us</h5>
+                            <p>+91 9902079990<br>Mon-Fri: 9am-6pm</p>
                         </div>
                     </div>
                 </div>
             </div>
+            
+            <!-- Newsletter -->
+            <div class="footer-column footer-newsletter">
+                <h4>Newsletter</h4>
+                <p>Subscribe to our newsletter to receive updates on our latest projects, industry insights, and company news.</p>
+                
+                <div class="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="Your email address">
+                    <button class="newsletter-btn"><i class="fas fa-paper-plane"></i></button>
+                </div>
+                
+                <p class="newsletter-note">By subscribing, you agree to our <a href="#" class="hover-underline">Privacy Policy</a>.</p>
+            </div>
         </div>
+        
+        <div class="footer-divider"></div>
+        
         <div class="footer-bottom">
-            <div class="container">
-                <p>&copy; 2025 Apex One Studios. All rights reserved.</p>
+            <div class="footer-copyright">
+                &copy; 2025 ApexOne Studios. All rights reserved.
+            </div>
+            
+            <div class="footer-legal">
+                <a href="#" class="legal-link">Terms of Service</a>
+                <a href="#" class="legal-link">Privacy Policy</a>
+                <a href="#" class="legal-link">Cookie Policy</a>
+                <a href="#" class="legal-link">Accessibility</a>
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
     <script src="script.js"></script>
 
-    <!-- Add floating action buttons -->
+    <!-- Add Direct Tab Functionality -->
+    <script>
+        // Direct tab functionality - completely isolated from other code
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log("Direct tab system initializing...");
+            
+            // Get all tabs and content sections
+            const tabs = document.querySelectorAll('.service-tab');
+            const contents = document.querySelectorAll('.service-content');
+            
+            // Add click event directly to each tab
+            tabs.forEach(function(tab) {
+                tab.addEventListener('click', function() {
+                    const targetId = this.getAttribute('data-target');
+                    console.log("Tab clicked: " + targetId);
+                    
+                    // Deactivate all tabs
+                    tabs.forEach(function(t) {
+                        t.classList.remove('active');
+                    });
+                    
+                    // Activate clicked tab
+                    this.classList.add('active');
+                    
+                    // Hide all content sections
+                    contents.forEach(function(content) {
+                        content.classList.remove('active');
+                        content.style.display = 'none';
+                    });
+                    
+                    // Show target content
+                    const targetContent = document.getElementById(targetId);
+                    if (targetContent) {
+                        targetContent.classList.add('active');
+                        targetContent.style.display = 'block';
+                        console.log("Showing content: " + targetId);
+                    } else {
+                        console.error("Target content not found: " + targetId);
+                    }
+                });
+            });
+            
+            // Activate first tab on page load
+            console.log("Setting initial tab state...");
+            if (tabs.length > 0) {
+                // Force a click on the first tab
+                tabs[0].click();
+            }
+            
+            console.log("Direct tab system initialized!");
+        });
+    </script>
+
+    <!-- Dedicated tabs script -->
+    <script src="tabs.js"></script>
+
+    <!-- Replace existing floating actions with premium ones -->
     <div class="floating-actions">
-        <button class="fab-button theme-toggle">
+        <button class="fab-button theme-toggle premium-glass" title="Toggle light/dark theme">
             <i class="fas fa-moon"></i>
         </button>
-        <button class="fab-button scroll-top">
+        <button class="fab-button scroll-top premium-glass" title="Scroll to top" style="opacity: 0; visibility: hidden;">
             <i class="fas fa-arrow-up"></i>
         </button>
     </div>
