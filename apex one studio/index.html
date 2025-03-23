@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex One Studios</title>
+    <link rel="stylesheet" href="./styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Add Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+    <!-- Add GenZ Floating Shapes -->
+    <div class="floating-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    
+    <!-- Loading Overlay -->
+    <div class="loading-overlay">
+        <div class="loading-content">
+            <div class="loading-logo">A1</div>
+            <div class="loading-spinner"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar glass-nav">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="assets/images/logo.svg" alt="A1 Logo" class="logo-icon">
+                <div class="logo-text">
+                    <span class="logo-main">Apex One</span>
+                    <span class="logo-sub">Studios</span>
+                </div>
+            </div>
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#team" class="nav-link">Team</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- First: Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-particles"></div>
+        <div class="hero-content">
+            <h1 class="glitch" data-text="Apex One Studios">Apex One Studios</h1>
+            <p class="hero-subtitle">Where Innovation Meets Excellence</p>
+            <div class="hero-text">
+                <p>Bridging the gap between cutting-edge technology and creative excellence</p>
+                <p class="location">Founded in 2025 • Bangalore, India</p>
+            </div>
+            <div class="cta-group">
+                <a href="#contact" class="cta-button primary">
+                    <span class="button-content">
+                        <i class="fas fa-rocket"></i>
+                        <span>Get Started</span>
+                    </span>
+                    <span class="button-border"></span>
+                </a>
+                <a href="#services" class="cta-button secondary">
+                    <span class="button-content">
+                        <i class="fas fa-cube"></i>
+                        <span>Our Services</span>
+                    </span>
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <div class="arrow"></div>
+        </div>
+    </section>
+
+    <!-- Second: About Section -->
+    <section id="about" class="about">
+        <div class="about-wrapper">
+            <div class="section-header">
+                <span class="section-tag">About Us</span>
+                <h2>Innovating Tomorrow</h2>
+                <p class="section-intro">At Apex One Studios, we're not just building digital solutions—we're architecting the future. Our student-led team combines fresh perspectives with cutting-edge expertise to deliver innovative solutions that transcend expectations.</p>
+            </div>
+
+            <div class="about-grid">
+                <!-- Vision Card (Full Width) -->
+                <div class="about-card glass-effect vision-card">
+                    <div class="vision-content">
+                        <div class="vision-header">
+                            <div class="card-icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <div>
+                                <h3>Our Vision</h3>
+                                <p class="vision-subtitle">Revolutionizing digital landscapes through cutting-edge technology</p>
+                            </div>
+                        </div>
+                        
+                        <div class="vision-main">
+                            <p class="vision-description">We're not just building solutions; we're shaping the future through innovation, creativity, and technical excellence at every step of the journey.</p>
+                            
+                            <div class="vision-points">
+                                <div class="vision-point">
+                                    <i class="fas fa-bullseye"></i>
+                                    <span>Forward-thinking digital innovation</span>
+                                </div>
+                                <div class="vision-point">
+                                    <i class="fas fa-brain"></i>
+                                    <span>AI-powered solutions for complex challenges</span>
+                                </div>
+                                <div class="vision-point">
+                                    <i class="fas fa-rocket"></i>
+                                    <span>Elevating businesses through technological excellence</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="highlight-box">
+                            <span>Est. 2025</span>
+                            <span>Bangalore, India</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mission Statement -->
+                <div class="about-card glass-effect featured">
+                    <div class="mission-content">
+                        <h3>Why Choose Us?</h3>
+                        <p class="mission-intro">We combine youthful innovation with technical expertise to create solutions that are both cutting-edge and practical.</p>
+                        <div class="mission-points">
+                            <div class="point">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Student-Driven Innovation</span>
+                                <small>Fresh perspectives backed by academic excellence</small>
+                            </div>
+                            <div class="point">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Cutting-edge Technology</span>
+                                <small>Leveraging the latest in AI, ML and web development</small>
+                            </div>
+                            <div class="point">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Creative Excellence</span>
+                                <small>Where technical expertise meets artistic vision</small>
+                            </div>
+                            <div class="point">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Affordable Solutions</span>
+                                <small>Enterprise-quality output without the enterprise price tag</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats Card -->
+                <div class="about-card glass-effect">
+                    <h3 class="stats-title">Our Impact</h3>
+                    <p class="stats-intro">Our growing portfolio reflects our commitment to excellence and innovation in every project we undertake.</p>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number" data-value="100">0</div>
+                            <div class="stat-label">Projects</div>
+                            <div class="stat-icon">
+                                <i class="fas fa-project-diagram"></i>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-value="50">0</div>
+                            <div class="stat-label">Clients</div>
+                            <div class="stat-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-value="10">0</div>
+                            <div class="stat-label">Team Size</div>
+                            <div class="stat-icon">
+                                <i class="fas fa-user-friends"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stat-highlight">
+                        <i class="fas fa-lightbulb"></i>
+                        <span>Turning innovative ideas into digital realities since 2025</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Third: Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">What We Do</span>
+                <h2>Our Services</h2>
+            </div>
+            
+            <!-- Infinite Scroll Cards -->
+            <div class="infinite-scroll-container">
+                <div class="services-track">
+                    <!-- First Set -->
+                    <div class="service-card glass-effect">
+                        <div class="card-content">
+                            <div class="icon-wrapper">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <h3>AI & Machine Learning</h3>
+                            <ul>
+                                <li>Custom AI models</li>
+                                <li>Predictive analytics</li>
+                                <li>Automation solutions</li>
+                            </ul>
+                            <div class="card-blur"></div>
+                        </div>
+                    </div>
+
+                    <div class="service-card glass-effect">
+                        <div class="card-content">
+                            <div class="icon-wrapper">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h3>Web Development</h3>
+                            <ul>
+                                <li>Full-stack development</li>
+                                <li>UI/UX design</li>
+                                <li>E-commerce solutions</li>
+                            </ul>
+                            <div class="card-blur"></div>
+                        </div>
+                    </div>
+
+                    <div class="service-card glass-effect">
+                        <div class="card-content">
+                            <div class="icon-wrapper">
+                                <i class="fas fa-bullhorn"></i>
+                            </div>
+                            <h3>Digital Marketing</h3>
+                            <ul>
+                                <li>Social media management</li>
+                                <li>Content creation</li>
+                                <li>Brand strategy</li>
+                            </ul>
+                            <div class="card-blur"></div>
+                        </div>
+                    </div>
+
+                    <div class="service-card glass-effect">
+                        <div class="card-content">
+                            <div class="icon-wrapper">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h3>Business Consulting</h3>
+                            <ul>
+                                <li>Market research</li>
+                                <li>Strategy formulation</li>
+                                <li>Start-up consulting</li>
+                            </ul>
+                            <div class="card-blur"></div>
+                        </div>
+                    </div>
+
+                    <!-- Duplicate cards for infinite scroll effect -->
+                    <!-- Second Set (Duplicates) -->
+                    <!-- ... duplicate the above cards ... -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fourth: Team Section -->
+    <section id="team" class="team">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">SQUAD</span>
+                <h2 class="glitch-text" data-text="THE CREW">THE CREW</h2>
+            </div>
+            
+            <div class="genz-team-grid">
+                <!-- Leadership Row -->
+                <div class="leadership-row">
+                    <!-- CEO -->
+                    <div class="genz-member leadership">
+                        <div class="member-photo">
+                            <div class="image-wrapper">
+                                <img src="assets/images/KRITHIK.R.jpg" alt="Krithik R">
+                            </div>
+                            <div class="status-badge">FOUNDER</div>
+                        </div>
+                        <div class="member-data">
+                            <h3 class="member-name">KRITHIK R</h3>
+                            <div class="member-title">CEO & VISIONARY</div>
+                            <div class="member-vibe">
+                                <span>#Leadership</span>
+                                <span>#Strategy</span>
+                                <span>#AI/ML</span>
+                            </div>
+                            <div class="member-socials">
+                                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- COO -->
+                    <div class="genz-member leadership">
+                        <div class="member-photo">
+                            <div class="image-wrapper">
+                                <img src="assets/images/shaili.jpg" alt="Shaili">
+                            </div>
+                            <div class="status-badge">CO-FOUNDER</div>
+                        </div>
+                        <div class="member-data">
+                            <h3 class="member-name">SHAILI</h3>
+                            <div class="member-title">COO & STRATEGIST</div>
+                            <div class="member-vibe">
+                                <span>#Operations</span>
+                                <span>#Research</span>
+                            </div>
+                            <div class="member-socials">
+                                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTO -->
+                <div class="genz-member">
+                    <div class="member-photo">
+                        <div class="image-wrapper">
+                            <img src="assets/images/kanishk.jpg" alt="Kanishk">
+                        </div>
+                        <div class="status-badge">TECH LEAD</div>
+                    </div>
+                    <div class="member-data">
+                        <h3 class="member-name">KANISHK</h3>
+                        <div class="member-title">CTO & DEVELOPER</div>
+                        <div class="member-vibe">
+                            <span>#Tech</span>
+                            <span>#AI/ML</span>
+                            <span>#Code</span>
+                        </div>
+                        <div class="member-socials">
+                            <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Creative Director -->
+                <div class="genz-member">
+                    <div class="member-photo">
+                        <div class="image-wrapper">
+                            <img src="../apex one studio/assets/images/Ayadee.jpg" alt="Hemili">
+                        </div>
+                        <div class="status-badge">CREATIVE</div>
+                    </div>
+                    <div class="member-data">
+                        <h3 class="member-name">HEMILI</h3>
+                        <div class="member-title">CREATIVE DIRECTOR</div>
+                        <div class="member-vibe">
+                            <span>#Design</span>
+                            <span>#Aesthetic</span>
+                        </div>
+                        <div class="member-socials">
+                            <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- External Affairs Lead -->
+                <div class="genz-member">
+                    <div class="member-photo">
+                        <div class="image-wrapper">
+                            <img src="../apex one studio/assets/images/IMG-20241112-WA0010.jpg" alt="Rupali">
+                        </div>
+                        <div class="status-badge">RELATIONS</div>
+                    </div>
+                    <div class="member-data">
+                        <h3 class="member-name">RUPALI</h3>
+                        <div class="member-title">EXTERNAL AFFAIRS</div>
+                        <div class="member-vibe">
+                            <span>#Growth</span>
+                            <span>#Partnerships</span>
+                        </div>
+                        <div class="member-socials">
+                            <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Marketing Lead -->
+                <div class="genz-member">
+                    <div class="member-photo">
+                        <div class="image-wrapper">
+                            <img src="../apex one studio/assets/images/ahyam.jpg" alt="Ayham">
+                        </div>
+                        <div class="status-badge">MARKETING</div>
+                    </div>
+                    <div class="member-data">
+                        <h3 class="member-name">AYHAM</h3>
+                        <div class="member-title">DIGITAL MARKETING LEAD</div>
+                        <div class="member-vibe">
+                            <span>#SocialMedia</span>
+                            <span>#ContentStrategy</span>
+                            <span>#Analytics</span>
+                        </div>
+                        <div class="member-socials">
+                            <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technical Strategist -->
+                <div class="genz-member">
+                    <div class="member-photo">
+                        <div class="image-wrapper">
+                            <img src="../apex one studio/assets/images/lucky.jpg" alt="Lucky">
+                        </div>
+                        <div class="status-badge">STRATEGIST</div>
+                    </div>
+                    <div class="member-data">
+                        <h3 class="member-name">LUCKY</h3>
+                        <div class="member-title">TECH STRATEGIST</div>
+                        <div class="member-vibe">
+                            <span>#Problem-Solving</span>
+                            <span>#Architecture</span>
+                        </div>
+                        <div class="member-socials">
+                            <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fifth: Project Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Our Work</span>
+                <h2>Project Gallery</h2>
+            </div>
+        </div>
+        
+        <div class="gallery-container">
+            <div class="gallery-track">
+                <!-- First Row -->
+                <div class="gallery-row">
+                    <div class="gallery-item">
+                        <img src="path/to/project1.jpg" alt="Project 1">
+                        <div class="gallery-overlay">
+                            <h3>AI Solution</h3>
+                            <p>Machine Learning Implementation</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="path/to/project2.jpg" alt="Project 2">
+                        <div class="gallery-overlay">
+                            <h3>Web Development</h3>
+                            <p>E-commerce Platform</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="path/to/project3.jpg" alt="Project 3">
+                        <div class="gallery-overlay">
+                            <h3>Digital Marketing</h3>
+                            <p>Social Media Campaign</p>
+                        </div>
+                    </div>
+                    <!-- Add more items as needed -->
+                </div>
+                
+                <!-- Second Row (Reverse Direction) -->
+                <div class="gallery-row reverse">
+                    <div class="gallery-item">
+                        <img src="path/to/project4.jpg" alt="Project 4">
+                        <div class="gallery-overlay">
+                            <h3>UI/UX Design</h3>
+                            <p>Mobile App Interface</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="path/to/project5.jpg" alt="Project 5">
+                        <div class="gallery-overlay">
+                            <h3>Branding</h3>
+                            <p>Corporate Identity</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="path/to/project6.jpg" alt="Project 6">
+                        <div class="gallery-overlay">
+                            <h3>Consulting</h3>
+                            <p>Business Strategy</p>
+                        </div>
+                    </div>
+                    <!-- Add more items as needed -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners & Testimonials -->
+
+    <!-- Sixth: Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contact-wrapper">
+            <div class="contact-info glass-effect">
+                <div class="contact-header">
+                    <h2>Get In Touch</h2>
+                    <p>Let's discuss your next big project</p>
+                </div>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="item-content">
+                            <h3>Location</h3>
+                            <p>Bangalore, India</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="item-content">
+                            <h3>Email</h3>
+                            <p>rkrithik795@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div class="item-content">
+                            <h3>Phone</h3>
+                            <p>+91 XXXX XXXX XX</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="social-connect">
+                    <h3>Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-btn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <form class="contact-form glass-effect" id="contactForm" onsubmit="sendEmail(event)">
+                <div class="form-header">
+                    <h2>Send Message</h2>
+                    <p>Fill out the form below</p>
+                </div>
+                
+                <div class="form-group floating">
+                    <input type="text" id="name" required>
+                    <label for="name">Your Name</label>
+                    <div class="form-border"></div>
+                </div>
+                
+                <div class="form-group floating">
+                    <input type="email" id="email" required>
+                    <label for="email">Your Email</label>
+                    <div class="form-border"></div>
+                </div>
+                
+                <div class="form-group floating">
+                    <input type="text" id="subject" required>
+                    <label for="subject">Subject</label>
+                    <div class="form-border"></div>
+                </div>
+                
+                <div class="form-group floating">
+                    <textarea id="message" required></textarea>
+                    <label for="message">Your Message</label>
+                    <div class="form-border"></div>
+                </div>
+                
+                <button type="submit" class="submit-btn">
+                    <span>Send Message</span>
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Last: Footer -->
+    <footer class="footer">
+        <div class="parallax-bg"></div>
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <div class="footer-logo">A1</div>
+                        <p>Innovating for tomorrow, delivering excellence today.</p>
+                        <div class="footer-contact">
+                            <p><i class="fas fa-map-marker-alt"></i> Bangalore, India</p>
+                            <p><i class="fas fa-envelope"></i> contact@apexonestudios.com</p>
+                        </div>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#team">Team</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#services">AI Solutions</a></li>
+                            <li><a href="#services">Web Development</a></li>
+                            <li><a href="#services">Digital Marketing</a></li>
+                            <li><a href="#services">Consulting</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-social">
+                        <h4>Connect With Us</h4>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 Apex One Studios. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+
+    <!-- Add floating action buttons -->
+    <div class="floating-actions">
+        <button class="fab-button theme-toggle">
+            <i class="fas fa-moon"></i>
+        </button>
+        <button class="fab-button scroll-top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </div>
+</body>
+</html>
