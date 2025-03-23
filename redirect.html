@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting to Apex One Studios</title>
+    <meta http-equiv="refresh" content="0;url=./apex one studio/index.html">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0a0a0a;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            background: linear-gradient(45deg, #0079ff, #00ffd1);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        p {
+            color: #b3b3b3;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+        a {
+            display: inline-block;
+            padding: 10px 20px;
+            background: linear-gradient(45deg, #0079ff, #00ffd1);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .loader {
+            width: 50px;
+            height: 50px;
+            border: 4px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            border-top-color: #0057ff;
+            margin: 0 auto 2rem;
+            animation: spin 1s ease-in-out infinite;
+        }
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="loader"></div>
+    <h1>Apex One Studios</h1>
+    <p>You are being redirected to our website...</p>
+    <a href="./apex one studio/index.html">Click here if you are not redirected automatically</a>
+    
+    <script>
+        // Fallback JavaScript redirect in case meta refresh doesn't work
+        setTimeout(function() {
+            window.location.href = "./apex one studio/index.html";
+        }, 1500);
+    </script>
+</body>
+</html>
