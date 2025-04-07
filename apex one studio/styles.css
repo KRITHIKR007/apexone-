@@ -88,7 +88,7 @@ body.light-theme .genz-member,
 body.light-theme .footer-enhanced,
 body.light-theme .service-hero,
 body.light-theme .feature-card,
-body.light-theme .service-cta {
+body-light-theme .service-cta {
     background-color: var(--glass-bg);
     border-color: var(--glass-border);
 }
@@ -106,7 +106,7 @@ body.light-theme .navbar {
 
 /* Adjust glass effects for light theme */
 body.light-theme .glass-effect,
-body.light-theme .premium-glass {
+body-light-theme .premium-glass {
     background: rgba(255, 255, 255, 0.2);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), inset 0 0 15px rgba(255, 255, 255, 0.3);
 }
@@ -2977,8 +2977,8 @@ body.light-theme .nav-links a {
 }
 
 body.light-theme .hero-content h1,
-body.light-theme .section-header h2,
-body.light-theme .glitch-text {
+body-light-theme .section-header h2,
+body-light-theme .glitch-text {
     text-shadow: none;
 }
 
@@ -3025,7 +3025,7 @@ body.light-theme {
     --text-primary: #202842 !important;
     --text-secondary: #4d5a7a !important;
     --card-shadow: 0 8px 25px rgba(0, 0, 0, 0.1) !important;
-    --glass-bg: rgba(255, 255, 255, 0.3) !important;
+    --glass-bg: rgba(255, 255, 255, 3) !important;
     --glass-border: rgba(255, 255, 255, 0.5) !important;
     background-color: var(--bg-primary) !important;
     color: var(--text-primary) !important;
@@ -3532,4 +3532,185 @@ body-light-theme .hero-text p {
 /* Light theme adjustments for leadership section */
 body.light-theme .genz-member.leadership .member-bio p {
     color: #4d5a7a;
+}
+
+/* Photo Collage Section Styles */
+.collage {
+    padding: 7rem 0;
+    background: var(--bg-primary);
+    position: relative;
+    overflow: hidden;
+}
+
+.collage-filter {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.filter-btn {
+    padding: 0.8rem 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    color: var(--text-secondary);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.filter-btn.active {
+    background: var(--gradient-1);
+    color: white;
+    box-shadow: 0 5px 15px rgba(110, 87, 255, 0.3);
+}
+
+.collage-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 4rem;
+}
+
+.collage-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    height: 100%;
+}
+
+.collage-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.collage-image {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.02);
+    height: 220px;
+    overflow: hidden;
+}
+
+.collage-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.collage-card:hover .collage-image img {
+    transform: scale(1.1);
+}
+
+.collage-info {
+    padding: 2rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.collage-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.collage-location {
+    color: var(--accent-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.collage-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+
+.collage-tags span {
+    background: rgba(110, 87, 255, 0.1);
+    color: var(--accent-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.collage-description {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex: 1;
+}
+
+.collage-link {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    margin-top: auto;
+}
+
+.collage-link:hover {
+    color: var(--accent-secondary);
+    gap: 0.8rem;
+}
+
+.collage-cta {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.collage-cta p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+/* Collage Section Responsive */
+@media (max-width: 992px) {
+    .collage-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .collage-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .filter-btn {
+        font-size: 0.8rem;
+        padding: 0.6rem 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .filter-btn {
+        font-size: 0.75rem;
+        padding: 0.5rem 1rem;
+    }
 }

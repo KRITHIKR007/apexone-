@@ -194,6 +194,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Initialize scroll to top button
     initializeScrollToTop();
+    
+    // Initialize collage filtering functionality
+    initCollageFiltering();
 });
 
 // Add a new function to handle service card interactions
@@ -919,3 +922,47 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // ...existing code...
 });
+
+// Function to handle photo collage filtering
+function initCollageFiltering() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const collageCards = document.querySelectorAll('.collage-card');
+    
+    // Add click event to each filter button
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to clicked button
+            button.classList.add('active');
+            
+            const filterValue = button.getAttribute('data-filter');
+            
+            // Filter collage cards
+            collageCards.forEach(card => {
+                if (filterValue === 'all') {
+                    card.style.display = 'flex';
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, 100);
+                } else {
+                    const categories = card.getAttribute('data-category').split(' ');
+                    if (categories.includes(filterValue)) {
+                        card.style.display = 'flex';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, 100);
+                    } else {
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 300);
+                    }
+                }
+            });
+        });
+    });
+}
