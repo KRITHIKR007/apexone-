@@ -1,7 +1,7 @@
 # ApexOne Studio - Company Overview & Operations
 
 <div align="center">
-  <img src="assets/images/logo.svg" alt="ApexOne Studio Logo" width="200">
+  <img src="apex one studio\assets\images\logo.svg" alt="ApexOne Studio Logo" width="200">
   
   **Architecting the Future Through Innovation**
   
