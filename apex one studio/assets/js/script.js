@@ -48,17 +48,13 @@ sectionElements.forEach(section => {
     sectionObserver.observe(section);
 });
 
-// Page Loading Animation
+// Page Loading Animation - Immediate loading (no delay)
 document.addEventListener('DOMContentLoaded', () => {
     const loadingOverlay = document.querySelector('.loading-overlay');
     
-    // Simulate loading time
-    setTimeout(() => {
-        loadingOverlay.style.opacity = '0';
-        setTimeout(() => {
-            loadingOverlay.style.display = 'none';
-        }, 500);
-    }, 1500);
+    // Remove loading overlay immediately
+    loadingOverlay.style.opacity = '0';
+    loadingOverlay.style.display = 'none';
 });
 
 // Smooth scroll for navigation links
