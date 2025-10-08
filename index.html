@@ -30,7 +30,7 @@
     <script src="./apex one studio/assets/js/theme.js"></script>
     <link rel="stylesheet" href="./apex one studio/assets/css/styles.css">
     <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">    <!-- Add Google Fonts -->    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">    <link rel="stylesheet" href="./apex one studio/assets/css/utility.css">    <link rel="stylesheet" href="./apex one studio/assets/css/pricing.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">    <!-- Add Google Fonts -->    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">    <link rel="stylesheet" href="./apex one studio/assets/css/utility.css">
     <link rel="stylesheet" href="./apex one studio/assets/css/ai-showcase.css">
     <link rel="stylesheet" href="./apex one studio/assets/css/hero-enhanced.css">
     <link rel="stylesheet" href="./apex one studio/assets/css/layout-fixes.css">
@@ -73,7 +73,7 @@
                 <li><a href="#services" class="nav-link">Services</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#team" class="nav-link">Team</a></li>
-                <li><a href="#pricing" class="nav-link">Pricing</a></li>
+
                 <li><a href="#contact" class="nav-link">Contact</a></li>
                 <li><a href="./apex one studio/pages/handbook.html" class="nav-link">Handbook</a></li>
             </ul>
@@ -280,7 +280,7 @@
                             <div class="card-icon">
                                 <i class="fas fa-eye"></i>
                             </div>
-                            <div>
+                            <div class="vision-text">
                                 <h3>Our Vision</h3>
                                 <p class="vision-subtitle">Revolutionizing digital landscapes through cutting-edge technology</p>
                             </div>
@@ -306,43 +306,67 @@
                         </div>
                         
                         <div class="highlight-box">
-                            <span>Est. 2025</span>
-                            <span>Bangalore, India</span>
+                            <span class="highlight-item">Est. 2025</span>
+                            <span class="highlight-item">Bangalore, India</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Mission Statement -->
-                <div class="about-card glass-effect featured">
+                <div class="about-card glass-effect mission-card">
                     <div class="mission-content">
-                        <h3>Why Choose Us?</h3>
+                        <div class="mission-header">
+                            <div class="card-icon">
+                                <i class="fas fa-target"></i>
+                            </div>
+                            <h3>Why Choose Us?</h3>
+                        </div>
+                        
                         <p class="mission-intro">We combine youthful innovation with technical expertise to create solutions that are both cutting-edge and practical.</p>
+                        
                         <div class="mission-points">
                             <div class="point">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Student-Driven Innovation</span>
-                                <small>Fresh perspectives backed by academic excellence</small>
+                                <div class="point-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="point-content">
+                                    <span class="point-title">Student-Driven Innovation</span>
+                                    <small class="point-desc">Fresh perspectives backed by academic excellence</small>
+                                </div>
                             </div>
+                            
                             <div class="point">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Cutting-edge Technology</span>
-                                <small>Leveraging the latest in AI, ML and web development</small>
+                                <div class="point-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="point-content">
+                                    <span class="point-title">Cutting-edge Technology</span>
+                                    <small class="point-desc">Leveraging the latest in AI, ML and web development</small>
+                                </div>
                             </div>
+                            
                             <div class="point">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Creative Excellence</span>
-                                <small>Where technical expertise meets artistic vision</small>
+                                <div class="point-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="point-content">
+                                    <span class="point-title">Creative Excellence</span>
+                                    <small class="point-desc">Where technical expertise meets artistic vision</small>
+                                </div>
                             </div>
+                            
                             <div class="point">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Affordable Solutions</span>
-                                <small>Enterprise-quality output without the enterprise price tag</small>
+                                <div class="point-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="point-content">
+                                    <span class="point-title">Affordable Solutions</span>
+                                    <small class="point-desc">Enterprise-quality output without the enterprise price tag</small>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Stats Card removed as requested -->
             </div>
         </div>
     </section>
@@ -1061,460 +1085,7 @@
         </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section id="pricing" class="pricing">
-        <div class="pricing-bg">
-            <div class="pricing-circle"></div>
-            <div class="pricing-circle"></div>
-        </div>
-        
-        <div class="container pricing-container">
-            <div class="section-header">
-                <span class="section-tag">Investment</span>
-                <h2>Our Pricing Plans</h2>
-                <p class="section-intro">Transparent pricing options designed to fit your business needs and goals, whether you're looking for one-time services or ongoing partnerships.</p>
-            </div>
-            
-            <div class="pricing-tabs">
-                <button class="pricing-tab active" data-target="business-services">Business Services</button>
-                <button class="pricing-tab" data-target="individual-consulting">Individual Consulting</button>
-            </div>
-            
-            <div class="pricing-content-container">
-                <!-- Business Services Pricing -->
-                <div id="business-services" class="pricing-content active">
-                    <h3 class="text-center mb-4">One-Time Services</h3>
-                    <p class="text-center mb-5">Perfect for businesses seeking targeted solutions without long-term commitments.</p>
-                    
-                    <div class="table-responsive">
-                        <table class="pricing-table">
-                            <thead>
-                                <tr>
-                                    <th>Service</th>
-                                    <th>Description</th>
-                                    <th>Delivery Time</th>
-                                    <th>Pricing (INR)</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><strong>Brand Identity Package</strong></td>
-                                    <td>Logo, typography, color palette, brand guidelines</td>
-                                    <td>5–7 Days</td>
-                                    <td>₹15,000</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>One-Page Website Development</strong></td>
-                                    <td>Custom responsive website, SEO optimized</td>
-                                    <td>7–10 Days</td>
-                                    <td>₹25,000</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Multi-Page Website</strong></td>
-                                    <td>5–7 pages, SEO, mobile-optimized</td>
-                                    <td>15–20 Days</td>
-                                    <td>₹50,000</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>E-Commerce Website</strong></td>
-                                    <td>Shopify/WooCommerce + AI recommendations</td>
-                                    <td>20–25 Days</td>
-                                    <td>₹75,000</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>AI Chatbot Development</strong></td>
-                                    <td>Conversational AI for lead gen & support</td>
-                                    <td>10–15 Days</td>
-                                    <td>₹30,000</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>SEO Optimization (One-Time)</strong></td>
-                                    <td>Keywords, on-page SEO, technical fixes</td>
-                                    <td>10 Days</td>
-                                    <td>₹20,000</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Short-Form Video Editing</strong></td>
-                                    <td>Reels, ads, animated content</td>
-                                    <td>3–5 Days</td>
-                                    <td>₹10,000</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Performance Marketing Setup</strong></td>
-                                    <td>Google, Meta, LinkedIn ad setup</td>
-                                    <td>7–10 Days</td>
-                                    <td>₹35,000</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>AI-Powered Market Research</strong></td>
-                                    <td>Competitor, customer, market trends</td>
-                                    <td>10–15 Days</td>
-                                    <td>₹40,000</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Business Process Automation (AI)</strong></td>
-                                    <td>Automate ops with AI tools/workflows</td>
-                                    <td>20–30 Days</td>
-                                    <td>₹75,000</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    
-                    <h3 class="text-center mb-4 mt-5">Subscription-Based Business Plans</h3>
-                    <p class="text-center mb-5">For growing businesses that require continuous digital transformation and marketing support.</p>
-                    
-                    <div class="pricing-grid">
-                        <div class="pricing-card">
-                            <div class="pricing-card-header">
-                                <h3 class="pricing-card-title">Starter Plan</h3>
-                                <p class="pricing-card-subtitle">For startups & SMEs</p>
-                                <div class="pricing-card-price">₹25,000</div>
-                                <div class="pricing-card-period">per month</div>
-                            </div>
-                            <ul class="pricing-card-features">
-                                <li>Branding essentials</li>
-                                <li>Website maintenance</li>
-                                <li>Social media setup</li>
-                                <li>Basic SEO optimization</li>
-                                <li>Monthly performance report</li>
-                            </ul>
-                            <div class="pricing-card-cta">
-                                <a href="#contact" class="cta-button primary">
-                                    <span class="button-content">
-                                        <i class="fas fa-paper-plane"></i>
-                                        <span>Get Started</span>
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <div class="pricing-card">
-                            <div class="pricing-card-header">
-                                <h3 class="pricing-card-title">Growth Plan</h3>
-                                <p class="pricing-card-subtitle">For scaling brands</p>
-                                <div class="pricing-card-price">₹50,000</div>
-                                <div class="pricing-card-period">per month</div>
-                            </div>
-                            <ul class="pricing-card-features">
-                                <li>Advanced SEO strategy</li>
-                                <li>AI-powered marketing</li>
-                                <li>PPC campaign management</li>
-                                <li>CRM setup & integration</li>
-                                <li>Comprehensive analytics</li>
-                                <li>Bi-weekly strategy calls</li>
-                            </ul>
-                            <div class="pricing-card-cta">
-                                <a href="#contact" class="cta-button primary">
-                                    <span class="button-content">
-                                        <i class="fas fa-paper-plane"></i>
-                                        <span>Get Started</span>
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <div class="pricing-card">
-                            <div class="pricing-card-header">
-                                <h3 class="pricing-card-title">Enterprise Plan</h3>
-                                <p class="pricing-card-subtitle">For large enterprises</p>
-                                <div class="pricing-card-price">₹1,00,000+</div>
-                                <div class="pricing-card-period">per month</div>
-                            </div>
-                            <ul class="pricing-card-features">
-                                <li>Full AI business automation</li>
-                                <li>Advanced analytics dashboard</li>
-                                <li>Comprehensive paid marketing</li>
-                                <li>Strategic business consulting</li>
-                                <li>Dedicated account manager</li>
-                                <li>Weekly strategy sessions</li>
-                                <li>Priority support 24/7</li>
-                            </ul>
-                            <div class="pricing-card-cta">
-                                <a href="#contact" class="cta-button primary">
-                                    <span class="button-content">
-                                        <i class="fas fa-paper-plane"></i>
-                                        <span>Contact Us</span>
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <h3 class="text-center mb-4 mt-5">Add-On Services</h3>
-                    <p class="text-center mb-5">Optional upgrades that can be bundled with any plan or bought separately.</p>
-                    
-                    <div class="table-responsive">
-                        <table class="pricing-table">
-                            <thead>
-                                <tr>
-                                    <th>Add-On Service</th>
-                                    <th>Description</th>
-                                    <th>Monthly Pricing (INR)</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><strong>AI Chatbots & Assistants</strong></td>
-                                    <td>Custom AI bots for websites, WhatsApp, CRMs</td>
-                                    <td>₹20,000</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>LinkedIn Personal Branding</strong></td>
-                                    <td>Strategy, content, design for founder presence</td>
-                                    <td>₹15,000</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>AI-Based Content Marketing</strong></td>
-                                    <td>Blog & social content strategy powered by AI</td>
-                                    <td>₹30,000</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Influencer & Partnership Marketing</strong></td>
-                                    <td>AI-optimized influencer & collab strategies</td>
-                                    <td>₹40,000</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Business Intelligence Reports</strong></td>
-                                    <td>Deep market + competitor analysis</td>
-                                    <td>₹50,000</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                
-                <!-- Individual Consulting Pricing -->
-                <div id="individual-consulting" class="pricing-content">
-                    <h3 class="text-center mb-4">One-Time Strategy Sessions</h3>
-                    <p class="text-center mb-5">For founders, creators, and business leaders seeking AI-enhanced strategic guidance.</p>
-                    
-                    <div class="table-responsive">
-                        <table class="pricing-table">
-                            <thead>
-                                <tr>
-                                    <th>Consulting Session</th>
-                                    <th>Focus Area</th>
-                                    <th>Duration</th>
-                                    <th>Pricing (INR)</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><strong>AI & Automation Strategy</strong></td>
-                                    <td>Build AI-first business operations</td>
-                                    <td>90 mins</td>
-                                    <td>₹15,000</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Personal Branding Strategy</strong></td>
-                                    <td>Positioning, storytelling, platform strategy</td>
-                                    <td>60 mins</td>
-                                    <td>₹10,000</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Startup Growth Hacking</strong></td>
-                                    <td>GTM, product scaling, funnel optimization</td>
-                                    <td>90 mins</td>
-                                    <td>₹18,000</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Social Media Monetization</strong></td>
-                                    <td>Growth → monetization using AI tools</td>
-                                    <td>60 mins</td>
-                                    <td>₹12,000</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>AI Marketing Blueprint</strong></td>
-                                    <td>Full-funnel marketing powered by AI</td>
-                                    <td>90 mins</td>
-                                    <td>₹20,000</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Business Expansion Strategy</strong></td>
-                                    <td>AI-guided growth & market entry plans</td>
-                                    <td>120 mins</td>
-                                    <td>₹30,000</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    
-                    <h3 class="text-center mb-4 mt-5">Subscription-Based Consulting Plans</h3>
-                    <p class="text-center mb-5">Tailored for leaders seeking continuous guidance, mentorship, and scaling support.</p>
-                    
-                    <div class="pricing-grid">
-                        <div class="pricing-card">
-                            <div class="pricing-card-header">
-                                <h3 class="pricing-card-title">Starter Consulting</h3>
-                                <p class="pricing-card-subtitle">For founders & creators</p>
-                                <div class="pricing-card-price">₹30,000</div>
-                                <div class="pricing-card-period">per month</div>
-                            </div>
-                            <ul class="pricing-card-features">
-                                <li>2 strategy sessions per month</li>
-                                <li>Growth insights report</li>
-                                <li>Strategic recommendation briefs</li>
-                                <li>Email support</li>
-                            </ul>
-                            <div class="pricing-card-cta">
-                                <a href="#contact" class="cta-button primary">
-                                    <span class="button-content">
-                                        <i class="fas fa-paper-plane"></i>
-                                        <span>Get Started</span>
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <div class="pricing-card">
-                            <div class="pricing-card-header">
-                                <h3 class="pricing-card-title">Advanced Growth</h3>
-                                <p class="pricing-card-subtitle">For scaling founders</p>
-                                <div class="pricing-card-price">₹50,000</div>
-                                <div class="pricing-card-period">per month</div>
-                            </div>
-                            <ul class="pricing-card-features">
-                                <li>4 strategy calls per month</li>
-                                <li>AI-powered market reports</li>
-                                <li>Brand and content reviews</li>
-                                <li>Competitive analysis</li>
-                                <li>Priority email & phone support</li>
-                            </ul>
-                            <div class="pricing-card-cta">
-                                <a href="#contact" class="cta-button primary">
-                                    <span class="button-content">
-                                        <i class="fas fa-paper-plane"></i>
-                                        <span>Get Started</span>
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <div class="pricing-card">
-                            <div class="pricing-card-header">
-                                <h3 class="pricing-card-title">Elite AI Mentorship</h3>
-                                <p class="pricing-card-subtitle">For C-Suite & influencers</p>
-                                <div class="pricing-card-price">₹1,00,000+</div>
-                                <div class="pricing-card-period">per month</div>
-                            </div>
-                            <ul class="pricing-card-features">
-                                <li>Unlimited strategy calls</li>
-                                <li>Full-stack AI business consulting</li>
-                                <li>Personal brand development</li>
-                                <li>Growth & scaling strategy</li>
-                                <li>Direct founder access 24/7</li>
-                                <li>Exclusive mastermind access</li>
-                            </ul>
-                            <div class="pricing-card-cta">
-                                <a href="#contact" class="cta-button primary">
-                                    <span class="button-content">
-                                        <i class="fas fa-paper-plane"></i>
-                                        <span>Contact Us</span>
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="pricing-benefits">
-                <h3 class="benefits-title">Why Choose ApexOne Studio?</h3>
-                <div class="benefits-list">
-                    <div class="benefit-item">
-                        <div class="benefit-icon">
-                            <i class="fas fa-brain"></i>
-                        </div>
-                        <div class="benefit-content">
-                            <h4>AI-First Thinking</h4>
-                            <p>We don't just digitize, we intelligently optimize your business processes and strategies.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="benefit-item">
-                        <div class="benefit-icon">
-                            <i class="fas fa-globe"></i>
-                        </div>
-                        <div class="benefit-content">
-                            <h4>Global-Standard Design & Tech</h4>
-                            <p>Sleek, scalable, and SEO-ready solutions that stand out in the digital landscape.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="benefit-item">
-                        <div class="benefit-icon">
-                            <i class="fas fa-users-cog"></i>
-                        </div>
-                        <div class="benefit-content">
-                            <h4>Expert-Led Strategy</h4>
-                            <p>Our approach is backed by data, design, and real-world business experience.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="benefit-item">
-                        <div class="benefit-icon">
-                            <i class="fas fa-handshake"></i>
-                        </div>
-                        <div class="benefit-content">
-                            <h4>Flexible Engagements</h4>
-                            <p>One-time, monthly, or fully customized plans to fit your specific needs.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="benefit-item">
-                        <div class="benefit-icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <div class="benefit-content">
-                            <h4>Result-Driven Approach</h4>
-                            <p>We focus on metrics, milestones, and measurable outcomes for your business.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="pricing-glossary">
-                <h3 class="pricing-glossary-title">Glossary</h3>
-                <table class="glossary-table">
-                    <tr>
-                        <th>Term</th>
-                        <th>Full Form</th>
-                    </tr>
-                    <tr>
-                        <td>AI</td>
-                        <td>Artificial Intelligence</td>
-                    </tr>
-                    <tr>
-                        <td>ML</td>
-                        <td>Machine Learning</td>
-                    </tr>
-                    <tr>
-                        <td>SEO</td>
-                        <td>Search Engine Optimization</td>
-                    </tr>
-                    <tr>
-                        <td>PPC</td>
-                        <td>Pay-Per-Click</td>
-                    </tr>
-                    <tr>
-                        <td>CRM</td>
-                        <td>Customer Relationship Management</td>
-                    </tr>
-                    <tr>
-                        <td>BI</td>
-                        <td>Business Intelligence</td>
-                    </tr>
-                </table>
-            </div>
-            
-            <p class="pricing-note">* All prices are in Indian Rupees (INR). Custom quotes available for specific requirements.</p>
-        </div>
-    </section>
-
-    <!-- Partners & Testimonials -->
-
-    <!-- Sixth: Contact Section -->    <section id="contact" class="contact">
+    <!-- Fifth: Contact Section -->    <section id="contact" class="contact">
     <!-- Add premium background effect -->
     <div class="premium-bg">
         <div class="premium-circle"></div>
@@ -1653,10 +1224,10 @@
                 
                 <div class="ai-card-cta">
                     <p>Experience the power of AI for your business</p>
-                    <a href="#pricing" class="cta-button primary">
+                    <a href="#contact" class="cta-button primary">
                         <span class="button-content">
                             <i class="fas fa-rocket"></i>
-                            <span>Book Demo</span>
+                            <span>Get Started</span>
                         </span>
                     </a>
                 </div>
@@ -1746,7 +1317,7 @@
                 <h4>Quick Links</h4>                <ul class="footer-links">                    <li><a href="#about" class="footer-link"><i class="fas fa-chevron-right"></i> About Us</a></li>
                     <li><a href="#services" class="footer-link"><i class="fas fa-chevron-right"></i> Services</a></li>
                     <li><a href="#team" class="footer-link"><i class="fas fa-chevron-right"></i> Team</a></li>
-                    <li><a href="#pricing" class="footer-link"><i class="fas fa-chevron-right"></i> Pricing</a></li>
+
                     <li><a href="#projects" class="footer-link"><i class="fas fa-chevron-right"></i> Projects</a></li>
                     <li><a href="#contact" class="footer-link"><i class="fas fa-chevron-right"></i> Contact</a></li>
                     <li><a href="./apex one studio/pages/handbook.html" class="footer-link"><i class="fas fa-chevron-right"></i> Handbook</a></li>
@@ -1837,7 +1408,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
     <!-- Load dedicated tabs script before main script -->
     <script src="./apex one studio/assets/js/tabs.js"></script>
-    <script src="./apex one studio/assets/js/pricing-tabs.js"></script>
+
     <script src="./apex one studio/assets/js/ai-showcase.js"></script>
     <script src="./apex one studio/assets/js/hero-enhanced.js"></script>
     <script src="./apex one studio/assets/js/projects.js"></script>

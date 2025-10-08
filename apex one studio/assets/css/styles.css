@@ -537,15 +537,18 @@ body::after {
     z-index: 1;
 }
 
-/* New grid layout - Vision card full width, other cards side by side */
+/* Clean and organized about grid layout */
 .about-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: 
         "vision vision"
-        "mission stats";
-    gap: 2rem;
+        "mission mission";
+    gap: 2.5rem;
     margin-bottom: 4rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .about-card {
@@ -581,24 +584,36 @@ body::after {
     box-shadow: 0 20px 40px rgba(0, 87, 255, 0.15);
 }
 
-/* Vision Card - Full width */
+/* Vision Card - Full width, clean layout */
 .vision-card {
     grid-area: vision;
-    background: rgba(0, 87, 255, 0.02);
-    border: 1px solid rgba(0, 184, 255, 0.08);
+    background: linear-gradient(135deg, rgba(0, 87, 255, 0.03), rgba(0, 184, 255, 0.01));
+    border: 1px solid rgba(0, 184, 255, 0.12);
     padding: 0;
+    position: relative;
+    overflow: hidden;
 }
 
 .vision-content {
     display: flex;
     flex-direction: column;
     height: 100%;
-    padding: 2.5rem;
+    padding: 3rem;
+    gap: 2rem;
 }
 
 .vision-header {
     display: flex;
     align-items: center;
+    gap: 1.5rem;
+}
+
+.vision-text {
+    flex: 1;
+}
+
+.vision-main {
+    display: flex;
     gap: 2rem;
     margin-bottom: 2rem;
 }
@@ -704,29 +719,42 @@ body::after {
 .highlight-box {
     display: flex;
     justify-content: space-between;
-    gap: 1rem;
+    align-items: center;
+    gap: 1.5rem;
     margin-top: auto;
-    padding: 1rem;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 10px;
-    border-left: 3px solid var(--accent-color);
+    padding: 1.25rem;
+    background: linear-gradient(135deg, rgba(0, 87, 255, 0.1), rgba(0, 184, 255, 0.05));
+    border-radius: 12px;
+    border: 1px solid rgba(0, 184, 255, 0.2);
 }
 
-.highlight-box span {
-    font-size: 0.9rem;
+.highlight-item {
+    font-size: 0.95rem;
     color: var(--accent-color);
-    font-weight: 500;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    border: 1px solid rgba(0, 184, 255, 0.3);
 }
 
-/* Mission Card */
-.about-card.featured {
+/* Mission Card - Clean layout */
+.mission-card {
     grid-area: mission;
-    background: linear-gradient(
-        135deg,
-        rgba(0, 87, 255, 0.1),
-        rgba(0, 184, 255, 0.05)
-    );
-    border: 1px solid rgba(0, 184, 255, 0.3);
+    background: linear-gradient(135deg, rgba(0, 87, 255, 0.08), rgba(0, 184, 255, 0.03));
+    border: 1px solid rgba(0, 184, 255, 0.15);
+    position: relative;
+}
+
+.mission-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.mission-header h3 {
+    margin-bottom: 0;
 }
 
 .mission-intro {
@@ -743,34 +771,57 @@ body::after {
 
 .point {
     display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 10px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.25rem;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
     border-left: 3px solid transparent;
 }
 
 .point:hover {
-    transform: translateX(10px);
+    transform: translateY(-3px);
     background: rgba(255, 255, 255, 0.1);
     border-left-color: var(--accent-color);
 }
 
-.point i {
-    color: var(--accent-secondary);
-    margin-bottom: 0.5rem;
+.point-icon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradient-1);
+    border-radius: 10px;
+    margin-top: 0.2rem;
 }
 
-.point span {
+.point-icon i {
+    color: white;
+    font-size: 1.1rem;
+}
+
+.point-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.point-title {
     font-weight: 600;
-    margin-bottom: 0.25rem;
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    line-height: 1.3;
 }
 
-.point small {
+.point-desc {
     color: var(--text-secondary);
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     line-height: 1.4;
+    opacity: 0.8;
 }
 
 /* Stats Card */
