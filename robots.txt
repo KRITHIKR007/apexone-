@@ -1,0 +1,27 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://apexonestudio.com/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Specific rules for common bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Block access to sensitive directories
+Disallow: /assets/js/
+Disallow: /assets/css/
+
+# Allow important files
+Allow: /assets/images/
+Allow: /assets/css/styles.css
+Allow: /assets/js/script.js

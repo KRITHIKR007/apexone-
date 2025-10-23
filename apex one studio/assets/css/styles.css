@@ -173,13 +173,13 @@ body::after {
 /* Navigation - update to floating style with curved edges */
 .navbar {
     position: fixed;
-    width: calc(100% - 40px);
+    width: calc(100% - 2rem);
     max-width: 1400px;
     left: 50%;
     transform: translateX(-50%);
     top: 15px;
     background: rgba(5, 8, 16, 0.8);
-    padding: 0.8rem 0;
+    padding: 0.5rem 0;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.05);
@@ -201,39 +201,51 @@ body::after {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 25px;
+    padding: 0 1.5rem;
+    height: 50px;
 }
 
 /* Enhanced Logo Styles */
 .logo {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0.75rem;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
 }
 
 .logo-icon {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     filter: drop-shadow(0 0 10px rgba(110, 87, 255, 0.3));
+    flex-shrink: 0;
 }
 
 .logo-text {
     display: flex;
     flex-direction: column;
+    line-height: 1;
 }
 
 .logo-main {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 700;
     background: var(--gradient-1);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+    margin-bottom: 2px;
 }
 
 .logo-sub {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     color: var(--text-secondary);
+    font-weight: 400;
 }
 
 /* Enhanced Nav Links */
@@ -304,9 +316,28 @@ body::after {
 /* Mobile Menu Styles - update for floating navbar */
 @media (max-width: 768px) {
     .navbar {
-        width: calc(100% - 20px);
+        width: calc(100% - 1.5rem);
         border-radius: 25px;
         top: 10px;
+        padding: 0.4rem 0;
+    }
+
+    .nav-container {
+        height: 45px;
+        padding: 0 1rem;
+    }
+
+    .logo-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .logo-main {
+        font-size: 1.1rem;
+    }
+
+    .logo-sub {
+        font-size: 0.65rem;
     }
 
     .hamburger {

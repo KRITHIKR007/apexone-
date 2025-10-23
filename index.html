@@ -1,14 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" itemscope itemtype="https://schema.org/Organization">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apex One Studios</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>Apex One Studios | AI-Powered Digital Solutions & Web Development in Bangalore</title>
+    <meta name="description" content="Apex One Studios - Leading AI-driven digital agency in Bangalore offering web development, machine learning solutions, digital marketing, and business consulting. Student-led innovation with enterprise-quality results.">
+    <meta name="keywords" content="AI development, machine learning, web development, digital marketing, business consulting, Bangalore tech startup, student-led agency, automation solutions, AI-powered branding">
+    <meta name="author" content="Apex One Studios">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Apex One Studios">
+    <meta property="og:title" content="Apex One Studios | AI-Powered Digital Solutions & Web Development">
+    <meta property="og:description" content="Leading AI-driven digital agency in Bangalore offering innovative web development, machine learning solutions, and digital marketing services.">
+    <meta property="og:url" content="https://apexonestudio.com">
+    <meta property="og:image" content="https://apexonestudio.com/apex one studio/assets/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@Apexonestudio">
+    <meta name="twitter:creator" content="@Apexonestudio">
+    <meta name="twitter:title" content="Apex One Studios | AI-Powered Digital Solutions">
+    <meta name="twitter:description" content="Student-led AI agency delivering enterprise-quality solutions in web development, machine learning, and digital marketing.">
+    <meta name="twitter:image" content="https://apexonestudio.com/apex one studio/assets/images/twitter-card.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://apexonestudio.com">
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Apex One Studios",
+        "alternateName": "ApexOne Studio",
+        "url": "https://apexonestudio.com",
+        "logo": "https://apexonestudio.com/apex one studio/assets/images/logo.svg",
+        "description": "AI-driven digital agency specializing in web development, machine learning, digital marketing, and business consulting.",
+        "foundingDate": "2025",
+        "founders": [
+            {
+                "@type": "Person",
+                "name": "Krithik R",
+                "jobTitle": "CEO & Founder"
+            },
+            {
+                "@type": "Person", 
+                "name": "Shaili Srivastava",
+                "jobTitle": "COO & Co-Founder"
+            }
+        ],
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Bangalore",
+            "addressRegion": "Karnataka",
+            "addressCountry": "IN"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+91-9902079990",
+            "contactType": "customer service",
+            "email": "apexonestudio@gmail.com"
+        },
+        "sameAs": [
+            "https://twitter.com/Apexonestudio",
+            "https://instagram.com/apexonestudio",
+            "https://linkedin.com/company/apexonestudio"
+        ],
+        "services": [
+            "AI & Machine Learning Development",
+            "Web Development",
+            "Digital Marketing",
+            "Business Consulting"
+        ]
+    }
+    </script>
     
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="./apex one studio/assets/images/logo.svg">
     <link rel="alternate icon" href="./apex one studio/assets/images/logo.svg">
     <link rel="mask-icon" href="./apex one studio/assets/images/logo.svg" color="#0057ff">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apex one studio/assets/images/apple-touch-icon.png">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     
     <!-- Critical immediate theme check - Must be first -->
     <script>
@@ -55,27 +138,30 @@
     </div>
 
     <!-- Navigation -->
-    <nav class="navbar glass-nav">
+    <nav class="navbar glass-nav" role="navigation" aria-label="Main navigation">
         <div class="nav-container">
             <div class="logo">
-                <img src="./apex one studio/assets/images/logo.svg" alt="A1 Logo" class="logo-icon">
-                <div class="logo-text">
-                    <span class="logo-main">Apex One</span>
-                    <span class="logo-sub">Studios</span>
-                </div>
+                <a href="#home" aria-label="Apex One Studios Homepage">
+                    <img src="./apex one studio/assets/images/logo.svg" alt="Apex One Studios Logo" class="logo-icon" loading="eager">
+                    <div class="logo-text">
+                        <span class="logo-main">Apex One</span>
+                        <span class="logo-sub">Studios</span>
+                    </div>
+                </a>
             </div>
-            <div class="hamburger">
+            <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
                 <div></div>
                 <div></div>
                 <div></div>
-            </div>            <ul class="nav-links">                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#team" class="nav-link">Team</a></li>
-
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-                <li><a href="./apex one studio/pages/handbook.html" class="nav-link">Handbook</a></li>
+            </button>
+            <ul class="nav-links" id="nav-menu" role="menubar">
+                <li role="none"><a href="#home" class="nav-link" role="menuitem" aria-label="Navigate to Home section">Home</a></li>
+                <li role="none"><a href="#about" class="nav-link" role="menuitem" aria-label="Navigate to About section">About</a></li>
+                <li role="none"><a href="#services" class="nav-link" role="menuitem" aria-label="Navigate to Services section">Services</a></li>
+                <li role="none"><a href="#projects" class="nav-link" role="menuitem" aria-label="Navigate to Projects section">Projects</a></li>
+                <li role="none"><a href="#team" class="nav-link" role="menuitem" aria-label="Navigate to Team section">Team</a></li>
+                <li role="none"><a href="#contact" class="nav-link" role="menuitem" aria-label="Navigate to Contact section">Contact</a></li>
+                <li role="none"><a href="./apex one studio/pages/handbook.html" class="nav-link" role="menuitem" aria-label="View Company Handbook">Handbook</a></li>
             </ul>
         </div>
     </nav>    <!-- First: Hero Section -->
@@ -1403,11 +1489,21 @@
                 </div>
                 
                 <div class="social-links-premium">
-                    <a href="#" class="social-link-premium"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://x.com/Apexonestudio" target="_blank" class="social-link-premium"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.instagram.com/apexonestudio/" target="_blank" class="social-link-premium"><i class="fab fa-instagram"></i></a>
-                    <a href="https://discord.com/channels/" target="_blank" class="social-link-premium"><i class="fab fa-discord"></i></a>
-                    <a href="#" class="social-link-premium"><i class="fab fa-youtube"></i></a>
+                    <a href="https://linkedin.com/company/apexonestudio" target="_blank" rel="noopener noreferrer" class="social-link-premium" aria-label="Follow us on LinkedIn">
+                        <i class="fab fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://x.com/Apexonestudio" target="_blank" rel="noopener noreferrer" class="social-link-premium" aria-label="Follow us on Twitter/X">
+                        <i class="fab fa-twitter" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.instagram.com/apexonestudio/" target="_blank" rel="noopener noreferrer" class="social-link-premium" aria-label="Follow us on Instagram">
+                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://discord.gg/apexonestudio" target="_blank" rel="noopener noreferrer" class="social-link-premium" aria-label="Join our Discord community">
+                        <i class="fab fa-discord" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://youtube.com/@apexonestudio" target="_blank" rel="noopener noreferrer" class="social-link-premium" aria-label="Subscribe to our YouTube channel">
+                        <i class="fab fa-youtube" aria-hidden="true"></i>
+                    </a>
                 </div>
             </div>
             
@@ -1483,7 +1579,7 @@
                     <button class="newsletter-btn"><i class="fas fa-paper-plane"></i></button>
                 </div>
                 
-                <p class="newsletter-note">By subscribing, you agree to our <a href="#" class="hover-underline">Privacy Policy</a>.</p>
+                <p class="newsletter-note">By subscribing, you agree to our <a href="./apex one studio/pages/privacy-policy.html" class="hover-underline" rel="noopener">Privacy Policy</a>.</p>
             </div>
         </div>
         
@@ -1495,10 +1591,10 @@
             </div>
             
             <div class="footer-legal">
-                <a href="./apex one studio/pages/terms-of-service.html" class="legal-link">Terms of Service</a>
-                <a href="./apex one studio/pages/privacy-policy.html" class="legal-link">Privacy Policy</a>
-                <a href="./apex one studio/pages/cookie-policy.html" class="legal-link">Cookie Policy</a>
-                <a href="./apex one studio/pages/accessibility.html" class="legal-link">Accessibility</a>
+                <a href="./apex one studio/pages/terms-of-service.html" class="legal-link" rel="noopener" aria-label="Read our Terms of Service">Terms of Service</a>
+                <a href="./apex one studio/pages/privacy-policy.html" class="legal-link" rel="noopener" aria-label="Read our Privacy Policy">Privacy Policy</a>
+                <a href="./apex one studio/pages/cookie-policy.html" class="legal-link" rel="noopener" aria-label="Read our Cookie Policy">Cookie Policy</a>
+                <a href="./apex one studio/pages/accessibility.html" class="legal-link" rel="noopener" aria-label="Read our Accessibility Statement">Accessibility</a>
             </div>
         </div>
     </div>

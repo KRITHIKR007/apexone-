@@ -1,14 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" itemscope itemtype="https://schema.org/WebPage">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Company Handbook | ApexOne Studio</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>Company Handbook | Apex One Studios - Culture, Values & Guidelines</title>
+    <meta name="description" content="Discover Apex One Studios' company culture, core values, workplace guidelines, and team handbook. Learn about our student-led innovation approach and professional standards.">
+    <meta name="keywords" content="company handbook, workplace culture, team guidelines, Apex One Studios values, student-led agency culture, professional standards">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Company Handbook | Apex One Studios">
+    <meta property="og:description" content="Explore our company culture, values, and guidelines that drive innovation at Apex One Studios.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://apexonestudio.com/pages/handbook.html">
+    <meta property="og:site_name" content="Apex One Studios">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Company Handbook | Apex One Studios">
+    <meta name="twitter:description" content="Discover our company culture and values.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://apexonestudio.com/pages/handbook.html">
     
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg">
     <link rel="alternate icon" href="../assets/images/logo.svg">
     <link rel="mask-icon" href="../assets/images/logo.svg" color="#0057ff">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
     <!-- Critical immediate theme check - Must be first -->
     <script>
@@ -45,27 +69,30 @@
     </div>
 
     <!-- Navigation -->
-    <nav class="navbar glass-nav">
+    <nav class="navbar glass-nav" role="navigation" aria-label="Main navigation">
         <div class="nav-container">
             <div class="logo">
-                <img src="../assets/images/logo.svg" alt="A1 Logo" class="logo-icon">
-                <div class="logo-text">
-                    <span class="logo-main">Apex One</span>
-                    <span class="logo-sub">Studios</span>
-                </div>
+                <a href="../index.html#home" aria-label="Apex One Studios Homepage">
+                    <img src="../assets/images/logo.svg" alt="Apex One Studios Logo" class="logo-icon" loading="eager">
+                    <div class="logo-text">
+                        <span class="logo-main">Apex One</span>
+                        <span class="logo-sub">Studios</span>
+                    </div>
+                </a>
             </div>
-            <div class="hamburger">
+            <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
                 <div></div>
                 <div></div>
                 <div></div>
-            </div>
-            <ul class="nav-links">
-                <li><a href="../index.html#home" class="nav-link">Home</a></li>
-                <li><a href="../index.html#about" class="nav-link">About</a></li>
-                <li><a href="../index.html#services" class="nav-link">Services</a></li>
-                <li><a href="../index.html#team" class="nav-link">Team</a></li>
-                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
-                <li><a href="handbook.html" class="nav-link active">Handbook</a></li>
+            </button>
+            <ul class="nav-links" id="nav-menu" role="menubar">
+                <li role="none"><a href="../index.html#home" class="nav-link" role="menuitem" aria-label="Navigate to Home">Home</a></li>
+                <li role="none"><a href="../index.html#about" class="nav-link" role="menuitem" aria-label="Navigate to About">About</a></li>
+                <li role="none"><a href="../index.html#services" class="nav-link" role="menuitem" aria-label="Navigate to Services">Services</a></li>
+                <li role="none"><a href="../index.html#projects" class="nav-link" role="menuitem" aria-label="Navigate to Projects">Projects</a></li>
+                <li role="none"><a href="../index.html#team" class="nav-link" role="menuitem" aria-label="Navigate to Team">Team</a></li>
+                <li role="none"><a href="../index.html#contact" class="nav-link" role="menuitem" aria-label="Navigate to Contact">Contact</a></li>
+                <li role="none"><a href="handbook.html" class="nav-link active" role="menuitem" aria-current="page" aria-label="Company Handbook (Current Page)">Handbook</a></li>
             </ul>
         </div>
     </nav>
