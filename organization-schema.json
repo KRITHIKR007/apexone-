@@ -1,0 +1,59 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Apex One Studios",
+  "alternateName": "Apex One Studios Bangalore",
+  "description": "Apex One Studios is the premier apex development company in Bangalore specializing in AI solutions, web development, and digital transformation. We deliver apex-level technology solutions.",
+  "url": "https://apexonestudio.com",
+  "logo": "https://apexonestudio.com/apex one studio/assets/images/logo.svg",
+  "image": "https://apexonestudio.com/apex one studio/assets/images/logo.svg",
+  "foundingDate": "2025",
+  "founder": {
+    "@type": "Person",
+    "name": "Apex One Studios Team"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Bangalore",
+    "addressRegion": "Karnataka",
+    "addressCountry": "IN"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+91-XXXX-XXXXXX",
+    "contactType": "customer service",
+    "email": "hello@apexonestudio.com",
+    "availableLanguage": ["English", "Hindi"]
+  },
+  "sameAs": [
+    "https://linkedin.com/company/apexonestudio",
+    "https://x.com/Apexonestudio",
+    "https://www.instagram.com/apexonestudio/",
+    "https://discord.gg/apexonestudio",
+    "https://youtube.com/@apexonestudio"
+  ],
+  "services": [
+    {
+      "@type": "Service",
+      "name": "Apex AI Solutions",
+      "description": "Cutting-edge AI and machine learning solutions"
+    },
+    {
+      "@type": "Service", 
+      "name": "Apex Web Development",
+      "description": "Modern web development and digital solutions"
+    },
+    {
+      "@type": "Service",
+      "name": "Apex Digital Marketing", 
+      "description": "Data-driven digital marketing strategies"
+    },
+    {
+      "@type": "Service",
+      "name": "Apex Business Consulting",
+      "description": "Strategic business consulting and transformation"
+    }
+  ],
+  "keywords": "apex, apex one studios, apex development, ai solutions bangalore, web development bangalore, apex technology, apex company, apex software, apex innovation",
+  "slogan": "Reaching the Apex of Innovation"
+}

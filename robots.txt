@@ -1,27 +1,49 @@
 User-agent: *
 Allow: /
 
-# Sitemaps
+# Primary Sitemap
 Sitemap: https://apexonestudio.com/sitemap.xml
 
-# Crawl-delay
+# Crawl-delay for optimization
 Crawl-delay: 1
 
-# Specific rules for common bots
+# Search Engine Specific Rules
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Slurp
 Allow: /
+Crawl-delay: 1
 
-# Block access to sensitive directories
-Disallow: /assets/js/
-Disallow: /assets/css/
+User-agent: Yandex
+Allow: /
+Crawl-delay: 1
 
-# Allow important files
-Allow: /assets/images/
-Allow: /assets/css/styles.css
-Allow: /assets/js/script.js
+User-agent: Baidu
+Allow: /
+Crawl-delay: 2
+
+# Block sensitive directories but allow important assets
+Disallow: /apex one studio/assets/js/
+Disallow: /apex one studio/assets/css/
+Disallow: /*.json$
+
+# Allow critical SEO files
+Allow: /favicon.svg
+Allow: /favicon.ico
+Allow: /robots.txt
+Allow: /sitemap.xml
+Allow: /apex one studio/assets/images/
+Allow: /apex one studio/assets/css/styles.css
+Allow: /apex one studio/assets/js/script.js
+
+# Apex-specific optimization
+# Allow crawling of all Apex-related content
+Allow: /*apex*
+Allow: /*Apex*
+Allow: /*APEX*
