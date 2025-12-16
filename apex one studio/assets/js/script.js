@@ -57,17 +57,45 @@ document.addEventListener('DOMContentLoaded', () => {
     loadingOverlay.style.display = 'none';
 });
 
-// Smooth scroll for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
+// Smooth scroll for navigation links - Enhanced version
+document.addEventListener('DOMContentLoaded', function() {
+    // Select all anchor links with hash
+    const anchorLinks = document.querySelectorAll('a[href^="#"]');
+    
+    anchorLinks.forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            
+            // Skip if href is just "#"
+            if (href === '#' || !href) return;
+            
+            e.preventDefault();
+            
+            const targetId = href.substring(1);
+            const target = document.getElementById(targetId);
+            
+            if (target) {
+                // Close mobile menu if open
+                const navLinksContainer = document.querySelector('.nav-links');
+                const hamburger = document.querySelector('.hamburger');
+                if (navLinksContainer && navLinksContainer.classList.contains('active')) {
+                    navLinksContainer.classList.remove('active');
+                    hamburger.classList.remove('active');
+                }
+                
+                // Smooth scroll to target
+                const offsetTop = target.offsetTop - 80; // Account for fixed navbar
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+                
+                // Update URL without jumping
+                if (history.pushState) {
+                    history.pushState(null, null, href);
+                }
+            }
+        });
     });
 });
 
