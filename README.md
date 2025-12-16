@@ -1,11 +1,13 @@
-# ApexOne Studio - Company Overview & Operations
+# ApexOne Studio
 
 <div align="center">
-  <img src="apex one studio\assets\images\logo.svg" alt="ApexOne Studio Logo" width="200">
   
   **Architecting the Future Through Innovation**
   
   *Student-led digital innovation company based in Bangalore, India*
+  
+  [![Website](https://img.shields.io/badge/Website-Live-brightgreen)](https://apexone.vercel.app)
+  
 </div>
 
 ---
@@ -13,6 +15,8 @@
 ## 🚀 About ApexOne Studio
 
 **ApexOne Studio** is a cutting-edge digital solutions company founded in 2025, specializing in AI-powered innovations, web development, digital marketing, and business consulting. We're a **student-led team** that combines fresh perspectives with technical expertise to deliver enterprise-quality solutions at accessible prices.
+
+Visit our website: [https://apexone.vercel.app](https://apexone.vercel.app)
 
 ### 🎯 Our Mission
 We're not just building digital solutions—we're architecting the future. Our mission is to revolutionize digital landscapes through cutting-edge technology, helping businesses transform and grow in the digital age.
@@ -302,12 +306,133 @@ We develop AI and digital solutions that are responsible, transparent, and benef
 
 ---
 
+## �️ Repository Structure
+
+```
+apex one studio/
+├── assets/
+│   ├── css/           # Stylesheets for all pages
+│   ├── images/        # Images and media assets
+│   └── js/            # JavaScript modules
+├── pages/             # Additional HTML pages
+│   ├── accessibility.html
+│   ├── cookie-policy.html
+│   ├── handbook.html
+│   ├── privacy-policy.html
+│   └── terms-of-service.html
+├── index.html         # Main landing page
+├── manifest.json      # PWA manifest
+├── robots.txt         # SEO configuration
+└── sitemap.xml        # Site structure for search engines
+```
+
+---
+
+## 🛠️ Technologies Used
+
+- **Frontend**: HTML5, CSS3, JavaScript (Vanilla)
+- **Design**: Custom CSS with animations and responsive layouts
+- **Deployment**: Vercel
+- **SEO**: Schema.org structured data, sitemap, robots.txt
+- **Features**: 
+  - AI Showcase section
+  - Interactive pricing tabs
+  - Project portfolio
+  - Responsive handbook/documentation
+  - Light/dark theme toggle
+  - Stats counters with animations
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- A modern web browser
+- A local web server (optional for development)
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/KRITHIKR007/apexone-.git
+```
+
+2. Navigate to the project directory:
+```bash
+cd apexone-
+```
+
+3. Open `index.html` in your browser or use a local server:
+```bash
+# Using Python
+python -m http.server 8000
+
+# Using Node.js (http-server)
+npx http-server
+```
+
+4. Visit `http://localhost:8000` in your browser
+
+---
+
+## 📄 Pages & Features
+
+### Main Pages
+- **Home** (`index.html`) - Landing page with hero section, services, and showcase
+- **Handbook** - Comprehensive documentation and guides
+- **Privacy Policy** - Data protection and privacy information
+- **Terms of Service** - Service agreement and terms
+- **Cookie Policy** - Cookie usage and management
+- **Accessibility** - Accessibility statement and features
+
+### Key Features
+- 🎨 Modern, responsive design
+- 🌓 Light/dark theme toggle
+- 📊 Animated statistics counters
+- 🤖 AI showcase section
+- 💰 Interactive pricing tables
+- 📱 Mobile-first approach
+- ♿ Accessibility-focused
+- 🔍 SEO optimized with structured data
+
+---
+
 ## 📝 Legal & Compliance
 
-- **Privacy Policy**: We maintain strict data privacy standards
-- **Terms of Service**: Clear contractual agreements for all projects
-- **Cookie Policy**: Transparent data collection practices
-- **Accessibility**: All solutions built with accessibility standards
+- **[Privacy Policy](pages/privacy-policy.html)**: We maintain strict data privacy standards
+- **[Terms of Service](pages/terms-of-service.html)**: Clear contractual agreements for all projects
+- **[Cookie Policy](pages/cookie-policy.html)**: Transparent data collection practices
+- **[Accessibility](pages/accessibility.html)**: All solutions built with accessibility standards (WCAG 2.1 AA compliance)
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions! If you'd like to contribute:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+---
+
+## 📞 Contact
+
+- **Website**: [https://apexone.vercel.app](https://apexone.vercel.app)
+- **GitHub**: [@KRITHIKR007](https://github.com/KRITHIKR007)
+- **Location**: Bangalore, India
+
+---
+
+## © Copyright
+
+**All Rights Reserved**
+
+Copyright © 2025 ApexOne Studio. All content, design, code, and materials in this repository are proprietary and confidential. Unauthorized copying, distribution, modification, or use of any materials from this repository is strictly prohibited without prior written permission from ApexOne Studio.
+
+For licensing inquiries or permissions, please contact us through our website.
 
 ---
 
@@ -318,6 +443,8 @@ We develop AI and digital solutions that are responsible, transparent, and benef
   *Architecting the Future, One Solution at a Time*
   
   ---
+  
+  Made with ❤️ in Bangalore, India
   
   © 2025 ApexOne Studio. All rights reserved.
   
