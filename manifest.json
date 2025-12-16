@@ -1,0 +1,56 @@
+{
+  "name": "Apex One Studios - AI & Web Development Company",
+  "short_name": "Apex One",
+  "description": "Leading AI development company in Bangalore specializing in machine learning, web development, and digital transformation solutions.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050810",
+  "theme_color": "#0057ff",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": [
+    "business",
+    "productivity",
+    "technology"
+  ],
+  "lang": "en-IN",
+  "dir": "ltr",
+  "scope": "/",
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "shortcuts": [
+    {
+      "name": "Services",
+      "short_name": "Services",
+      "description": "View our AI and web development services",
+      "url": "/#services",
+      "icons": []
+    },
+    {
+      "name": "Projects",
+      "short_name": "Projects",
+      "description": "Explore our portfolio",
+      "url": "/#projects",
+      "icons": []
+    },
+    {
+      "name": "Contact",
+      "short_name": "Contact",
+      "description": "Get in touch with us",
+      "url": "/#contact",
+      "icons": []
+    }
+  ]
+}
