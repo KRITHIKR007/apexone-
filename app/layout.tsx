@@ -46,11 +46,6 @@ export const metadata: Metadata = {
     description: "Transform your business with AI-powered intelligence and automation",
     images: ["/logo.png"],
   },
-  icons: {
-    icon: "/logo.png",
-    shortcut: "/logo.png",
-    apple: "/logo.png",
-  },
 };
 
 export default function RootLayout({
