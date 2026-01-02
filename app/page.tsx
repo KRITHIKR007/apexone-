@@ -1,6 +1,7 @@
 'use client';
 
 import Hero from '@/components/Hero';
+import TrustedBy from '@/components/TrustedBy';
 import Problem from '@/components/Problem';
 import Solution from '@/components/Solution';
 import GoldenGoose from '@/components/GoldenGoose';
@@ -28,6 +29,7 @@ export default function Home() {
     <main>
       <Navigation />
       <Hero />
+      <TrustedBy />
       <Problem />
       <Solution />
       <GoldenGoose />

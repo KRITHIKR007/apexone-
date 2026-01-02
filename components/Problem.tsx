@@ -10,16 +10,16 @@ export default function Problem() {
             <div className="container relative">
                 {/* Header */}
                 <div className="max-w-3xl mb-20">
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-500 text-xs font-bold tracking-widest uppercase mb-6">
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-50 border border-red-100 text-red-600 text-xs font-bold tracking-widest uppercase mb-6">
                         <div className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
-                        The Disconnect
+                        Critical Alert
                     </div>
                     <h2 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight">
-                        You are running <span className="relative inline-block text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-orange-600">blind.</span>
+                        Why you are <span className="text-red-600">behind.</span>
                     </h2>
                     <p className="text-xl md:text-2xl text-slate-600 leading-relaxed max-w-2xl">
-                        You have data. You have tools. But you don't have <span className="font-semibold text-slate-900">truth</span>.
-                        Most businesses scale by guessing, not knowing.
+                        Your competitors aren't working harder. They are working with better intelligence.
+                        <span className="font-semibold text-slate-900"> You are running on intuition.</span>
                     </p>
                 </div>
 
