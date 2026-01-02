@@ -54,9 +54,9 @@ export default function Products() {
                 </div>
 
                 {/* Vertical Product List - Ultra Editorial */}
-                <div className="space-y-32">
+                <div className="space-y-16 md:space-y-32">
                     {products.map((product, index) => (
-                        <div key={index} className={`group flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-12 md:gap-24`}>
+                        <div key={index} className={`group flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-8 md:gap-24`}>
 
                             {/* Image Side */}
                             <div className="w-full md:w-1/2">

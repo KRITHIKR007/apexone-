@@ -17,7 +17,7 @@ export default function Hero() {
         <div className={`flex flex-col items-center text-center max-w-4xl mx-auto transition-opacity duration-1000 ${mounted ? 'opacity-100' : 'opacity-0'}`}>
 
           {/* Heading - Clean, Custom Tracking, Standard Premium */}
-          <h1 className="text-5xl font-medium tracking-tight text-slate-900 md:text-7xl lg:text-[5rem] leading-[1.05] mb-8">
+          <h1 className="text-4xl font-medium tracking-tight text-slate-900 md:text-7xl lg:text-[5rem] leading-[1.05] mb-6 md:mb-8">
             The Cognitive Engine for <br className="hidden md:block" />
             <span className="text-slate-900">
               Global Enterprise.
