@@ -33,7 +33,8 @@ export default function Footer() {
                             <li><a href="/products/golden-goose" className="text-slate-500 hover:text-indigo-600 transition-colors">Golden Goose</a></li>
                             <li><a href="/products/ciip" className="text-slate-500 hover:text-indigo-600 transition-colors">CIIP Platform</a></li>
                             <li><a href="/products/growth-os" className="text-slate-500 hover:text-indigo-600 transition-colors">Growth OS</a></li>
-                            <li><a href="/pricing" className="text-slate-500 hover:text-indigo-600 transition-colors">Pricing</a></li>
+                            <li><a href="/products/enterprise-os" className="text-slate-500 hover:text-indigo-600 transition-colors">Enterprise OS</a></li>
+                            <li><a href="/products/acn" className="text-slate-500 hover:text-indigo-600 transition-colors">ACN</a></li>
                         </ul>
                     </div>
 

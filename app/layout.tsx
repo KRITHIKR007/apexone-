@@ -55,7 +55,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased">
+      <body className="font-sans antialiased text-slate-900 bg-white selection:bg-indigo-500/30">
         <div className="main-layout">
           {children}
         </div>

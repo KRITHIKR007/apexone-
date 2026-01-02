@@ -2,67 +2,87 @@
 
 export default function ForWhom() {
     return (
-        <section className="section bg-slate-900 text-white relative overflow-hidden">
-            <div className="absolute inset-0 bg-indigo-900/20" />
+        <section className="py-32 bg-white relative overflow-hidden">
+            <div className="container mx-auto">
 
-            <div className="container relative z-10">
-                <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-5xl font-bold mb-6">Designed for the <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-amber-500">Top 1%</span>.</h2>
-                    <p className="text-xl text-slate-400 max-w-2xl mx-auto">
-                        We are not a vendor for everyone. We are a strategic partner for high-growth leadership teams.
+                {/* Section Header */}
+                <div className="mb-24">
+                    <span className="text-xs font-bold tracking-[0.2em] text-indigo-600 uppercase mb-4 block">Selection Criteria</span>
+                    <h2 className="text-5xl md:text-7xl font-bold tracking-tight text-slate-900 leading-[0.9]">
+                        Designed for <br />
+                        <span className="text-slate-400">the 1%.</span>
+                    </h2>
+                </div>
+
+                <div className="grid lg:grid-cols-2 gap-20 lg:gap-32">
+
+                    {/* Part 1: YOU ARE THE 1% */}
+                    <div>
+                        <div className="flex items-end gap-4 mb-8">
+                            <span className="text-6xl font-light text-slate-200">01</span>
+                            <h3 className="text-2xl font-bold text-slate-900 mb-2">The Leadership</h3>
+                        </div>
+                        <div className="prose prose-lg text-slate-500">
+                            <p className="mb-6">
+                                You are not a manager. Managers maintain the status quo. <strong>You are an architect of value.</strong>
+                            </p>
+                            <p className="mb-8">
+                                We partner exclusively with founders and executives who view their business not as a job, but as a high-performance machine. You are tired of "people problems" and are ready for "system solutions." You demand speed, precision, and absolute autonomy.
+                            </p>
+                            <ul className="space-y-4">
+                                <li className="flex items-center gap-3 text-slate-900 font-medium">
+                                    <span className="w-1.5 h-1.5 bg-indigo-600 rounded-full" />
+                                    Revenue &gt; $3M/year
+                                </li>
+                                <li className="flex items-center gap-3 text-slate-900 font-medium">
+                                    <span className="w-1.5 h-1.5 bg-indigo-600 rounded-full" />
+                                    Decisive Leadership
+                                </li>
+                                <li className="flex items-center gap-3 text-slate-900 font-medium">
+                                    <span className="w-1.5 h-1.5 bg-indigo-600 rounded-full" />
+                                    Unsatisfied with Linear Growth
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    {/* Part 2: GETTING TO THE 1% */}
+                    <div className="relative">
+                        <div className="absolute top-0 left-0 w-full h-px bg-slate-100 lg:hidden" /> {/* Mobile separator */}
+
+                        <div className="flex items-end gap-4 mb-8 lg:mt-0 mt-12">
+                            <span className="text-6xl font-light text-slate-200">02</span>
+                            <h3 className="text-2xl font-bold text-slate-900 mb-2">The Transformation</h3>
+                        </div>
+                        <div className="prose prose-lg text-slate-500">
+                            <p className="mb-6">
+                                Most companies die in the "Middle Class" of business—too big to be small, too small to be dominant. <strong>We bridge the gap.</strong>
+                            </p>
+                            <p className="mb-8">
+                                To enter the top 1% of your industry, you cannot rely on more headcount. You must deploy leverage. We install the infrastructure that creates unfair advantages: predictive data, automated fulfillment, and infinite media scale.
+                            </p>
+
+                            <div className="grid grid-cols-2 gap-4 mt-8">
+                                <div className="p-6 bg-slate-50 rounded-xl border border-slate-100">
+                                    <div className="text-3xl font-bold text-slate-900 mb-1">10x</div>
+                                    <div className="text-xs font-bold uppercase tracking-widest text-slate-400">Efficiency</div>
+                                </div>
+                                <div className="p-6 bg-slate-50 rounded-xl border border-slate-100">
+                                    <div className="text-3xl font-bold text-slate-900 mb-1">#1</div>
+                                    <div className="text-xs font-bold uppercase tracking-widest text-slate-400">Market Pos.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div className="mt-24 pt-8 border-t border-slate-100 flex justify-end">
+                    <p className="text-sm font-mono text-slate-400 uppercase tracking-widest">
+                        *Strict qualification criteria apply to all partnerships.
                     </p>
                 </div>
 
-                <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
-
-                    {/* The Qualifier */}
-                    <div className="bg-white/5 backdrop-blur-md rounded-3xl p-10 border border-white/10">
-                        <h3 className="text-2xl font-bold mb-8 flex items-center gap-3">
-                            <span className="w-8 h-8 rounded-full bg-emerald-500 flex items-center justify-center text-black font-bold">✓</span>
-                            Who Fits
-                        </h3>
-                        <ul className="space-y-6">
-                            {[
-                                { title: "Founders & CEOs", desc: "You are tired of managing people and want to manage systems." },
-                                { title: "Revenue > $1M", desc: "You have product-market fit, but scaling is breaking your operations." },
-                                { title: "Data-Hungry", desc: "You believe that gut-feeling is for gambling, not for business." },
-                                { title: "Aggressive Goals", desc: "You want to 3x your growth next year, not 1.1x." }
-                            ].map((item, i) => (
-                                <li key={i} className="flex gap-4">
-                                    <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2.5 flex-shrink-0" />
-                                    <div>
-                                        <div className="font-bold text-lg text-slate-100">{item.title}</div>
-                                        <div className="text-slate-400 text-sm leading-relaxed">{item.desc}</div>
-                                    </div>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-
-                    {/* The Disqualifier */}
-                    <div className="bg-transparent rounded-3xl p-10 border border-white/5 opacity-60 hover:opacity-100 transition-opacity">
-                        <h3 className="text-2xl font-bold mb-8 flex items-center gap-3 text-slate-400">
-                            <span className="w-8 h-8 rounded-full bg-slate-700 flex items-center justify-center text-slate-400 font-bold">✕</span>
-                            Who Does Not
-                        </h3>
-                        <ul className="space-y-6">
-                            {[
-                                { title: "Micromanagers", desc: "We build autonomous systems. If you need to approve every pixel, we are not a match." },
-                                { title: "Idea Stage", desc: "We fuel fire, we don't start it. Come back when you have revenue." },
-                                { title: "Feature Shoppers", desc: "If you are looking for a 'cheaper Mailchimp', we are too expensive for you." }
-                            ].map((item, i) => (
-                                <li key={i} className="flex gap-4">
-                                    <div className="w-1.5 h-1.5 rounded-full bg-slate-600 mt-2.5 flex-shrink-0" />
-                                    <div>
-                                        <div className="font-bold text-lg text-slate-300">{item.title}</div>
-                                        <div className="text-slate-500 text-sm leading-relaxed">{item.desc}</div>
-                                    </div>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-
-                </div>
             </div>
         </section>
     );

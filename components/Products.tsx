@@ -1,65 +1,96 @@
 'use client';
 
 export default function Products() {
+    // Premium Product Data
+    const products = [
+        {
+            title: 'Golden Goose',
+            description: 'The automated revenue engine. Scale vertically without adding headcount.',
+            image: '/products/golden-goose.png',
+            link: '/products/golden-goose'
+        },
+        {
+            title: 'CIIP Platform',
+            description: 'Central Intelligence & Integration Platform. The brain of your enterprise.',
+            image: '/products/ciip.png',
+            link: '/products/ciip'
+        },
+        {
+            title: 'Growth OS',
+            description: 'Data-driven market expansion and customer acquisition at scale.',
+            image: '/products/growth-os.png',
+            link: '/products/growth-os'
+        },
+        {
+            title: 'Enterprise OS',
+            description: 'Full-stack operational infrastructure for high-velocity organizations.',
+            image: '/products/enterprise-os.png',
+            link: '/products/enterprise-os'
+        },
+        {
+            title: 'Apex Creators Network (ACN)',
+            description: 'Elite talent on demand. Access the top 1% of global creative professionals.',
+            image: '/products/acn-network.png',
+            link: '/products/acn'
+        }
+    ];
+
     return (
-        <section id="products" className="section bg-slate-50 py-32">
-            <div className="container">
-                <div className="max-w-3xl mx-auto text-center mb-16">
-                    <div className="inline-block px-3 py-1 bg-white border border-indigo-100 rounded-full text-indigo-700 text-xs font-bold tracking-widest uppercase mb-6 shadow-sm">
-                        The Ecosystem
+        <section id="products" className="py-32 bg-white border-t border-slate-100">
+            <div className="container mx-auto">
+
+                {/* Header */}
+                <div className="flex flex-col md:flex-row items-end justify-between mb-24 gap-8">
+                    <div className="max-w-xl">
+                        <div className="inline-flex items-center gap-2 mb-6">
+                            <span className="h-px w-8 bg-slate-900"></span>
+                            <span className="text-xs font-bold uppercase tracking-widest text-slate-900">The Ecosystem</span>
+                        </div>
+                        <h2 className="text-4xl md:text-5xl font-medium text-slate-900 tracking-tight leading-tight">
+                            Tools for the <br />
+                            <span className="text-slate-400">exponential age.</span>
+                        </h2>
                     </div>
-                    <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-                        Complete Business OS
-                    </h2>
-                    <p className="text-xl text-slate-600 leading-relaxed">
-                        Four specialized engines working in unison to automate every layer of your enterprise.
-                    </p>
                 </div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    {[
-                        {
-                            title: "Golden Goose",
-                            desc: "Central Intelligence & P&L",
-                            path: "/products/golden-goose",
-                            icon: "M13 10V3L4 14h7v7l9-11h-7z",
-                            color: "text-amber-500"
-                        },
-                        {
-                            title: "CIIP Platform",
-                            desc: "Security & IP Protection",
-                            path: "/products/ciip",
-                            icon: "M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z",
-                            color: "text-red-500"
-                        },
-                        {
-                            title: "Growth OS",
-                            desc: "Revenue & Acquisition",
-                            path: "/products/growth-os",
-                            icon: "M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z",
-                            color: "text-emerald-500"
-                        },
-                        {
-                            title: "Enterprise OS",
-                            desc: "Full Autonomous Infrastructure",
-                            path: "/products/enterprise-os",
-                            icon: "M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z",
-                            color: "text-indigo-500"
-                        }
-                    ].map((product, i) => (
-                        <a key={i} href={product.path} className="group bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-indigo-300 transition-all duration-300 flex flex-col items-start relative overflow-hidden">
-                            <div className={`w-12 h-12 rounded-xl bg-slate-50 flex items-center justify-center mb-6 border border-slate-100 group-hover:bg-white group-hover:scale-110 transition-all duration-300 ${product.color}`}>
-                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={product.icon} /></svg>
-                            </div>
-                            <h3 className="text-lg font-bold text-slate-900 mb-2">{product.title}</h3>
-                            <p className="text-sm text-slate-500 mb-6">{product.desc}</p>
+                {/* Vertical Product List - Ultra Editorial */}
+                <div className="space-y-32">
+                    {products.map((product, index) => (
+                        <div key={index} className={`group flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-12 md:gap-24`}>
 
-                            <div className="mt-auto flex items-center font-bold text-sm text-indigo-600 group-hover:translate-x-2 transition-transform duration-300">
-                                View Section <span className="ml-1">→</span>
+                            {/* Image Side */}
+                            <div className="w-full md:w-1/2">
+                                <a href={product.link} className="block relative overflow-hidden rounded-lg aspect-video shadow-2xl group-hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] transition-all duration-700">
+                                    <div className="absolute inset-0 bg-slate-900/10 transition-opacity duration-500 group-hover:opacity-0 z-10" />
+                                    <img
+                                        src={product.image}
+                                        alt={product.title}
+                                        className="w-full h-full object-cover transform scale-100 group-hover:scale-105 transition-transform duration-1000 ease-[cubic-bezier(0.23,1,0.32,1)]"
+                                    />
+                                </a>
                             </div>
-                        </a>
+
+                            {/* Content Side */}
+                            <div className="w-full md:w-1/3 flex flex-col justify-center">
+                                <div className="text-xs font-mono text-slate-400 mb-4">0{index + 1}</div>
+                                <h3 className="text-3xl font-medium text-slate-900 mb-6 group-hover:text-indigo-600 transition-colors duration-300">
+                                    <a href={product.link}>{product.title}</a>
+                                </h3>
+                                <div className="h-px w-12 bg-slate-200 mb-8 mt-2" />
+                                <p className="text-lg text-slate-500 leading-relaxed mb-10">
+                                    {product.description}
+                                </p>
+
+                                <a href={product.link} className="inline-flex items-center gap-4 text-sm font-bold uppercase tracking-widest text-slate-900 group/link">
+                                    View Product
+                                    <span className="w-8 h-px bg-slate-900 group-hover/link:w-12 transition-all duration-300" />
+                                </a>
+                            </div>
+
+                        </div>
                     ))}
                 </div>
+
             </div>
         </section>
     );

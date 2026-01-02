@@ -12,7 +12,7 @@ export default function ACN() {
                 <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.03]" />
             </div>
 
-            <div className="container mx-auto px-6 md:px-12 relative z-10">
+            <div className="container mx-auto relative z-10">
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
                     {/* Left Content */}
                     <div>
