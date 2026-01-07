@@ -10,14 +10,14 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative bg-white min-h-screen flex items-center justify-center overflow-hidden py-20">
+    <section className="relative bg-white h-screen flex items-center justify-center overflow-hidden pt-24">
       <div className="container mx-auto">
 
         {/* Content Wrapper - Centered & Stark */}
-        <div className={`flex flex-col justify-center w-full max-w-[90vw] xl:max-w-[1200px] mx-auto transition-opacity duration-1000 ${mounted ? 'opacity-100' : 'opacity-0'}`}>
+        <div className={`flex flex-col items-center text-center max-w-4xl mx-auto transition-opacity duration-1000 ${mounted ? 'opacity-100' : 'opacity-0'}`}>
 
           {/* Heading - Clean, Custom Tracking, Standard Premium */}
-          <h1 className="text-6xl md:text-[8rem] font-bold tracking-tighter text-slate-900 leading-[0.9] mb-6 md:mb-10 text-left">
+          <h1 className="text-6xl md:text-[8rem] font-bold tracking-tighter text-slate-900 leading-[0.9] mb-6 md:mb-8 text-left">
             The Cognitive Engine for
             <span className="text-transparent bg-clip-text bg-gradient-to-b from-slate-900 to-slate-600 block pl-12 md:pl-48">
               Global Enterprise.
@@ -25,7 +25,7 @@ export default function Hero() {
           </h1>
 
           {/* Subheading - Refined Grey, Good Measure */}
-          <p className="max-w-3xl text-2xl leading-relaxed text-slate-600 mb-12 antialiased">
+          <p className="max-w-3xl text-2xl leading-relaxed text-slate-600 mb-8 antialiased">
             Predict revenue, automate execution, and scale net profit with proprietary AI.
             <span className="text-slate-900 font-medium"> Zero headcount added.</span>
           </p>
