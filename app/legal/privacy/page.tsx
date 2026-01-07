@@ -125,7 +125,7 @@ export default function PrivacyPage() {
                                 <h3 className="mb-4">Contact Privacy Office</h3>
                                 <div className="bg-slate-50 p-6 rounded-lg border border-slate-100 inline-block pr-20">
                                     <p className="mb-1 font-bold text-slate-900">ApexOne Studios - Legal Dept.</p>
-                                    <p className="mb-0 text-slate-500">Bengaluru, India</p>
+                                    <p className="mb-0 text-slate-500">Akshaya Nilaya, Ranganath Layout, Harohalli, Bangalore South, Karnataka, India</p>
                                     <a href="mailto:privacy@apexonestudio.com" className="block mt-4 text-emerald-600 font-medium hover:underline">privacy@apexonestudio.com</a>
                                 </div>
                             </div>

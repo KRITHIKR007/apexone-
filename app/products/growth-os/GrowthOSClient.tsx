@@ -1,179 +1,271 @@
 'use client';
 
-import PageHeader from '@/components/PageHeader';
+import Link from 'next/link';
 import Footer from '@/components/Footer';
 import Navigation from '@/components/Navigation';
 
 export default function GrowthOSClient() {
     return (
-        <main className="bg-slate-50 min-h-screen text-slate-900 selection:bg-indigo-600 selection:text-white">
+        <main className="bg-[#030303] min-h-screen text-white selection:bg-white selection:text-black">
             <Navigation />
 
-            <div className="pt-32 pb-12 container">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-indigo-600 text-white text-xs font-bold uppercase tracking-widest mb-6">
-                    Performance Protocol
-                </div>
-                <h1 className="text-5xl md:text-7xl font-bold text-slate-900 mb-6 tracking-tight">
-                    Growth <span className="text-indigo-600">OS</span>
-                </h1>
-                <p className="text-xl text-slate-600 max-w-2xl leading-relaxed">
-                    We don't "do marketing". We install a mathematical revenue engine.
-                    From acquisition to retention, every user action is predicted, tracked, and optimized.
-                </p>
-
-                {/* Metric Strip */}
-                <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-px bg-slate-200 border border-slate-200 rounded-lg overflow-hidden">
-                    {[
-                        { label: "Target ROAS", val: "4.5x", sub: "+12% vs Market" },
-                        { label: "CAC Efficiency", val: "-22%", sub: "MoM Reduction" },
-                        { label: "Conversion Rate", val: "3.8%", sub: "Top 1% Percentile" },
-                        { label: "LTV / CAC", val: "5:1", sub: "Healthy Growth" }
-                    ].map((stat) => (
-                        <div key={stat.label} className="bg-white p-6">
-                            <div className="text-xs text-slate-500 uppercase tracking-widest font-semibold mb-2">{stat.label}</div>
-                            <div className="text-3xl font-bold text-slate-900 mb-1">{stat.val}</div>
-                            <div className="text-[10px] font-bold text-emerald-600 bg-emerald-50 inline-block px-1.5 py-0.5 rounded">{stat.sub}</div>
-                        </div>
-                    ))}
-                </div>
-            </div>
-
-            {/* Funnel Visualization */}
-            <section className="pb-20">
-                <div className="container">
-                    <div className="bg-white rounded-2xl shadow-xl border border-slate-100 overflow-hidden">
-                        <div className="p-6 border-b border-slate-100 flex justify-between items-center bg-slate-50/50">
-                            <h3 className="font-bold text-slate-700 flex items-center gap-2">
-                                <svg className="w-5 h-5 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
-                                Live Funnel Diagnostics
-                            </h3>
-                            <div className="flex gap-2">
-                                <span className="px-3 py-1 bg-white border border-slate-200 rounded text-xs font-medium text-slate-600">Last 30 Days</span>
-                                <span className="px-3 py-1 bg-indigo-50 border border-indigo-100 rounded text-xs font-bold text-indigo-700">Live View</span>
-                            </div>
-                        </div>
-
-                        <div className="p-8 grid md:grid-cols-5 gap-4 items-center relative">
-                            {/* Connecting Line (Desktop) */}
-                            <div className="hidden md:block absolute top-1/2 left-0 right-0 h-0.5 bg-slate-100 -z-10"></div>
-
-                            {[
-                                { stage: "Impressions", count: "142,000", rate: "100%", color: "bg-slate-100 border-slate-200" },
-                                { stage: "Clicks", count: "8,520", rate: "6.0% CTR", color: "bg-blue-50 border-blue-100 text-blue-700" },
-                                { stage: "Leads", count: "2,130", rate: "25% Opt-in", color: "bg-indigo-50 border-indigo-100 text-indigo-700" },
-                                { stage: "Sales Call", count: "426", rate: "20% Booked", color: "bg-purple-50 border-purple-100 text-purple-700" },
-                                { stage: "Closed Deals", count: "128", rate: "30% Close", color: "bg-emerald-50 border-emerald-100 text-emerald-700" }
-                            ].map((step, i) => (
-                                <div key={step.stage} className={`p-6 rounded-xl border ${step.color} shadow-sm relative group hover:-translate-y-1 transition-transform duration-300 bg-white`}>
-                                    {/* Fix: bg-white overrides specific backgrounds, removing it to let color prop work, or blending */}
-                                    <div className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Step 0{i + 1}</div>
-                                    <h4 className="font-bold text-slate-900 mb-1">{step.stage}</h4>
-                                    <div className="text-2xl font-bold text-slate-900 mb-2">{step.count}</div>
-                                    <div className="text-xs font-semibold px-2 py-1 rounded bg-white/50 inline-block border border-black/5">{step.rate}</div>
-
-                                    {i < 4 && (
-                                        <div className="absolute top-1/2 -right-6 w-8 h-8 rounded-full bg-white border border-slate-200 shadow flex items-center justify-center z-10 hidden md:flex text-slate-400">
-                                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-                                        </div>
-                                    )}
-                                </div>
-                            ))}
-                        </div>
-
-                        {/* Dropoff Analysis */}
-                        <div className="px-8 pb-8 pt-0">
-                            <div className="bg-amber-50 border border-amber-100 rounded-lg p-4 flex items-start gap-3">
-                                <svg className="w-5 h-5 text-amber-600 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
-                                <div>
-                                    <h4 className="text-sm font-bold text-amber-800">Anomaly Detected: High Dropoff at Step 03</h4>
-                                    <p className="text-xs text-amber-700 mt-1">
-                                        Booking page load time is 4.2s. Predicted lift if reduced to 2.0s: <span className="font-bold">+18% Calls Booked.</span>
-                                    </p>
-                                </div>
-                                <button className="ml-auto text-xs bg-amber-100 text-amber-800 px-3 py-1.5 rounded font-bold hover:bg-amber-200">Deploy Fix</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Experiment Log */}
-            <section className="py-20 bg-white border-t border-slate-100">
-                <div className="container max-w-5xl">
-                    <h2 className="text-3xl font-bold mb-12 text-slate-900">Active Experiments (A/B)</h2>
-
-                    <div className="border border-slate-200 rounded-lg overflow-hidden">
-                        <table className="w-full text-left">
-                            <thead className="bg-slate-50 text-xs font-bold uppercase tracking-widest text-slate-500">
-                                <tr>
-                                    <th className="p-4 border-b border-slate-200">Experiment ID</th>
-                                    <th className="p-4 border-b border-slate-200">Hypothesis</th>
-                                    <th className="p-4 border-b border-slate-200">Confidence</th>
-                                    <th className="p-4 border-b border-slate-200 text-right">Impact</th>
-                                </tr>
-                            </thead>
-                            <tbody className="text-sm">
-                                {[
-                                    { id: "EXP-402", title: "Headline: 'Save Costs' vs 'Increase Revenue'", conf: "99% (Statistical Significance)", impact: "+14.2% Conv.", status: "WINNER" },
-                                    { id: "EXP-405", title: "Checkout: Remove 'Company Name' field", conf: "82% (Gathering Data)", impact: "+4.1% Conv.", status: "RUNNING" },
-                                    { id: "EXP-409", title: "Pricing: Annual Plan Default", conf: "95% (Statistical Significance)", impact: "+22% LTV", status: "WINNER" },
-                                    { id: "EXP-411", title: "CTA Color: Black vs Indigo", conf: "12% (Inconclusive)", impact: "0.0% Diff", status: "FAILED" }
-                                ].map((row, i) => (
-                                    <tr key={row.id} className="border-b border-slate-100 hover:bg-slate-50 transition-colors">
-                                        <td className="p-4 font-mono text-slate-500">{row.id}</td>
-                                        <td className="p-4 font-medium text-slate-900">{row.title}</td>
-                                        <td className="p-4 text-slate-500">
-                                            <div className="flex items-center gap-2">
-                                                <div className={`w-2 h-2 rounded-full ${row.status === 'RUNNING' ? 'bg-amber-500 animate-pulse' : 'bg-slate-300'}`}></div>
-                                                {row.conf}
-                                            </div>
-                                        </td>
-                                        <td className="p-4 text-right font-bold text-emerald-600">{row.impact}</td>
-                                    </tr>
-                                ))}
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </section>
-
-            {/* System Blueprint */}
-            <section className="py-20 bg-slate-50">
+            {/* Hero Section */}
+            <section className="pt-40 pb-32 relative border-b border-white/5">
                 <div className="container max-w-6xl">
-                    <h2 className="text-3xl font-bold mb-12 text-slate-900">Integration Map</h2>
-                    <div className="grid md:grid-cols-3 gap-8">
-                        <div className="p-6 bg-white rounded-xl shadow-sm border border-slate-200">
-                            <div className="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center mb-4">
-                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" /></svg>
+                    <div className="inline-block px-3 py-1 mb-6 border border-white/10 rounded-full bg-white/5 backdrop-blur-sm">
+                        <span className="text-[10px] font-mono tracking-[0.2em] uppercase text-white/60">Growth OS 3.0</span>
+                    </div>
+
+                    <h1 className="text-6xl md:text-8xl font-medium tracking-tighter mb-8 leading-[0.9]">
+                        Revenue <br />
+                        <span className="text-white/40">Engineering.</span>
+                    </h1>
+
+                    <p className="text-xl text-white/60 max-w-2xl font-light leading-relaxed mb-12">
+                        A deterministic system for predictable revenue growth. Every dollar spent is tracked,
+                        every conversion optimized, every customer journey engineered for maximum LTV.
+                    </p>
+
+                    <div className="flex gap-4">
+                        <Link href="/contact" className="px-8 py-4 bg-white text-black text-sm font-medium tracking-wide hover:bg-slate-200 transition-colors inline-block">
+                            Request Demo
+                        </Link>
+                        <button className="px-8 py-4 border border-white/10 text-white text-sm font-medium tracking-wide hover:bg-white/5 transition-colors">
+                            View Case Studies
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            {/* Performance Metrics */}
+            <section className="py-32 border-b border-white/5">
+                <div className="container max-w-6xl">
+                    <div className="mb-16">
+                        <h2 className="text-sm font-mono tracking-[0.2em] text-white/40 uppercase mb-4">Performance Benchmarks</h2>
+                        <h3 className="text-4xl font-medium tracking-tight">Measured Outcomes</h3>
+                    </div>
+
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/10">
+                        {[
+                            { metric: "ROAS", value: "4.5x", delta: "+12% vs Industry" },
+                            { metric: "CAC Reduction", value: "22%", delta: "Month over Month" },
+                            { metric: "Conversion Rate", value: "3.8%", delta: "Top 1% Percentile" },
+                            { metric: "LTV:CAC", value: "5:1", delta: "Sustainable Growth" }
+                        ].map((stat) => (
+                            <div key={stat.metric} className="bg-[#080808] p-8 hover:bg-[#0a0a0a] transition-colors">
+                                <div className="text-xs font-mono text-white/40 mb-4 uppercase tracking-widest">{stat.metric}</div>
+                                <div className="text-4xl font-medium text-white mb-2">{stat.value}</div>
+                                <div className="text-xs text-white/60">{stat.delta}</div>
                             </div>
-                            <h4 className="font-bold text-slate-900 mb-2">Acquisition Layer</h4>
-                            <ul className="text-sm text-slate-600 space-y-2">
-                                <li>• Meta Ads Manager (API v19.0)</li>
-                                <li>• Google Ads (PMax)</li>
-                                <li>• LinkedIn Insight Tag</li>
-                            </ul>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* The Problem: Traditional Marketing */}
+            <section className="py-32 border-b border-white/5">
+                <div className="container max-w-6xl">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
+                        <div>
+                            <h2 className="text-3xl font-medium tracking-tight mb-6">The Attribution Gap</h2>
+                            <p className="text-lg text-white/50 leading-relaxed">
+                                Most companies operate on intuition. They spend millions on ads without knowing which channels
+                                drive revenue, which campaigns are profitable, or where customers drop off. Growth OS eliminates guesswork.
+                            </p>
                         </div>
-                        <div className="p-6 bg-white rounded-xl shadow-sm border border-slate-200">
-                            <div className="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center mb-4">
-                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" /></svg>
+                        <div className="space-y-8">
+                            <div className="group">
+                                <div className="h-[1px] w-full bg-white/10 mb-4 group-hover:bg-white/30 transition-colors"></div>
+                                <h3 className="text-lg font-medium mb-2">Broken Attribution</h3>
+                                <p className="text-sm text-white/40">Multi-touch attribution is fragmented across platforms with no single source of truth.</p>
                             </div>
-                            <h4 className="font-bold text-slate-900 mb-2">Data Warehouse</h4>
-                            <ul className="text-sm text-slate-600 space-y-2">
-                                <li>• BigQuery (Event Stream)</li>
-                                <li>• Segment.com (CDP)</li>
-                                <li>• DBT (Data Transformation)</li>
-                            </ul>
+                            <div className="group">
+                                <div className="h-[1px] w-full bg-white/10 mb-4 group-hover:bg-white/30 transition-colors"></div>
+                                <h3 className="text-lg font-medium mb-2">Optimization Lag</h3>
+                                <p className="text-sm text-white/40">Manual A/B testing takes weeks. Markets move in hours.</p>
+                            </div>
+                            <div className="group">
+                                <div className="h-[1px] w-full bg-white/10 mb-4 group-hover:bg-white/30 transition-colors"></div>
+                                <h3 className="text-lg font-medium mb-2">Revenue Opacity</h3>
+                                <p className="text-sm text-white/40">CMOs cannot answer: "What is our true CAC by channel?"</p>
+                            </div>
                         </div>
-                        <div className="p-6 bg-white rounded-xl shadow-sm border border-slate-200">
-                            <div className="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center mb-4">
-                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                    </div>
+                </div>
+            </section>
+
+            {/* System Architecture */}
+            <section className="py-32 bg-[#050505] border-b border-white/5">
+                <div className="container max-w-6xl">
+                    <div className="mb-20">
+                        <h2 className="text-sm font-mono tracking-[0.2em] text-white/40 uppercase mb-4">System Architecture</h2>
+                        <h3 className="text-4xl font-medium tracking-tight">Three-Layer Revenue Stack</h3>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/10 border border-white/10">
+                        {/* Layer 1 */}
+                        <div className="bg-[#080808] p-12 hover:bg-[#0a0a0a] transition-colors relative group">
+                            <div className="absolute top-6 left-6 text-xs font-mono text-white/20">01 / ACQUIRE</div>
+                            <div className="mt-8 mb-6">
+                                <svg className="w-8 h-8 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="square" strokeLinejoin="miter" strokeWidth={1} d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" /></svg>
                             </div>
-                            <h4 className="font-bold text-slate-900 mb-2">Retention Layer</h4>
-                            <ul className="text-sm text-slate-600 space-y-2">
-                                <li>• Klaviyo (Email Flows)</li>
-                                <li>• Intercom (Live Chat)</li>
-                                <li>• Twilio (SMS / WhatsApp)</li>
-                            </ul>
+                            <h4 className="text-xl font-medium mb-4">Acquisition Engine</h4>
+                            <p className="text-sm text-white/40 leading-relaxed">
+                                Unified API layer ingests data from Meta, Google, LinkedIn. Real-time bidding optimization across all platforms simultaneously.
+                            </p>
+                        </div>
+
+                        {/* Layer 2 */}
+                        <div className="bg-[#080808] p-12 hover:bg-[#0a0a0a] transition-colors relative group">
+                            <div className="absolute top-6 left-6 text-xs font-mono text-white/20">02 / CONVERT</div>
+                            <div className="mt-8 mb-6">
+                                <svg className="w-8 h-8 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="square" strokeLinejoin="miter" strokeWidth={1} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+                            </div>
+                            <h4 className="text-xl font-medium mb-4">Conversion Intelligence</h4>
+                            <p className="text-sm text-white/40 leading-relaxed">
+                                Continuous A/B testing on landing pages, CTAs, and checkout flows. Statistical significance reached in days, not months.
+                            </p>
+                        </div>
+
+                        {/* Layer 3 */}
+                        <div className="bg-[#080808] p-12 hover:bg-[#0a0a0a] transition-colors relative group">
+                            <div className="absolute top-6 left-6 text-xs font-mono text-white/20">03 / RETAIN</div>
+                            <div className="mt-8 mb-6">
+                                <svg className="w-8 h-8 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="square" strokeLinejoin="miter" strokeWidth={1} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                            </div>
+                            <h4 className="text-xl font-medium mb-4">Retention Automation</h4>
+                            <p className="text-sm text-white/40 leading-relaxed">
+                                Behavioral triggers for email, SMS, and in-app messaging. Churn prediction models identify at-risk customers 30 days in advance.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Core Capabilities */}
+            <section className="py-32 border-b border-white/5">
+                <div className="container max-w-6xl">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
+                        <div className="lg:col-span-4">
+                            <h2 className="text-3xl font-medium tracking-tight mb-6">Core Capabilities</h2>
+                            <p className="text-white/50 leading-relaxed">
+                                Growth OS is a complete revenue operating system. Deploy modules independently or as an integrated stack.
+                            </p>
+                        </div>
+
+                        <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div className="border border-white/10 bg-[#080808] p-8">
+                                <h3 className="text-lg font-medium text-white mb-2">Multi-Channel Attribution</h3>
+                                <ul className="space-y-4 mt-6">
+                                    <li className="flex items-start gap-3">
+                                        <div className="w-1 h-1 bg-white rounded-full mt-2"></div>
+                                        <span className="text-sm text-white/60">First-touch, Last-touch, Linear Models</span>
+                                    </li>
+                                    <li className="flex items-start gap-3">
+                                        <div className="w-1 h-1 bg-white rounded-full mt-2"></div>
+                                        <span className="text-sm text-white/60">Cross-device User Stitching</span>
+                                    </li>
+                                    <li className="flex items-start gap-3">
+                                        <div className="w-1 h-1 bg-white rounded-full mt-2"></div>
+                                        <span className="text-sm text-white/60">Revenue Attribution by Campaign</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div className="border border-white/10 bg-[#080808] p-8">
+                                <h3 className="text-lg font-medium text-white mb-2">Experimentation Platform</h3>
+                                <ul className="space-y-4 mt-6">
+                                    <li className="flex items-start gap-3">
+                                        <div className="w-1 h-1 bg-white rounded-full mt-2"></div>
+                                        <span className="text-sm text-white/60">Multivariate Testing Engine</span>
+                                    </li>
+                                    <li className="flex items-start gap-3">
+                                        <div className="w-1 h-1 bg-white rounded-full mt-2"></div>
+                                        <span className="text-sm text-white/60">Bayesian Statistical Analysis</span>
+                                    </li>
+                                    <li className="flex items-start gap-3">
+                                        <div className="w-1 h-1 bg-white rounded-full mt-2"></div>
+                                        <span className="text-sm text-white/60">Auto-deploy Winning Variants</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div className="border border-white/10 bg-[#080808] p-8">
+                                <h3 className="text-lg font-medium text-white mb-2">Predictive Analytics</h3>
+                                <ul className="space-y-4 mt-6">
+                                    <li className="flex items-start gap-3">
+                                        <div className="w-1 h-1 bg-white rounded-full mt-2"></div>
+                                        <span className="text-sm text-white/60">Customer Lifetime Value Forecasting</span>
+                                    </li>
+                                    <li className="flex items-start gap-3">
+                                        <div className="w-1 h-1 bg-white rounded-full mt-2"></div>
+                                        <span className="text-sm text-white/60">Churn Risk Scoring</span>
+                                    </li>
+                                    <li className="flex items-start gap-3">
+                                        <div className="w-1 h-1 bg-white rounded-full mt-2"></div>
+                                        <span className="text-sm text-white/60">Propensity-to-Buy Models</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div className="border border-white/10 bg-[#080808] p-8">
+                                <h3 className="text-lg font-medium text-white mb-2">Campaign Automation</h3>
+                                <ul className="space-y-4 mt-6">
+                                    <li className="flex items-start gap-3">
+                                        <div className="w-1 h-1 bg-white rounded-full mt-2"></div>
+                                        <span className="text-sm text-white/60">Dynamic Budget Allocation</span>
+                                    </li>
+                                    <li className="flex items-start gap-3">
+                                        <div className="w-1 h-1 bg-white rounded-full mt-2"></div>
+                                        <span className="text-sm text-white/60">Audience Segmentation AI</span>
+                                    </li>
+                                    <li className="flex items-start gap-3">
+                                        <div className="w-1 h-1 bg-white rounded-full mt-2"></div>
+                                        <span className="text-sm text-white/60">Creative Performance Analysis</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Performance Table */}
+            <section className="py-32">
+                <div className="container max-w-5xl">
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl font-medium tracking-tight mb-6">Efficiency Gains</h2>
+                        <p className="text-white/50">Comparative analysis: Traditional marketing vs Growth OS automation.</p>
+                    </div>
+
+                    <div className="w-full">
+                        <div className="grid grid-cols-3 border-b border-white/20 pb-4 mb-4">
+                            <div className="text-xs font-mono uppercase tracking-widest text-white/40">Process</div>
+                            <div className="text-xs font-mono uppercase tracking-widest text-white/40">Manual Approach</div>
+                            <div className="text-xs font-mono uppercase tracking-widest text-white/40">Growth OS</div>
+                        </div>
+
+                        <div className="space-y-6">
+                            <div className="grid grid-cols-3 items-center py-4 border-b border-white/5">
+                                <div className="text-sm font-medium text-white">Campaign Attribution</div>
+                                <div className="text-sm text-white/40">7-14 Days (Spreadsheets)</div>
+                                <div className="text-sm text-white">Real-time (&lt;1s)</div>
+                            </div>
+                            <div className="grid grid-cols-3 items-center py-4 border-b border-white/5">
+                                <div className="text-sm font-medium text-white">A/B Test Deployment</div>
+                                <div className="text-sm text-white/40">2-3 Weeks</div>
+                                <div className="text-sm text-white">24 Hours</div>
+                            </div>
+                            <div className="grid grid-cols-3 items-center py-4 border-b border-white/5">
+                                <div className="text-sm font-medium text-white">Budget Reallocation</div>
+                                <div className="text-sm text-white/40">Monthly Review Cycle</div>
+                                <div className="text-sm text-white">Continuous (Hourly)</div>
+                            </div>
+                            <div className="grid grid-cols-3 items-center py-4 border-b border-white/5">
+                                <div className="text-sm font-medium text-white">Churn Detection</div>
+                                <div className="text-sm text-white/40">Post-cancellation</div>
+                                <div className="text-sm text-white">30-Day Advance Warning</div>
+                            </div>
                         </div>
                     </div>
                 </div>
