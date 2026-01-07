@@ -8,221 +8,304 @@ export default function GoldenGooseClient() {
     return (
         <main>
             <Navigation />
-            <PageHeader
-                title="Thinking Engine of ApexOne Studios"
-                subtitle="Golden Goose is ApexOne Studios's AI-powered business intelligence system. It turns chaos into a single source of truth."
-                badge="Business Intelligence"
-            />
+            <div className="pt-32 pb-20 md:pt-48 md:pb-32 text-center relative overflow-hidden">
+                {/* Background Effects */}
+                <div className="absolute inset-0 pointer-events-none">
+                    <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] bg-gradient-to-br from-indigo-500/5 to-purple-500/5 rounded-full blur-[100px]" />
+                    <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-gradient-to-tl from-blue-500/5 to-emerald-500/5 rounded-full blur-[80px]" />
+                </div>
 
-            <section className="section">
+                <div className="container relative z-10">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 border border-slate-200 mb-10 transform hover:scale-105 transition-transform duration-300">
+                        <span className="w-2 h-2 rounded-full bg-indigo-500 animate-pulse" />
+                        <span className="text-sm font-bold text-slate-600 uppercase tracking-wider">Autonomous Business Intelligence</span>
+                    </div>
+                    <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-slate-900 mb-8 tracking-tighter leading-[1.1]">
+                        Thinking Engine of<br />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">ApexOne Studios</span>
+                    </h1>
+                    <p className="text-2xl md:text-3xl text-slate-600 max-w-4xl mx-auto leading-relaxed font-medium">
+                        Golden Goose is not software. It is ApexOne's <strong>thinking layer</strong> for modern companies.
+                    </p>
+                </div>
+            </div>
+
+            <section className="section pb-0">
                 <div className="container">
-                    <div className="max-w-5xl mx-auto space-y-32">
+                    <div className="max-w-4xl mx-auto text-center">
+                        <h2 className="text-3xl md:text-5xl font-bold mb-8 text-slate-900 leading-tight">
+                            Your data is no longer history.<br />
+                            <span className="text-indigo-600">It is strategy in real time.</span>
+                        </h2>
+                        <p className="text-xl text-slate-600 leading-relaxed">
+                            It continuously ingests, understands, predicts, and acts on every signal inside your business — from ads and payments to logistics and customer behavior — and turns chaos into a <strong>single source of truth</strong> that runs your company for you.
+                        </p>
+                    </div>
+                </div>
+            </section>
 
-                        {/* 1. The Core Philosophy */}
-                        <div className="text-center max-w-3xl mx-auto">
-                            <h2 className="text-4xl font-bold mb-8 text-slate-900">Your Data IS Your Strategy.</h2>
-                            <p className="text-xl text-slate-600 leading-relaxed">
-                                Most companies treat data as a "report card"—something you look at after the month is over.
-                                Golden Goose treats data as a "steering wheel." It is a living, breathing engine that ingests millions of signals
-                                from your business ecosystem and tells you exactly what to do next.
-                            </p>
-                            <div className="mt-12 p-6 bg-amber-50 rounded-2xl border border-amber-100 inline-block text-left">
-                                <p className="font-bold text-amber-900 mb-2 flex items-center gap-2">
-                                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
-                                    The "Black Box" Problem
-                                </p>
-                                <p className="text-amber-800/80 mb-0">
-                                    "I know 50% of my marketing budget works, I just don't know which 50%." <br />
-                                    <strong>Golden Goose kills this statement. We tell you which 50% it is, down to the exact rupee.</strong>
-                                </p>
-                            </div>
-                        </div>
-
-                        {/* 2. Architecture Diagram (Conceptual) */}
-                        <div className="bg-slate-900 rounded-3xl p-8 md:p-12 text-white shadow-2xl overflow-hidden relative">
-                            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-indigo-600 rounded-full blur-[150px] opacity-20 animate-pulse"></div>
-                            <h2 className="text-3xl font-bold mb-12 relative z-10">The Neural Architecture</h2>
-
-                            <div className="grid md:grid-cols-3 gap-8 relative z-10">
-                                {/* Input Layer */}
-                                <div className="space-y-6">
-                                    <div className="text-sm font-bold text-slate-400 uppercase tracking-widest border-b border-slate-700 pb-2">Step 1: Ingestion</div>
-                                    <ul className="space-y-4">
-                                        {[
-                                            { icon: 'M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4', label: 'SQL Databases (Postgres/MySQL)' },
-                                            { icon: 'M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z', label: 'Payment Gateways (Stripe/Razorpay)' },
-                                            { icon: 'M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z', label: 'Ads API (Meta/Google)' },
-                                            { icon: 'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0z', label: 'CRM (Salesforce/HubSpot)' }
-                                        ].map(item => (
-                                            <li key={item.label} className="flex items-center gap-3 text-slate-300">
-                                                <svg className="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={item.icon} /></svg>
-                                                {item.label}
-                                            </li>
+            {/* The Core Problem */}
+            <section className="section bg-white">
+                <div className="container">
+                    <div className="max-w-5xl mx-auto">
+                        <div className="bg-slate-50 border border-slate-200 rounded-3xl p-10 md:p-16">
+                            <div className="grid md:grid-cols-2 gap-12 items-center">
+                                <div>
+                                    <h3 className="text-2xl font-bold mb-6 text-slate-900">The Core Problem We Solve</h3>
+                                    <p className="text-lg text-slate-600 mb-6 italic border-l-4 border-indigo-200 pl-4">
+                                        “We have data everywhere… but we don’t know what to do with it.”
+                                    </p>
+                                    <p className="text-slate-600 mb-6">
+                                        Marketing dashboards, Sales CRMs, Payment gateways, Customer support, Website analytics, Ad platforms... all screaming different stories.
+                                    </p>
+                                    <p className="font-medium text-indigo-900">
+                                        Golden Goose unifies them into <strong>one brain</strong> that answers only one question:
+                                    </p>
+                                    <div className="mt-4 text-xl font-bold text-slate-900">
+                                        “What should we do next to make more money?”
+                                    </div>
+                                </div>
+                                <div className="space-y-4">
+                                    {/* Chaos Visualization */}
+                                    <div className="flex flex-wrap gap-2 justify-center opacity-60">
+                                        {['Meta Ads', 'Stripe', 'Google Analytics', 'HubSpot', 'Shopify', 'Support', 'AWS', 'TikTok'].map(tool => (
+                                            <span key={tool} className="px-3 py-1 bg-white border border-slate-200 rounded text-xs text-slate-400 font-mono strike-through decorative-chaos">
+                                                {tool}
+                                            </span>
                                         ))}
-                                    </ul>
-                                </div>
-
-                                {/* Processing Layer */}
-                                <div className="space-y-6">
-                                    <div className="text-sm font-bold text-slate-400 uppercase tracking-widest border-b border-slate-700 pb-2">Step 2: Synthesis (The Brain)</div>
-                                    <div className="bg-indigo-900/50 border border-indigo-500/30 rounded-xl p-6 relative">
-                                        <div className="absolute -top-3 -right-3 w-6 h-6 bg-green-500 rounded-full animate-pulse shadow-[0_0_15px_#22c55e]"></div>
-                                        <h3 className="font-bold text-white mb-2">Attribution Engine</h3>
-                                        <p className="text-xs text-indigo-200 mb-4">
-                                            Matches ad clicks to bank deposits using a 90-day lookback window across devices.
-                                        </p>
-                                        <h3 className="font-bold text-white mb-2">Anomaly Detector</h3>
-                                        <p className="text-xs text-indigo-200">
-                                            Watches for deviations (e.g., "Checkout page load time up 200ms").
-                                        </p>
                                     </div>
-                                    <div className="flex justify-center text-indigo-400">
-                                        <svg className="w-8 h-8 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
+                                    <div className="flex justify-center my-4">
+                                        <svg className="w-6 h-6 text-indigo-400 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
+                                    </div>
+                                    <div className="bg-slate-900 text-white p-6 rounded-xl text-center shadow-xl relative overflow-hidden">
+                                        <div className="absolute inset-0 bg-indigo-600/20 blur-xl"></div>
+                                        <div className="relative z-10 font-bold text-lg">One Single Source of Truth</div>
+                                        <div className="text-indigo-300 text-xs mt-1 font-mono uppercase tracking-widest">Golden Goose Core</div>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-                                {/* Output Layer */}
-                                <div className="space-y-6">
-                                    <div className="text-sm font-bold text-slate-400 uppercase tracking-widest border-b border-slate-700 pb-2">Step 3: Action</div>
-                                    <ul className="space-y-4">
-                                        <li className="bg-white/5 rounded-lg p-3 text-sm">
-                                            <span className="text-green-400 font-bold">Scaling Signal:</span><br />
-                                            "Campaign B has 3.4x ROAS. Increase budget by 20% immediately."
-                                        </li>
-                                        <li className="bg-white/5 rounded-lg p-3 text-sm">
-                                            <span className="text-red-400 font-bold">Kill Signal:</span><br />
-                                            "Ad Creative #442 saturation reached. CPR rose 40% yesterday. Turn off."
-                                        </li>
-                                    </ul>
+            {/* Neural Architecture */}
+            <section className="section pt-0">
+                <div className="container">
+                    <div className="text-center mb-16">
+                        <span className="text-indigo-600 font-bold tracking-widest uppercase text-sm mb-2 block">System Architecture</span>
+                        <h2 className="text-4xl font-bold text-slate-900">The Golden Goose Neural Architecture</h2>
+                    </div>
+
+                    <div className="max-w-6xl mx-auto space-y-24">
+
+                        {/* Layer 1: Ingestion */}
+                        <div className="grid md:grid-cols-12 gap-12 items-start">
+                            <div className="md:col-span-4 sticky top-32">
+                                <div className="text-6xl font-black text-slate-100 mb-4 -ml-4">01</div>
+                                <h3 className="text-2xl font-bold text-slate-900 mb-4">Universal Ingestion</h3>
+                                <p className="text-slate-600">
+                                    Golden Goose connects to everything that moves money or behavior inside your business. Everything flows into one <strong>time-aligned data lake</strong>.
+                                </p>
+                            </div>
+                            <div className="md:col-span-8 grid sm:grid-cols-2 gap-6">
+                                <SourceCard title="Revenue" items={['Razorpay', 'Stripe', 'PayPal', 'Shopify', 'WooCommerce']} />
+                                <SourceCard title="Marketing" items={['Meta Ads', 'Google Ads', 'TikTok', 'LinkedIn']} />
+                                <SourceCard title="Customers" items={['Salesforce', 'HubSpot', 'Zoho', 'Custom CRMs']} />
+                                <SourceCard title="Product" items={['Website', 'App', 'Funnels', 'Checkout', 'Heatmaps']} />
+                                <SourceCard title="Operations" items={['Delivery Partners', 'Support Tickets', 'Refunds', 'NPS']} />
+                                <SourceCard title="Offline" items={['TV Ads', 'Influencer Posts', 'Billboards', 'POS Sales']} />
+                            </div>
+                        </div>
+
+                        {/* Layer 2: Intelligence Core */}
+                        <div className="grid md:grid-cols-12 gap-12 items-start border-t border-slate-100 pt-24">
+                            <div className="md:col-span-4 sticky top-32">
+                                <div className="text-6xl font-black text-slate-100 mb-4 -ml-4">02</div>
+                                <h3 className="text-2xl font-bold text-slate-900 mb-4">The Intelligence Core</h3>
+                                <p className="text-slate-600">
+                                    This is where ApexOne becomes lethal. We don't just report data; we calculate reality using advanced attribution and prediction models.
+                                </p>
+                            </div>
+                            <div className="md:col-span-8 space-y-8">
+                                <FeatureBlock
+                                    title="Causal Attribution Engine"
+                                    desc="Not pixel-based. Not cookie-based. Money-based. We match ad clicks to revenue across devices, channels, and time windows (up to 90 days). You get who actually made you money."
+                                />
+                                <FeatureBlock
+                                    title="Bayesian Marketing Mix Modeling (MMM)"
+                                    desc="When tracking breaks (iOS, cookies), we use Bayesian regression to correlate ad spend, seasonality, and external events with actual revenue. It answers: 'If I spend ₹10L more on Google, how much revenue will I really get?'"
+                                />
+                                <FeatureBlock
+                                    title="Anomaly Detection Engine"
+                                    desc="Watches thousands of signals. 'Your Mumbai courier delay increased refunds by 12%.' This turns Golden Goose into a 24/7 digital COO."
+                                />
+                                <FeatureBlock
+                                    title="Predictive Intelligence"
+                                    desc="LTV Prediction on Day 1: We look at first session behavior to predict 12-month value. Churn & Risk Engine: identify users likely to cancel before money is lost."
+                                />
+                            </div>
+                        </div>
+
+                        {/* Layer 3: Creative Intelligence */}
+                        <div className="grid md:grid-cols-12 gap-12 items-start border-t border-slate-100 pt-24">
+                            <div className="md:col-span-4 sticky top-32">
+                                <div className="text-6xl font-black text-slate-100 mb-4 -ml-4">03</div>
+                                <h3 className="text-2xl font-bold text-slate-900 mb-4">Creative Intelligence</h3>
+                                <p className="text-slate-600">
+                                    Ads don’t fail. <strong>Creatives fail.</strong> Golden Goose analyzes every frame of every ad to build a creative genome.
+                                </p>
+                            </div>
+                            <div className="md:col-span-8">
+                                <div className="bg-slate-900 rounded-2xl p-8 text-white">
+                                    <div className="mb-6 border-b border-slate-700 pb-6">
+                                        <h4 className="font-bold text-lg mb-4">What it measures:</h4>
+                                        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                                            {['Face vs No Face', 'Emotion Analysis', 'First-3s Hook', 'Text Density', 'Visual Movement', 'Offer Clarity'].map(item => (
+                                                <div key={item} className="flex items-center gap-2 text-sm text-slate-300">
+                                                    <div className="w-1.5 h-1.5 rounded-full bg-emerald-400"></div>
+                                                    {item}
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div className="font-mono text-emerald-400 text-sm mb-2">&gt; INSIGHT GENERATED</div>
+                                        <p className="font-medium text-lg">
+                                            “Testimonial hooks with a human face and subtitles outperform by <span className="text-emerald-400 font-bold">2.3x</span> in your audience.”
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        {/* 3. Deep Dive into Features */}
-                        <div className="grid lg:grid-cols-2 gap-16">
-
-                            {/* Feature 1: MMM (Marketing Mix Modeling) */}
-                            <div>
-                                <h3 className="text-2xl font-bold mb-4 text-slate-900 flex items-center gap-3">
-                                    <span className="w-8 h-8 rounded bg-indigo-100 text-indigo-600 flex items-center justify-center text-sm">01</span>
-                                    Marketing Mix Modeling (MMM)
-                                </h3>
-                                <p className="text-slate-600 mb-6">
-                                    Attribution is dying because of iOS14 and cookies. We don't rely on pixels. Golden Goose uses <strong>Bayesian Regression</strong> to correlate spending with revenue lift.
+                        {/* Layer 4: Competitor Intelligence */}
+                        <div className="grid md:grid-cols-12 gap-12 items-start border-t border-slate-100 pt-24">
+                            <div className="md:col-span-4 sticky top-32">
+                                <div className="text-6xl font-black text-slate-100 mb-4 -ml-4">04</div>
+                                <h3 className="text-2xl font-bold text-slate-900 mb-4">Competitor Intelligence</h3>
+                                <p className="text-slate-600">
+                                    Golden Goose watches your battlefield. It tracks pricing, offers, creatives, and funnel changes of your top competitors.
                                 </p>
-                                <ul className="space-y-3">
-                                    <li className="flex items-center gap-3 text-sm text-slate-700">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-indigo-500"></div>
-                                        <strong>No Tracking Code Needed:</strong> Works purely on spend vs. revenue data.
-                                    </li>
-                                    <li className="flex items-center gap-3 text-sm text-slate-700">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-indigo-500"></div>
-                                        <strong>Offline Attribution:</strong> Detects if a TV ad or billboard spike caused a web traffic spike.
-                                    </li>
-                                    <li className="flex items-center gap-3 text-sm text-slate-700">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-indigo-500"></div>
-                                        <strong>Diminishing Returns Curve:</strong> Tells you exactly when your next $1 of spend will yield only $0.90 back.
-                                    </li>
-                                </ul>
                             </div>
-
-                            {/* Feature 2: LTV/CAC Engine */}
-                            <div>
-                                <h3 className="text-2xl font-bold mb-4 text-slate-900 flex items-center gap-3">
-                                    <span className="w-8 h-8 rounded bg-purple-100 text-purple-600 flex items-center justify-center text-sm">02</span>
-                                    Cohort-Based LTV Prediction
-                                </h3>
-                                <p className="text-slate-600 mb-6">
-                                    Not all customers are equal. Golden Goose predicts the 12-month value of a customer on <strong>Day 1</strong> based on their behavior.
-                                </p>
-                                <ul className="space-y-3">
-                                    <li className="flex items-center gap-3 text-sm text-slate-700">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-purple-500"></div>
-                                        <strong>Whale Detection:</strong> Identifies high-value users instantly and sends the signal back to Meta to find more like them.
-                                    </li>
-                                    <li className="flex items-center gap-3 text-sm text-slate-700">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-purple-500"></div>
-                                        <strong>Churn Prediction:</strong> Flags users who are 80% likely to cancel next month so automated email flows can save them.
-                                    </li>
-                                </ul>
-                            </div>
-
-                            {/* Feature 3: Creative Intelligence */}
-                            <div>
-                                <h3 className="text-2xl font-bold mb-4 text-slate-900 flex items-center gap-3">
-                                    <span className="w-8 h-8 rounded bg-emerald-100 text-emerald-600 flex items-center justify-center text-sm">03</span>
-                                    Creative Intelligence
-                                </h3>
-                                <p className="text-slate-600 mb-6">
-                                    The biggest lever in 2026 is ad creative. The AI analyzes every frame of your video ads.
-                                </p>
-                                <ul className="space-y-3">
-                                    <li className="flex items-center gap-3 text-sm text-slate-700">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-emerald-500"></div>
-                                        <strong>Frame-by-Frame Analysis:</strong> "Videos starting with a human face have 2.3x higher retention than text-only hooks."
-                                    </li>
-                                    <li className="flex items-center gap-3 text-sm text-slate-700">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-emerald-500"></div>
-                                        <strong>Hook Testing:</strong> Automatically categorizes hooks (e.g., "Problem/Solution" vs "Testimonial") and tells you which format converts.
-                                    </li>
-                                </ul>
-                            </div>
-
-                            {/* Feature 4: Competitor Reconnaissance */}
-                            <div>
-                                <h3 className="text-2xl font-bold mb-4 text-slate-900 flex items-center gap-3">
-                                    <span className="w-8 h-8 rounded bg-rose-100 text-rose-600 flex items-center justify-center text-sm">04</span>
-                                    Competitor Reconnaissance
-                                </h3>
-                                <p className="text-slate-600 mb-6">
-                                    You don't operate in a vacuum. Golden Goose monitors your top 5 competitors constantly.
-                                </p>
-                                <ul className="space-y-3">
-                                    <li className="flex items-center gap-3 text-sm text-slate-700">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-rose-500"></div>
-                                        <strong>Price Watch:</strong> Alerts you if a competitor drops their price.
-                                    </li>
-                                    <li className="flex items-center gap-3 text-sm text-slate-700">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-rose-500"></div>
-                                        <strong>Ad Library Scraper:</strong> Detects new ads launched by competitors and analyzes their messaging strategy.
-                                    </li>
-                                </ul>
+                            <div className="md:col-span-8 grid gap-6">
+                                <div className="bg-white border-l-4 border-rose-500 p-6 shadow-sm rounded-r-lg">
+                                    <h4 className="font-bold text-rose-900 mb-2">Pricing Alert</h4>
+                                    <p className="text-slate-700">“Competitor X dropped price 15%. Expect CAC to rise in 48 hours.”</p>
+                                </div>
+                                <div className="bg-white border-l-4 border-amber-500 p-6 shadow-sm rounded-r-lg">
+                                    <h4 className="font-bold text-amber-900 mb-2">Creative Strategy Alert</h4>
+                                    <p className="text-slate-700">“Competitor Y launched a new testimonial campaign. Their hook angle is shifting.”</p>
+                                </div>
                             </div>
                         </div>
 
-                        {/* 4. Use Case Scenarios */}
-                        <div className="bg-slate-50 border border-slate-200 rounded-3xl p-10">
-                            <h2 className="text-2xl font-bold mb-8 text-center text-slate-900">Real World Execution</h2>
-
-                            <div className="grid md:grid-cols-2 gap-8">
-                                <div className="bg-white p-6 rounded-2xl shadow-sm">
-                                    <div className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Scenario A</div>
-                                    <h4 className="text-lg font-bold mb-2">The "Hidden Loss"</h4>
-                                    <p className="text-sm text-slate-600 mb-4">
-                                        <strong>Problem:</strong> A D2C brand spending ₹50L/month sees sales drop. Dashboard shows ROAS is fine.
-                                    </p>
-                                    <p className="text-sm text-slate-900">
-                                        <strong>Golden Goose Finding:</strong> "Your ROAS is fine on new customers, but your <em>Repeat Purchase Rate</em> has dropped 40% because of a delivery delay issue with your courier partner in Mumbai."
-                                    </p>
-                                </div>
-
-                                <div className="bg-white p-6 rounded-2xl shadow-sm">
-                                    <div className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Scenario B</div>
-                                    <h4 className="text-lg font-bold mb-2">The "Scale Wall"</h4>
-                                    <p className="text-sm text-slate-600 mb-4">
-                                        <strong>Problem:</strong> SaaS company can't scale past ₹1Cr MRR. Every time they increase ad spend, CAC skyrockets.
-                                    </p>
-                                    <p className="text-sm text-slate-900">
-                                        <strong>Golden Goose Finding:</strong> "You have tapped out the 'Founder' audience. The diminishing returns curve shows you need to switch creatives to target 'Product Managers' to unlock the next leg of scale."
-                                    </p>
-                                </div>
+                        {/* Layer 5: Action Engine */}
+                        <div className="grid md:grid-cols-12 gap-12 items-start border-t border-slate-100 pt-24">
+                            <div className="md:col-span-4 sticky top-32">
+                                <div className="text-6xl font-black text-slate-100 mb-4 -ml-4">05</div>
+                                <h3 className="text-2xl font-bold text-slate-900 mb-4">The Action Engine</h3>
+                                <p className="text-slate-600">
+                                    This is where Golden Goose becomes a money machine. It does not just show insights. It gives <strong>commands</strong>.
+                                </p>
+                            </div>
+                            <div className="md:col-span-8 grid gap-6">
+                                <ActionSignal type="scaling" title="Scaling Signal" desc="Campaign B has 3.4x ROAS and rising. Increase spend 20% now." />
+                                <ActionSignal type="kill" title="Kill Signal" desc="Creative #442 fatigue detected. CPR up 40%. Turn off immediately." />
+                                <ActionSignal type="pivot" title="Pivot Signal" desc="Founder audience saturated. Shift targeting to Product Managers to unlock scale." />
                             </div>
                         </div>
 
                     </div>
                 </div>
             </section>
+
+            {/* Why Category Creator */}
+            <section className="py-24 bg-slate-900 text-white mt-12">
+                <div className="container">
+                    <div className="max-w-4xl mx-auto text-center">
+                        <h2 className="text-3xl font-bold mb-12">Why Golden Goose is a Category Creator</h2>
+                        <div className="grid md:grid-cols-2 gap-12 items-center">
+                            <div className="opacity-50 space-y-4">
+                                <h3 className="text-xl font-bold text-slate-400">Most Tools</h3>
+                                <ul className="space-y-2">
+                                    <li className="text-slate-500">Show data...</li>
+                                    <li className="text-slate-500">Visulize chaos...</li>
+                                    <li className="text-slate-500">Wait for you to decide...</li>
+                                </ul>
+                            </div>
+                            <div className="bg-white/10 p-8 rounded-2xl border border-white/20">
+                                <h3 className="text-2xl font-bold text-indigo-400 mb-6">Golden Goose</h3>
+                                <ul className="space-y-4 text-left">
+                                    <li className="flex items-center gap-3">
+                                        <svg className="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                                        Understands reality
+                                    </li>
+                                    <li className="flex items-center gap-3">
+                                        <svg className="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                                        Predicts outcomes
+                                    </li>
+                                    <li className="flex items-center gap-3">
+                                        <svg className="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                                        Tells you what to do
+                                    </li>
+                                    <li className="flex items-center gap-3 bg-indigo-500/20 p-2 rounded -mx-2">
+                                        <svg className="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                                        Executes via ApexOne teams
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="mt-16 text-lg text-slate-400">
+                            This is why ApexOne is not an agency.<br />
+                            It is an <strong className="text-white">AI-powered business operating system.</strong>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <Footer />
         </main>
+    );
+}
+
+function SourceCard({ title, items }: { title: string, items: string[] }) {
+    return (
+        <div className="bg-slate-50 p-6 rounded-xl border border-slate-100">
+            <h4 className="font-bold text-indigo-900 mb-3">{title}</h4>
+            <ul className="space-y-1">
+                {items.map(item => (
+                    <li key={item} className="text-sm text-slate-600 flex items-center gap-2">
+                        <span className="w-1 h-1 rounded-full bg-indigo-400"></span>
+                        {item}
+                    </li>
+                ))}
+            </ul>
+        </div>
+    );
+}
+
+function FeatureBlock({ title, desc }: { title: string, desc: string }) {
+    return (
+        <div className="group">
+            <h4 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">{title}</h4>
+            <div className="h-1 w-12 bg-indigo-600 mb-3 opacity-20 group-hover:opacity-100 transition-opacity"></div>
+            <p className="text-slate-600 leading-relaxed">{desc}</p>
+        </div>
+    );
+}
+
+function ActionSignal({ type, title, desc }: { type: 'scaling' | 'kill' | 'pivot', title: string, desc: string }) {
+    const colors = {
+        scaling: "border-green-500 bg-green-50 text-green-900",
+        kill: "border-red-500 bg-red-50 text-red-900",
+        pivot: "border-blue-500 bg-blue-50 text-blue-900"
+    };
+
+    return (
+        <div className={`border-l-4 p-6 rounded-r-xl ${colors[type]}`}>
+            <h4 className="font-bold uppercase tracking-wider text-xs mb-2 opacity-80">{title}</h4>
+            <p className="font-bold text-lg">“{desc}”</p>
+        </div>
     );
 }
