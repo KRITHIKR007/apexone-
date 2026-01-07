@@ -1,6 +1,70 @@
+'use client';
+
 export default function Footer() {
     return (
         <footer className="bg-white border-t border-slate-200 pt-20 pb-10 font-sans relative overflow-hidden">
+            {/* Dramatic Flow Lines - Lower Section Only */}
+            <div className="absolute bottom-0 left-0 right-0 h-[30%] opacity-15 pointer-events-none">
+                {/* Line 1 - Large dramatic waves */}
+                <svg
+                    className="absolute w-full h-full"
+                    style={{
+                        animation: 'flow-stream 10s linear infinite',
+                    }}
+                    viewBox="0 0 2400 200"
+                    preserveAspectRatio="none"
+                >
+                    <path
+                        d="M-400,100 Q-200,40 0,100 Q200,160 400,100 Q600,50 800,100 Q1000,150 1200,100 Q1400,60 1600,100 Q1800,140 2000,100 Q2200,70 2400,100"
+                        fill="none"
+                        stroke="#000000"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        opacity="0.5"
+                    />
+                </svg>
+
+                {/* Line 2 - Medium irregular waves */}
+                <svg
+                    className="absolute w-full h-full"
+                    style={{
+                        animation: 'flow-stream 14s linear infinite',
+                        animationDelay: '-3s',
+                    }}
+                    viewBox="0 0 2400 200"
+                    preserveAspectRatio="none"
+                >
+                    <path
+                        d="M-400,120 Q-150,80 100,130 Q350,170 600,110 Q850,60 1100,140 Q1350,180 1600,100 Q1850,50 2100,130 Q2350,160 2600,110"
+                        fill="none"
+                        stroke="#000000"
+                        strokeWidth="1.8"
+                        strokeLinecap="round"
+                        opacity="0.4"
+                    />
+                </svg>
+
+                {/* Line 3 - Subtle background wave */}
+                <svg
+                    className="absolute w-full h-full"
+                    style={{
+                        animation: 'flow-stream 18s linear infinite',
+                        animationDelay: '-7s',
+                    }}
+                    viewBox="0 0 2400 200"
+                    preserveAspectRatio="none"
+                >
+                    <path
+                        d="M-400,110 Q-100,130 200,90 Q500,60 800,120 Q1100,150 1400,95 Q1700,70 2000,125 Q2300,155 2600,100"
+                        fill="none"
+                        stroke="#000000"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        opacity="0.3"
+                    />
+                </svg>
+            </div>
+
             <div className="container relative z-10">
                 <div className="grid md:grid-cols-4 gap-12 mb-16">
                     {/* Brand Section */}
@@ -62,6 +126,17 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
+
+            <style jsx>{`
+                @keyframes flow-stream {
+                    0% {
+                        transform: translateX(0);
+                    }
+                    100% {
+                        transform: translateX(400px);
+                    }
+                }
+            `}</style>
         </footer>
     );
 }
