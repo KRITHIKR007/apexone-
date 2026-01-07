@@ -61,6 +61,29 @@ export default function RootLayout({
           {children}
         </div>
         <Analytics />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "ApexOne Studio",
+              "url": "https://apexonestudio.com",
+              "logo": "https://apexonestudio.com/logo.png",
+              "sameAs": [
+                "https://x.com/Apexonestudio",
+                "https://www.linkedin.com/company/apex-one-studio",
+                "https://www.linkedin.com/company/apex-one-studio",
+                "https://www.youtube.com/channel/UCWcqtFUkhYoR5bfD-x0tn-g"
+              ],
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+91-9902079990",
+                "contactType": "customer service"
+              }
+            })
+          }}
+        />
       </body>
     </html>
   );

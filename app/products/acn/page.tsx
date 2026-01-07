@@ -3,6 +3,18 @@ import React from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "ACN - Apex Creators Network | Exclusive Talent Ecosystem",
+  description: "Join the Apex Creators Network (ACN), a decentralized guild of the top 1% creative engineers. Not an agency, but a curated ecosystem for enterprise growth.",
+  openGraph: {
+    title: "ACN - Apex Creators Network | Exclusive Talent Ecosystem",
+    description: "Access the world's top 1% creative talent. A decentralized guild of elite engineers and creators.",
+    images: ["/products/acn-network.png"],
+  },
+};
+
 export default function ACNPage() {
   return (
     <main className="min-h-screen bg-white font-sans text-slate-900">
