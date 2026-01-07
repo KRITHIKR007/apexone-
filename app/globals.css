@@ -484,22 +484,16 @@
   text-shadow: none !important;
 }
 
+/* Global Scrollbar Hiding */
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
 ::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f5f9;
-}
-
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #6366f1, #8b5cf6);
-  border-radius: 5px;
-  transition: background 0.3s;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #4f46e5, #7c3aed);
+  width: 0px;
+  background: transparent;
+  display: none;
 }
 
 .terminal-scrollbar::-webkit-scrollbar {

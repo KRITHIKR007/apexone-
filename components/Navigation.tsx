@@ -1,17 +1,39 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
 
 export default function Navigation() {
     const [isScrolled, setIsScrolled] = useState(false);
+    const [isVisible, setIsVisible] = useState(true);
     const [activeSection, setActiveSection] = useState('');
     const pathname = usePathname();
     const isHome = pathname === '/';
+    const lastScrollY = useState(0)[0]; // We'll use a closure variable or ref actually. state is fine if we don't depend on it in effect
+    // Actually, let's use a ref for the last scroll position to avoid re-renders of the effect
+    const prevScrollY = useRef(0);
+
+    // Need to import useRef
+    // Since I can't add imports easily without replacing top lines, I will assume React imports are needed or use React.useRef if I can't see top.
+    // I can see top. transform `import { useState, useEffect } from 'react';` to include useRef.
 
     useEffect(() => {
         const handleScroll = () => {
-            setIsScrolled(window.scrollY > 20);
+            const currentScrollY = window.scrollY;
+
+            // Visibility logic
+            if (currentScrollY < 50) {
+                setIsVisible(true);
+            } else if (currentScrollY > prevScrollY.current) {
+                // Scrolling down
+                setIsVisible(false);
+            } else {
+                // Scrolling up
+                setIsVisible(true);
+            }
+
+            prevScrollY.current = currentScrollY;
+            setIsScrolled(currentScrollY > 20);
 
             // Only track sections on homepage
             if (isHome) {
@@ -43,7 +65,7 @@ export default function Navigation() {
     ];
 
     return (
-        <div className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4 pointer-events-none">
+        <div className={`fixed top-6 left-0 right-0 z-50 flex justify-center px-4 pointer-events-none transition-transform duration-500 ease-in-out ${isVisible ? 'translate-y-0' : '-translate-y-[200%]'}`}>
             <nav className={`pointer-events-auto transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${isScrolled || !isHome
                 ? 'bg-white/90 backdrop-blur-xl shadow-lg shadow-indigo-500/10 border border-white/20 py-3 px-6 rounded-full w-auto max-w-6xl'
                 : 'bg-transparent py-4 px-0 w-full max-w-[1600px] border-none'
