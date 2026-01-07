@@ -10,16 +10,16 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative bg-white pt-32 pb-20 md:pt-48 md:pb-40 overflow-hidden">
+    <section className="relative bg-white min-h-screen flex items-center justify-center overflow-hidden py-20">
       <div className="container mx-auto">
 
         {/* Content Wrapper - Centered & Stark */}
-        <div className={`flex flex-col items-center text-center max-w-4xl mx-auto transition-opacity duration-1000 ${mounted ? 'opacity-100' : 'opacity-0'}`}>
+        <div className={`flex flex-col justify-center w-full max-w-[90vw] xl:max-w-[1200px] mx-auto transition-opacity duration-1000 ${mounted ? 'opacity-100' : 'opacity-0'}`}>
 
           {/* Heading - Clean, Custom Tracking, Standard Premium */}
-          <h1 className="text-5xl font-medium tracking-tight text-slate-900 md:text-8xl lg:text-[6.5rem] leading-[1.05] mb-6 md:mb-10">
-            The Cognitive Engine for <br className="hidden md:block" />
-            <span className="text-slate-900">
+          <h1 className="text-6xl md:text-[8rem] font-bold tracking-tighter text-slate-900 leading-[0.9] mb-6 md:mb-10 text-left">
+            The Cognitive Engine for
+            <span className="text-transparent bg-clip-text bg-gradient-to-b from-slate-900 to-slate-600 block pl-12 md:pl-48">
               Global Enterprise.
             </span>
           </h1>

@@ -1,4 +1,66 @@
-'use client';
+
+import React from 'react';
+
+const LOGS = [
+    { time: '14:20:01', type: 'info', msg: 'Neural Layer... [OK]' },
+    { time: '14:20:02', type: 'success', msg: 'TLS 1.3 Handshake' },
+    { time: '14:20:05', type: 'warning', msg: 'Scanning Packet...' },
+    { time: '14:20:06', type: 'error', msg: 'PII LEAK DETECTED' },
+    { time: '14:20:06', type: 'action', msg: '>> AUTO-REDACTING' },
+    { time: '14:20:07', type: 'success', msg: 'Payload Sanitized' },
+    { time: '14:20:08', type: 'info', msg: 'Monitoring...' },
+];
+
+function LiveConsole() {
+    const [logs, setLogs] = React.useState(LOGS.slice(0, 3));
+    const [index, setIndex] = React.useState(3);
+    const scrollRef = React.useRef<HTMLDivElement>(null);
+
+    React.useEffect(() => {
+        const interval = setInterval(() => {
+            setIndex(prev => {
+                const next = (prev + 1) % LOGS.length;
+                setLogs(current => {
+                    const newLogs = [...current, LOGS[prev % LOGS.length]];
+                    if (newLogs.length > 3) newLogs.shift(); // Keep only 3 logs for compact view
+                    return newLogs;
+                });
+                return next;
+            });
+        }, 2000);
+
+        return () => clearInterval(interval);
+    }, []);
+
+    React.useEffect(() => {
+        if (scrollRef.current) {
+            scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
+        }
+    }, [logs]);
+
+    return (
+        <div className="border-t border-white/5 pt-3 mt-4">
+            <div className="text-[10px] text-slate-500 mb-2 uppercase tracking-widest font-bold">Real-time Audit Log</div>
+            <div ref={scrollRef} className="font-mono text-[10px] space-y-1.5 h-[60px] overflow-hidden relative fade-mask">
+                {logs.map((log, i) => (
+                    <div key={i} className={`flex gap-2 items-center animate-in fade-in slide-in-from-bottom-1 duration-300 ${log.type === 'error' ? 'text-red-400' :
+                        log.type === 'action' ? 'text-emerald-500 font-bold' :
+                            'opacity-80'
+                        }`}>
+                        <span className="text-slate-600">[{log.time}]</span>
+                        <span className={`${log.type === 'success' ? 'text-emerald-400' :
+                            log.type === 'warning' ? 'text-amber-400' :
+                                log.type === 'error' ? 'font-bold' :
+                                    'text-slate-400'
+                            }`}>
+                            {log.msg}
+                        </span>
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
+}
 
 export default function CIIP() {
     return (
@@ -26,8 +88,8 @@ export default function CIIP() {
                             </span>
                         </div>
 
-                        <h2 className="text-5xl md:text-7xl font-bold tracking-tighter text-slate-900 leading-[0.95]">
-                            CIIP <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600 block text-3xl md:text-5xl mt-2 tracking-tight">Protocol</span>
+                        <h2 className="text-4xl md:text-6xl font-bold tracking-tighter text-slate-900 leading-[1.1]">
+                            Corporate Intelligence & <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-teal-500 to-emerald-600 bg-[length:200%_auto] animate-[gradient-shift_3s_ease_infinite] tracking-tight border-r-4 border-emerald-600 pr-2 animate-[typewriter_1s_steps(2)_infinite]">Integrity Platform</span>
                         </h2>
 
                         <p className="text-xl text-slate-600 leading-relaxed max-w-lg">
@@ -77,11 +139,11 @@ export default function CIIP() {
                                 </div>
 
                                 {/* Content */}
-                                <div className="p-6 font-mono text-xs md:text-sm space-y-4 h-[400px] overflow-hidden text-slate-300 relative bg-black/50">
+                                <div className="p-6 font-mono text-xs md:text-sm h-[400px] overflow-hidden text-slate-300 relative bg-black/50 overflow-y-auto terminal-scrollbar">
 
                                     <div className="flex gap-3 items-center opacity-60">
                                         <span className="text-emerald-500">➜</span>
-                                        <span>Initialising CIIP Neural Layer... [OK]</span>
+                                        <span>Initialising Neural Layer... [OK]</span>
                                     </div>
 
                                     <div className="space-y-2 mt-4">
@@ -94,45 +156,37 @@ export default function CIIP() {
                                             <span className="text-emerald-400 font-bold">99.98%</span>
                                         </div>
                                         <div className="flex justify-between items-center group">
-                                            <span className="text-slate-400">Live Threats Blocked</span>
+                                            <span className="text-slate-400">Threats Blocked</span>
                                             <span className="text-amber-400 font-bold">14,204</span>
-                                        </div>
-                                        <div className="flex justify-between items-center group">
-                                            <span className="text-slate-400">PII Leaks Prevented</span>
-                                            <span className="text-emerald-400 font-bold">0</span>
                                         </div>
                                     </div>
 
-                                    {/* Line 3: The Danger */}
+                                    {/* Alert Box */}
                                     <div className="mt-6 pt-6 border-t border-white/5">
                                         <div className="flex gap-3 items-start bg-red-950/20 -mx-6 px-6 py-3 border-l-2 border-red-500/50">
                                             <div className="flex-1">
                                                 <div className="text-red-400 font-bold mb-1 flex items-center gap-2">
                                                     <span className="animate-pulse">●</span> THREAT DETECTED
                                                 </div>
-                                                <div className="text-slate-400 mb-2">
-                                                    Suspicious payload detected in API stream:
+                                                <div className="text-slate-400 mb-2 text-[10px]">
+                                                    Suspicious payload detected:
                                                 </div>
                                                 <code className="block bg-black p-2 rounded text-red-300 text-[10px] border border-red-900/30">
-                                                    POST /api/v1/users {'{'} "admin": true, "sql": "DROP TABLE..." {'}'}
+                                                    POST /api/v1/users {'{'} "sql": "DROP..." {'}'}
                                                 </code>
                                             </div>
                                         </div>
                                     </div>
 
-                                    {/* Line 4: Intervention */}
-                                    <div className="flex gap-3 items-center text-emerald-400 font-bold animate-pulse mt-4">
+                                    <div className="flex gap-3 items-center text-emerald-400 font-bold animate-pulse mt-4 text-[10px] md:text-xs">
                                         <span>&gt;&gt; CIIP AUTO-DEFENSE ENGAGED</span>
                                     </div>
 
-                                    <div className="text-slate-500 text-[10px] mt-2">
-                                        Src IP: 192.168.4.x [BLOCKED] <br />
-                                        Session ID: a8f9-22a1 [TERMINATED] <br />
-                                        Evidence Logged to: /var/log/ciip/audit_a8f9.log
-                                    </div>
+                                    {/* Live Log Area */}
+                                    <LiveConsole />
 
                                     {/* Decoration Lines */}
-                                    <div className="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-[#050505] to-transparent"></div>
+                                    <div className="absolute bottom-0 left-0 right-0 h-4 bg-gradient-to-t from-[#050505] to-transparent pointer-events-none"></div>
                                 </div>
                             </div>
 

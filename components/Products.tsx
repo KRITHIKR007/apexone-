@@ -59,7 +59,7 @@ export default function Products() {
                         <div key={index} className={`group flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-8 md:gap-24`}>
 
                             {/* Image Side */}
-                            <div className="w-full md:w-1/2">
+                            <div className="w-full md:w-[35%]">
                                 <a href={product.link} className="block relative overflow-hidden rounded-lg aspect-video shadow-2xl group-hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] transition-all duration-700">
                                     <div className="absolute inset-0 bg-slate-900/10 transition-opacity duration-500 group-hover:opacity-0 z-10" />
                                     <img
