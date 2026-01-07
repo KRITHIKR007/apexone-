@@ -5,6 +5,7 @@ import TrustedBy from '@/components/TrustedBy';
 
 import Solution from '@/components/Solution';
 import GoldenGoose from '@/components/GoldenGoose';
+import CIIP from '@/components/CIIP';
 
 import ACN from '@/components/ACN';
 import Products from '@/components/Products';
@@ -33,7 +34,7 @@ export default function Home() {
 
       <Solution />
       <GoldenGoose />
-
+      <CIIP />
       <ACN />
       <WhoWeAre />
       <WhatMakesDifferent />
