@@ -1,8 +1,9 @@
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://apexonestudios.com'),
+  metadataBase: new URL('https://apexonestudio.com'),
   title: {
     default: "ApexOne Studios - The AI Operating System for Business Growth",
     template: "%s | ApexOne Studios"
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
   description: "ApexOne Studios installs an AI-powered intelligence, sales, and automation system inside your business so you can see where you're losing money, fix it, and scale faster than your competitors.",
   applicationName: "ApexOne Studios",
   keywords: ["AI", "Business Intelligence", "Automation", "Sales", "Marketing", "Growth", "Analytics", "CRM", "ApexOne"],
-  authors: [{ name: "ApexOne Studios", url: "https://apexonestudios.com" }],
+  authors: [{ name: "ApexOne Studios", url: "https://apexonestudio.com" }],
   creator: "ApexOne Studios",
   publisher: "ApexOne Studios",
   robots: {
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "ApexOne Studios - The AI Operating System for Business Growth",
     description: "Transform your business with AI-powered intelligence and automation",
-    url: "https://apexonestudios.com",
+    url: "https://apexonestudio.com",
     siteName: "ApexOne Studios",
     images: [
       {
@@ -59,6 +60,7 @@ export default function RootLayout({
         <div className="main-layout">
           {children}
         </div>
+        <Analytics />
       </body>
     </html>
   );
