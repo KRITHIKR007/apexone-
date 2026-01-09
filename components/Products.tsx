@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+
 export default function Products() {
     // Premium Product Data
     const products = [
@@ -58,13 +60,14 @@ export default function Products() {
                     {products.map((product, index) => (
                         <div key={index} className={`group flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-8 md:gap-24`}>
 
-                            {/* Image Side */}
                             <div className="w-full md:w-[35%]">
                                 <a href={product.link} className="block relative overflow-hidden rounded-lg aspect-video shadow-2xl group-hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] transition-all duration-700">
                                     <div className="absolute inset-0 bg-slate-900/10 transition-opacity duration-500 group-hover:opacity-0 z-10" />
-                                    <img
+                                    <Image
                                         src={product.image}
                                         alt={product.title}
+                                        width={600}
+                                        height={400}
                                         className="w-full h-full object-cover transform scale-100 group-hover:scale-105 transition-transform duration-1000 ease-[cubic-bezier(0.23,1,0.32,1)]"
                                     />
                                 </a>

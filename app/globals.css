@@ -459,6 +459,16 @@
   animation: marquee 60s linear infinite;
 }
 
+@keyframes flow-stream {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(400px);
+  }
+}
+
 @media (max-width: 768px) {
   body {
     margin: 0.75rem;

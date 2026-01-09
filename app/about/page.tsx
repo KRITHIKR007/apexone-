@@ -3,6 +3,7 @@
 import PageHeader from '@/components/PageHeader';
 import Footer from '@/components/Footer';
 import Navigation from '@/components/Navigation';
+import Image from 'next/image';
 
 export default function AboutPage() {
     return (
@@ -68,7 +69,7 @@ export default function AboutPage() {
                     <div className="grid lg:grid-cols-2 gap-20 items-center mb-40">
                         <div className="relative group w-[80%] mx-auto">
                             <div className="aspect-[3/4] overflow-hidden rounded-sm bg-slate-100 shadow-2xl">
-                                <img src="/team/krithik.jpg" alt="Krithik R" className="w-full h-full object-cover transition-all duration-700 ease-in-out hover:scale-105" />
+                                <Image src="/team/krithik.jpg" alt="Krithik R" width={600} height={800} className="w-full h-full object-cover transition-all duration-700 ease-in-out hover:scale-105" />
                             </div>
                             <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-white p-6 border border-slate-100 shadow-xl hidden lg:flex flex-col justify-center items-center text-center z-10">
                                 <span className="text-4xl font-bold">01</span>
@@ -113,7 +114,7 @@ export default function AboutPage() {
                         </div>
                         <div className="order-1 lg:order-2 relative group w-[80%] mx-auto">
                             <div className="aspect-[3/4] overflow-hidden rounded-sm bg-slate-100 shadow-2xl">
-                                <img src="/team/shaili_new.jpg" alt="Shaili Srivastava" className="w-full h-full object-cover transition-all duration-700 ease-in-out hover:scale-105" />
+                                <Image src="/team/shaili_new.jpg" alt="Shaili Srivastava" width={600} height={800} className="w-full h-full object-cover transition-all duration-700 ease-in-out hover:scale-105" />
                             </div>
                             <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-white p-6 border border-slate-100 shadow-xl hidden lg:flex flex-col justify-center items-center text-center z-10">
                                 <span className="text-4xl font-bold">02</span>
@@ -147,7 +148,7 @@ export default function AboutPage() {
                         ].map((member, i) => (
                             <div key={i} className="group cursor-pointer">
                                 <div className="aspect-[3/4] mb-6 overflow-hidden bg-white rounded-sm shadow-sm hover:shadow-xl transition-all duration-500">
-                                    <img src={member.img} alt={member.name} className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]" />
+                                    <Image src={member.img} alt={member.name} width={400} height={533} className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]" />
                                 </div>
                                 <h4 className="text-xl font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">{member.name}</h4>
                                 <p className="text-sm text-slate-500 font-medium uppercase tracking-wider mt-1">{member.role}</p>

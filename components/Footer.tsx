@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+
 export default function Footer() {
     return (
         <footer className="bg-white border-t border-slate-200 pt-20 pb-10 font-sans relative overflow-hidden">
@@ -70,7 +72,7 @@ export default function Footer() {
                     {/* Brand Section */}
                     <div className="md:col-span-2">
                         <div className="flex items-center gap-3 mb-6">
-                            <img src="/logo.png" alt="ApexOne Studios Logo" className="h-8 w-auto" />
+                            <Image src="/logo.png" alt="ApexOne Studios Logo" width={32} height={32} className="w-8 h-auto" />
                             <h3 className="text-xl font-bold tracking-tight text-slate-900">ApexOne Studios</h3>
                         </div>
                         <p className="text-slate-600 text-sm leading-relaxed mb-6 max-w-sm">
@@ -126,17 +128,6 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-
-            <style jsx>{`
-                @keyframes flow-stream {
-                    0% {
-                        transform: translateX(0);
-                    }
-                    100% {
-                        transform: translateX(400px);
-                    }
-                }
-            `}</style>
         </footer>
     );
 }

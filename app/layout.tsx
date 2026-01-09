@@ -1,6 +1,7 @@
 import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 import "./globals.css";
+import ErrorBoundary from "@/components/ErrorBoundary";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://apexonestudio.com'),
@@ -57,7 +58,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="font-sans antialiased text-slate-900 bg-white selection:bg-indigo-500/30">
-        {children}
+        <ErrorBoundary>
+          {children}
+        </ErrorBoundary>
         <Analytics />
         <script
           type="application/ld+json"

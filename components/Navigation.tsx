@@ -2,20 +2,16 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
+import Image from 'next/image';
 
 export default function Navigation() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isVisible, setIsVisible] = useState(true);
     const [activeSection, setActiveSection] = useState('');
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const pathname = usePathname();
     const isHome = pathname === '/';
-    const lastScrollY = useState(0)[0]; // We'll use a closure variable or ref actually. state is fine if we don't depend on it in effect
-    // Actually, let's use a ref for the last scroll position to avoid re-renders of the effect
     const prevScrollY = useRef(0);
-
-    // Need to import useRef
-    // Since I can't add imports easily without replacing top lines, I will assume React imports are needed or use React.useRef if I can't see top.
-    // I can see top. transform `import { useState, useEffect } from 'react';` to include useRef.
 
     useEffect(() => {
         const handleScroll = () => {
@@ -37,7 +33,7 @@ export default function Navigation() {
 
             // Only track sections on homepage
             if (isHome) {
-                const sections = ['hero', 'problem', 'solution', 'products'];
+                const sections = ['hero', 'solution', 'products'];
                 const current = sections.find(section => {
                     const element = document.getElementById(section);
                     if (element) {
@@ -54,9 +50,23 @@ export default function Navigation() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, [isHome]);
 
+    // Close mobile menu on scroll or route change
+    useEffect(() => {
+        setIsMobileMenuOpen(false);
+    }, [pathname]);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (isMobileMenuOpen) {
+                setIsMobileMenuOpen(false);
+            }
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [isMobileMenuOpen]);
+
     const navLinks = [
         { path: '/', label: 'Home', sectionId: 'hero' },
-        { path: '/#problem', label: 'Problem', sectionId: 'problem' },
         { path: '/#solution', label: 'Solution', sectionId: 'solution' },
         { path: '/#products', label: 'Products', sectionId: 'products' },
         { path: '/about', label: 'About' },
@@ -75,9 +85,9 @@ export default function Navigation() {
                     {/* Logo */}
                     <a
                         href="/"
-                        className={`text-xl font-bold tracking-tight transition-all duration-500 flex items-center gap-2 ${isScrolled ? 'opacity-100' : 'opacity-100'}`}
+                        className="text-xl font-bold tracking-tight transition-all duration-500 flex items-center gap-2"
                     >
-                        <img src="/logo.png" alt="ApexOne Studios Logo" className="h-8 w-auto" />
+                        <Image src="/logo.png" alt="ApexOne Studios Logo" width={32} height={32} className="w-8 h-auto" priority />
                         <span className="gradient-text">ApexOne Studios</span>
                     </a>
 
@@ -116,14 +126,69 @@ export default function Navigation() {
                         Start Audit
                     </a>
 
-                    {/* Mobile Menu Button - Frosty */}
-                    <button className="lg:hidden p-2.5 rounded-full bg-white/80 backdrop-blur border border-slate-200 text-slate-600 shadow-sm">
+                    {/* Mobile Menu Button */}
+                    <button
+                        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                        className="lg:hidden p-2.5 rounded-full bg-white/80 backdrop-blur border border-slate-200 text-slate-600 shadow-sm hover:bg-white transition-colors"
+                        aria-label="Toggle mobile menu"
+                        aria-expanded={isMobileMenuOpen}
+                    >
                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                            {isMobileMenuOpen ? (
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                            ) : (
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                            )}
                         </svg>
                     </button>
                 </div>
             </nav>
+
+            {/* Mobile Menu Drawer */}
+            {isMobileMenuOpen && (
+                <div className="lg:hidden fixed inset-0 top-24 z-40 pointer-events-auto">
+                    {/* Backdrop */}
+                    <div
+                        className="absolute inset-0 bg-black/20 backdrop-blur-sm animate-in fade-in duration-200"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                    />
+
+                    {/* Menu Panel */}
+                    <div className="absolute top-4 left-4 right-4 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-slate-200 p-6 animate-in slide-in-from-top duration-300">
+                        <nav className="flex flex-col gap-2">
+                            {navLinks.map((link) => {
+                                let isActive = false;
+                                if (isHome && link.sectionId && activeSection === link.sectionId) isActive = true;
+                                if (!isHome && pathname.startsWith(link.path) && link.path !== '/') isActive = true;
+                                if (!isHome && link.path === '/blog' && pathname.startsWith('/blog')) isActive = true;
+
+                                return (
+                                    <a
+                                        key={link.label}
+                                        href={link.path}
+                                        onClick={() => setIsMobileMenuOpen(false)}
+                                        className={`px-4 py-3 text-base font-medium rounded-lg transition-all duration-200 ${isActive
+                                            ? 'text-indigo-600 bg-indigo-50'
+                                            : 'text-slate-700 hover:text-slate-900 hover:bg-slate-50'
+                                            }`}
+                                    >
+                                        {link.label}
+                                    </a>
+                                );
+                            })}
+
+                            {/* Mobile CTA */}
+                            <a
+                                href="/contact"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="mt-4 px-4 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-center font-bold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-200 shadow-lg"
+                            >
+                                Start Audit
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }

@@ -29,17 +29,23 @@ export default function Home() {
   return (
     <main>
       <Navigation />
-      <Hero />
+      <div id="hero">
+        <Hero />
+      </div>
       <TrustedBy />
 
-      <Solution />
+      <div id="solution">
+        <Solution />
+      </div>
       <GoldenGoose />
       <CIIP />
       <ACN />
       <WhoWeAre />
       <WhatMakesDifferent />
       <ForWhom />
-      <Products />
+      <div id="products">
+        <Products />
+      </div>
       <Results90Days />
       <HowItWorks />
 
