@@ -10,28 +10,28 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative bg-white h-screen flex items-center justify-center overflow-hidden pt-24">
+    <section className="relative bg-white min-h-screen flex items-center justify-center overflow-hidden pt-32 pb-16 px-4">
       <div className="container mx-auto">
 
         {/* Content Wrapper - Centered & Stark */}
         <div className={`flex flex-col items-center text-center max-w-4xl mx-auto transition-opacity duration-1000 ${mounted ? 'opacity-100' : 'opacity-0'}`}>
 
           {/* Heading - Clean, Custom Tracking, Standard Premium */}
-          <h1 className="text-6xl md:text-[8rem] font-bold tracking-tighter text-slate-900 leading-[0.9] mb-6 md:mb-8 text-left">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[8rem] font-bold tracking-tighter text-slate-900 leading-[1.1] md:leading-[0.9] mb-6 md:mb-8 text-center md:text-left w-full">
             The Cognitive Engine for
-            <span className="text-transparent bg-clip-text bg-gradient-to-b from-slate-900 to-slate-600 block pl-12 md:pl-48">
+            <span className="text-transparent bg-clip-text bg-gradient-to-b from-slate-900 to-slate-600 block pl-0 md:pl-48">
               Global Enterprise.
             </span>
           </h1>
 
           {/* Subheading - Refined Grey, Good Measure */}
-          <p className="max-w-3xl text-2xl leading-relaxed text-slate-600 mb-8 antialiased">
+          <p className="max-w-3xl text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed text-slate-600 mb-8 antialiased px-4 md:px-0">
             Predict revenue, automate execution, and scale net profit with proprietary AI.
             <span className="text-slate-900 font-medium"> Zero headcount added.</span>
           </p>
 
           {/* Actions - Standard, High Contrast */}
-          <div className="flex flex-col sm:flex-row items-center gap-5 w-full sm:w-auto">
+          <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto px-4 md:px-0">
             <a
               href="/contact"
               className="w-full sm:w-auto px-10 py-4 bg-slate-900 text-white text-lg font-bold rounded-full hover:bg-slate-800 transition-all duration-200 shadow-lg shadow-indigo-500/20"
