@@ -12,7 +12,7 @@ export default function BlogPage() {
             title: "The Death of Traditional SaaS: Why Service-Plus-Software is Winning",
             excerpt: "The era of empty subscriptions is over. Companies now demand outcomes, not just login credentials.",
             date: "Jan 2, 2026",
-            readTime: "8 min read",
+            readTime: "12 min read",
             image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
         },
         {
@@ -30,7 +30,7 @@ export default function BlogPage() {
             title: "How We Scaled a Fintech to $50M ARR with 3 Marketers",
             excerpt: "The exact playbook of automation, Golden Goose intelligence, and high-velocity testing.",
             date: "Dec 15, 2025",
-            readTime: "6 min read",
+            readTime: "15 min read",
             image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
         },
         {
@@ -48,7 +48,7 @@ export default function BlogPage() {
             title: "Why Dashboard Fatigue is Killing Your Efficiency",
             excerpt: "You don't need more charts. You need actionable insights pushed to you.",
             date: "Nov 12, 2025",
-            readTime: "5 min read",
+            readTime: "8 min read",
             image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
         },
         {
@@ -57,7 +57,7 @@ export default function BlogPage() {
             title: "Automating 90% of Customer Support for a Logistics Giant",
             excerpt: "How we implemented a Tier-1 AI defense layer that solved tickets in under 3 seconds.",
             date: "Oct 24, 2025",
-            readTime: "7 min read",
+            readTime: "12 min read",
             image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80"
         }
     ];
