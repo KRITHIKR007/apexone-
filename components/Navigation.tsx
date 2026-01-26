@@ -152,48 +152,92 @@ export default function Navigation() {
                 </div>
             </nav>
 
-            {/* Mobile Menu Drawer */}
+            {/* Premium Mobile Menu Drawer */}
             {isMobileMenuOpen && (
-                <div className="lg:hidden fixed inset-0 top-24 z-40 pointer-events-auto">
-                    {/* Backdrop */}
+                <div className="lg:hidden fixed inset-0 z-50 pointer-events-auto">
+                    {/* Backdrop with blur */}
                     <div
-                        className="absolute inset-0 bg-black/20 backdrop-blur-sm animate-in fade-in duration-200"
+                        className="absolute inset-0 bg-white/60 backdrop-blur-2xl animate-in fade-in duration-500"
                         onClick={() => setIsMobileMenuOpen(false)}
                     />
 
                     {/* Menu Panel */}
-                    <div className="absolute top-4 left-4 right-4 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-slate-200 p-6 animate-in slide-in-from-top duration-300">
-                        <nav className="flex flex-col gap-2">
-                            {navLinks.map((link) => {
-                                let isActive = false;
-                                if (isHome && link.sectionId && activeSection === link.sectionId) isActive = true;
-                                if (!isHome && pathname.startsWith(link.path) && link.path !== '/') isActive = true;
-                                if (!isHome && link.path === '/blog' && pathname.startsWith('/blog')) isActive = true;
+                    <div className="absolute inset-0 top-0 right-0 w-full h-screen bg-white shadow-2xl animate-in slide-in-from-right duration-500 ease-out flex flex-col">
+                        {/* Mobile Header (Fixed) */}
+                        <div className="flex items-center justify-between p-6 border-b border-slate-100">
+                            <div className="flex items-center gap-2">
+                                <Image src="/logo.png" alt="Logo" width={28} height={28} />
+                                <span className="font-bold tracking-tight text-slate-900">ApexOne</span>
+                            </div>
+                            <button
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="p-2 rounded-full bg-slate-100 text-slate-900"
+                            >
+                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                        </div>
 
-                                return (
-                                    <a
-                                        key={link.label}
-                                        href={link.path}
-                                        onClick={() => setIsMobileMenuOpen(false)}
-                                        className={`px-4 py-3 text-base font-medium rounded-lg transition-all duration-200 ${isActive
-                                            ? 'text-indigo-600 bg-indigo-50'
-                                            : 'text-slate-700 hover:text-slate-900 hover:bg-slate-50'
-                                            }`}
-                                    >
-                                        {link.label}
-                                    </a>
-                                );
-                            })}
+                        {/* Scrolling Content */}
+                        <div className="flex-1 overflow-y-auto p-8 pt-12">
+                            <div className="space-y-12">
+                                {/* Nav Links */}
+                                <nav className="flex flex-col gap-6">
+                                    <span className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.3em]">Menu</span>
+                                    {navLinks.map((link, i) => {
+                                        let isActive = false;
+                                        if (isHome && link.sectionId && activeSection === link.sectionId) isActive = true;
+                                        if (!isHome && pathname.startsWith(link.path) && link.path !== '/') isActive = true;
 
-                            {/* Mobile CTA */}
+                                        return (
+                                            <a
+                                                key={link.label}
+                                                href={link.path}
+                                                onClick={() => setIsMobileMenuOpen(false)}
+                                                className={`text-4xl font-bold tracking-tighter transition-all duration-300 ${isActive ? 'text-indigo-600 translate-x-2' : 'text-slate-900 hover:text-indigo-600'
+                                                    }`}
+                                                style={{ animationDelay: `${i * 50}ms` }}
+                                            >
+                                                {link.label}
+                                            </a>
+                                        );
+                                    })}
+                                </nav>
+
+                                {/* Contact Mini Section */}
+                                <div className="space-y-6 pt-12 border-t border-slate-100">
+                                    <span className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.3em]">Connect</span>
+                                    <div className="space-y-4">
+                                        <a href="mailto:apexonestudio@gmail.com" className="block text-xl font-medium text-slate-900">
+                                            apexonestudio@gmail.com
+                                        </a>
+                                        <p className="text-slate-500 font-light leading-relaxed">
+                                            Bangalore South, <br />
+                                            Karnataka, India
+                                        </p>
+                                    </div>
+                                    <div className="flex gap-4">
+                                        {['Twitter', 'LinkedIn', 'YouTube'].map((social) => (
+                                            <a key={social} href="#" className="text-sm font-bold text-slate-900 border-b-2 border-slate-100 hover:border-indigo-600 transition-colors">
+                                                {social}
+                                            </a>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Footer CTA (Fixed) */}
+                        <div className="p-6 border-t border-slate-100 bg-slate-50">
                             <a
                                 href="/contact"
                                 onClick={() => setIsMobileMenuOpen(false)}
-                                className="mt-4 px-4 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-center font-bold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-200 shadow-lg"
+                                className="flex items-center justify-center p-5 bg-black text-white rounded-2xl font-bold text-lg shadow-xl shadow-black/10 active:scale-95 transition-all"
                             >
-                                Start Audit
+                                Start Your Project
                             </a>
-                        </nav>
+                        </div>
                     </div>
                 </div>
             )}

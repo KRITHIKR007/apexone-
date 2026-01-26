@@ -22,6 +22,7 @@ import FinalCTA from '@/components/FinalCTA';
 import Footer from '@/components/Footer';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import Navigation from '@/components/Navigation';
+import MobileActions from '@/components/MobileActions';
 
 export default function Home() {
   useScrollReveal();
@@ -54,6 +55,7 @@ export default function Home() {
       <FAQ />
       <FinalCTA />
       <Footer />
+      <MobileActions />
     </main>
   );
 }

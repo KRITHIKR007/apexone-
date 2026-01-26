@@ -68,9 +68,9 @@ export default function Footer() {
             </div>
 
             <div className="container relative z-10">
-                <div className="grid md:grid-cols-4 gap-12 mb-16">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-12 mb-16">
                     {/* Brand Section */}
-                    <div className="md:col-span-2">
+                    <div className="col-span-2">
                         <div className="flex items-center gap-3 mb-6">
                             <Image src="/logo.png" alt="ApexOne Studios Logo" width={32} height={32} className="w-8 h-auto" />
                             <h3 className="text-xl font-bold tracking-tight text-slate-900">ApexOne Studios</h3>

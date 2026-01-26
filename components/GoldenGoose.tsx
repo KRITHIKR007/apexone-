@@ -50,56 +50,56 @@ export default function GoldenGoose() {
                         </a>
                     </div>
 
-                    {/* Right: Visual Creative */}
-                    <div className="relative px-8 py-12">
+                    {/* Right: Visual Creative - Optimized for Mobile */}
+                    <div className="relative px-0 md:px-8 py-12 order-first lg:order-last">
                         {/* Main Card */}
-                        <div className="relative z-20 bg-white rounded-3xl p-8 shadow-2xl shadow-indigo-500/20 border border-slate-100 transform rotate-[-2deg] transition-all duration-500 hover:rotate-0 hover:scale-[1.02]">
+                        <div className="relative z-20 bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 shadow-2xl shadow-indigo-500/20 border border-slate-100 transform rotate-0 md:rotate-[-2deg] transition-all duration-500 hover:rotate-0 hover:scale-[1.02]">
                             <div className="flex items-center justify-between mb-8 border-b border-slate-100 pb-4">
                                 <div>
-                                    <div className="text-xs text-slate-400 uppercase tracking-widest font-bold">Live Profitability</div>
-                                    <div className="text-3xl font-bold text-slate-900">₹8,420,103</div>
+                                    <div className="text-[10px] md:text-xs text-slate-400 uppercase tracking-widest font-bold">Live Profitability</div>
+                                    <div className="text-2xl md:text-3xl font-bold text-slate-900">₹8,420,103</div>
                                 </div>
                                 <div className="text-right">
-                                    <div className="text-xs text-emerald-500 font-bold bg-emerald-50 px-2 py-1 rounded">+24% vs Prev Month</div>
+                                    <div className="text-[10px] md:text-xs text-emerald-500 font-bold bg-emerald-50 px-2 py-1 rounded">+24%</div>
                                 </div>
                             </div>
 
-                            {/* Fake Chart Bars */}
-                            <div className="flex items-end gap-3 h-48 mb-6">
-                                {[40, 60, 45, 70, 85, 60, 95].map((h, i) => (
-                                    <div key={i} className="w-full bg-indigo-50 rounded-t-lg relative group overflow-hidden">
+                            {/* Fake Chart Bars - Fewer bars on very small screens */}
+                            <div className="flex items-end gap-2 md:gap-3 h-32 md:h-48 mb-6">
+                                {[40, 60, 45, 70, 85, 60, 95].slice(0, 5).concat([60, 95]).map((h, i) => (
+                                    <div key={i} className={`w-full bg-indigo-50 rounded-t-lg relative group overflow-hidden ${i > 4 ? 'hidden sm:block' : ''}`}>
                                         <div style={{ height: `${h}%` }} className="absolute bottom-0 left-0 w-full bg-indigo-500 rounded-t-lg transition-all duration-1000 group-hover:bg-indigo-600" />
                                     </div>
                                 ))}
                             </div>
 
                             <div className="bg-slate-900 rounded-xl p-4 text-white flex items-center gap-4 shadow-lg">
-                                <div className="w-10 h-10 rounded-full bg-amber-500 flex items-center justify-center flex-shrink-0 animate-pulse">
-                                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                                <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-amber-500 flex items-center justify-center flex-shrink-0 animate-pulse">
+                                    <svg className="w-5 h-5 md:w-6 md:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
                                 </div>
                                 <div>
-                                    <div className="text-xs text-slate-400">AI Recommendation</div>
-                                    <div className="font-medium text-sm">Scale Campaign #402. ROAS is 4.2x.</div>
+                                    <div className="text-[10px] text-slate-400">AI Recommendation</div>
+                                    <div className="font-medium text-xs md:text-sm leading-tight">Scale Campaign #402. ROAS is 4.2x.</div>
                                 </div>
                             </div>
                         </div>
 
-                        {/* Floating Element 1 - Creative */}
-                        <div className="absolute -top-6 -right-6 z-10 bg-white p-4 rounded-2xl shadow-xl shadow-purple-500/10 border border-white/50 w-48 animate-[float_6s_ease-in-out_infinite]">
-                            <div className="flex items-center gap-3 mb-2">
-                                <div className="w-2 h-2 rounded-full bg-red-500" />
-                                <div className="text-xs font-bold text-slate-700">Kill Signal</div>
+                        {/* Floating Element 1 - Repositioned/Hidden on small mobile */}
+                        <div className="absolute -top-4 right-0 md:-top-6 md:-right-6 z-30 bg-white p-3 md:p-4 rounded-xl shadow-xl shadow-purple-500/10 border border-white/50 w-40 md:w-48 animate-[float_6s_ease-in-out_infinite]">
+                            <div className="flex items-center gap-2 mb-1">
+                                <div className="w-1.5 h-1.5 rounded-full bg-red-500" />
+                                <div className="text-[10px] font-bold text-slate-700">Kill Signal</div>
                             </div>
-                            <div className="text-xs text-slate-500">"Ad Creative B is fatiguing. CPR up 40%. Paused automatically."</div>
+                            <div className="text-[10px] text-slate-500 leading-tight">"Creative fatigue detected. Paused."</div>
                         </div>
 
-                        {/* Floating Element 2 - Funnel */}
-                        <div className="absolute -bottom-6 -left-6 z-30 bg-white p-4 rounded-2xl shadow-xl shadow-emerald-500/10 border border-white/50 w-56 animate-[float_8s_ease-in-out_infinite_reverse]">
+                        {/* Floating Element 2 - Hidden on very small mobile */}
+                        <div className="hidden sm:block absolute -bottom-6 -left-6 z-30 bg-white p-4 rounded-2xl shadow-xl shadow-emerald-500/10 border border-white/50 w-56 animate-[float_8s_ease-in-out_infinite_reverse]">
                             <div className="flex items-center gap-3 mb-2">
                                 <div className="w-2 h-2 rounded-full bg-emerald-500" />
                                 <div className="text-xs font-bold text-slate-700">Cohort Detected</div>
                             </div>
-                            <div className="text-xs text-slate-500">"New user segment 'Whales' identified. LTV predicted at ₹40k."</div>
+                            <div className="text-xs text-slate-500">"New user segment identified. LTV high."</div>
                         </div>
 
                     </div>

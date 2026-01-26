@@ -17,9 +17,9 @@ export default function Hero() {
         <div className={`flex flex-col items-center text-center max-w-4xl mx-auto transition-opacity duration-1000 ${mounted ? 'opacity-100' : 'opacity-0'}`}>
 
           {/* Heading - Clean, Custom Tracking, Standard Premium */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[8rem] font-bold tracking-tighter text-slate-900 leading-[1.1] md:leading-[0.9] mb-6 md:mb-8 text-center md:text-left w-full">
-            The Cognitive Engine for
-            <span className="text-transparent bg-clip-text bg-gradient-to-b from-slate-900 to-slate-600 block pl-0 md:pl-48">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[8rem] font-bold tracking-tighter text-slate-900 leading-[1.1] md:leading-[0.9] mb-6 md:mb-8 text-center md:text-left w-full flex flex-col items-center md:items-start">
+            <span className="text-center md:text-left">The Cognitive Engine for</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-b from-slate-900 to-slate-600 block md:pl-48 text-center md:text-left">
               Global Enterprise.
             </span>
           </h1>

@@ -138,8 +138,8 @@ export default function CIIP() {
                                     </div>
                                 </div>
 
-                                {/* Content */}
-                                <div className="p-6 font-mono text-xs md:text-sm h-[400px] overflow-hidden text-slate-300 relative bg-black/50 overflow-y-auto terminal-scrollbar">
+                                {/* Content - Optimized for Mobile Height */}
+                                <div className="p-4 md:p-6 font-mono text-[10px] md:text-sm h-[280px] md:h-[400px] overflow-hidden text-slate-300 relative bg-black/50 overflow-y-auto terminal-scrollbar">
 
                                     <div className="flex gap-3 items-center opacity-60">
                                         <span className="text-emerald-500">➜</span>
@@ -147,7 +147,7 @@ export default function CIIP() {
                                     </div>
 
                                     <div className="space-y-2 mt-4">
-                                        <div className="flex justify-between text-slate-600 text-[10px] uppercase tracking-widest border-b border-white/5 pb-1">
+                                        <div className="flex justify-between text-slate-600 text-[8px] md:text-[10px] uppercase tracking-widest border-b border-white/5 pb-1">
                                             <span>Metric</span>
                                             <span>Status</span>
                                         </div>
@@ -161,24 +161,24 @@ export default function CIIP() {
                                         </div>
                                     </div>
 
-                                    {/* Alert Box */}
-                                    <div className="mt-6 pt-6 border-t border-white/5">
-                                        <div className="flex gap-3 items-start bg-red-950/20 -mx-6 px-6 py-3 border-l-2 border-red-500/50">
+                                    {/* Alert Box - Slighly more compact on mobile */}
+                                    <div className="mt-4 md:mt-6 pt-4 md:pt-6 border-t border-white/5">
+                                        <div className="flex gap-3 items-start bg-red-950/20 -mx-4 md:-mx-6 px-4 md:px-6 py-3 border-l-2 border-red-500/50">
                                             <div className="flex-1">
-                                                <div className="text-red-400 font-bold mb-1 flex items-center gap-2">
+                                                <div className="text-red-400 font-bold mb-1 flex items-center gap-2 text-[10px] md:text-sm">
                                                     <span className="animate-pulse">●</span> THREAT DETECTED
                                                 </div>
-                                                <div className="text-slate-400 mb-2 text-[10px]">
+                                                <div className="text-slate-500 mb-2 text-[8px] md:text-[10px]">
                                                     Suspicious payload detected:
                                                 </div>
-                                                <code className="block bg-black p-2 rounded text-red-300 text-[10px] border border-red-900/30">
+                                                <code className="block bg-black p-2 rounded text-red-300 text-[8px] md:text-[10px] border border-red-900/30 break-all">
                                                     POST /api/v1/users {'{'} "sql": "DROP..." {'}'}
                                                 </code>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div className="flex gap-3 items-center text-emerald-400 font-bold animate-pulse mt-4 text-[10px] md:text-xs">
+                                    <div className="flex gap-3 items-center text-emerald-400 font-bold animate-pulse mt-4 text-[9px] md:text-xs">
                                         <span>&gt;&gt; CIIP AUTO-DEFENSE ENGAGED</span>
                                     </div>
 
@@ -186,7 +186,7 @@ export default function CIIP() {
                                     <LiveConsole />
 
                                     {/* Decoration Lines */}
-                                    <div className="absolute bottom-0 left-0 right-0 h-4 bg-gradient-to-t from-[#050505] to-transparent pointer-events-none"></div>
+                                    <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-[#050505] to-transparent pointer-events-none"></div>
                                 </div>
                             </div>
 
