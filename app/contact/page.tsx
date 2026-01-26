@@ -68,7 +68,7 @@ export default function ContactPage() {
                                     <p className="text-slate-600 leading-relaxed mt-2">
                                         Akshaya Nilaya, <br />
                                         Ranganath Layout, <br />
-                                        Harohalli, Bangalore South,<br />
+                                        Bangalore South,<br />
                                         Karnataka, India
                                     </p>
                                 </div>

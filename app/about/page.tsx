@@ -125,76 +125,62 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            {/* Redesigned Core Team Section */}
-            <section className="py-32 bg-[#050505] relative overflow-hidden">
-                {/* Technical Grid Background */}
-                <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('/grid.svg')]"></div>
-                <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-slate-800 to-transparent"></div>
-
-                <div className="container relative z-10">
-                    <div className="mb-24 flex flex-col md:flex-row justify-between items-end gap-10">
-                        <div className="space-y-4">
-                            <span className="text-xs font-bold tracking-[0.4em] uppercase text-emerald-500">Infrastructure & Leadership</span>
-                            <h3 className="text-6xl md:text-7xl font-bold tracking-tighter text-white">The Core Team.</h3>
-                        </div>
-                        <p className="text-slate-400 max-w-md text-lg font-light leading-relaxed md:text-right border-l md:border-l-0 md:border-r border-emerald-500/30 pl-6 md:pl-0 md:pr-6">
-                            A multi-disciplinary collective of specialists engineered to scale enterprise integrity.
+            {/* Minimal Premium Core Team Section */}
+            <section className="py-32 bg-white">
+                <div className="container">
+                    {/* Minimal Header */}
+                    <div className="mb-24 flex flex-col md:flex-row items-baseline justify-between gap-4 border-b border-slate-100 pb-12">
+                        <h3 className="text-4xl font-light tracking-tight text-slate-900">
+                            The Core <span className="font-bold">Team.</span>
+                        </h3>
+                        <p className="text-sm font-medium uppercase tracking-[0.2em] text-slate-400">
+                            Engineering Excellence
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-16 lg:gap-24">
                         {[
                             {
                                 name: "Kanishk K. Singh",
                                 role: "Technology Director",
                                 img: "/team/kanishk.webp",
-                                spec: "Systems Architecture",
-                                bio: "Lead architect of core infrastructure and security protocols."
+                                bio: "Lead architect driving the technical vision and security protocols of ApexOne's sovereign infrastructure."
                             },
                             {
                                 name: "Vasanth",
                                 role: "Finance Director",
                                 img: "/team/vasanth.jpg",
-                                spec: "Capital Strategy",
-                                bio: "Oversees fiscal intelligence and growth sustainability."
+                                bio: "Oversees the financial intelligence layer, ensuring sustainable growth and strategic capital allocation."
                             },
                             {
                                 name: "Thanish",
                                 role: "Chief AI Officer",
                                 img: "/team/thanish.png",
-                                spec: "Neural Systems",
-                                bio: "Pioneer in autonomous intelligence and predictive modeling."
+                                bio: "Specializes in neural system deployment and the ethical evolution of our autonomous intelligence models."
                             }
                         ].map((member, i) => (
-                            <div key={i} className="group relative">
-                                <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl transition-all duration-500 group-hover:border-emerald-500/50 group-hover:shadow-[0_0_40px_-10px_rgba(16,185,129,0.2)]">
-                                    {/* Technical Overlay */}
-                                    <div className="absolute inset-0 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                                        <div className="absolute top-4 right-4 text-[10px] font-mono text-emerald-500 uppercase tracking-widest">
-                                            Status: Active
-                                        </div>
-                                        <div className="absolute bottom-4 left-4 right-4 h-px bg-gradient-to-r from-emerald-500/50 to-transparent"></div>
-                                    </div>
-
+                            <div key={i} className="group">
+                                {/* Image Container */}
+                                <div className="relative aspect-[3/4] overflow-hidden bg-slate-50 mb-8">
                                     <Image
                                         src={member.img}
                                         alt={member.name}
                                         width={500}
-                                        height={625}
-                                        className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 ease-out scale-100 group-hover:scale-110"
+                                        height={667}
+                                        className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
                                     />
+                                </div>
 
-                                    {/* Info Overlay */}
-                                    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black via-black/80 to-transparent p-8 pt-20 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
-                                        <div className="mb-2">
-                                            <span className="text-[10px] font-bold text-emerald-500 uppercase tracking-[0.2em]">{member.spec}</span>
-                                        </div>
-                                        <h4 className="text-2xl font-bold text-white mb-1">{member.name}</h4>
-                                        <p className="text-sm font-medium text-slate-400 mb-4">{member.role}</p>
-                                        <p className="text-xs text-slate-500 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-                                            {member.bio}
-                                        </p>
+                                {/* Details */}
+                                <div className="space-y-3">
+                                    <div className="flex items-center justify-between">
+                                        <h4 className="text-2xl font-bold tracking-tight text-slate-900">{member.name}</h4>
+                                        <div className="h-px w-8 bg-slate-200 group-hover:w-12 group-hover:bg-indigo-600 transition-all duration-500"></div>
                                     </div>
+                                    <p className="text-xs font-bold uppercase tracking-widest text-indigo-600">{member.role}</p>
+                                    <p className="text-slate-500 font-light leading-relaxed text-base pt-2 border-t border-slate-50">
+                                        {member.bio}
+                                    </p>
                                 </div>
                             </div>
                         ))}
@@ -211,9 +197,9 @@ export default function AboutPage() {
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {[
-                            { city: "Harohalli", coord: "12.7944° N, 77.4611° E", time: "HQ / ENGINEERING" },
-                            { city: "New York", coord: "40.7128° N, 74.0060° W", time: "SALES / FINANCE" },
-                            { city: "London", coord: "51.5074° N, 0.1278° W", time: "STRATEGY / EMEA" }
+                            { city: "Bangalore South", coord: "12.7944° N, 77.4611° E", time: "HQ / ENGINEERING" },
+                            { city: "Abu Dhabi", coord: "24.4539° N, 54.3773° E", time: "SALES / FINANCE" },
+                            { city: "Bangkok", coord: "13.7563° N, 100.5018° E", time: "STRATEGY / EMEA" }
                         ].map((loc, i) => (
                             <div key={i} className="group border-t border-white/10 pt-8 hover:border-emerald-500 transition-colors duration-300">
                                 <h4 className="text-2xl font-bold mb-2 group-hover:text-emerald-400 transition-colors">{loc.city}</h4>
