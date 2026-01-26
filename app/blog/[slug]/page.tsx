@@ -735,15 +735,7 @@ export default function BlogPostPage() {
                         </div>
 
                         {/* Prose Content */}
-                        <div className="prose prose-lg md:prose-xl prose-slate max-w-none 
-                            prose-headings:font-bold prose-headings:tracking-tighter prose-headings:text-slate-900
-                            prose-p:text-slate-600 prose-p:leading-[1.8] prose-p:font-light
-                            prose-strong:text-slate-900 prose-strong:font-bold
-                            prose-li:text-slate-600 prose-li:font-light
-                            prose-hr:border-slate-100
-                            prose-a:text-indigo-600 prose-a:font-bold hover:prose-a:text-indigo-700 prose-a:no-underline prose-a:border-b-2 prose-a:border-indigo-100
-                            prose-blockquote:border-l-indigo-600 prose-blockquote:bg-slate-50 prose-blockquote:py-2 prose-blockquote:px-8 prose-blockquote:rounded-r-xl prose-blockquote:font-medium prose-blockquote:text-slate-800
-                        ">
+                        <div className="prose prose-lg md:prose-xl prose-slate max-w-none prose-headings:font-bold prose-headings:tracking-tighter prose-headings:text-slate-900 prose-p:text-slate-600 prose-p:leading-[1.8] prose-p:font-light prose-strong:text-slate-900 prose-strong:font-bold prose-li:text-slate-600 prose-li:font-light prose-hr:border-slate-100 prose-a:text-indigo-600 prose-a:font-bold hover:prose-a:text-indigo-700 prose-a:no-underline prose-a:border-b-2 prose-a:border-indigo-100 prose-blockquote:border-l-indigo-600 prose-blockquote:bg-slate-50 prose-blockquote:py-2 prose-blockquote:px-8 prose-blockquote:rounded-r-xl prose-blockquote:font-medium prose-blockquote:text-slate-800">
                             {post.content}
                         </div>
 
