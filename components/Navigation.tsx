@@ -17,19 +17,27 @@ export default function Navigation() {
         const handleScroll = () => {
             const currentScrollY = window.scrollY;
 
-            // Visibility logic
+            // Always update style state
+            setIsScrolled(currentScrollY > 20);
+
+            // Visibility logic with threshold to prevent jitter
+            // We only update visibility if user scrolls more than 10px
+            const threshold = 10;
+
             if (currentScrollY < 50) {
                 setIsVisible(true);
-            } else if (currentScrollY > prevScrollY.current) {
-                // Scrolling down
-                setIsVisible(false);
-            } else {
-                // Scrolling up
-                setIsVisible(true);
+                prevScrollY.current = currentScrollY;
+            } else if (Math.abs(currentScrollY - prevScrollY.current) > threshold) {
+                // Significant movement detected
+                if (currentScrollY > prevScrollY.current) {
+                    // Scrolling down
+                    setIsVisible(false);
+                } else {
+                    // Scrolling up
+                    setIsVisible(true);
+                }
+                prevScrollY.current = currentScrollY;
             }
-
-            prevScrollY.current = currentScrollY;
-            setIsScrolled(currentScrollY > 20);
 
             // Only track sections on homepage
             if (isHome) {

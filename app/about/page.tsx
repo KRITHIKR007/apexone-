@@ -125,33 +125,77 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            {/* Directors - Classic Grid Layout (EXISTING) */}
-            <section className="py-32 bg-slate-50">
-                <div className="container">
-                    <div className="mb-20 flex flex-col md:flex-row justify-between items-end gap-8">
-                        <h3 className="text-5xl font-bold tracking-tight max-w-xl">The Core Team.</h3>
-                        <p className="text-slate-500 max-w-md text-right">
-                            A multi-disciplinary team of experts leading technology, finance, and growth.
+            {/* Redesigned Core Team Section */}
+            <section className="py-32 bg-[#050505] relative overflow-hidden">
+                {/* Technical Grid Background */}
+                <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('/grid.svg')]"></div>
+                <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-slate-800 to-transparent"></div>
+
+                <div className="container relative z-10">
+                    <div className="mb-24 flex flex-col md:flex-row justify-between items-end gap-10">
+                        <div className="space-y-4">
+                            <span className="text-xs font-bold tracking-[0.4em] uppercase text-emerald-500">Infrastructure & Leadership</span>
+                            <h3 className="text-6xl md:text-7xl font-bold tracking-tighter text-white">The Core Team.</h3>
+                        </div>
+                        <p className="text-slate-400 max-w-md text-lg font-light leading-relaxed md:text-right border-l md:border-l-0 md:border-r border-emerald-500/30 pl-6 md:pl-0 md:pr-6">
+                            A multi-disciplinary collective of specialists engineered to scale enterprise integrity.
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-16">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                         {[
-                            { name: "Kanishk K. Singh", role: "Technology Director", img: "/team/kanishk.webp" },
-                            { name: "Vasanth", role: "Finance Director", img: "/team/vasanth.jpg" },
-                            { name: "Thanish", role: "Chief AI Officer", img: "/team/thanish.png" },
-                            { name: "Ayadee A.", role: "Creative Director", img: "/team/ayadee.jpg" },
-                            { name: "Ayham", role: "Digital Marketing Director", img: "/team/ahyam.jpg" },
-                            { name: "Kishore", role: "Corporate Director", img: "/team/kishore.jpg" },
-                            { name: "Ardhendu", role: "Tech Ops Director", img: "/team/ardhendu.jpg" },
-                            { name: "Tanvir", role: "Content Director", img: "/team/tanvir_new.png" }
+                            {
+                                name: "Kanishk K. Singh",
+                                role: "Technology Director",
+                                img: "/team/kanishk.webp",
+                                spec: "Systems Architecture",
+                                bio: "Lead architect of core infrastructure and security protocols."
+                            },
+                            {
+                                name: "Vasanth",
+                                role: "Finance Director",
+                                img: "/team/vasanth.jpg",
+                                spec: "Capital Strategy",
+                                bio: "Oversees fiscal intelligence and growth sustainability."
+                            },
+                            {
+                                name: "Thanish",
+                                role: "Chief AI Officer",
+                                img: "/team/thanish.png",
+                                spec: "Neural Systems",
+                                bio: "Pioneer in autonomous intelligence and predictive modeling."
+                            }
                         ].map((member, i) => (
-                            <div key={i} className="group cursor-pointer">
-                                <div className="aspect-[3/4] mb-6 overflow-hidden bg-white rounded-sm shadow-sm hover:shadow-xl transition-all duration-500">
-                                    <Image src={member.img} alt={member.name} width={400} height={533} className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]" />
+                            <div key={i} className="group relative">
+                                <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl transition-all duration-500 group-hover:border-emerald-500/50 group-hover:shadow-[0_0_40px_-10px_rgba(16,185,129,0.2)]">
+                                    {/* Technical Overlay */}
+                                    <div className="absolute inset-0 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                                        <div className="absolute top-4 right-4 text-[10px] font-mono text-emerald-500 uppercase tracking-widest">
+                                            Status: Active
+                                        </div>
+                                        <div className="absolute bottom-4 left-4 right-4 h-px bg-gradient-to-r from-emerald-500/50 to-transparent"></div>
+                                    </div>
+
+                                    <Image
+                                        src={member.img}
+                                        alt={member.name}
+                                        width={500}
+                                        height={625}
+                                        className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 ease-out scale-100 group-hover:scale-110"
+                                    />
+
+                                    {/* Info Overlay */}
+                                    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black via-black/80 to-transparent p-8 pt-20 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+                                        <div className="mb-2">
+                                            <span className="text-[10px] font-bold text-emerald-500 uppercase tracking-[0.2em]">{member.spec}</span>
+                                        </div>
+                                        <h4 className="text-2xl font-bold text-white mb-1">{member.name}</h4>
+                                        <p className="text-sm font-medium text-slate-400 mb-4">{member.role}</p>
+                                        <p className="text-xs text-slate-500 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                                            {member.bio}
+                                        </p>
+                                    </div>
                                 </div>
-                                <h4 className="text-xl font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">{member.name}</h4>
-                                <p className="text-sm text-slate-500 font-medium uppercase tracking-wider mt-1">{member.role}</p>
                             </div>
                         ))}
                     </div>
