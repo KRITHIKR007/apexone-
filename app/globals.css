@@ -459,6 +459,10 @@
   animation: marquee 60s linear infinite;
 }
 
+.animate-marquee-slow {
+  animation: marquee 120s linear infinite;
+}
+
 @keyframes flow-stream {
   from {
     transform: translateX(0);
