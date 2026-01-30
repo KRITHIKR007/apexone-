@@ -12,9 +12,15 @@ const jobs = [
         title: 'Principal AI Scientist',
         level: 'L7 / Principal',
         department: 'AI Research',
-        image: '/careers/ai-research.png',
+        image: '/careers/principal_ai_scientist.png',
         location: 'Bengaluru / Remote',
-        salary: '₹50L - ₹85L',
+        salary: 'Top Tier / Role-Based',
+        manager: 'Executive Council / CTO Office',
+        responsibilities: [
+            "Architectural leadership for multi-modal reasoning engines.",
+            "Synthesizing frontier research into enterprise-grade protocols.",
+            "Directing the neural roadmap for 2026 expansion."
+        ],
         description: 'Lead multi-modal architectural breakthroughs. Researching the next frontier of autonomous reasoning agents.'
     },
     {
@@ -22,9 +28,15 @@ const jobs = [
         title: 'Neural Systems Engineer',
         level: 'L6 / Senior',
         department: 'AI Research',
-        image: '/careers/engineering.png',
+        image: '/careers/neural_systems.png',
         location: 'Global Remote',
-        salary: '₹40L - ₹65L',
+        salary: 'Top Tier / Role-Based',
+        manager: 'Lead AI Scientist',
+        responsibilities: [
+            "Scaling distributed training infrastructure for billion-parameter models.",
+            "Implementing low-latency inference protocols for real-time telemetry.",
+            "Optimizing neural weights for specialized edge deployment."
+        ],
         description: 'Optimize training pipelines for billion-parameter models. Infrastructure design for neural scale.'
     },
     {
@@ -33,8 +45,14 @@ const jobs = [
         level: 'L5 / Senior',
         department: 'AI Research',
         location: 'Hybrid / Remote',
-        image: '/careers/ai-research.png',
-        salary: '₹35L - ₹55L',
+        image: '/careers/ai_product_manager.png',
+        salary: 'Competitive Range',
+        manager: 'Head of Intelligence',
+        responsibilities: [
+            "Defining the intelligence roadmap for enterprise automation.",
+            "Bridging the gap between neural research and user-facing dashboards.",
+            "Managing lifecycle pivots for autonomous agent deployment."
+        ],
         description: 'Bridge the gap between frontier research and enterprise deployment. Define the core intelligence roadmap.'
     },
     {
@@ -42,9 +60,15 @@ const jobs = [
         title: 'Spatial Systems Lead',
         level: 'L6 / Senior',
         department: 'AR/VR',
-        image: '/careers/ar-vr.png',
+        image: '/careers/spatial_systems.png',
         location: 'Bengaluru / Hybrid',
-        salary: '₹45L - ₹70L',
+        salary: 'Top Tier / Role-Based',
+        manager: 'Spatial Design Lead',
+        responsibilities: [
+            "Engineering the core OS for spatial computing interfaces.",
+            "Defining persistency protocols for multi-user AR environments.",
+            "Researching neural-input integration for zero-latency interactions."
+        ],
         description: 'Develop the OS for spatial computing interfaces. Bridging neural inputs with high-fidelity digital reality.'
     },
     {
@@ -52,9 +76,15 @@ const jobs = [
         title: 'Cinematic Metaverse Artist',
         level: 'L5 / Senior',
         department: 'AR/VR',
-        image: '/careers/metaverse.png',
+        image: '/careers/metaverse_artist.png',
         location: 'Remote',
-        salary: 'Top Tier',
+        salary: 'Top Tier / Role-Based',
+        manager: 'World Architect',
+        responsibilities: [
+            "Crafting hyper-realistic environments in UE5 for global commerce.",
+            "Directing the visual narrative of spatial storytelling.",
+            "Implementing high-fidelity procedural world-generation logic."
+        ],
         description: 'Craft high-fidelity immersive worlds. Experience in UE5 and spatial storytelling for global commerce.'
     },
     {
@@ -62,9 +92,15 @@ const jobs = [
         title: 'AR Interaction Designer',
         level: 'L4 / Senior',
         department: 'AR/VR',
-        image: '/careers/ar-vr.png',
+        image: '/careers/ar_interaction.png',
         location: 'Remote',
-        salary: '₹24L - ₹42L',
+        salary: 'Competitive Range',
+        manager: 'Spatial UX Lead',
+        responsibilities: [
+            "Defining gesture libraries for the next generation of computing.",
+            "Prototyping fluid spatial overlays for enterprise data hubs.",
+            "Researching ethical interaction patterns in AR/VR contexts."
+        ],
         description: 'Define the gestures and interfaces of the spatial age. Engineering the next phase of human-computer interaction.'
     },
     {
@@ -72,34 +108,244 @@ const jobs = [
         title: 'Founding Infrastructure Lead',
         level: 'Founding Team',
         department: 'Engineering',
-        image: '/careers/engineering.png',
+        image: '/careers/founding_infra.png',
         location: 'Bengaluru (Hybrid)',
-        salary: '₹25L - ₹45L',
+        salary: 'Strategic Equity + Range',
+        manager: 'CEO / CTO Office',
+        responsibilities: [
+            "Building the core engine that automates multi-billion dollar firms.",
+            "Defining the engineering culture for the ApexOne ecosystem.",
+            "Directing architectural scaling from zero to global dominance."
+        ],
         description: 'Build the engine that automates multi-billion dollar enterprises. Direct engineering dominance.'
     }
 ];
 
 const internships = [
-    { id: 1, title: 'AI Research Intern', dept: 'AI Research', loc: 'Remote', type: 'Technical' },
-    { id: 2, title: 'Neural Network Intern', dept: 'AI Research', loc: 'Bengaluru', type: 'Technical' },
-    { id: 3, title: 'Spatial UX Intern', dept: 'AR/VR', loc: 'Remote', type: 'Design' },
-    { id: 4, title: 'Metaverse World Intern', dept: 'AR/VR', loc: 'Remote', type: 'Creative' },
-    { id: 5, title: 'AR Interface Intern', dept: 'AR/VR', loc: 'Hybrid', type: 'Technical' },
-    { id: 6, title: '3D Content Intern', dept: 'AR/VR', loc: 'Remote', type: 'Creative' },
-    { id: 7, title: 'Frontend Systems Intern', dept: 'Engineering', loc: 'Remote', type: 'Technical' },
-    { id: 8, title: 'Backend Scale Intern', dept: 'Engineering', loc: 'Remote', type: 'Technical' },
-    { id: 9, title: 'Full Stack Node Intern', dept: 'Engineering', loc: 'Hybrid', type: 'Technical' },
-    { id: 10, title: 'Cloud Infrastructure Intern', dept: 'Engineering', loc: 'Remote', type: 'Technical' },
-    { id: 11, title: 'Cinematic Design Intern', dept: 'Creative Lab', loc: 'Bengaluru', type: 'Creative' },
-    { id: 12, title: 'Motion Graphics Intern', dept: 'Creative Lab', loc: 'Remote', type: 'Creative' },
-    { id: 13, title: 'Visual Identity Intern', dept: 'Creative Lab', loc: 'Remote', type: 'Creative' },
-    { id: 14, title: 'Graphic Design Intern', dept: 'Creative Lab', loc: 'Remote', type: 'Creative' },
-    { id: 15, title: 'Editorial Video Intern', dept: 'Creative Lab', loc: 'Hybrid', type: 'Creative' }
+    // AI & ML
+    {
+        id: 1,
+        title: 'AI Research Intern',
+        dept: 'AI & ML',
+        loc: 'Remote',
+        type: 'Technical',
+        duration: '6 Months',
+        manager: 'Lead AI Scientist',
+        responsibilities: [
+            "Researching and implementing state-of-the-art transformer architectures.",
+            "Benchmarking multi-modal models for enterprise logic.",
+            "Assisting in the development of autonomous reasoning protocols."
+        ]
+    },
+    {
+        id: 2,
+        title: 'Neural Network / ML Intern',
+        dept: 'AI & ML',
+        loc: 'Bengaluru',
+        type: 'Technical',
+        duration: '6 Months',
+        manager: 'Neural Systems Architect',
+        responsibilities: [
+            "Optimizing neural scale training pipelines.",
+            "Fine-tuning billion-parameter models for specific domain niches.",
+            "Implementing advanced quantization techniques for edge deployment."
+        ]
+    },
+    {
+        id: 3,
+        title: 'Data Science Intern',
+        dept: 'AI & ML',
+        loc: 'Hybrid',
+        type: 'Technical',
+        duration: '4 Months',
+        manager: 'Head of Data Intelligence',
+        responsibilities: [
+            "Building predictive revenue models using historical enterprise data.",
+            "Synthesizing complex datasets into actionable growth insights.",
+            "Automating ETL pipelines for real-time telemetry."
+        ]
+    },
+    {
+        id: 4,
+        title: 'Automation & AI Tools Intern',
+        dept: 'AI & ML',
+        loc: 'Remote',
+        type: 'Technical',
+        duration: '3 Months',
+        manager: 'Automation Lead',
+        responsibilities: [
+            "Developing custom AI agents for internal workflow optimization.",
+            "Integrating LLM-based tools into the existing CRM infrastructure.",
+            "Mapping business processes for autonomous execution."
+        ]
+    },
+
+    // AR/VR & Metaverse
+    {
+        id: 5,
+        title: 'Spatial UX Intern',
+        dept: 'AR/VR',
+        loc: 'Hybrid',
+        type: 'Design',
+        duration: '6 Months',
+        manager: 'Spatial Design Lead',
+        responsibilities: [
+            "Designing 3D interfaces for spatial computing environments.",
+            "Researching intuitive gesture-based interaction patterns.",
+            "Prototyping AR overlays for complex industrial workflows."
+        ]
+    },
+    {
+        id: 6,
+        title: 'Metaverse World Intern',
+        dept: 'AR/VR',
+        loc: 'Remote',
+        type: 'Creative',
+        duration: '6 Months',
+        manager: 'World Architect',
+        responsibilities: [
+            "Building high-fidelity environments in Unreal Engine 5.",
+            "Implementing spatial audio experiences for virtual commerce hubs.",
+            "Optimizing 3D assets for real-time multiplayer interaction."
+        ]
+    },
+    {
+        id: 7,
+        title: 'AR Interface Intern',
+        dept: 'AR/VR',
+        loc: 'Remote',
+        type: 'Technical',
+        duration: '4 Months',
+        manager: 'Core Systems Engineer',
+        responsibilities: [
+            "Developing real-time tracking algorithms for AR devices.",
+            "Integrating cloud-spatial anchors for persistent digital objects.",
+            "Refining hand-tracking latency for high-precision interactions."
+        ]
+    },
+    {
+        id: 8,
+        title: '3D Content Intern',
+        dept: 'AR/VR',
+        loc: 'Bengaluru',
+        type: 'Creative',
+        duration: '3 Months',
+        manager: 'Senior Artist',
+        responsibilities: [
+            "Modeling and texturing premium assets for virtual showrooms.",
+            "Developing procedural shaders for hyper-realistic materials.",
+            "Implementing physics-based animations for spatial assets."
+        ]
+    },
+
+    // Engineering
+    {
+        id: 9,
+        title: 'Frontend Systems Intern',
+        dept: 'Engineering',
+        loc: 'Remote',
+        type: 'Technical',
+        duration: '4 Months',
+        manager: 'Frontend Principal',
+        responsibilities: [
+            "Building high-performance dashboards using Next.js and React 19.",
+            "Implementing complex Framer Motion animations for data density.",
+            "Ensuring pixel-perfect responsive execution across all viewports."
+        ]
+    },
+    {
+        id: 10,
+        title: 'Backend Scale Intern',
+        dept: 'Engineering',
+        loc: 'Remote',
+        type: 'Technical',
+        duration: '6 Months',
+        manager: 'Infrastructure Architect',
+        responsibilities: [
+            "Optimizing Postgres query performance for high-concurrency loops.",
+            "Designing scalable API microservices to handle global traffic.",
+            "Implementing robust security protocols and authentication layers."
+        ]
+    },
+    {
+        id: 11,
+        title: 'Full Stack Node Intern',
+        dept: 'Engineering',
+        loc: 'Hybrid',
+        type: 'Technical',
+        duration: '4 Months',
+        manager: 'Full Stack Lead',
+        responsibilities: [
+            "Developing end-to-end features for the Command Center dashboard.",
+            "Bridging AI services with user-facing frontend interfaces.",
+            "Maintaining 99.9% uptime for critical business operations."
+        ]
+    },
+    {
+        id: 12,
+        title: 'Cloud Infrastructure Intern',
+        dept: 'Engineering',
+        loc: 'Remote',
+        type: 'Technical',
+        duration: '6 Months',
+        manager: 'DevOps Lead',
+        responsibilities: [
+            "Managing Vercel and AWS deployments for global scale.",
+            "Automating CI/CD pipelines for instant protocol rollout.",
+            "Monitoring real-time telemetry for system-wide health."
+        ]
+    },
+
+    // Creative Lab
+    {
+        id: 13,
+        title: 'Motion Graphics Intern',
+        dept: 'Creative Lab',
+        loc: 'Remote',
+        type: 'Creative',
+        duration: '4 Months',
+        manager: 'Creative Director',
+        responsibilities: [
+            "Crafting premium orbital animations for the ApexOne brand.",
+            "Designing dynamic UI transitions for the digital ecosystem.",
+            "Creating high-impact social assets for expansion protocols."
+        ]
+    },
+    {
+        id: 14,
+        title: 'Visual Identity / Graphic Design Intern',
+        dept: 'Creative Lab',
+        loc: 'Remote',
+        type: 'Creative',
+        duration: '3 Months',
+        manager: 'Brand Architect',
+        responsibilities: [
+            "Evolving the ApexOne design language for the 2026 era.",
+            "Curating visual tokens for product interfaces and marketing.",
+            "Defining typography and color standards for global dominance."
+        ]
+    },
+    {
+        id: 15,
+        title: 'Cinematic / Editorial Video Intern',
+        dept: 'Creative Lab',
+        loc: 'Bengaluru',
+        type: 'Creative',
+        duration: '6 Months',
+        manager: 'Executive Producer',
+        responsibilities: [
+            "Editing high-fidelity brand films and cinematic shorts.",
+            "Sound design for immersive metaverse experiences.",
+            "Directing visual storytelling for enterprise-level audits."
+        ]
+    }
 ];
 
 export default function CareersPage() {
     const [filter, setFilter] = useState('All');
     const [showAllInterns, setShowAllInterns] = useState(false);
+    const [selectedIntern, setSelectedIntern] = useState<number | null>(null);
+    const [selectedJob, setSelectedJob] = useState<string | null>(null);
 
     const filteredJobs = filter === 'All' ? jobs : jobs.filter(j => j.department.includes(filter));
     const visibleInterns = showAllInterns ? internships : internships.slice(0, 6);
@@ -199,7 +445,7 @@ export default function CareersPage() {
                         </div>
                     </div>
                     <div className="relative aspect-[4/5] rounded-[4rem] overflow-hidden shadow-2xl border-[12px] border-slate-50 hidden lg:block">
-                        <Image src="/careers/engineering.png" alt="Operational Center" fill className="object-cover" />
+                        <Image src="/careers/sovereign_infra.png" alt="Operational Center" fill className="object-cover" />
                         <div className="absolute inset-x-8 bottom-8 p-10 bg-white/90 backdrop-blur-3xl border border-white rounded-[2.5rem] text-slate-900">
                             <div className="flex justify-between items-center mb-6">
                                 <span className="text-[10px] font-bold tracking-widest uppercase text-indigo-600 font-mono">operational_telemetry</span>
@@ -223,14 +469,14 @@ export default function CareersPage() {
                     <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
                         <div>
                             <h2 className="text-5xl md:text-8xl font-black tracking-tighter text-slate-950 leading-none">Open Protocols.</h2>
-                            <p className="text-xl text-slate-500 mt-10 font-light max-w-xl">Curating elite creative and engineering nodes for the 2026 expansion protocol.</p>
+                            <p className="text-xl text-slate-500 mt-10 font-light max-w-xl">Curating elite creative and engineering nodes for the 2026 expansion protocol. Select a role for full technical specs.</p>
                         </div>
                         <div className="flex bg-white p-1.5 rounded-2xl border border-slate-200 shadow-sm">
-                            {['All', 'AI Research', 'AR/VR', 'Creative'].map(cat => (
+                            {['All', 'AI Research', 'AR/VR', 'Engineering'].map(cat => (
                                 <button
                                     key={cat}
-                                    onClick={() => setFilter(cat === 'Creative' ? 'Creative Lab' : cat)}
-                                    className={`px-10 py-4 rounded-xl text-[10px] font-bold uppercase tracking-[0.3em] transition-all duration-300 ${filter === (cat === 'Creative' ? 'Creative Lab' : cat) ? 'bg-slate-900 text-white' : 'text-slate-400 hover:text-slate-900'}`}
+                                    onClick={() => setFilter(cat)}
+                                    className={`px-10 py-4 rounded-xl text-[10px] font-bold uppercase tracking-[0.3em] transition-all duration-300 ${filter === cat ? 'bg-slate-900 text-white' : 'text-slate-400 hover:text-slate-900'}`}
                                 >
                                     {cat}
                                 </button>
@@ -239,25 +485,161 @@ export default function CareersPage() {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-                        {filteredJobs.map((job, i) => (
-                            <motion.div key={job.id} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="flex flex-col bg-white border border-slate-200 rounded-[3rem] overflow-hidden group hover:border-indigo-400 transition-all duration-1000 shadow-sm hover:shadow-2xl">
-                                <div className="aspect-[16/10] overflow-hidden relative">
-                                    <Image src={job.image} alt={job.title} fill className="object-cover" />
-                                    <div className="absolute top-8 left-8"><span className="px-5 py-2 bg-white/95 rounded-xl text-[9px] font-black text-slate-950 uppercase tracking-widest shadow-sm">{job.level}</span></div>
+                        <AnimatePresence mode="popLayout">
+                            {filteredJobs.map((job, i) => (
+                                <motion.div
+                                    key={job.id}
+                                    layout
+                                    initial={{ opacity: 0, y: 30 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, scale: 0.95 }}
+                                    onClick={() => setSelectedJob(selectedJob === job.id ? null : job.id)}
+                                    className={`flex flex-col bg-white border border-slate-200 rounded-[3rem] overflow-hidden group cursor-pointer transition-all duration-700 shadow-sm hover:shadow-2xl ${selectedJob === job.id ? 'lg:col-span-2 border-indigo-400 ring-1 ring-indigo-100' : 'hover:border-indigo-200'}`}
+                                >
+                                    <motion.div
+                                        layout
+                                        className={`overflow-hidden relative transition-all duration-700 ease-[0.16, 1, 0.3, 1] ${selectedJob === job.id ? 'aspect-[21/9] rounded-b-[2rem]' : 'aspect-[16/10]'}`}
+                                    >
+                                        <Image src={job.image} alt={job.title} fill className="object-cover" />
+                                        <div className="absolute top-8 left-8">
+                                            <span className="px-5 py-2 bg-white/95 rounded-xl text-[9px] font-black text-slate-950 uppercase tracking-widest shadow-sm">
+                                                {job.level}
+                                            </span>
+                                        </div>
+                                    </motion.div>
+
+                                    <div className={`p-10 md:p-12 flex-1 flex flex-col items-stretch transition-all duration-500`}>
+                                        <div className="flex-1">
+                                            <div className="flex justify-between items-start mb-6">
+                                                <div className="text-[10px] font-bold text-indigo-600 uppercase tracking-[0.4em]">{job.department}</div>
+                                                <motion.div animate={{ rotate: selectedJob === job.id ? 180 : 0 }} className="w-2 h-2 rounded-full bg-slate-300" />
+                                            </div>
+                                            <h3 className={`font-bold tracking-tight text-slate-950 leading-none transition-all duration-500 ${selectedJob === job.id ? 'text-4xl md:text-5xl mb-12' : 'text-4xl mb-8'}`}>{job.title}</h3>
+
+                                            <AnimatePresence>
+                                                {selectedJob === job.id && (
+                                                    <motion.div
+                                                        initial={{ opacity: 0, height: 0 }}
+                                                        animate={{ opacity: 1, height: 'auto' }}
+                                                        exit={{ opacity: 0, height: 0 }}
+                                                        className="overflow-hidden"
+                                                    >
+                                                        <div className="grid md:grid-cols-2 gap-12 py-8 border-t border-slate-100">
+                                                            <div className="space-y-6">
+                                                                <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Expansion Objectives</span>
+                                                                <ul className="space-y-4">
+                                                                    {job.responsibilities.map((res, idx) => (
+                                                                        <li key={idx} className="flex gap-4 text-sm text-slate-600 leading-relaxed antialiased">
+                                                                            <div className="mt-2 w-1.5 h-1.5 rounded-full bg-indigo-500 shrink-0" />
+                                                                            {res}
+                                                                        </li>
+                                                                    ))}
+                                                                </ul>
+                                                            </div>
+                                                            <div className="space-y-8">
+                                                                <div>
+                                                                    <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest block mb-4">Operational Data</span>
+                                                                    <div className="grid grid-cols-2 gap-6">
+                                                                        <div>
+                                                                            <div className="text-[9px] font-bold text-indigo-600 uppercase mb-1">Status</div>
+                                                                            <div className="text-lg font-bold text-slate-950">Active Protocol</div>
+                                                                        </div>
+                                                                        <div>
+                                                                            <div className="text-[9px] font-bold text-indigo-600 uppercase mb-1">Rep. Manager</div>
+                                                                            <div className="text-lg font-bold text-slate-950">{job.manager}</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div className="pt-8 flex flex-col gap-4">
+                                                                    <a href={`mailto:apexonestudio@gmail.com?subject=Application: ${job.title}`} className="inline-block text-center px-12 py-5 bg-slate-950 text-white rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-indigo-600 transition-all shadow-xl">Initialize Admission</a>
+                                                                    <p className="text-[9px] text-center text-slate-400 italic">Financial package discussed during Phase II audit.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </motion.div>
+                                                )}
+                                            </AnimatePresence>
+
+                                            {!selectedJob && (
+                                                <p className="text-lg text-slate-500 font-light leading-relaxed mb-10">{job.description}</p>
+                                            )}
+                                        </div>
+
+                                        {!selectedJob && (
+                                            <div className="pt-10 border-t border-slate-100 flex items-center justify-between">
+                                                <div className="text-base font-medium text-slate-950">{job.salary}</div>
+                                                <span className="text-indigo-600 text-[10px] font-black uppercase tracking-widest group-hover:translate-x-2 transition-transform">Details →</span>
+                                            </div>
+                                        )}
+                                    </div>
+                                </motion.div>
+                            ))}
+                        </AnimatePresence>
+                    </div>
+                </div>
+            </section>
+
+            {/* Culture Manifesto - New Section */}
+            <section className="py-40 bg-white border-y border-slate-50 overflow-hidden">
+                <div className="container max-w-7xl px-4 mx-auto">
+                    <div className="grid lg:grid-cols-2 gap-24 items-center">
+                        <motion.div
+                            initial={{ opacity: 0, x: -50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            className="space-y-12"
+                        >
+                            <div>
+                                <span className="text-indigo-600 font-bold text-xs uppercase tracking-[0.6em]">Cultural Architecture</span>
+                                <h2 className="text-6xl md:text-8xl font-black tracking-tighter mt-8 leading-tight">
+                                    The Silent <br />
+                                    <span className="text-slate-300">Engine.</span>
+                                </h2>
+                            </div>
+
+                            <div className="space-y-8">
+                                <p className="text-xl text-slate-500 font-light leading-relaxed antialiased">
+                                    At ApexOne, we don't follow industry trends; we engineer the foundations they sit on. Our culture is built on <span className="text-slate-950 font-medium italic">Digital Sovereignty</span> and radical autonomy.
+                                </p>
+
+                                <div className="grid gap-6">
+                                    {[
+                                        { title: "Radical Secrecy", desc: "All core protocols are protected by multi-layer NDAs. We operate in stealth because true power is silent." },
+                                        { title: "Direct Dealing", desc: "We don't 'manage' clients. We audit their reality and install solutions. Zero fluff. Zero friction." },
+                                        { title: "Neural Flow", desc: "Work is not measured by hours, but by the complexity of the problems solved. We operate in deep flow states." }
+                                    ].map((item, i) => (
+                                        <div key={i} className="p-8 bg-slate-50 rounded-3xl border border-slate-100 hover:border-indigo-100 transition-colors">
+                                            <h4 className="text-lg font-bold text-slate-950 mb-2">{item.title}</h4>
+                                            <p className="text-sm text-slate-500 font-light leading-relaxed">{item.desc}</p>
+                                        </div>
+                                    ))}
                                 </div>
-                                <div className="p-12 flex-1 flex flex-col items-stretch">
-                                    <div className="flex-1">
-                                        <div className="text-[10px] font-bold text-indigo-600 uppercase tracking-[0.4em] mb-6">{job.department}</div>
-                                        <h3 className="text-4xl font-bold tracking-tight text-slate-950 mb-8 group-hover:text-indigo-600 transition-colors leading-none">{job.title}</h3>
-                                        <p className="text-lg text-slate-500 font-light leading-relaxed mb-10">{job.description}</p>
+                            </div>
+                        </motion.div>
+
+                        <div className="relative">
+                            <motion.div
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: true }}
+                                className="aspect-[4/5] rounded-[4rem] overflow-hidden shadow-2xl border-[12px] border-slate-50 relative z-10"
+                            >
+                                <Image src="/careers/culture_manifesto.png" alt="Cultural Hub" fill className="object-cover" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
+                                <div className="absolute bottom-12 left-12 right-12 p-8 bg-white/10 backdrop-blur-3xl border border-white/20 rounded-3xl">
+                                    <div className="flex items-center gap-4 mb-4">
+                                        <div className="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_10px_#10b981]" />
+                                        <span className="text-[10px] font-bold text-white uppercase tracking-widest">Protocol: Classified</span>
                                     </div>
-                                    <div className="pt-10 border-t border-slate-100 flex items-center justify-between">
-                                        <div className="text-base font-medium text-slate-950">{job.salary}</div>
-                                        <a href={`mailto:apexonestudio@gmail.com?subject=Application: ${job.title}`} className="px-10 py-4 bg-slate-900 text-white rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-indigo-600 transition-all">Initialize</a>
-                                    </div>
+                                    <p className="text-xs text-white/70 leading-relaxed font-light">
+                                        Admittance to the ApexOne inner circle requires a rigid verification process. All engineers and artists are bound by the Global Secrecy Protocol (GSP-2026).
+                                    </p>
                                 </div>
                             </motion.div>
-                        ))}
+
+                            {/* Decorative Background Element */}
+                            <div className="absolute -top-12 -right-12 w-64 h-64 bg-indigo-50 rounded-full blur-3xl opacity-50 z-0" />
+                        </div>
                     </div>
                 </div>
             </section>
@@ -268,27 +650,81 @@ export default function CareersPage() {
                     <div className="text-center mb-24">
                         <span className="text-indigo-600 font-bold text-xs uppercase tracking-[0.6em]">FUTURE TALENT</span>
                         <h2 className="text-6xl md:text-9xl font-black tracking-tighter mt-8 leading-none">Internship Guild.</h2>
+                        <p className="text-xl text-slate-500 mt-10 font-light max-w-xl mx-auto">Join the 2026 Cohort across 15 specialized domains. Select a protocol to view details.</p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-                        <AnimatePresence>
+                        <AnimatePresence mode="popLayout">
                             {visibleInterns.map((intern, i) => (
                                 <motion.div
                                     key={intern.id}
+                                    layout
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
-                                    className="p-12 rounded-[3.5rem] bg-slate-50 border border-slate-100 group hover:bg-white hover:shadow-2xl hover:border-indigo-100 transition-all duration-300"
+                                    exit={{ opacity: 0, scale: 0.95 }}
+                                    onClick={() => setSelectedIntern(selectedIntern === intern.id ? null : intern.id)}
+                                    className={`p-10 rounded-[3.5rem] bg-slate-50 border border-slate-100 cursor-pointer group hover:shadow-2xl transition-all duration-500 ${selectedIntern === intern.id ? 'bg-white border-indigo-200 ring-1 ring-indigo-100 lg:col-span-2' : 'hover:bg-white'}`}
                                 >
-                                    <div className="flex justify-between items-center mb-10">
+                                    <div className="flex justify-between items-center mb-8">
                                         <div className="text-[10px] font-bold text-indigo-600 uppercase tracking-widest">{intern.dept}</div>
-                                        <div className="w-1.5 h-1.5 rounded-full bg-slate-300" />
+                                        <motion.div
+                                            animate={{ rotate: selectedIntern === intern.id ? 180 : 0 }}
+                                            className="w-1.5 h-1.5 rounded-full bg-slate-300"
+                                        />
                                     </div>
-                                    <h4 className="text-3xl font-bold text-slate-950 mb-6 leading-none">{intern.title}</h4>
-                                    <div className="flex items-center gap-6 text-[10px] font-bold text-slate-400 tracking-[0.2em] uppercase mt-12">
-                                        <span>{intern.loc}</span>
-                                        <div className="flex-1 h-px bg-slate-200" />
-                                        <a href="/contact" className="text-indigo-600 hover:text-slate-950 transition-colors">Apply →</a>
-                                    </div>
+
+                                    <h4 className={`font-bold text-slate-950 mb-6 leading-none transition-all duration-500 ${selectedIntern === intern.id ? 'text-4xl md:text-5xl' : 'text-3xl'}`}>{intern.title}</h4>
+
+                                    <AnimatePresence>
+                                        {selectedIntern === intern.id && (
+                                            <motion.div
+                                                initial={{ opacity: 0, height: 0 }}
+                                                animate={{ opacity: 1, height: 'auto' }}
+                                                exit={{ opacity: 0, height: 0 }}
+                                                className="overflow-hidden"
+                                            >
+                                                <div className="grid md:grid-cols-2 gap-12 py-8 border-t border-slate-100">
+                                                    <div className="space-y-6">
+                                                        <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Key Responsibilities</span>
+                                                        <ul className="space-y-4">
+                                                            {intern.responsibilities.map((res, idx) => (
+                                                                <li key={idx} className="flex gap-4 text-sm text-slate-600 leading-relaxed antialiased">
+                                                                    <div className="mt-2 w-1.5 h-1.5 rounded-full bg-indigo-500 shrink-0" />
+                                                                    {res}
+                                                                </li>
+                                                            ))}
+                                                        </ul>
+                                                    </div>
+                                                    <div className="space-y-8">
+                                                        <div>
+                                                            <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest block mb-4">Metadata</span>
+                                                            <div className="grid grid-cols-2 gap-6">
+                                                                <div>
+                                                                    <div className="text-[9px] font-bold text-indigo-600 uppercase mb-1">Duration</div>
+                                                                    <div className="text-lg font-bold text-slate-950">{intern.duration}</div>
+                                                                </div>
+                                                                <div>
+                                                                    <div className="text-[9px] font-bold text-indigo-600 uppercase mb-1">Rep. Manager</div>
+                                                                    <div className="text-lg font-bold text-slate-950">{intern.manager}</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div className="pt-8">
+                                                            <a href={`mailto:apexonestudio@gmail.com?subject=Internship Application: ${intern.title}`} className="inline-block px-12 py-4 bg-slate-950 text-white rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-indigo-600 transition-all shadow-xl">Deploy Application</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </motion.div>
+                                        )}
+                                    </AnimatePresence>
+
+                                    {!selectedIntern && (
+                                        <div className="flex items-center gap-6 text-[10px] font-bold text-slate-400 tracking-[0.2em] uppercase mt-12">
+                                            <span>{intern.loc}</span>
+                                            <div className="flex-1 h-px bg-slate-200" />
+                                            <span className="text-indigo-600 group-hover:translate-x-2 transition-transform">Details →</span>
+                                        </div>
+                                    )}
                                 </motion.div>
                             ))}
                         </AnimatePresence>
