@@ -132,7 +132,7 @@ export default function Navigation() {
                         href="/contact"
                         className="btn btn-primary hidden md:inline-flex rounded-full px-6 py-2.5 text-sm shadow-indigo-500/20 shadow-lg hover:shadow-indigo-500/40 transition-all duration-300 hover:-translate-y-0.5 no-underline hover:text-white"
                     >
-                        Start Audit
+                        Partner With Us
                     </a>
 
                     {/* Mobile Menu Button */}

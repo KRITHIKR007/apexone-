@@ -104,7 +104,7 @@ export default function CIIP() {
                             />
                             <FeatureRow
                                 title="Runtime Defense Fabric"
-                                desc="Blocks credential stuffing, DDoS, and injection payloads in real-time with a distributed AI firewall."
+                                desc="Protects your customer database from extraction and stops competitor espionage in real-time."
                             />
                         </div>
 

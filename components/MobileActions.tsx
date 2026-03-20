@@ -23,7 +23,7 @@ export default function MobileActions() {
                     href="/contact"
                     className="flex-1 bg-white text-slate-900 py-3 px-6 rounded-xl font-bold text-sm text-center active:scale-95 transition-transform"
                 >
-                    Start Executive Audit
+                    Partner With Us
                 </a>
                 <a
                     href="tel:+91 9902079990"

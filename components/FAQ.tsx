@@ -26,6 +26,11 @@ export default function FAQ() {
             id: '04',
             question: 'How fast can we deploy?',
             answer: 'Our average integration time is 14 days. This includes connecting all data sources, training the Golden Goose models, and setting up your executive dashboards.'
+        },
+        {
+            id: '05',
+            question: 'How does your commercial model work?',
+            answer: 'We operate on a hybrid engagement model: A flat-fee infrastructure build, followed by a performance-based maintenance license aligned directly with your profit growth.'
         }
     ];
 

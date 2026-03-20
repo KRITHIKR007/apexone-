@@ -58,11 +58,11 @@ export default function GoldenGoose() {
                         <div className="relative z-20 bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 shadow-2xl shadow-indigo-500/20 border border-slate-100 transform rotate-0 md:rotate-[-2deg] transition-all duration-500 hover:rotate-0 hover:scale-[1.02]">
                             <div className="flex items-center justify-between mb-8 border-b border-slate-100 pb-4">
                                 <div>
-                                    <div className="text-[10px] md:text-xs text-slate-500 uppercase tracking-widest font-bold">Live Profitability</div>
-                                    <div className="text-2xl md:text-3xl font-bold text-slate-900">₹8,420,103</div>
+                                    <div className="text-[10px] md:text-xs text-slate-500 uppercase tracking-widest font-bold">Monthly Pipeline Generated</div>
+                                    <div className="text-2xl md:text-3xl font-bold text-slate-900">₹84,20,100</div>
                                 </div>
                                 <div className="text-right">
-                                    <div className="text-[10px] md:text-xs text-emerald-700 font-bold bg-emerald-100 px-2 py-1 rounded">+24%</div>
+                                    <div className="text-[10px] md:text-xs text-emerald-700 font-bold bg-emerald-100 px-2 py-1 rounded">+18.5%</div>
                                 </div>
                             </div>
 
@@ -80,8 +80,8 @@ export default function GoldenGoose() {
                                     <Zap className="w-5 h-5 md:w-6 md:h-6 text-white" />
                                 </div>
                                 <div>
-                                    <div className="text-[10px] text-slate-300">AI Recommendation</div>
-                                    <div className="font-medium text-xs md:text-sm leading-tight">Scale Campaign #402. ROAS is 4.2x.</div>
+                                    <div className="text-[10px] text-slate-300">Automated Action Taken</div>
+                                    <div className="font-medium text-xs md:text-sm leading-tight">Reallocated ad-spend to top-performing B2B channel.</div>
                                 </div>
                             </div>
                         </div>
@@ -90,18 +90,18 @@ export default function GoldenGoose() {
                         <div className="absolute -top-4 right-0 md:-top-6 md:-right-6 z-30 bg-white p-3 md:p-4 rounded-xl shadow-xl shadow-purple-500/10 border border-white/50 w-40 md:w-48 animate-[float_6s_ease-in-out_infinite]">
                             <div className="flex items-center gap-2 mb-1">
                                 <div className="w-1.5 h-1.5 rounded-full bg-red-500" />
-                                <div className="text-[10px] font-bold text-slate-700">Kill Signal</div>
+                                <div className="text-[10px] font-bold text-slate-700">Cost Anomaly</div>
                             </div>
-                            <div className="text-[10px] text-slate-500 leading-tight">"Creative fatigue detected. Paused."</div>
+                            <div className="text-[10px] text-slate-500 leading-tight">"CPA spiked 14% on AdSet B. Targeting paused."</div>
                         </div>
 
                         {/* Floating Element 2 - Hidden on very small mobile */}
                         <div className="hidden sm:block absolute -bottom-6 -left-6 z-30 bg-white p-4 rounded-2xl shadow-xl shadow-emerald-500/10 border border-white/50 w-56 animate-[float_8s_ease-in-out_infinite_reverse]">
                             <div className="flex items-center gap-3 mb-2">
                                 <div className="w-2 h-2 rounded-full bg-emerald-500" />
-                                <div className="text-xs font-bold text-slate-700">Cohort Detected</div>
+                                <div className="text-xs font-bold text-slate-700">Audience Sync</div>
                             </div>
-                            <div className="text-xs text-slate-500">"New user segment identified. LTV high."</div>
+                            <div className="text-xs text-slate-500">"High-intent SaaS founders segment identified. Lookalike updated."</div>
                         </div>
 
                     </div>
