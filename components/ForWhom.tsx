@@ -19,7 +19,7 @@ export default function ForWhom() {
                     {/* Part 1: YOU ARE THE 1% */}
                     <div>
                         <div className="flex items-end gap-4 mb-8">
-                            <span className="text-6xl font-light text-slate-200">01</span>
+                            <span className="text-6xl font-light text-slate-300">01</span>
                             <h3 className="text-2xl font-bold text-slate-900 mb-2">The Leadership</h3>
                         </div>
                         <div className="prose prose-lg text-slate-500">
@@ -51,7 +51,7 @@ export default function ForWhom() {
                         <div className="absolute top-0 left-0 w-full h-px bg-slate-100 lg:hidden" /> {/* Mobile separator */}
 
                         <div className="flex items-end gap-4 mb-8 lg:mt-0 mt-12">
-                            <span className="text-6xl font-light text-slate-200">02</span>
+                            <span className="text-6xl font-light text-slate-300">02</span>
                             <h3 className="text-2xl font-bold text-slate-900 mb-2">The Transformation</h3>
                         </div>
                         <div className="prose prose-lg text-slate-500">
@@ -65,11 +65,11 @@ export default function ForWhom() {
                             <div className="grid grid-cols-2 gap-4 mt-8">
                                 <div className="p-6 bg-slate-50 rounded-xl border border-slate-100">
                                     <div className="text-3xl font-bold text-slate-900 mb-1">10x</div>
-                                    <div className="text-xs font-bold uppercase tracking-widest text-slate-400">Efficiency</div>
+                                    <div className="text-xs font-bold uppercase tracking-widest text-slate-500">Efficiency</div>
                                 </div>
                                 <div className="p-6 bg-slate-50 rounded-xl border border-slate-100">
                                     <div className="text-3xl font-bold text-slate-900 mb-1">#1</div>
-                                    <div className="text-xs font-bold uppercase tracking-widest text-slate-400">Market Pos.</div>
+                                    <div className="text-xs font-bold uppercase tracking-widest text-slate-500">Market Pos.</div>
                                 </div>
                             </div>
                         </div>
@@ -78,7 +78,7 @@ export default function ForWhom() {
                 </div>
 
                 <div className="mt-24 pt-8 border-t border-slate-100 flex justify-end">
-                    <p className="text-sm font-mono text-slate-400 uppercase tracking-widest">
+                    <p className="text-sm font-mono text-slate-500 uppercase tracking-widest">
                         *Strict qualification criteria apply to all partnerships.
                     </p>
                 </div>

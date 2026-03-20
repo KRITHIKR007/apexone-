@@ -10,7 +10,7 @@ export default function WhatMakesDifferent() {
                     <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold tracking-tighter mb-4 text-white leading-tight">
                         Evolution, not Upgrade.
                     </h2>
-                    <p className="text-base sm:text-lg md:text-xl text-slate-500 font-light tracking-wide">
+                    <p className="text-base sm:text-lg md:text-xl text-slate-400 font-light tracking-wide">
                         Why traditional agencies and SaaS tools are failing.
                     </p>
                 </div>
@@ -22,7 +22,7 @@ export default function WhatMakesDifferent() {
 
                     {/* Column Headers */}
                     <div className="text-left md:text-right md:pr-12 border-b md:border-none border-white/10 pb-8 md:pb-0 mb-8 md:mb-0">
-                        <h3 className="text-xs font-mono font-bold uppercase tracking-[0.2em] text-slate-600 mb-6 md:mb-8">The Old Way</h3>
+                        <h3 className="text-xs font-mono font-bold uppercase tracking-[0.2em] text-slate-400 mb-6 md:mb-8">The Old Way</h3>
                         <div className="space-y-8 md:space-y-16">
                             {[
                                 "Running isolated ad campaigns manually.",
@@ -30,7 +30,7 @@ export default function WhatMakesDifferent() {
                                 "Siloed in Facebook / Google / CRM.",
                                 "Vanity metrics (Clicks, Likes)."
                             ].map((text, i) => (
-                                <p key={i} className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-600 font-medium line-through decoration-slate-800 decoration-2 transition-colors duration-500 hover:text-slate-500 hover:decoration-slate-700 cursor-default">
+                                <p key={i} className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-500 font-medium line-through decoration-slate-600 decoration-2 transition-colors duration-500 hover:text-slate-400 hover:decoration-slate-500 cursor-default">
                                     {text}
                                 </p>
                             ))}

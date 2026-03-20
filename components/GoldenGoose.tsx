@@ -1,5 +1,7 @@
 'use client';
 
+import { Check, Zap } from 'lucide-react';
+
 export default function GoldenGoose() {
     return (
         <section className="section bg-slate-50 overflow-hidden relative">
@@ -34,7 +36,7 @@ export default function GoldenGoose() {
                             ].map((item, i) => (
                                 <div key={i} className="flex gap-4 group">
                                     <div className="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center shadow-sm group-hover:border-indigo-500 group-hover:scale-110 transition-all duration-300">
-                                        <svg className="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                                        <Check className="w-5 h-5 text-indigo-600" />
                                     </div>
                                     <div>
                                         <h4 className="font-bold text-slate-900">{item.title}</h4>
@@ -56,11 +58,11 @@ export default function GoldenGoose() {
                         <div className="relative z-20 bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 shadow-2xl shadow-indigo-500/20 border border-slate-100 transform rotate-0 md:rotate-[-2deg] transition-all duration-500 hover:rotate-0 hover:scale-[1.02]">
                             <div className="flex items-center justify-between mb-8 border-b border-slate-100 pb-4">
                                 <div>
-                                    <div className="text-[10px] md:text-xs text-slate-400 uppercase tracking-widest font-bold">Live Profitability</div>
+                                    <div className="text-[10px] md:text-xs text-slate-500 uppercase tracking-widest font-bold">Live Profitability</div>
                                     <div className="text-2xl md:text-3xl font-bold text-slate-900">₹8,420,103</div>
                                 </div>
                                 <div className="text-right">
-                                    <div className="text-[10px] md:text-xs text-emerald-500 font-bold bg-emerald-50 px-2 py-1 rounded">+24%</div>
+                                    <div className="text-[10px] md:text-xs text-emerald-700 font-bold bg-emerald-100 px-2 py-1 rounded">+24%</div>
                                 </div>
                             </div>
 
@@ -75,10 +77,10 @@ export default function GoldenGoose() {
 
                             <div className="bg-slate-900 rounded-xl p-4 text-white flex items-center gap-4 shadow-lg">
                                 <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-amber-500 flex items-center justify-center flex-shrink-0 animate-pulse">
-                                    <svg className="w-5 h-5 md:w-6 md:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                                    <Zap className="w-5 h-5 md:w-6 md:h-6 text-white" />
                                 </div>
                                 <div>
-                                    <div className="text-[10px] text-slate-400">AI Recommendation</div>
+                                    <div className="text-[10px] text-slate-300">AI Recommendation</div>
                                     <div className="font-medium text-xs md:text-sm leading-tight">Scale Campaign #402. ROAS is 4.2x.</div>
                                 </div>
                             </div>

@@ -1,5 +1,6 @@
 import Footer from '@/components/Footer';
 import Navigation from '@/components/Navigation';
+import { Lock, ShieldCheck, KeyRound, AlertTriangle } from 'lucide-react';
 
 export default function SecurityPage() {
     return (

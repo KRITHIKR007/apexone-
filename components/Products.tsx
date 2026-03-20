@@ -50,7 +50,7 @@ export default function Products() {
                         </div>
                         <h2 className="text-4xl md:text-5xl font-medium text-slate-900 tracking-tight leading-tight">
                             Tools for the <br />
-                            <span className="text-slate-400">exponential age.</span>
+                            <span className="text-slate-500">exponential age.</span>
                         </h2>
                     </div>
                 </div>
@@ -75,7 +75,7 @@ export default function Products() {
 
                             {/* Content Side */}
                             <div className="w-full md:w-1/3 flex flex-col justify-center">
-                                <div className="text-xs font-mono text-slate-400 mb-4">0{index + 1}</div>
+                                <div className="text-xs font-mono text-slate-500 mb-4">0{index + 1}</div>
                                 <h3 className="text-3xl font-medium text-slate-900 mb-6 group-hover:text-indigo-600 transition-colors duration-300">
                                     <a href={product.link}>{product.title}</a>
                                 </h3>

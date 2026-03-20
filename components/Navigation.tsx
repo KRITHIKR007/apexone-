@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
+import { Menu, X, ArrowRight } from 'lucide-react';
 
 export default function Navigation() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -141,13 +142,7 @@ export default function Navigation() {
                         aria-label="Toggle mobile menu"
                         aria-expanded={isMobileMenuOpen}
                     >
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            {isMobileMenuOpen ? (
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                            ) : (
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                            )}
-                        </svg>
+                        {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
                     </button>
                 </div>
             </nav>
@@ -166,16 +161,14 @@ export default function Navigation() {
                         {/* Mobile Header (Fixed) */}
                         <div className="flex items-center justify-between p-6 border-b border-slate-100">
                             <div className="flex items-center gap-2">
-                                <Image src="/logo.png" alt="Logo" width={28} height={28} />
+                                <Image src="/logo.png" alt="Logo" width={28} height={28} className="w-7" style={{ height: 'auto' }} />
                                 <span className="font-bold tracking-tight text-slate-900">ApexOne</span>
                             </div>
                             <button
                                 onClick={() => setIsMobileMenuOpen(false)}
                                 className="p-2 rounded-full bg-slate-100 text-slate-900"
                             >
-                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                                </svg>
+                                <X className="w-6 h-6" />
                             </button>
                         </div>
 

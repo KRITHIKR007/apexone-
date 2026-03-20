@@ -76,19 +76,19 @@ export default function Results90Days() {
                 <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-white/10 pt-12">
                     <div className="text-center">
                         <div className="text-3xl font-bold text-white mb-1">3.5x</div>
-                        <div className="text-xs text-slate-500 uppercase tracking-wider">Avg. ROI</div>
+                        <div className="text-xs text-slate-400 uppercase tracking-wider">Avg. ROI</div>
                     </div>
                     <div className="text-center">
                         <div className="text-3xl font-bold text-white mb-1">14 Days</div>
-                        <div className="text-xs text-slate-500 uppercase tracking-wider">Time to Value</div>
+                        <div className="text-xs text-slate-400 uppercase tracking-wider">Time to Value</div>
                     </div>
                     <div className="text-center">
                         <div className="text-3xl font-bold text-white mb-1">100%</div>
-                        <div className="text-xs text-slate-500 uppercase tracking-wider">Data Ownership</div>
+                        <div className="text-xs text-slate-400 uppercase tracking-wider">Data Ownership</div>
                     </div>
                     <div className="text-center">
                         <div className="text-3xl font-bold text-white mb-1">24/7</div>
-                        <div className="text-xs text-slate-500 uppercase tracking-wider">Executive Support</div>
+                        <div className="text-xs text-slate-400 uppercase tracking-wider">Executive Support</div>
                     </div>
                 </div>
             </div>

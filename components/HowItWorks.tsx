@@ -36,8 +36,8 @@ export default function HowItWorks() {
                                 Connect Golden Goose to your Ads Managers, payment processors (Stripe/Razorpay), and CRMs.
                             </p>
                             <div className="inline-flex gap-2">
-                                <span className="px-2 py-1 bg-slate-100 rounded text-xs text-slate-500 font-mono">API Connection</span>
-                                <span className="px-2 py-1 bg-slate-100 rounded text-xs text-slate-500 font-mono">Data Cleaning</span>
+                                <span className="px-2 py-1 bg-slate-200 rounded text-xs text-slate-600 font-mono">API Connection</span>
+                                <span className="px-2 py-1 bg-slate-200 rounded text-xs text-slate-600 font-mono">Data Cleaning</span>
                             </div>
                         </div>
 
@@ -51,8 +51,8 @@ export default function HowItWorks() {
                                 Our models begin training on your historical data to establish baselines for CPA, LTV, and Churn.
                             </p>
                             <div className="inline-flex gap-2">
-                                <span className="px-2 py-1 bg-slate-100 rounded text-xs text-slate-500 font-mono">LTV Modeling</span>
-                                <span className="px-2 py-1 bg-slate-100 rounded text-xs text-slate-500 font-mono">Anomaly Detection</span>
+                                <span className="px-2 py-1 bg-slate-200 rounded text-xs text-slate-600 font-mono">LTV Modeling</span>
+                                <span className="px-2 py-1 bg-slate-200 rounded text-xs text-slate-600 font-mono">Anomaly Detection</span>
                             </div>
                         </div>
 
@@ -66,7 +66,7 @@ export default function HowItWorks() {
                                 You receive daily "Kill/Scale" signals. Bad ads are paused. Good ads are scaled. Revenue becomes predictable.
                             </p>
                             <div className="inline-flex gap-2">
-                                <span className="px-2 py-1 bg-emerald-50 border border-emerald-100 rounded text-xs text-emerald-600 font-bold font-mono">PROFIT OPTIMIZED</span>
+                                <span className="px-2 py-1 bg-emerald-100 border border-emerald-200 rounded text-xs text-emerald-700 font-bold font-mono">PROFIT OPTIMIZED</span>
                             </div>
                         </div>
                     </div>

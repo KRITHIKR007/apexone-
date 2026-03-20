@@ -2,11 +2,14 @@ import { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
     return {
-        rules: {
-            userAgent: '*',
-            allow: '/',
-            disallow: '/private/',
-        },
+        rules: [
+            {
+                userAgent: '*',
+                allow: '/',
+                disallow: ['/dashboard/', '/private/', '/api/'],
+            },
+        ],
         sitemap: 'https://apexonestudio.com/sitemap.xml',
+        host: 'https://apexonestudio.com',
     };
 }
