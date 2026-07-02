@@ -134,8 +134,8 @@ const blogPosts: Record<string, {
         category: "AI Engineering",
         date: "Dec 28, 2025",
         readTime: "12 min read",
-        author: "Kanishk K. Singh",
-        role: "CTO",
+        author: "ApexOne Technology Group",
+        role: "Technology Research",
         image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200&q=80",
         content: (
             <>
@@ -312,8 +312,8 @@ def verify_response(draft_response, context_facts):
         category: "Security",
         date: "Nov 30, 2025",
         readTime: "10 min read",
-        author: "Thanish",
-        role: "Chief AI Officer",
+        author: "ApexOne Research Fabric",
+        role: "AI Security Systems",
         image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200&q=80",
         content: (
             <>

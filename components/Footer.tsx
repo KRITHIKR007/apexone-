@@ -122,6 +122,7 @@ export default function Footer() {
                 <div className="pt-8 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500 font-medium">
                     <p>© 2026 ApexOne Studios. All rights reserved.</p>
                     <div className="flex gap-8">
+                        <a href="/legal/notice" className="hover:text-slate-900 transition-colors">Public Notice</a>
                         <a href="/legal/privacy" className="hover:text-slate-900 transition-colors">Privacy Policy</a>
                         <a href="/legal/terms" className="hover:text-slate-900 transition-colors">Terms of Service</a>
                         <a href="/legal/security" className="hover:text-slate-900 transition-colors">Security</a>

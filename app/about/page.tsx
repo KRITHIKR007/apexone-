@@ -141,22 +141,10 @@ export default function AboutPage() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-16 lg:gap-24">
                         {[
                             {
-                                name: "Kanishk K. Singh",
-                                role: "Technology Director",
-                                img: "/team/kanishk.webp",
-                                bio: "Lead architect driving the technical vision and security protocols of ApexOne's sovereign infrastructure."
-                            },
-                            {
                                 name: "Vasanth",
                                 role: "Finance Director",
                                 img: "/team/vasanth.jpg",
                                 bio: "Oversees the financial intelligence layer, ensuring sustainable growth and strategic capital allocation."
-                            },
-                            {
-                                name: "Thanish",
-                                role: "Chief AI Officer",
-                                img: "/team/thanish.png",
-                                bio: "Specializes in neural system deployment and the ethical evolution of our autonomous intelligence models."
                             }
                         ].map((member, i) => (
                             <div key={i} className="group">
