@@ -18,7 +18,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
         { url: '/legal/privacy', priority: 0.4, changeFrequency: 'yearly' },
         { url: '/legal/terms', priority: 0.4, changeFrequency: 'yearly' },
         { url: '/legal/security', priority: 0.4, changeFrequency: 'yearly' },
-        { url: '/legal/notice', priority: 0.5, changeFrequency: 'monthly' },
     ];
 
     const blogSlugs = [

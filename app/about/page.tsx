@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import PageHeader from '@/components/PageHeader';
 import Footer from '@/components/Footer';
 import Navigation from '@/components/Navigation';
@@ -125,56 +126,8 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            {/* Minimal Premium Core Team Section */}
-            <section className="py-32 bg-white">
-                <div className="container">
-                    {/* Minimal Header */}
-                    <div className="mb-24 flex flex-col md:flex-row items-baseline justify-between gap-4 border-b border-slate-100 pb-12">
-                        <h3 className="text-4xl font-light tracking-tight text-slate-900">
-                            The Core <span className="font-bold">Team.</span>
-                        </h3>
-                        <p className="text-sm font-medium uppercase tracking-[0.2em] text-slate-400">
-                            Engineering Excellence
-                        </p>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-16 lg:gap-24">
-                        {[
-                            {
-                                name: "Vasanth",
-                                role: "Finance Director",
-                                img: "/team/vasanth.jpg",
-                                bio: "Oversees the financial intelligence layer, ensuring sustainable growth and strategic capital allocation."
-                            }
-                        ].map((member, i) => (
-                            <div key={i} className="group">
-                                {/* Image Container */}
-                                <div className="relative aspect-[3/4] overflow-hidden bg-slate-50 mb-8">
-                                    <Image
-                                        src={member.img}
-                                        alt={member.name}
-                                        width={500}
-                                        height={667}
-                                        className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
-                                    />
-                                </div>
-
-                                {/* Details */}
-                                <div className="space-y-3">
-                                    <div className="flex items-center justify-between">
-                                        <h4 className="text-2xl font-bold tracking-tight text-slate-900">{member.name}</h4>
-                                        <div className="h-px w-8 bg-slate-200 group-hover:w-12 group-hover:bg-indigo-600 transition-all duration-500"></div>
-                                    </div>
-                                    <p className="text-xs font-bold uppercase tracking-widest text-indigo-600">{member.role}</p>
-                                    <p className="text-slate-500 font-light leading-relaxed text-base pt-2 border-t border-slate-50">
-                                        {member.bio}
-                                    </p>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
+            {/* Interactive Operating Principles Section */}
+            <OperatingPrinciples />
 
             {/* 3. GLOBAL COORDINATES (NEW) */}
             <section className="py-24 bg-slate-900 text-white relative overflow-hidden">
@@ -227,5 +180,110 @@ export default function AboutPage() {
 
             <Footer />
         </main>
+    );
+}
+
+function OperatingPrinciples() {
+    const [activeTab, setActiveTab] = useState(0);
+
+    const principles = [
+        {
+            title: "Asymmetric Moats",
+            tagline: "Build unassailable digital parameters.",
+            desc: "We do not believe in standard growth channels. We build custom algorithms, proprietary data lakes, and private media structures that belong entirely to you, creating an unfair advantage that competitors cannot duplicate.",
+            stats: [
+                { label: "IP Ownership", val: "100%" },
+                { label: "Data Leakage Rate", val: "0.00%" },
+                { label: "Competitor Replication Difficulty", val: "Infinite" }
+            ],
+            color: "from-indigo-600 to-violet-500"
+        },
+        {
+            title: "Absolute Speed",
+            tagline: "Reduce decision latency to zero.",
+            desc: "In high-velocity markets, analysis paralysis is a death sentence. By feeding time-aligned intelligence into automated action loops, we reduce the time between data detection and market execution from weeks to milliseconds.",
+            stats: [
+                { label: "Decision Latency", val: "< 10ms" },
+                { label: "Action Autonomy", val: "Real-time" },
+                { label: "Campaign Sync Speed", val: "Instantaneous" }
+            ],
+            color: "from-emerald-600 to-teal-500"
+        },
+        {
+            title: "Sovereign Autonomy",
+            tagline: "Scale margins, not headcount.",
+            desc: "The traditional way to scale is to add human complexity. The ApexOne way is to deploy algorithmic leverage. We install digital workflows that run your campaigns, monitor code security, and forecast solvency automatically.",
+            stats: [
+                { label: "Headcount Added", val: "Zero" },
+                { label: "Workflow Automation Rate", val: "90%+" },
+                { label: "Profit Optimization Focus", val: "Net Income" }
+            ],
+            color: "from-orange-600 to-red-500"
+        }
+    ];
+
+    return (
+        <section className="py-32 bg-slate-50 relative overflow-hidden border-t border-slate-100">
+            <div className="container relative z-10">
+                <div className="max-w-4xl mx-auto text-center mb-20">
+                    <span className="text-xs font-bold uppercase tracking-[0.3em] text-indigo-600 mb-4 block">The Apex Code</span>
+                    <h2 className="text-4xl md:text-6xl font-bold tracking-tight text-slate-900 mb-6">Our Operating Principles.</h2>
+                    <p className="text-lg text-slate-500 max-w-2xl mx-auto font-light">
+                        We don't operate like a services agency. We build and deploy systems according to three mathematical growth laws.
+                    </p>
+                </div>
+
+                <div className="grid lg:grid-cols-12 gap-12 items-stretch max-w-6xl mx-auto">
+                    {/* Tabs Navigation (Col 4) */}
+                    <div className="lg:col-span-4 flex flex-row lg:flex-col gap-4 overflow-x-auto lg:overflow-x-visible pb-4 lg:pb-0 scrollbar-none">
+                        {principles.map((pr, idx) => (
+                            <button
+                                key={idx}
+                                onClick={() => setActiveTab(idx)}
+                                className={`flex-1 text-left p-6 rounded-2xl border transition-all duration-500 flex flex-col justify-between cursor-pointer whitespace-nowrap lg:whitespace-normal group ${
+                                    activeTab === idx
+                                        ? 'bg-slate-950 border-slate-950 text-white shadow-xl shadow-slate-950/15'
+                                        : 'bg-white border-slate-200 hover:border-slate-350 text-slate-600 hover:text-slate-900 shadow-sm'
+                                }`}
+                            >
+                                <span className={`text-[10px] font-bold font-mono tracking-widest uppercase mb-4 ${activeTab === idx ? 'text-indigo-400' : 'text-slate-400'}`}>0{idx + 1}</span>
+                                <div>
+                                    <h3 className="text-lg font-bold tracking-tight mb-1">{pr.title}</h3>
+                                    <p className={`text-xs font-light ${activeTab === idx ? 'text-slate-400' : 'text-slate-500'}`}>{pr.tagline}</p>
+                                </div>
+                            </button>
+                        ))}
+                    </div>
+
+                    {/* Tab Content Display (Col 8) */}
+                    <div className="lg:col-span-8 bg-white border border-slate-200 rounded-3xl p-8 md:p-12 shadow-xl flex flex-col justify-between relative overflow-hidden group">
+                        <div className="absolute top-0 right-0 p-8 opacity-[0.03] pointer-events-none">
+                            <span className="text-[12rem] font-bold tracking-tighter text-slate-900 font-mono">0{activeTab + 1}</span>
+                        </div>
+
+                        <div className="relative z-10 space-y-6">
+                            <div className={`inline-block px-3 py-1 bg-gradient-to-r ${principles[activeTab].color} text-white text-[10px] font-bold tracking-wider rounded-full uppercase`}>
+                                Active Protocol
+                            </div>
+                            <h3 className="text-3xl font-bold tracking-tight text-slate-900 leading-tight">
+                                {principles[activeTab].title}
+                            </h3>
+                            <p className="text-slate-600 text-lg leading-relaxed font-light">
+                                {principles[activeTab].desc}
+                            </p>
+                        </div>
+
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-12 border-t border-slate-100 mt-12 relative z-10">
+                            {principles[activeTab].stats.map((st, i) => (
+                                <div key={i} className="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                                    <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">{st.label}</div>
+                                    <div className="text-2xl font-bold text-slate-900 tracking-tight">{st.val}</div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     );
 }

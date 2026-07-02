@@ -71,18 +71,6 @@ export default function RootLayout({
               "name": "ApexOne Studio",
               "url": "https://apexonestudio.com",
               "logo": "https://apexonestudio.com/logo.png",
-              "alumni": [
-                {
-                  "@type": "Person",
-                  "name": "Kanishk K. Singh",
-                  "jobTitle": "Former Technology Director (Terminated)"
-                },
-                {
-                  "@type": "Person",
-                  "name": "Thanish",
-                  "jobTitle": "Former Chief AI Officer (Terminated)"
-                }
-              ],
               "sameAs": [
                 "https://x.com/Apexonestudio",
                 "https://www.linkedin.com/company/apex-one-studio",
