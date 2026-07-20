@@ -120,7 +120,7 @@ export default function DashboardPage() {
                             <div className="space-y-6">
                                 {[
                                     { title: 'Allocate $24K to Growth OS', score: 'P: 0.94', status: 'RECOMMENDED' },
-                                    { title: 'ACN Node Expansion', score: 'P: 0.88', status: 'ACTIVE' },
+                                    { title: 'Enterprise OS Node Expansion', score: 'P: 0.88', status: 'ACTIVE' },
                                     { title: 'Synthesize Data Lake v3', score: 'P: 0.82', status: 'IDLE' },
                                 ].map((rec, i) => (
                                     <div key={i} className="p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-white/10 transition-colors">
@@ -160,7 +160,7 @@ export default function DashboardPage() {
                                         { id: 'GG-001-BOM', protocol: 'Golden Goose', latency: '12ms', perf: 'Optimal' },
                                         { id: 'CIIP-XA-78', protocol: 'Security Fabric', latency: '4ms', perf: 'Defensive' },
                                         { id: 'GOS-DELTA-9', protocol: 'Growth Engine', latency: '45ms', perf: 'Throttled' },
-                                        { id: 'ACN-NODE-12', protocol: 'Human Asset', latency: 'N/A', perf: 'Executing' },
+                                        { id: 'EOS-NODE-12', protocol: 'Enterprise OS', latency: '8ms', perf: 'Executing' },
                                     ].map((row, i) => (
                                         <tr key={i} className="border-b border-white/5 hover:bg-white/[0.01] transition-colors">
                                             <td className="p-8 font-mono text-white/50">{row.id}</td>

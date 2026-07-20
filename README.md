@@ -100,7 +100,7 @@ NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY=your_api_key_here
 - `/products/ciip` - Central Intelligence Platform
 - `/products/growth-os` - Growth Operating System
 - `/products/enterprise-os` - Enterprise Operating System
-- `/products/acn` - Apex Creators Network
+- `/products/apex-edu` - Academic Intelligence System
 - `/legal/privacy` - Privacy Policy
 - `/legal/terms` - Terms of Service
 - `/legal/security` - Security Information
@@ -150,9 +150,9 @@ Route (app)
 ├ ○ /legal/privacy            (Privacy)
 ├ ○ /legal/security           (Security)
 ├ ○ /legal/terms              (Terms)
-├ ○ /products/acn             (ACN)
 ├ ○ /products/ciip            (CIIP)
 ├ ○ /products/enterprise-os   (Enterprise OS)
+├ ○ /products/apex-edu        (Apex.EDU)
 ├ ○ /products/golden-goose    (Golden Goose)
 └ ○ /products/growth-os       (Growth OS)
 

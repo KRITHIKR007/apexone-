@@ -14,7 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         { url: '/products/ciip', priority: 0.9, changeFrequency: 'monthly' },
         { url: '/products/growth-os', priority: 0.9, changeFrequency: 'monthly' },
         { url: '/products/enterprise-os', priority: 0.9, changeFrequency: 'monthly' },
-        { url: '/products/acn', priority: 0.8, changeFrequency: 'monthly' },
+        { url: '/products/apex-edu', priority: 0.9, changeFrequency: 'monthly' },
         { url: '/legal/privacy', priority: 0.4, changeFrequency: 'yearly' },
         { url: '/legal/terms', priority: 0.4, changeFrequency: 'yearly' },
         { url: '/legal/security', priority: 0.4, changeFrequency: 'yearly' },

@@ -30,10 +30,10 @@ export default function Products() {
             link: '/products/enterprise-os'
         },
         {
-            title: 'Apex Creators Network (ACN)',
-            description: 'Elite talent on demand. Access the top 1% of global creative professionals.',
-            image: '/products/acn-network.png',
-            link: '/products/acn'
+            title: 'Apex.EDU',
+            description: 'The Cognitive Operating System for Pre-University, University, and Graduate Institutions.',
+            image: '/products/ciip.png',
+            link: '/products/apex-edu'
         }
     ];
 

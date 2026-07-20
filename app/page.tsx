@@ -6,8 +6,8 @@ import TrustedBy from '@/components/TrustedBy';
 import Solution from '@/components/Solution';
 import GoldenGoose from '@/components/GoldenGoose';
 import CIIP from '@/components/CIIP';
+import ApexEDU from '@/components/ApexEDU';
 
-import ACN from '@/components/ACN';
 import Products from '@/components/Products';
 import HowItWorks from '@/components/HowItWorks';
 import WhoWeAre from '@/components/WhoWeAre';
@@ -40,7 +40,7 @@ export default function Home() {
       </div>
       <GoldenGoose />
       <CIIP />
-      <ACN />
+      <ApexEDU />
       <WhoWeAre />
       <WhatMakesDifferent />
       <ForWhom />

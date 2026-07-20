@@ -56,8 +56,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="font-sans antialiased text-slate-900 bg-white selection:bg-indigo-500/30">
+    <html lang="en" suppressHydrationWarning>
+      <body className="font-sans antialiased text-slate-900 bg-white selection:bg-indigo-500/30" suppressHydrationWarning>
         <ErrorBoundary>
           {children}
         </ErrorBoundary>
