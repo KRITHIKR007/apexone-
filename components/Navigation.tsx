@@ -1,21 +1,44 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import { Menu, X, ArrowRight } from 'lucide-react';
 
 export default function Navigation() {
     const [isScrolled, setIsScrolled] = useState(false);
+    const [isVisible, setIsVisible] = useState(true);
     const [activeSection, setActiveSection] = useState('');
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const pathname = usePathname();
     const isHome = pathname === '/';
+    const prevScrollY = useRef(0);
 
     useEffect(() => {
         const handleScroll = () => {
             const currentScrollY = window.scrollY;
-            setIsScrolled(currentScrollY > 15);
+
+            // Liquid glass activates once scrolled past initial top buffer
+            setIsScrolled(currentScrollY > 20);
+
+            // Always show at top of page
+            if (currentScrollY <= 20) {
+                setIsVisible(true);
+            } else {
+                const diff = currentScrollY - prevScrollY.current;
+                // Threshold of 8px to prevent micro-jitter
+                if (Math.abs(diff) > 8) {
+                    if (diff > 0) {
+                        // Scrolling DOWN (swiping up) -> HIDE navbar
+                        setIsVisible(false);
+                    } else {
+                        // Scrolling UP (swiping down) -> REVEAL navbar
+                        setIsVisible(true);
+                    }
+                }
+            }
+
+            prevScrollY.current = currentScrollY;
 
             // Track sections on homepage
             if (isHome) {
@@ -65,9 +88,15 @@ export default function Navigation() {
     const isLiquidGlass = isScrolled || !isHome;
 
     return (
-        <header className={`fixed left-0 right-0 z-50 flex justify-center px-4 pointer-events-none transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-            isLiquidGlass ? 'top-3 md:top-4' : 'top-5 md:top-6'
-        }`}>
+        <header
+            style={{
+                transform: isVisible || isMobileMenuOpen ? 'translateY(0)' : 'translateY(-160%)',
+                opacity: isVisible || isMobileMenuOpen ? 1 : 0
+            }}
+            className={`fixed left-0 right-0 z-50 flex justify-center px-4 pointer-events-none transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                isLiquidGlass ? 'top-3 md:top-4' : 'top-5 md:top-6'
+            }`}
+        >
             {/* Ambient Refraction Glow behind liquid glass pill */}
             <div className={`transition-opacity duration-700 pointer-events-none ${
                 isLiquidGlass ? 'opacity-100' : 'opacity-0'
