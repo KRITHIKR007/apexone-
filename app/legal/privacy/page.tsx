@@ -1,5 +1,14 @@
 import Footer from '@/components/Footer';
 import Navigation from '@/components/Navigation';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: "Privacy Policy | ApexOne Studios",
+    description: "Our commitment to data privacy, zero-retention AI protocols, and enterprise data sovereignty.",
+    alternates: {
+        canonical: 'https://apexonestudio.com/legal/privacy',
+    },
+};
 
 export default function PrivacyPage() {
     return (

@@ -1,5 +1,14 @@
 import Footer from '@/components/Footer';
 import Navigation from '@/components/Navigation';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: "Terms of Service | ApexOne Studios",
+    description: "Terms of service and master service agreement for utilizing the ApexOne Cognitive Engine and enterprise AI OS.",
+    alternates: {
+        canonical: 'https://apexonestudio.com/legal/terms',
+    },
+};
 
 export default function TermsPage() {
     return (

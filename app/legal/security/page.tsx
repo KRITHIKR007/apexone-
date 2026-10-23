@@ -1,6 +1,15 @@
 import Footer from '@/components/Footer';
 import Navigation from '@/components/Navigation';
 import { Lock, ShieldCheck, KeyRound, AlertTriangle } from 'lucide-react';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: "Security & Compliance | ApexOne Studios",
+    description: "Enterprise defense in depth, zero-trust architecture, SOC 2 compliance, and encryption standards for ApexOne AI platforms.",
+    alternates: {
+        canonical: 'https://apexonestudio.com/legal/security',
+    },
+};
 
 export default function SecurityPage() {
     return (

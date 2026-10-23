@@ -9,12 +9,15 @@ export const metadata: Metadata = {
     default: "ApexOne Studios - The AI Operating System for Business Growth",
     template: "%s | ApexOne Studios"
   },
-  description: "ApexOne Studios installs an AI-powered intelligence, sales, and automation system inside your business so you can see where you're losing money, fix it, and scale faster than your competitors.",
+  description: "ApexOne Studios builds and installs sovereign AI operating systems, autonomous sales agents, and real-time business intelligence to engineer enterprise growth.",
   applicationName: "ApexOne Studios",
-  keywords: ["AI", "Business Intelligence", "Automation", "Sales", "Marketing", "Growth", "Analytics", "CRM", "ApexOne"],
-  authors: [{ name: "ApexOne Studios", url: "https://apexonestudio.com" }],
+  keywords: ["AI Operating System", "ApexOne Studios", "Enterprise AI", "Golden Goose BI", "CIIP Cybersecurity", "Growth OS", "Autonomous AI Agents", "Business Automation", "Krithik R"],
+  authors: [{ name: "ApexOne Studios", url: "https://apexonestudio.com" }, { name: "Krithik R", url: "https://apexonestudio.com/about" }],
   creator: "ApexOne Studios",
   publisher: "ApexOne Studios",
+  alternates: {
+    canonical: 'https://apexonestudio.com',
+  },
   robots: {
     index: true,
     follow: true,
@@ -28,14 +31,14 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "ApexOne Studios - The AI Operating System for Business Growth",
-    description: "Transform your business with AI-powered intelligence and automation",
+    description: "ApexOne Studios installs custom AI intelligence layers and autonomous automation systems inside your business.",
     url: "https://apexonestudio.com",
     siteName: "ApexOne Studios",
     images: [
       {
         url: "/logo.png",
-        width: 800,
-        height: 600,
+        width: 1200,
+        height: 630,
         alt: "ApexOne Studios Logo",
       },
     ],
@@ -45,7 +48,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "ApexOne Studios - The AI Operating System for Business Growth",
-    description: "Transform your business with AI-powered intelligence and automation",
+    description: "ApexOne Studios installs custom AI intelligence layers and autonomous automation systems inside your business.",
     images: ["/logo.png"],
   },
 };
@@ -68,12 +71,17 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              "name": "ApexOne Studio",
+              "name": "ApexOne Studios",
               "url": "https://apexonestudio.com",
               "logo": "https://apexonestudio.com/logo.png",
+              "description": "The AI Operating System for Business Growth",
+              "founder": {
+                "@type": "Person",
+                "name": "Krithik R",
+                "jobTitle": "Founder & CEO"
+              },
               "sameAs": [
                 "https://x.com/Apexonestudio",
-                "https://www.linkedin.com/company/apex-one-studio",
                 "https://www.linkedin.com/company/apex-one-studio",
                 "https://www.youtube.com/channel/UCWcqtFUkhYoR5bfD-x0tn-g"
               ],
