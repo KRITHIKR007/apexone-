@@ -2,13 +2,8 @@
 
 import Hero from '@/components/Hero';
 import TrustedBy from '@/components/TrustedBy';
-
 import Solution from '@/components/Solution';
-import GoldenGoose from '@/components/GoldenGoose';
-import CIIP from '@/components/CIIP';
-import ApexEDU from '@/components/ApexEDU';
-
-import Products from '@/components/Products';
+import CoreServices from '@/components/CoreServices';
 import HowItWorks from '@/components/HowItWorks';
 import WhoWeAre from '@/components/WhoWeAre';
 import WhatMakesDifferent from '@/components/WhatMakesDifferent';
@@ -28,25 +23,26 @@ export default function Home() {
   useScrollReveal();
 
   return (
-    <main>
+    <main className="bg-white selection:bg-indigo-500/30">
       <Navigation />
+      
       <div id="hero">
         <Hero />
       </div>
+      
       <TrustedBy />
 
       <div id="solution">
         <Solution />
       </div>
-      <GoldenGoose />
-      <CIIP />
-      <ApexEDU />
+
+      {/* Concrete Services & Scope Deliverables */}
+      <CoreServices />
+
       <WhoWeAre />
       <WhatMakesDifferent />
       <ForWhom />
-      <div id="products">
-        <Products />
-      </div>
+      
       <Results90Days />
       <HowItWorks />
 

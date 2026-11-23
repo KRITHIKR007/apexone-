@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 
 export default function Hero() {
   const [mounted, setMounted] = useState(false);
@@ -15,7 +16,6 @@ export default function Hero() {
 
         {/* Content Wrapper - Centered & Stark */}
         <div className={`flex flex-col items-center text-center max-w-4xl mx-auto transition-opacity duration-1000 ${mounted ? 'opacity-100' : 'opacity-0'}`}>
-
 
           {/* Heading - Clean, Custom Tracking, Standard Premium */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[8rem] font-bold tracking-tighter text-slate-900 leading-[1.1] md:leading-[0.9] mb-6 md:mb-8 text-center md:text-left w-full flex flex-col items-center md:items-start">
@@ -33,17 +33,18 @@ export default function Hero() {
 
           {/* Actions - Standard, High Contrast */}
           <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto px-4 md:px-0">
-            <a
+            <Link
               href="/contact"
-              className="w-full sm:w-auto px-10 py-4 bg-slate-900 text-white text-lg font-bold rounded-full hover:bg-slate-800 transition-all duration-200 shadow-lg shadow-indigo-500/20"
+              prefetch={false}
+              className="w-full sm:w-auto px-10 py-4 bg-slate-900 text-white text-lg font-bold rounded-full hover:bg-slate-800 transition-all duration-200 shadow-lg shadow-indigo-500/20 text-center"
             >
               Partner With Us
-            </a>
+            </Link>
             <a
-              href="#how-it-works"
-              className="w-full sm:w-auto px-10 py-4 bg-white text-slate-700 border border-slate-200 text-lg font-bold rounded-full hover:bg-slate-50 hover:text-indigo-600 hover:border-indigo-200 transition-all duration-200"
+              href="/services"
+              className="w-full sm:w-auto px-10 py-4 bg-white text-slate-700 border border-slate-200 text-lg font-bold rounded-full hover:bg-slate-50 hover:text-indigo-600 hover:border-indigo-200 transition-all duration-200 text-center"
             >
-              View Platform
+              Explore Services
             </a>
           </div>
 

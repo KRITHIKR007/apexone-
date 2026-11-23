@@ -37,7 +37,7 @@ export default function AboutClient() {
                         </h2>
                         <div className="h-px w-24 bg-white/20 mx-auto mb-12"></div>
                         <p className="text-xl md:text-2xl text-slate-400 leading-relaxed max-w-3xl mx-auto font-light">
-                            In an age of infinite noise and data overload, ApexOne stands as the signal. We believe that the future of enterprise belongs not to those who accumulate data, but to those who can transmute it into mathematical certainty.
+                            In an age of infinite noise and data overload, ApexOne stands as the signal. We believe that the future of enterprise belongs not to those who accumulate raw dashboards, but to those who transform fragmented data into operational and financial clarity.
                         </p>
                     </div>
                 </div>
@@ -48,10 +48,10 @@ export default function AboutClient() {
                 <div className="container">
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-slate-100">
                         {[
-                            { label: "Revenue Optimized", value: "$500M+" },
-                            { label: "Decision Latency", value: "0.01s" },
-                            { label: "Data Sovereignty", value: "100%" },
-                            { label: "Enterprise Nodes", value: "42" }
+                            { label: "Annual GMV Tracked", value: "$85M+" },
+                            { label: "Attribution Accuracy", value: "99.4%" },
+                            { label: "Client IP Ownership", value: "100%" },
+                            { label: "Average Profit Lift", value: "+38%" }
                         ].map((stat, i) => (
                             <div key={i} className="p-4 group">
                                 <div className="text-4xl md:text-5xl font-mono font-bold text-slate-900 mb-2 tracking-tighter group-hover:text-emerald-600 transition-colors">{stat.value}</div>
@@ -184,20 +184,18 @@ export default function AboutClient() {
                 </div>
             </section>
 
-            {/* 4. STRATEGIC ALLIANCES (NEW) */}
+            {/* 4. TECHNOLOGY & INFRASTRUCTURE INTEGRATIONS */}
             <section className="py-24 bg-white border-t border-slate-100 overflow-hidden">
                 <div className="container text-center mb-16">
-                    <p className="text-xs font-bold uppercase tracking-[0.2em] text-slate-400">Technology & Infrastructure Alliances</p>
+                    <p className="text-xs font-bold uppercase tracking-[0.2em] text-slate-400">Core Technology & Infrastructure Stack</p>
                 </div>
 
                 <div className="relative w-full">
                     <div className="flex w-max animate-marquee items-center">
-                        {/* Duplicate list for seamless loop */}
+                        {/* Clean stack without fake mega-bank claims */}
                         {[
-                            'AWS', 'OpenAI', 'Salesforce', 'Google', 'Antigravity IDE', 'Razorpay', 'Oracle',
-                            'Microsoft', 'Nvidia', 'Palantir', 'Bloomberg', 'Goldman Sachs', 'J.P. Morgan', 'Deloitte',
-                            'AWS', 'OpenAI', 'Salesforce', 'Google', 'Antigravity IDE', 'Razorpay', 'Oracle',
-                            'Microsoft', 'Nvidia', 'Palantir', 'Bloomberg', 'Goldman Sachs', 'J.P. Morgan', 'Deloitte'
+                            'Shopify Plus', 'Stripe', 'Meta Marketing API', 'Google Cloud', 'AWS', 'PostgreSQL', 'Snowflake', 'OpenAI', 'Anthropic', 'Salesforce', 'Docker', 'Redis',
+                            'Shopify Plus', 'Stripe', 'Meta Marketing API', 'Google Cloud', 'AWS', 'PostgreSQL', 'Snowflake', 'OpenAI', 'Anthropic', 'Salesforce', 'Docker', 'Redis'
                         ].map((partner, i) => (
                             <span key={i} className="mx-12 text-3xl md:text-5xl font-bold text-slate-200 hover:text-slate-800 cursor-default transition-all duration-500 select-none whitespace-nowrap">
                                 {partner}
@@ -226,7 +224,7 @@ function OperatingPrinciples() {
             stats: [
                 { label: "IP Ownership", val: "100%" },
                 { label: "Data Leakage Rate", val: "0.00%" },
-                { label: "Competitor Replication Difficulty", val: "Infinite" }
+                { label: "Architecture Moat", val: "Proprietary" }
             ],
             color: "from-indigo-600 to-violet-500"
         },

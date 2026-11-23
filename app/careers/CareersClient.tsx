@@ -8,116 +8,68 @@ import Navigation from '@/components/Navigation';
 
 const jobs = [
     {
-        id: 'ai-research-1',
-        title: 'Principal AI Scientist',
-        level: 'L7 / Principal',
-        department: 'AI Research',
-        image: '/careers/principal_ai_scientist.png',
+        id: 'ai-eng-1',
+        title: 'Principal AI Systems Engineer',
+        level: 'Senior / Lead',
+        department: 'AI Engineering',
+        image: '/careers/neural_systems.png',
         location: 'Bengaluru / Remote',
         salary: 'Top Tier / Role-Based',
-        manager: 'Executive Council / CTO Office',
+        manager: 'Head of Engineering',
         responsibilities: [
-            "Architectural leadership for multi-modal reasoning engines.",
-            "Synthesizing frontier research into enterprise-grade protocols.",
-            "Directing the neural roadmap for 2026 expansion."
+            "Architecting production RAG pipelines, agentic tool-calling, and evaluation loops.",
+            "Designing low-latency inference protocols and guardrails for autonomous client-facing agents.",
+            "Benchmarking frontier models for enterprise accuracy, cost, and sub-second execution."
         ],
-        description: 'Lead multi-modal architectural breakthroughs. Researching the next frontier of autonomous reasoning agents.'
+        description: 'Lead multi-agent architectural design. Build autonomous reasoning pipelines that drive measurable business outcomes.'
     },
     {
-        id: 'ai-eng-1',
-        title: 'Neural Systems Engineer',
-        level: 'L6 / Senior',
-        department: 'AI Research',
-        image: '/careers/neural_systems.png',
-        location: 'Global Remote',
-        salary: 'Top Tier / Role-Based',
-        manager: 'Lead AI Scientist',
-        responsibilities: [
-            "Scaling distributed training infrastructure for billion-parameter models.",
-            "Implementing low-latency inference protocols for real-time telemetry.",
-            "Optimizing neural weights for specialized edge deployment."
-        ],
-        description: 'Optimize training pipelines for billion-parameter models. Infrastructure design for neural scale.'
-    },
-    {
-        id: 'ai-pm-1',
-        title: 'AI Product Manager',
-        level: 'L5 / Senior',
-        department: 'AI Research',
-        location: 'Hybrid / Remote',
-        image: '/careers/ai_product_manager.png',
-        salary: 'Competitive Range',
-        manager: 'Head of Intelligence',
-        responsibilities: [
-            "Defining the intelligence roadmap for enterprise automation.",
-            "Bridging the gap between neural research and user-facing dashboards.",
-            "Managing lifecycle pivots for autonomous agent deployment."
-        ],
-        description: 'Bridge the gap between frontier research and enterprise deployment. Define the core intelligence roadmap.'
-    },
-    {
-        id: 'ar-vr-architect',
-        title: 'Spatial Systems Lead',
-        level: 'L6 / Senior',
-        department: 'AR/VR',
-        image: '/careers/spatial_systems.png',
-        location: 'Bengaluru / Hybrid',
-        salary: 'Top Tier / Role-Based',
-        manager: 'Spatial Design Lead',
-        responsibilities: [
-            "Engineering the core OS for spatial computing interfaces.",
-            "Defining persistency protocols for multi-user AR environments.",
-            "Researching neural-input integration for zero-latency interactions."
-        ],
-        description: 'Develop the OS for spatial computing interfaces. Bridging neural inputs with high-fidelity digital reality.'
-    },
-    {
-        id: 'metaverse-designer',
-        title: 'Cinematic Metaverse Artist',
-        level: 'L5 / Senior',
-        department: 'AR/VR',
-        image: '/careers/metaverse_artist.png',
-        location: 'Remote',
-        salary: 'Top Tier / Role-Based',
-        manager: 'World Architect',
-        responsibilities: [
-            "Crafting hyper-realistic environments in UE5 for global commerce.",
-            "Directing the visual narrative of spatial storytelling.",
-            "Implementing high-fidelity procedural world-generation logic."
-        ],
-        description: 'Craft high-fidelity immersive worlds. Experience in UE5 and spatial storytelling for global commerce.'
-    },
-    {
-        id: 'ar-ux-1',
-        title: 'AR Interaction Designer',
-        level: 'L4 / Senior',
-        department: 'AR/VR',
-        image: '/careers/ar_interaction.png',
-        location: 'Remote',
-        salary: 'Competitive Range',
-        manager: 'Spatial UX Lead',
-        responsibilities: [
-            "Defining gesture libraries for the next generation of computing.",
-            "Prototyping fluid spatial overlays for enterprise data hubs.",
-            "Researching ethical interaction patterns in AR/VR contexts."
-        ],
-        description: 'Define the gestures and interfaces of the spatial age. Engineering the next phase of human-computer interaction.'
-    },
-    {
-        id: 'founding-engineers',
-        title: 'Founding Infrastructure Lead',
-        level: 'Founding Team',
+        id: 'data-infra-1',
+        title: 'Data Infrastructure & Pipeline Lead',
+        level: 'Staff / Lead',
         department: 'Engineering',
         image: '/careers/founding_infra.png',
         location: 'Bengaluru (Hybrid)',
         salary: 'Strategic Equity + Range',
-        manager: 'CEO / CTO Office',
+        manager: 'Founder & CEO',
         responsibilities: [
-            "Building the core engine that automates multi-billion dollar firms.",
-            "Defining the engineering culture for the ApexOne ecosystem.",
-            "Directing architectural scaling from zero to global dominance."
+            "Scaling distributed event-driven ingestion across Shopify, Stripe, Meta Ads, and PostgreSQL.",
+            "Building resilient webhook pipelines and real-time P&L attribution calculating engines.",
+            "Enforcing SOC-2 ready data encryption enclaves and client IP protection."
         ],
-        description: 'Build the engine that automates multi-billion dollar enterprises. Direct engineering dominance.'
+        description: 'Build the sovereign data pipelines that power Golden Goose. Engineer resilient enterprise data infrastructure.'
+    },
+    {
+        id: 'fullstack-eng-1',
+        title: 'Senior Full-Stack Product Engineer',
+        level: 'Senior',
+        department: 'Engineering',
+        image: '/careers/engineering.png',
+        location: 'Bengaluru / Remote',
+        salary: 'Competitive Range',
+        manager: 'Engineering Lead',
+        responsibilities: [
+            "Building high-performance telemetry cockpits with Next.js, TypeScript, and modern styling.",
+            "Crafting interactive real-time data visualization widgets and telemetry graphs.",
+            "Designing seamless developer experience and secure role-based access controls."
+        ],
+        description: 'Craft intuitive, sub-second telemetry dashboards and command centers for modern enterprise operators.'
+    },
+    {
+        id: 'growth-strat-1',
+        title: 'Quantitative Growth Strategist',
+        level: 'Senior',
+        department: 'Growth & Strategy',
+        image: '/careers/ai_product_manager.png',
+        location: 'Bengaluru / Hybrid',
+        salary: 'Competitive Range + Performance',
+        manager: 'Head of Growth',
+        responsibilities: [
+            "Auditing CAC, LTV, and margin efficiency across high-velocity e-commerce and SaaS portfolios.",
+            "Codifying programmatic ad-buying rules and algorithmic budget triage with engineering teams.",
+            "Translating executive client P&L objectives into deterministic growth experiments."
+        ],
+        description: 'Bridge high-level financial strategy with autonomous ad algorithms. Drive mathematical net profit growth.'
     }
 ];
 

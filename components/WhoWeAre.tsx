@@ -1,61 +1,66 @@
-// Trigger recompile to fix cache issue
 'use client';
 
+import { SFDocText, SFBolt, SFBarChart } from './SFIcons';
+
 export default function WhoWeAre() {
+    const pillars = [
+        {
+            title: "Sovereign Infrastructure",
+            desc: "You own your data lakes, pipeline code, and customer intelligence models 100%. No vendor lock-in, no shared pools, and no rented intellectual property.",
+            tag: "Complete IP Ownership",
+            Icon: SFDocText
+        },
+        {
+            title: "Algorithmic Precision",
+            desc: "Sub-second budget allocation, real-time CPA arbitrage, and automated audience triage that halts ad spend decay before human teams can even log in.",
+            tag: "Sub-Second Latency",
+            Icon: SFBolt
+        },
+        {
+            title: "Deterministic Attribution",
+            desc: "Creativity is vital, but cash flow is mathematical. Every campaign, workflow, and customer touchpoint is tied directly to incremental net profit.",
+            tag: "True Unit Economics",
+            Icon: SFBarChart
+        }
+    ];
+
     return (
-        <section id="about" className="section bg-white text-slate-900 py-20 md:py-32 relative overflow-hidden px-4">
-            <div className="container relative z-10">
-                {/* Philosophy */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 mb-16 md:mb-24">
-                    <div>
-                        <div className="inline-block px-3 py-1 bg-slate-100 text-slate-900 text-xs font-bold tracking-[0.2em] uppercase mb-6 md:mb-8">
-                            Our Philosophy
-                        </div>
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight mb-6 md:mb-8 leading-tight">
-                            We don&apos;t sell services. <br />
-                            <span className="text-indigo-600">We engineer dominance.</span>
-                        </h2>
-                    </div>
-                    <div className="flex items-end">
-                        <p className="text-base sm:text-lg md:text-xl text-slate-600 font-light leading-relaxed">
-                            The traditional agency model is broken. It sells hours, not outcomes. It creates dependencies, not assets.
-                            <br /><br />
-                            <strong className="text-slate-900 font-semibold">ApexOne is different.</strong> We interact with your business as a sovereign territory of performance. We deploy proprietary technology, military-grade strategy, and creative intelligence to build an unassailable advantage.
-                        </p>
-                    </div>
-                </div>
+        <section id="about" className="py-20 sm:py-24 bg-white text-slate-900 relative overflow-hidden">
+            <div className="container max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
+                {/* 3 Sovereign Pillar Cards */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+                    {pillars.map((item, i) => {
+                        const Icon = item.Icon;
+                        return (
+                            <div
+                                key={i}
+                                className="relative bg-white rounded-2xl p-7 sm:p-8 border border-slate-200/90 shadow-[0_2px_12px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_30px_rgba(0,0,0,0.07)] hover:border-slate-300 transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between group overflow-hidden"
+                            >
+                                <div>
+                                    {/* Icon Squircle & Tag Pill */}
+                                    <div className="flex items-center justify-between mb-6">
+                                        <div className="w-11 h-11 rounded-xl bg-indigo-50/50 border border-indigo-100 flex items-center justify-center text-indigo-600 transition-all duration-300 group-hover:scale-105">
+                                            <Icon className="w-5 h-5" />
+                                        </div>
+                                        <span className="text-xs font-mono tracking-tight font-medium text-indigo-500/90 bg-indigo-50/30 px-3 py-1 rounded-full border border-indigo-100/80">
+                                            {item.tag}
+                                        </span>
+                                    </div>
 
-                {/* Pillars */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-slate-200 border border-slate-200 mb-24">
-                    {[
-                        {
-                            title: "Sovereign Intelligence",
-                            desc: "We do not rely on rented land. We build proprietary data lakes and intelligence systems that belong to you, ensuring your IP and customer insights remain your competitive moat.",
-                            icon: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                        },
-                        {
-                            title: "Asymmetric Warfare",
-                            desc: "In a saturated market, playing fair is a losing strategy. We deploy autonomous agents and algorithmic ad-buying to outmaneuver competitors who are still operating manually.",
-                            icon: "M13 10V3L4 14h7v7l9-11h-7z"
-                        },
-                        {
-                            title: "Mathematical Growth",
-                            desc: "Creativity is subjective. Revenue is not. Every campaign, every line of code, and every strategy is backed by a statistical probability of success before it ever goes live.",
-                            icon: "M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"
-                        }
-                    ].map((item, i) => (
-                        <div key={i} className="bg-slate-50 p-8 md:p-12 group hover:bg-white transition-colors duration-500">
-                            <div className="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-lg flex items-center justify-center mb-6 md:mb-8 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300">
-                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={item.icon} />
-                                </svg>
+                                    {/* Card Title */}
+                                    <h3 className="text-xl sm:text-[22px] font-bold text-slate-950 tracking-tight mb-3">
+                                        {item.title}
+                                    </h3>
+
+                                    {/* Card Description */}
+                                    <p className="text-sm sm:text-[15px] leading-relaxed text-slate-600 font-light antialiased">
+                                        {item.desc}
+                                    </p>
+                                </div>
                             </div>
-                            <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 text-slate-900">{item.title}</h3>
-                            <p className="text-slate-600 leading-relaxed text-sm">{item.desc}</p>
-                        </div>
-                    ))}
+                        );
+                    })}
                 </div>
-
             </div>
         </section>
     );

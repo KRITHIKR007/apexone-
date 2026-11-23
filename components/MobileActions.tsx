@@ -1,36 +1,41 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Phone } from 'lucide-react';
+import Link from 'next/link';
+import { SFPhone } from './SFIcons';
 
 export default function MobileActions() {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
-            // Show after scrolling 500px
-            setIsVisible(window.scrollY > 500);
+            setIsVisible(window.scrollY > 400);
         };
 
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('scroll', handleScroll, { passive: true });
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
     return (
-        <div className={`md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-40 w-[90%] max-w-sm transition-all duration-500 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
-            <div className="bg-slate-900/90 backdrop-blur-xl border border-white/10 p-2 rounded-2xl shadow-2xl flex items-center justify-between gap-2 ring-1 ring-white/20">
-                <a
+        <div
+            className={`md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-40 w-[92%] max-w-sm transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                isVisible ? 'translate-y-0 opacity-100 pointer-events-auto' : 'translate-y-12 opacity-0 pointer-events-none'
+            }`}
+        >
+            <div className="bg-black/80 backdrop-blur-2xl border border-white/15 p-1.5 rounded-full shadow-2xl flex items-center justify-between gap-2">
+                <Link
                     href="/contact"
-                    className="flex-1 bg-white text-slate-900 py-3 px-6 rounded-xl font-bold text-sm text-center active:scale-95 transition-transform"
+                    prefetch={false}
+                    className="flex-1 apple-btn-blue text-white py-2.5 px-6 rounded-full text-xs font-medium text-center shadow-xs transition-all active:scale-[0.98]"
                 >
                     Partner With Us
-                </a>
+                </Link>
                 <a
-                    href="tel:+91 9902079990"
-                    aria-label="Call us"
-                    className="w-12 h-12 bg-white/10 text-white rounded-xl flex items-center justify-center active:scale-95 transition-transform"
+                    href="tel:+919902079990"
+                    aria-label="Direct Phone Consultation"
+                    className="w-9 h-9 bg-white/10 hover:bg-white/15 text-white rounded-full flex items-center justify-center transition-all active:scale-[0.96]"
                 >
-                    <Phone className="w-5 h-5" />
+                    <SFPhone className="w-4 h-4" />
                 </a>
             </div>
         </div>

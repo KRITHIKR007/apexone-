@@ -1,58 +1,66 @@
 'use client';
 
-import { ArrowRight } from 'lucide-react';
+import React from 'react';
+import Link from 'next/link';
+import { SFArrowRight, SFCheck } from './SFIcons';
 
 export default function FinalCTA() {
     return (
-        <section id="audit" className="section relative overflow-hidden bg-black text-white py-32">
-            {/* Background Effects */}
-            <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/40 to-black pointer-events-none" />
-            <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-50" />
+        <section id="audit" className="py-24 sm:py-32 md:py-40 bg-[#000000] text-white border-t border-white/[0.08] relative overflow-hidden">
+            <div className="container relative z-10 max-w-5xl mx-auto px-4 sm:px-6">
+                <div className="text-center space-y-6">
 
-            <div className="container relative z-10">
-                <div className="max-w-5xl mx-auto text-center">
+                    <span className="text-xs font-mono font-bold tracking-[0.25em] text-[#86868b] uppercase block">
+                        SOVEREIGN ARCHITECTURE AUDIT
+                    </span>
 
-                    <h2 className="text-5xl md:text-7xl font-bold mb-8 tracking-tight">
-                        Stop guessing.<br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400">Start Knowing.</span>
+                    <h2 className="text-4xl sm:text-6xl md:text-7xl font-semibold tracking-[-0.03em] text-white leading-tight font-sans">
+                        Stop Guessing.<br />
+                        <span className="text-[#86868b]">Scale with Deterministic Intelligence.</span>
                     </h2>
 
-                    <p className="text-2xl text-slate-400 mb-12 max-w-3xl mx-auto font-light">
-                        We'll map your revenue leaks, model your growth ceiling, and show you exactly what's holding you back.
+                    <p className="text-lg sm:text-xl text-[#86868b] max-w-2xl mx-auto font-light leading-relaxed">
+                        We map your attribution leaks, benchmark your unit economics, and deploy sovereign neural infrastructure inside your private cloud perimeter.
                     </p>
 
-                    <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                        <a href="/contact" className="group relative inline-flex items-center justify-center px-8 py-5 text-lg font-bold text-white transition-all duration-200 bg-indigo-600 font-pj rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 hover:bg-indigo-500 hover:scale-105 shadow-[0_0_30px_rgba(79,70,229,0.3)]">
-                            <span className="absolute inset-0 w-full h-full -mt-1 rounded-full opacity-30 bg-gradient-to-b from-transparent via-transparent to-black"></span>
-                            <span className="relative flex items-center gap-3">
-                                Book a Free Audit
-                                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                            </span>
-                        </a>
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
+                        <Link
+                            href="/contact"
+                            prefetch={false}
+                            className="inline-flex items-center justify-center px-8 py-3.5 text-[15px] font-normal text-white bg-[#0071e3] hover:bg-[#0077ed] rounded-full transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] shadow-md shadow-blue-500/20 group"
+                        >
+                            <span>Schedule an Architecture Audit</span>
+                            <SFArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
+                        </Link>
 
-                        <div className="flex items-center gap-4 text-slate-400">
-                            <div className="h-px w-12 bg-slate-800"></div>
-                            <span className="text-sm uppercase tracking-widest">or</span>
-                            <div className="h-px w-12 bg-slate-800"></div>
-                        </div>
-
-                        <a href="/products/enterprise-os" className="text-lg text-white hover:text-indigo-400 font-medium transition-colors">
-                            View the Enterprise OS
-                        </a>
+                        <Link
+                            href="/services#enterprise-os"
+                            prefetch={false}
+                            className="inline-flex items-center justify-center px-7 py-3.5 text-[15px] font-normal text-[#2997ff] hover:underline transition-colors"
+                        >
+                            <span>Explore Enterprise OS Specs</span>
+                            <span className="ml-1">›</span>
+                        </Link>
                     </div>
 
-                    <div className="mt-16 grid grid-cols-3 gap-4 max-w-2xl mx-auto opacity-60">
-                        <div className="flex flex-col items-center gap-2">
-                            <div className="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_10px_#10b981]" />
-                            <span className="text-xs uppercase tracking-widest text-slate-500">Free Audit</span>
+                    <div className="pt-16 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl mx-auto border-t border-white/[0.08] text-xs text-[#86868b] font-light">
+                        <div className="flex items-center justify-center gap-2">
+                            <div className="w-4 h-4 rounded-full bg-blue-500/20 text-[#2997ff] flex items-center justify-center shrink-0">
+                                <SFCheck className="w-2.5 h-2.5" />
+                            </div>
+                            <span>Forensic Unit Economics Audit</span>
                         </div>
-                        <div className="flex flex-col items-center gap-2">
-                            <div className="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_10px_#10b981]" />
-                            <span className="text-xs uppercase tracking-widest text-slate-500">No Lock-in</span>
+                        <div className="flex items-center justify-center gap-2">
+                            <div className="w-4 h-4 rounded-full bg-blue-500/20 text-[#2997ff] flex items-center justify-center shrink-0">
+                                <SFCheck className="w-2.5 h-2.5" />
+                            </div>
+                            <span>Zero Public Model Sharing</span>
                         </div>
-                        <div className="flex flex-col items-center gap-2">
-                            <div className="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_10px_#10b981]" />
-                            <span className="text-xs uppercase tracking-widest text-slate-500">Results in 90 Days</span>
+                        <div className="flex items-center justify-center gap-2">
+                            <div className="w-4 h-4 rounded-full bg-blue-500/20 text-[#2997ff] flex items-center justify-center shrink-0">
+                                <SFCheck className="w-2.5 h-2.5" />
+                            </div>
+                            <span>90-Day Net Margin Guarantee</span>
                         </div>
                     </div>
 

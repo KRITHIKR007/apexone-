@@ -28,8 +28,9 @@ apex-one-studio/
 │   ├── about/             # About page
 │   ├── blog/              # Blog section
 │   ├── contact/           # Contact form
+│   ├── customers/         # Client case studies
 │   ├── legal/             # Legal pages
-│   ├── products/          # Product pages
+│   ├── services/          # Services & Ecosystem
 │   ├── layout.tsx         # Root layout with SEO
 │   ├── loading.tsx        # Global loading state
 │   └── page.tsx           # Homepage
@@ -96,11 +97,8 @@ NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY=your_api_key_here
 - `/blog` - Insights & Articles
 - `/contact` - Contact Form
 - `/careers` - Career Opportunities
-- `/products/golden-goose` - Business Intelligence AI
-- `/products/ciip` - Central Intelligence Platform
-- `/products/growth-os` - Growth Operating System
-- `/products/enterprise-os` - Enterprise Operating System
-- `/products/apex-edu` - Academic Intelligence System
+- `/services` - Apple-Mirrored Unified Services & AI Ecosystem
+- `/customers` - Client Case Studies & Enterprise Outcomes
 - `/legal/privacy` - Privacy Policy
 - `/legal/terms` - Terms of Service
 - `/legal/security` - Security Information
@@ -150,11 +148,8 @@ Route (app)
 ├ ○ /legal/privacy            (Privacy)
 ├ ○ /legal/security           (Security)
 ├ ○ /legal/terms              (Terms)
-├ ○ /products/ciip            (CIIP)
-├ ○ /products/enterprise-os   (Enterprise OS)
-├ ○ /products/apex-edu        (Apex.EDU)
-├ ○ /products/golden-goose    (Golden Goose)
-└ ○ /products/growth-os       (Growth OS)
+├ ○ /customers               (Client Outcomes)
+└ ○ /services                (Unified Services & Ecosystem)
 
 ○ (Static)  - Prerendered as static content
 ƒ (Dynamic) - Server-rendered on demand

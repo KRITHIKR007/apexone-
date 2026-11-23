@@ -2,24 +2,16 @@
 
 export default function Problem() {
     return (
-        <section id="problem" className="section bg-white relative overflow-hidden py-32">
-            {/* Background Decor */}
-            <div className="absolute top-0 left-0 w-full h-[500px] bg-gradient-to-b from-slate-50 to-transparent -z-10" />
-            <div className="absolute right-0 top-20 w-1/3 h-1/3 bg-slate-100/50 blur-[100px] rounded-full -z-10" />
-
+        <section id="problem" className="section bg-white relative overflow-hidden py-24 sm:py-32 border-t border-slate-100">
             <div className="container relative">
                 {/* Header */}
-                <div className="max-w-3xl mb-20">
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-50 border border-red-100 text-red-600 text-xs font-bold tracking-widest uppercase mb-6">
-                        <div className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
-                        Critical Alert
-                    </div>
-                    <h2 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight">
-                        Why you are <span className="text-red-600">behind.</span>
+                <div className="max-w-3xl mb-16">
+                    <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight tracking-tight">
+                        Why Traditional Growth Stalls.
                     </h2>
-                    <p className="text-xl md:text-2xl text-slate-600 leading-relaxed max-w-2xl">
-                        Your competitors aren't working harder. They are working with better intelligence.
-                        <span className="font-semibold text-slate-900"> You are running on intuition.</span>
+                    <p className="text-xl md:text-2xl text-slate-600 leading-relaxed max-w-2xl font-light">
+                        High-growth enterprises don't fail from lack of effort. They bleed margin in fragmented silos.
+                        <span className="font-semibold text-slate-900"> Intuition cannot compete with deterministic telemetry.</span>
                     </p>
                 </div>
 

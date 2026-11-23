@@ -1,96 +1,129 @@
 'use client';
 
+import React from 'react';
+import Link from 'next/link';
+
+interface PhaseItem {
+    days: string;
+    phase: string;
+    title: string;
+    description: string;
+    deliverables: string[];
+}
+
+const PHASES: PhaseItem[] = [
+    {
+        days: 'DAY 1–30',
+        phase: 'Phase 01',
+        title: 'Ingestion & Forensic Audit',
+        description: 'Complete data lakehouse setup and multi-touch reconciliation across payment processors, CRM, and ad platforms.',
+        deliverables: [
+            'PostgreSQL or Snowflake pipeline live',
+            'Forensic margin baseline calculated',
+            'Attribution leaks surfaced and quantified'
+        ]
+    },
+    {
+        days: 'DAY 31–60',
+        phase: 'Phase 02',
+        title: 'Sovereign Enclave & Swarms',
+        description: 'Installation of the CIIP air-gapped security perimeter and first live deployment of autonomous outbound sales swarms.',
+        deliverables: [
+            'CIIP air-gapped KMS isolation active',
+            'Automated daily P&L dispatch loop',
+            '24/7 Outbound prospecting neural swarm'
+        ]
+    },
+    {
+        days: 'DAY 61–90+',
+        phase: 'Phase 03',
+        title: 'Continuous Autonomous Scale',
+        description: 'Real-time unit economics feedback loops actively managing budget arbitrage and churn defense with zero headcount added.',
+        deliverables: [
+            'Audited net EBITDA expansion engine',
+            'Sub-minute ad spend decay pruning',
+            'Full executive board P&L visibility'
+        ]
+    }
+];
+
 export default function Results90Days() {
     return (
-        <section className="section bg-slate-900 text-white relative overflow-hidden">
-            {/* Dark background with gradient accents */}
-            <div className="absolute top-0 right-0 w-[50vh] h-[50vh] bg-indigo-500/10 blur-[100px] rounded-full pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-[50vh] h-[50vh] bg-emerald-500/10 blur-[100px] rounded-full pointer-events-none" />
+        <section className="bg-black text-white flex flex-col justify-center items-center overflow-hidden relative selection:bg-indigo-500/30 py-24 sm:py-32 px-4">
+            <div className="container mx-auto px-4 max-w-6xl">
 
-            <div className="container relative z-10">
-                <div className="max-w-4xl mx-auto text-center mb-16">
-                    <div className="inline-block px-4 py-1 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-indigo-300 mb-6 font-mono text-sm">
-                        TIMELINE TO PROFITABILITY
-                    </div>
-                    <h2 className="text-4xl md:text-5xl font-bold mb-6">What to expect in 90 Days.</h2>
-                    <p className="text-xl text-slate-400">
-                        We don't sell "plans". We sell outcomes. Here is exactly what happens.
+                {/* Header */}
+                <div className="mb-14 md:mb-16 text-center">
+                    <span className="text-xs font-mono uppercase tracking-[0.25em] text-slate-500 block mb-3">
+                        DEPLOYMENT TIMELINE
+                    </span>
+                    <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-4 text-white leading-tight">
+                        What to Expect in 90 Days.
+                    </h2>
+                    <p className="text-sm sm:text-base md:text-lg text-slate-400 font-light tracking-wide max-w-2xl mx-auto leading-relaxed">
+                        We don&apos;t deliver vague strategy decks. We deploy sovereign infrastructure with mathematical milestones.
                     </p>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-8 relative">
-                    {/* Connecting Line */}
-                    <div className="hidden md:block absolute top-12 left-0 right-0 h-0.5 bg-gradient-to-r from-indigo-500 to-emerald-500 -z-10 opacity-30 transform translate-y-4" />
+                {/* 3 Dark Timeline Cards Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                    {PHASES.map((phase, idx) => (
+                        <div
+                            key={idx}
+                            className="bg-[#111113] border border-white/10 rounded-2xl p-7 sm:p-8 flex flex-col justify-between text-left shadow-xl"
+                        >
+                            <div>
+                                {/* Days & Phase Pill Header */}
+                                <div className="flex items-center justify-between">
+                                    <span className="text-xs font-mono font-bold uppercase tracking-wider text-slate-300">
+                                        {phase.days}
+                                    </span>
+                                    <span className="px-2.5 py-0.5 rounded-md bg-white/5 border border-white/10 text-[11px] font-mono text-slate-400">
+                                        {phase.phase}
+                                    </span>
+                                </div>
 
-                    {/* Stage 1 */}
-                    <div className="relative group">
-                        <div className="w-16 h-16 rounded-2xl bg-slate-800 border-2 border-slate-700 flex items-center justify-center text-xl font-bold mb-6 group-hover:border-indigo-500 group-hover:text-indigo-400 transition-colors mx-auto relative z-10 shadow-xl">
-                            01
-                        </div>
-                        <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-6 rounded-2xl hover:bg-white/10 transition-colors">
-                            <div className="text-xs font-bold text-indigo-400 uppercase tracking-widest mb-2 font-mono">Day 1-30</div>
-                            <h3 className="text-2xl font-bold mb-3">The Audit</h3>
-                            <ul className="space-y-2 text-slate-400 text-sm">
-                                <li className="flex gap-2"><span>•</span> Full data infrastructure setup</li>
-                                <li className="flex gap-2"><span>•</span> Connecting all revenue sources</li>
-                                <li className="flex gap-2"><span>•</span> Identifying "money leaks"</li>
-                            </ul>
-                        </div>
-                    </div>
+                                {/* Title */}
+                                <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight mt-6 mb-3">
+                                    {phase.title}
+                                </h3>
 
-                    {/* Stage 2 */}
-                    <div className="relative group">
-                        <div className="w-16 h-16 rounded-2xl bg-slate-800 border-2 border-slate-700 flex items-center justify-center text-xl font-bold mb-6 group-hover:border-purple-500 group-hover:text-purple-400 transition-colors mx-auto relative z-10 shadow-xl">
-                            02
-                        </div>
-                        <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-6 rounded-2xl hover:bg-white/10 transition-colors">
-                            <div className="text-xs font-bold text-purple-400 uppercase tracking-widest mb-2 font-mono">Day 31-60</div>
-                            <h3 className="text-2xl font-bold mb-3">The Optimization</h3>
-                            <ul className="space-y-2 text-slate-400 text-sm">
-                                <li className="flex gap-2"><span>•</span> Implementation of CIIP</li>
-                                <li className="flex gap-2"><span>•</span> Automated reporting live</li>
-                                <li className="flex gap-2"><span>•</span> First growth experiments launched</li>
-                            </ul>
-                        </div>
-                    </div>
+                                {/* Description */}
+                                <p className="text-xs sm:text-sm text-slate-400 font-light leading-relaxed mb-8">
+                                    {phase.description}
+                                </p>
+                            </div>
 
-                    {/* Stage 3 */}
-                    <div className="relative group">
-                        <div className="w-16 h-16 rounded-2xl bg-emerald-500/20 border-2 border-emerald-500/50 flex items-center justify-center text-xl font-bold mb-6 text-emerald-400 mx-auto relative z-10 shadow-[0_0_30px_rgba(16,185,129,0.3)]">
-                            03
+                            {/* Checklist Deliverables */}
+                            <div className="space-y-3.5 pt-4">
+                                {phase.deliverables.map((item, itemIdx) => (
+                                    <div key={itemIdx} className="flex items-start gap-3">
+                                        <div className="w-4 h-4 rounded-full bg-[#0071e3] flex items-center justify-center shrink-0 mt-0.5 text-white">
+                                            <svg className="w-2.5 h-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                                            </svg>
+                                        </div>
+                                        <span className="text-xs sm:text-[13px] text-slate-300 font-normal leading-tight">
+                                            {item}
+                                        </span>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
-                        <div className="bg-gradient-to-br from-emerald-500/10 to-transparent border border-emerald-500/20 p-6 rounded-2xl">
-                            <div className="text-xs font-bold text-emerald-400 uppercase tracking-widest mb-2 font-mono">Day 90+</div>
-                            <h3 className="text-2xl font-bold mb-3 text-white">The Scale</h3>
-                            <ul className="space-y-2 text-emerald-100/70 text-sm">
-                                <li className="flex gap-2"><span>•</span> Predictable revenue engine</li>
-                                <li className="flex gap-2"><span>•</span> 50% Reduction in manual work</li>
-                                <li className="flex gap-2"><span>•</span> <strong>Complete Business Visibility</strong></li>
-                            </ul>
-                        </div>
-                    </div>
-
+                    ))}
                 </div>
 
-                {/* Bottom Stats */}
-                <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-white/10 pt-12">
-                    <div className="text-center">
-                        <div className="text-3xl font-bold text-white mb-1">3.5x</div>
-                        <div className="text-xs text-slate-400 uppercase tracking-wider">Avg. ROI</div>
-                    </div>
-                    <div className="text-center">
-                        <div className="text-3xl font-bold text-white mb-1">14 Days</div>
-                        <div className="text-xs text-slate-400 uppercase tracking-wider">Time to Value</div>
-                    </div>
-                    <div className="text-center">
-                        <div className="text-3xl font-bold text-white mb-1">100%</div>
-                        <div className="text-xs text-slate-400 uppercase tracking-wider">Data Ownership</div>
-                    </div>
-                    <div className="text-center">
-                        <div className="text-3xl font-bold text-white mb-1">24/7</div>
-                        <div className="text-xs text-slate-400 uppercase tracking-wider">Executive Support</div>
-                    </div>
+                {/* Bottom Action CTA Button */}
+                <div className="text-center">
+                    <Link
+                        href="/contact"
+                        prefetch={false}
+                        className="inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-[#0071e3] hover:bg-[#0077ed] text-white text-[15px] font-medium tracking-tight transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-blue-500/25"
+                    >
+                        Schedule 90-Day Implementation Audit
+                    </Link>
                 </div>
+
             </div>
         </section>
     );

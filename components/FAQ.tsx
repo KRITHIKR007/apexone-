@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Plus } from 'lucide-react';
+import { SFPlus } from './SFIcons';
 
 export default function FAQ() {
     const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -77,7 +77,7 @@ export default function FAQ() {
                                         </div>
                                     </div>
                                     <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all ${openIndex === idx ? 'bg-indigo-100 text-indigo-600 rotate-45' : 'bg-slate-100 text-slate-400'}`}>
-                                        <Plus className="w-5 h-5" />
+                                        <SFPlus className="w-5 h-5" />
                                     </div>
                                 </button>
                             </div>
