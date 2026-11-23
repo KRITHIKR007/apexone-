@@ -113,7 +113,7 @@ export default function CoreServices() {
                                     {/* Backplate Card: CIIP */}
                                     <div className="absolute w-[85%] aspect-video rounded-2xl overflow-hidden shadow-2xl border border-white/10 -rotate-6 -translate-y-8 bg-slate-900">
                                         <Image
-                                            src="/products/ciip.png"
+                                            src="/services/ciip.png"
                                             alt="CIIP Architecture"
                                             fill
                                             className="object-cover opacity-80"
@@ -124,7 +124,7 @@ export default function CoreServices() {
                                     {/* Midplate Card: Golden Goose */}
                                     <div className="absolute w-[88%] aspect-video rounded-2xl overflow-hidden shadow-2xl border border-white/10 rotate-3 translate-y-4 bg-slate-900">
                                         <Image
-                                            src="/products/golden-goose.png"
+                                            src="/services/golden-goose.png"
                                             alt="Golden Goose Dashboard"
                                             fill
                                             className="object-cover opacity-90"
@@ -135,7 +135,7 @@ export default function CoreServices() {
                                     {/* Foreground Card: Growth OS */}
                                     <div className="absolute w-[92%] aspect-video rounded-2xl overflow-hidden shadow-2xl border border-white/20 -translate-y-1 bg-slate-900 hover:scale-105 transition-transform duration-500">
                                         <Image
-                                            src="/products/growth-os.png"
+                                            src="/services/growth-os.png"
                                             alt="Growth OS Interface"
                                             fill
                                             className="object-cover"

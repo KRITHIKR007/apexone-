@@ -34,7 +34,7 @@ export default function Solution() {
                 {/* Floating Product Image Container - Pure & Clean without floating tiles */}
                 <div className="relative w-full max-w-2xl aspect-[16/9] flex items-center justify-center transition-transform duration-700 ease-out group-hover:scale-[1.02]">
                     <Image
-                        src="/products/jarvis-core.jpg"
+                        src="/services/jarvis-core.jpg"
                         alt="ApexOne Friday Sovereign Neural Core"
                         width={1376}
                         height={768}

@@ -63,7 +63,7 @@ export default function ServicesClient() {
                     <div className="w-full max-w-4xl mx-auto relative">
                         <div className="relative aspect-[16/9] w-full max-w-3xl mx-auto rounded-[28px] overflow-hidden border border-white/[0.1] shadow-[0_20px_60px_rgba(0,0,0,0.8)] bg-[#0a0a0a]">
                             <Image
-                                src="/products/jarvis-core.jpg"
+                                src="/services/jarvis-core.jpg"
                                 alt="ApexOne Sovereign Architecture"
                                 fill
                                 priority
@@ -146,7 +146,7 @@ export default function ServicesClient() {
                     <div className="relative rounded-[28px] overflow-hidden border border-white/[0.1] bg-[#0a0a0a] shadow-2xl group">
                         <div className="relative aspect-[16/9] w-full max-h-[580px]">
                             <Image
-                                src="/products/growth-os.png"
+                                src="/services/growth-os.png"
                                 alt="Growth OS Autonomous Sales Pipeline"
                                 fill
                                 className="object-cover transition-transform duration-700 group-hover:scale-[1.01]"
@@ -204,7 +204,7 @@ export default function ServicesClient() {
                     <div className="relative rounded-[28px] overflow-hidden border border-white/[0.1] bg-[#0a0a0a] shadow-2xl group">
                         <div className="relative aspect-[16/9] w-full max-h-[580px]">
                             <Image
-                                src="/products/golden-goose.png"
+                                src="/services/golden-goose.png"
                                 alt="Golden Goose Deterministic Attribution"
                                 fill
                                 className="object-cover transition-transform duration-700 group-hover:scale-[1.01]"
@@ -262,7 +262,7 @@ export default function ServicesClient() {
                     <div className="relative rounded-[28px] overflow-hidden border border-white/[0.1] bg-[#0a0a0a] shadow-2xl group">
                         <div className="relative aspect-[16/9] w-full max-h-[580px]">
                             <Image
-                                src="/products/ciip.png"
+                                src="/services/ciip.png"
                                 alt="CIIP Sovereign Cybersecurity Architecture"
                                 fill
                                 className="object-cover transition-transform duration-700 group-hover:scale-[1.01]"
@@ -320,7 +320,7 @@ export default function ServicesClient() {
                     <div className="relative rounded-[28px] overflow-hidden border border-white/[0.1] bg-[#0a0a0a] shadow-2xl group">
                         <div className="relative aspect-[16/9] w-full max-h-[580px]">
                             <Image
-                                src="/products/enterprise-os.png"
+                                src="/services/enterprise-os.png"
                                 alt="Enterprise OS Infrastructure"
                                 fill
                                 className="object-cover transition-transform duration-700 group-hover:scale-[1.01]"
